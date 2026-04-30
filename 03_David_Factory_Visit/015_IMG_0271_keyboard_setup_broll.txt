@@ -1,0 +1,12 @@
+## Visual Scene Descriptor
+
+Beginning: Medium shot of the speaker wearing headphones at a black digital keyboard in a room/workshop setting.
+Middle: He plays/tests the keyboard while standing or leaning near it; the camera stays mostly stable.
+End: Ends with a brief reaction that it feels/sounds good.
+
+Editor note: `proof` and `broll`. Useful as quick hands-on demonstration footage, especially under narration.
+
+## Dialogue Transcript
+
+[00:00] There we go. There we go.
+[00:26] It's good.

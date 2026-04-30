@@ -1,0 +1,11 @@
+## Visual Scene Descriptor
+
+Beginning: Windshield highway b-roll through hilly Pennsylvania terrain.
+Middle: Continues as forward-moving road footage with trees, slopes, and distant landscape visible.
+End: Ends as a short atmospheric drive insert.
+
+Editor note: `ambient` and `broll`. Sparse/unhelpful transcript; use visually as road texture.
+
+## Dialogue Transcript
+
+[00:00] DMG 1

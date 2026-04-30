@@ -1,0 +1,9 @@
+## Visual Scene Descriptor
+
+Beginning: Wide lakeside view with water, grassy bank, bench/fence, trees, and cloudy sky.
+Middle: Camera slowly pans along the waterline and surrounding hills, staying calm and scenic.
+End: Ends with another view across the lake and bank.
+
+Editor note: `ambient` and `broll`. No dialogue; use as a reflective transition or breath before returning home.
+
+## Dialogue Transcript

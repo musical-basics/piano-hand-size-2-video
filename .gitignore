@@ -1,0 +1,13 @@
+# Raw footage is too large for normal GitHub pushes.
+# Use Git LFS before tracking video media.
+*.MOV
+*.mov
+*.MP4
+*.mp4
+
+# Local transcription environment and caches.
+venv_transcribe/
+__pycache__/
+*.pyc
+.DS_Store
+*.DS_Store

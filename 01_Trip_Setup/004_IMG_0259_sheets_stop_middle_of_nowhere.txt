@@ -1,0 +1,12 @@
+## Visual Scene Descriptor
+
+Beginning: Nighttime road-stop footage at or near a Sheetz, filmed handheld from the car/parking-lot area.
+Middle: Camera shows the isolated stop environment, emphasizing the "middle of nowhere" feeling.
+End: Short clip ends as a quick location marker rather than a full talking segment.
+
+Editor note: `ambient` and `backup`. Useful as a very brief road-trip texture shot if the overnight drive needs one more beat.
+
+## Dialogue Transcript
+
+[00:00] So here is where I am some random sheets.
+[00:06] Okay, sheets in the middle of nowhere.

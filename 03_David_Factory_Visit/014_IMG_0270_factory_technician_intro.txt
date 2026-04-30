@@ -1,0 +1,13 @@
+## Visual Scene Descriptor
+
+Beginning: Workshop/factory view with a large cardboard/wooden crate or keyboard-related case in frame.
+Middle: Camera lingers around the work area while the conversation mentions Karen and introducing the technicians.
+End: Ends as a short contextual factory/personnel beat rather than a detailed keyboard explanation.
+
+Editor note: `ambient`, `proof`, and `backup`. Use only if the edit needs to establish David's shop/team.
+
+## Dialogue Transcript
+
+[00:00] That was fun to take this skill.
+[00:04] Karen has her own.
+[00:07] So we got to introduce the technicians.

@@ -1,0 +1,20 @@
+## Visual Scene Descriptor
+
+Beginning: Highway driving view through the windshield in overcast morning light, with road and trees/hills ahead.
+Middle: Handheld driving update continues while the speaker mentions calling David and having about three and a half hours left.
+End: Ends with the speaker sounding alert/energetic, still paired with moving road visuals.
+
+Editor note: `talking_head`, `ambient`, and `broll`. Strong morning-drive progress beat.
+
+## Dialogue Transcript
+
+[00:00] Alright, so we are going over to Pytisville, Pennsylvania.
+[00:07] And we are driving along this highway.
+[00:10] We have a little bit of a sneeze, but we should clear up in another hour or so.
+[00:21] Just call David and tell him that I'm coming.
+[00:24] And another 3 and a half hours to go.
+[00:29] So we already did like 1 and a half hours last night of driving.
+[00:33] So yeah, it's pretty good.
+[00:36] I'm feeling good.
+[00:37] That's the most important, really energetic.
+[00:39] I'm alert and get there at time by noon.

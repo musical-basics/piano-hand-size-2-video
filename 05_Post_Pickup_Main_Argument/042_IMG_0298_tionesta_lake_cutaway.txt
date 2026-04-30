@@ -1,0 +1,12 @@
+## Visual Scene Descriptor
+
+Beginning: Vertical/rotated handheld selfie near a lake or dam overlook, with water, rocks, guardrail, and wooded hills visible.
+Middle: Camera alternates between the speaker and the lake/roadside view as he names the recurring stop.
+End: Ends quickly as a location marker and calm transition beat.
+
+Editor note: `ambient` and `talking_head`. Good breather after the dense factory/main-argument material.
+
+## Dialogue Transcript
+
+[00:00] Okay, this is the lake that I always come to whenever I visit David.
+[00:04] This is the Tiones Tiona lake or something like that.

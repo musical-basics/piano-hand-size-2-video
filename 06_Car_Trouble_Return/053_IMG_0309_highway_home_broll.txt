@@ -1,0 +1,9 @@
+## Visual Scene Descriptor
+
+Beginning: Windshield highway b-roll with broad road, guardrail, distant hills, and overcast sky.
+Middle: Continues along open highway through valley/hill scenery, with the road pulling the viewer forward.
+End: Ends as a final homeward-driving insert with no dialogue.
+
+Editor note: `ambient` and `broll`. Good late-video travel texture for closing the return journey.
+
+## Dialogue Transcript

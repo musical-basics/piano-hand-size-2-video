@@ -1,0 +1,16 @@
+## Visual Scene Descriptor
+
+Beginning: Hotel-room talking-head shot, handheld and close to the speaker, with bed/lamp/room decor visible behind him.
+Middle: Speaker explains the car broke down while still hours from Maryland; the shot stays on his face with tired/frustrated energy.
+End: Ends with him rubbing/covering his face, reinforcing the "saga continues" feeling.
+
+Editor note: `talking_head` and `proof`. Strong complication beat for the return-trip drama.
+
+## Dialogue Transcript
+
+[00:00] Alright, so right now I'm in hotel here in Pennsylvania and the reason why is because my car broke down.
+[00:08] So I'm still like 4.5 hours out from Maryland.
+[00:12] But yeah, the saga continues. I'm still the car broke down because the alternator failed.
+[00:20] You know? We'll see. But now it's weird. It kind of works right now.
+[00:27] But yeah, I don't trust it that much. So I'm gonna have to take it to the mechanic tomorrow and see what happens.
+[00:38] So yeah, the epic continues.

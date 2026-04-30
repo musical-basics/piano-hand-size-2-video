@@ -1,0 +1,36 @@
+## Visual Scene Descriptor
+
+Beginning: Tesla interior shot with dashboard/screen visible, likely in a driveway or parking-lot context.
+Middle: Conversation focuses on the car's driving behavior and screen visualization, with the exterior/parking area visible through the windshield.
+End: Ends as a side conversation about the Tesla rather than the keyboard trip.
+
+Editor note: `ambient` and `backup`. Mostly off-topic; only use if a tiny human/travel aside is needed.
+
+## Dialogue Transcript
+
+[00:00] That's interesting.
+[00:01] I'm waiting for bots to get a bunch of bots up there.
+[00:05] Well, see, it's going to gig up a jiggle a few times here.
+[00:09] Oh yeah, it's not taking it.
+[00:11] It's not the smartest.
+[00:12] Yeah, as long as it doesn't bump into the basketball pole, then it's OK.
+[00:15] It's safer.
+[00:16] Yeah, yeah.
+[00:17] Well, it's safer.
+[00:18] There's a fine drive.
+[00:19] Yeah, yeah, yeah.
+[00:20] Yeah.
+[00:21] And especially people that are driving in texting, they did it.
+[00:26] Nice.
+[00:27] It's going to get down to Main Street.
+[00:30] Well, I wish I had this one.
+[00:31] I was driving up five hours to come here.
+[00:34] We've taken up the floor of the back.
+[00:37] Oh, really?
+[00:37] It'll go from charging center to charging center.
+[00:40] Oh, really?
+[00:40] So you don't touch it at all?
+[00:42] Yeah.
+[00:42] All the way to Florida?
+[00:44] That's quite a distance.
+[00:46] I had to put on my seatbelt.

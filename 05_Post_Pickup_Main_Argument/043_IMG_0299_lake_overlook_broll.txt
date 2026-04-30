@@ -1,0 +1,9 @@
+## Visual Scene Descriptor
+
+Beginning: Wide lake/dam view with water, rocky slope, guardrail, and wooded hills under cloudy sky.
+Middle: Camera pans or moves across the overlook, showing the road, hillside, trees, and water from several angles.
+End: Returns to the lake/rocky shoreline view, functioning as quiet scenic b-roll.
+
+Editor note: `ambient` and `broll`. No dialogue; useful as a calm transition after the factory or car monologue section.
+
+## Dialogue Transcript

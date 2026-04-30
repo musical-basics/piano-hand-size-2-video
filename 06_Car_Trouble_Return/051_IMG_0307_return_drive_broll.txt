@@ -1,0 +1,9 @@
+## Visual Scene Descriptor
+
+Beginning: Forward windshield b-roll on a two-lane rural road with trees, guardrails, and cloudy daylight.
+Middle: Continues over gently rolling roads, passing houses, cars, and green roadside areas.
+End: Ends as quiet return-drive texture with no meaningful dialogue.
+
+Editor note: `ambient` and `broll`. Useful under narration or as connective tissue in the car-fixed/heading-home section.
+
+## Dialogue Transcript

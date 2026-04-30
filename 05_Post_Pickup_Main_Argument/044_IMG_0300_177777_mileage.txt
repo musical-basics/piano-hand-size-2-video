@@ -1,0 +1,12 @@
+## Visual Scene Descriptor
+
+Beginning: Close-up of the car instrument cluster and odometer.
+Middle: Camera zooms or reframes tighter on the mileage display showing the repeating 177777-style number.
+End: Pulls slightly wider to the dashboard/instrument panel.
+
+Editor note: `proof`, `ambient`, and `backup`. Small weird/funny travel beat; use as a quick insert if it helps the road-saga rhythm.
+
+## Dialogue Transcript
+
+[00:00] Look at that mileage on our car.
+[00:03] 1,777,777.

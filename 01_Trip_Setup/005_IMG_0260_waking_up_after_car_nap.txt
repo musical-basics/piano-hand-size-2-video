@@ -1,0 +1,13 @@
+## Visual Scene Descriptor
+
+Beginning: Morning car-interior shot after sleeping, with the camera showing the back seat/inside of the vehicle.
+Middle: Speaker explains he passed out in the back, giving visual context for the overnight fatigue.
+End: Ends as a sleepy recovery update before the drive resumes.
+
+Editor note: `talking_head` and `ambient`. Good fatigue/payoff beat after the night-driving setup.
+
+## Dialogue Transcript
+
+[00:00] Alright guys, I'm awake.
+[00:03] I think I've passed out in the back right here.
+[00:08] I'm sleeping there for like, you know.

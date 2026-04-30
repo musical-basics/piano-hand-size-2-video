@@ -1,0 +1,19 @@
+## Visual Scene Descriptor
+
+Beginning: Morning selfie from inside/near the car, with daylight and the travel-stop environment visible.
+Middle: Shows snacks again while the speaker jokes about eating the beef stick and animal crackers after the nap.
+End: Returns to the plan to keep driving, functioning as the reset after the sleep stop.
+
+Editor note: `talking_head` and `ambient`. Useful transition from exhausted overnight setup into morning-drive momentum.
+
+## Dialogue Transcript
+
+[00:00] And I'm finally asleep for like almost three hours.
+[00:05] They feel great.
+[00:07] They feel great.
+[00:09] I'm going to eat my beef stick as well as these animal crackers, which are really,
+[00:16] really good.
+[00:18] But really bad for you.
+[00:21] And yeah, I'm done.
+[00:24] These guys are so unhealthy, but they're so good.
+[00:29] Anyways, we're going to keep driving and yeah, let's see what happens.

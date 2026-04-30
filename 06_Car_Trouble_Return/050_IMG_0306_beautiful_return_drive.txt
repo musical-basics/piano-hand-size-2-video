@@ -1,0 +1,12 @@
+## Visual Scene Descriptor
+
+Beginning: Windshield view of rural Pennsylvania roads with rolling greenery, curves, and cloudy sky.
+Middle: Continues through small-town/country roads, passing houses, hills, and roadside trees.
+End: Ends as a scenic return-drive clip with the speaker admiring the view.
+
+Editor note: `ambient` and `broll`. Good visual release after the hotel/car-trouble update.
+
+## Dialogue Transcript
+
+[00:00] and look how beautiful this drive is such a beautiful scenery.
+[00:08] If I were me to go back home in rural Pennsylvania, it's so beautiful.

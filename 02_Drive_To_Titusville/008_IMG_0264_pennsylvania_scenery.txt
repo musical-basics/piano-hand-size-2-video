@@ -1,0 +1,14 @@
+## Visual Scene Descriptor
+
+Beginning: Windshield view of Pennsylvania road scenery with hills, trees, and cloudy sky.
+Middle: Camera continues riding forward through the landscape, emphasizing the beauty of the drive.
+End: Remains scenic travel b-roll with only brief spoken reactions.
+
+Editor note: `ambient` and `broll`. Good breath/pacing shot after talking segments.
+
+## Dialogue Transcript
+
+[00:00] So beautiful.
+[00:07] So beautiful.
+[00:10] And so many years.
+[00:11] So beautiful.

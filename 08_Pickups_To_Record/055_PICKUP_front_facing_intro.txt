@@ -1,0 +1,15 @@
+## Visual Scene Descriptor
+
+Beginning: Clean front-facing seated talking-head shot in the home room, with neutral wall art, plant, and piano/keyboard furniture visible behind the speaker.
+Middle: Speaker explains this is part two of the piano hand-size journey and frames the Pennsylvania trip to pick up DS 6.0 and DS 5.5 keyboards.
+End: He repeats/refines the main thesis that these sizes matter for pianists with smaller hands, still in stable front-facing framing.
+
+Editor note: `talking_head`. Use as clean explanatory glue or setup VO support; the first 0:00-0:30 is strongest, and the repeated ending line can be trimmed.
+
+## Dialogue Transcript
+
+[00:00] So this is actually part two of my piano hand size journey, okay?
+[00:06] So in this video, so I drove to Pennsylvania to pick up,
+[00:14] I drove to Pennsylvania to pick up the DS 6.0 and DS 5.5 keyboards.
+[00:22] And I want to show you guys why these sizes matter for pianists with small hands.
+[00:30] And I want to show you guys why these sizes matter for pianists with smaller hands.

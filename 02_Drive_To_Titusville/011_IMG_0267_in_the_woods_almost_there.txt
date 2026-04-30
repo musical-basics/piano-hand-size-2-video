@@ -1,0 +1,18 @@
+## Visual Scene Descriptor
+
+Beginning: Rainy two-lane wooded-road footage through the windshield, with trees close to the road and wipers visible.
+Middle: Speaker emphasizes still driving after five hours and being "in the woods" while the road gets more rural.
+End: Ends with the sense that the destination is close, about 48 minutes away.
+
+Editor note: `talking_head`, `ambient`, and `broll`. Strong "almost there" travel beat.
+
+## Dialogue Transcript
+
+[00:00] It's still driving after like five hours.
+[00:07] Okay, we're still driving.
+[00:10] It's quite a trip.
+[00:12] It is quite a trip.
+[00:14] Now we're in the woods.
+[00:16] We are in the woods.
+[00:18] We're almost there.
+[00:19] Another 48-ish minutes.

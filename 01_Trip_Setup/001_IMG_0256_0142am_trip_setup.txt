@@ -1,0 +1,23 @@
+## Visual Scene Descriptor
+
+Beginning: Handheld late-night talking-head shot indoors, close on the speaker's face as he introduces the Titusville drive.
+Middle: Camera briefly points to a phone/time display as proof of the 1:42 a.m. departure, then returns to selfie framing.
+End: Continues as direct-to-camera setup, explaining the long drive, the discounted keyboard, and why the key-size difference matters.
+
+Editor note: `talking_head` and `proof`. Strong cold-open/setup material because the late hour, trip premise, and motivation are all clear.
+
+## Dialogue Transcript
+
+[00:00] Alright guys, so right now it's 142 a.m.
+[00:05] And I'm probably just gonna drive right now all the way to Titusville, Pennsylvania
+[00:10] to get another Kali DS 6.0 keyboard.
+[00:15] Okay, here we go.
+[00:17] Look at the time right here.
+[00:19] So yeah, it's pretty crazy.
+[00:22] It's gonna be five and a half hours of driving plus stops.
+[00:26] And we exhausted, but I think it's worth it, you know.
+[00:31] And they're giving me a discount of price $8,000.
+[00:36] So I'm gonna go and buy it from them and get it.
+[00:41] You know, it's totally worth it for me because the keyboard itself,
+[00:46] you know, the size difference makes all the difference in terms of practicing.
+[00:53] You know.

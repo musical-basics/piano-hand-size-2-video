@@ -1,0 +1,12 @@
+## Visual Scene Descriptor
+
+Beginning: Bright gas-station/convenience-store selfie shot, with aisles and store lighting behind the speaker.
+Middle: Handheld framing stays close on the speaker while he explains the Hagerstown stop and need for food/snacks.
+End: Clip remains a quick travel update in the store, useful as a checkpoint before the longer overnight drive.
+
+Editor note: `talking_head` and `ambient`. Use as a short travel beat showing the trip has begun outside the house.
+
+## Dialogue Transcript
+
+[00:00] So right now I'm at this gas station near Haker's town, which is around one hour away from Baltimore
+[00:09] It's gonna be a long trip, but we get some food, get some snacks, any drink

@@ -1,0 +1,14 @@
+## Visual Scene Descriptor
+
+Beginning: Tesla interior while moving through residential streets, with dashboard/screen and windshield view available as visual context.
+Middle: Conversation turns to robotaxis and Tesla technology while the car moves through the neighborhood.
+End: Continues as car-tech chatter, visually separate from the DS keyboard story.
+
+Editor note: `ambient` and `backup`. Off-topic for the main thesis; likely skip unless the edit wants a brief travel/personality aside.
+
+## Dialogue Transcript
+
+[00:00] Yeah, that's very good.
+[00:13] So I mean, their Tesla's got robot taxis, doesn't have steering wheels.
+[00:20] They're deploying in them.
+[00:22] Yeah, I heard about that.

@@ -1,0 +1,11 @@
+## Visual Scene Descriptor
+
+Beginning: Close-up inside the car of a Double Big Mac held near the camera.
+Middle: Camera stays tight on the burger as the speaker points out the four patties.
+End: Ends as a quick food/comedy beat rather than a story-critical moment.
+
+Editor note: `broll` and `ambient`. Funny hunger beat; use very briefly if the drive montage needs levity.
+
+## Dialogue Transcript
+
+[00:00] I got myself a double big Mac because I'm really hungry so look four patties right one two three four

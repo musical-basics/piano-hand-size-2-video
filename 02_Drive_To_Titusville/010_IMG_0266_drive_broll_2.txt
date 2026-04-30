@@ -1,0 +1,9 @@
+## Visual Scene Descriptor
+
+Beginning: Rainy highway footage through the windshield, with wet road conditions and wipers visible.
+Middle: Continues along the highway in gray weather, adding tension and fatigue to the trip.
+End: Remains pure drive b-roll without meaningful dialogue.
+
+Editor note: `ambient` and `broll`. Useful as a weather/road-hardship insert in the overnight-drive section.
+
+## Dialogue Transcript
