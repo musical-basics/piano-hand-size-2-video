@@ -4,6 +4,8 @@
 *.mov
 *.MP4
 *.mp4
+*.wav
+*.WAV
 
 # Local transcription environment and caches.
 venv_transcribe/
@@ -11,3 +13,11 @@ __pycache__/
 *.pyc
 .DS_Store
 *.DS_Store
+
+# Local secrets.
+.env
+.env.*
+!.env.example
+
+# Local generated voice/output metadata.
+voiceovers/cartesia_voice_clone_response.json
