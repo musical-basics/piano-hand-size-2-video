@@ -202,7 +202,7 @@ finish_montage_with_vo_and_music() {
   local vo="$1"
   local label="$2"
   local silent_video="$MONTAGE_DIR/silent_video.mp4"
-  local out
+  local out montage_duration
   set_next_out
   out="$NEXT_OUT"
 
@@ -212,13 +212,15 @@ finish_montage_with_vo_and_music() {
     -c copy \
     "$silent_video"
 
+  montage_duration="$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$silent_video")"
+
   ffmpeg -y -hide_banner -loglevel error \
     -i "$silent_video" -i "$vo" -stream_loop -1 -i "$MUSIC_BED" \
-    -filter_complex "[1:a]aresample=${SR},volume=1.0[vo];[2:a]aresample=${SR},volume=0.075[music];[vo][music]amix=inputs=2:duration=first:dropout_transition=0[a]" \
+    -filter_complex "[1:a]aresample=${SR},volume=1.0,apad=whole_dur=${montage_duration}[vo];[2:a]aresample=${SR},volume=0.075,atrim=0:${montage_duration}[music];[vo][music]amix=inputs=2:duration=first:dropout_transition=0[a]" \
     -map 0:v:0 -map "[a]" \
     -c:v copy \
     -c:a aac -b:a 160k -ar "$SR" -ac 2 \
-    -shortest \
+    -t "$montage_duration" \
     -movflags +faststart \
     "$out"
   append_concat "$out"

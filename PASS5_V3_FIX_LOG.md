@@ -9,13 +9,13 @@ review_cuts/piano_hand_size_part2_rough_cut_v3.mp4
 Runtime:
 
 ```text
-10:51
+11:10
 ```
 
 Specs:
 
 ```text
-1280x720, 30 fps, H.264 video, AAC audio, 119 MB
+1280x720, 30 fps, H.264 video, AAC audio, 122 MB
 ```
 
 ## Changes Applied
@@ -24,6 +24,7 @@ Specs:
 - Kept original audio on speaking travel clips so the generated voiceover does not cover Lionel talking in the footage.
 - Moved the generated travel voiceovers onto silent b-roll and still-image montage blocks only.
 - Added a low-volume placeholder music bed under the generated travel voiceover montages.
+- Fixed VO montage rendering so shorter voiceover files do not truncate the visuals; music continues quietly after the VO inside the montage.
 - Preserved the v2 review fixes:
   - early breakdown flash-forward removed from the cold open
   - front-facing intro coarsely shortened to 22s
