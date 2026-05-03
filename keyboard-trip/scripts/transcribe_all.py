@@ -1,20 +1,24 @@
 import argparse
+import os
 import whisper
 from pathlib import Path
+
+# Always run from the keyboard-trip root
+os.chdir(Path(__file__).resolve().parent.parent)
 
 def transcribe_videos(model_name="base", force=False):
     print(f"Loading Whisper model ({model_name})...")
     model = whisper.load_model(model_name)
-    
+
     # Folders to scan
     folders = [
-        "01_Trip_Setup",
-        "02_Drive_To_Titusville",
-        "03_David_Factory_Visit",
-        "05_Post_Pickup_Main_Argument",
-        "06_Car_Trouble_Return",
-        "07_Home_Demo_Payoff",
-        "08_Pickups_To_Record",
+        "footage/01_Trip_Setup",
+        "footage/02_Drive_To_Titusville",
+        "footage/03_David_Factory_Visit",
+        "footage/05_Post_Pickup_Main_Argument",
+        "footage/06_Car_Trouble_Return",
+        "footage/07_Home_Demo_Payoff",
+        "footage/08_Pickups_To_Record",
     ]
     
     for folder in folders:

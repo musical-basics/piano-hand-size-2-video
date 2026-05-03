@@ -3,7 +3,7 @@
 Output:
 
 ```text
-review_cuts/piano_hand_size_part2_rough_cut_v3.mp4
+renders/review_cuts/piano_hand_size_part2_rough_cut_v3.mp4
 ```
 
 Runtime:

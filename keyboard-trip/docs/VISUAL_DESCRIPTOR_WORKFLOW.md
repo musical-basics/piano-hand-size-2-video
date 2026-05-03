@@ -19,20 +19,20 @@ PySceneDetect can still be useful later for very long or visually varied clips, 
 
 Contact sheets live in:
 
-`91_Visual_Contact_Sheets/`
+`footage/91_Visual_Contact_Sheets/`
 
 Each clip has its own folder. Each sheet samples the video every 2 seconds and burns the timestamp into the thumbnail.
 
 Regenerate with:
 
 ```bash
-./make_contact_sheets.sh 2
+./scripts/make_contact_sheets.sh 2
 ```
 
 Use a denser pass only when needed:
 
 ```bash
-./make_contact_sheets.sh 1
+./scripts/make_contact_sheets.sh 1
 ```
 
 ## Transcript Format

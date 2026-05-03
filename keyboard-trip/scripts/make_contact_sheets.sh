@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OUT_DIR="91_Visual_Contact_Sheets"
+# Always run from the keyboard-trip root
+cd "$(dirname "$0")/.."
+
+OUT_DIR="footage/91_Visual_Contact_Sheets"
 INTERVAL_SECONDS="${1:-2}"
 
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-/private/tmp}"
@@ -9,13 +12,13 @@ mkdir -p "$XDG_CACHE_HOME/fontconfig"
 mkdir -p "$OUT_DIR"
 
 find \
-  01_Trip_Setup \
-  02_Drive_To_Titusville \
-  03_David_Factory_Visit \
-  05_Post_Pickup_Main_Argument \
-  06_Car_Trouble_Return \
-  07_Home_Demo_Payoff \
-  08_Pickups_To_Record \
+  footage/01_Trip_Setup \
+  footage/02_Drive_To_Titusville \
+  footage/03_David_Factory_Visit \
+  footage/05_Post_Pickup_Main_Argument \
+  footage/06_Car_Trouble_Return \
+  footage/07_Home_Demo_Payoff \
+  footage/08_Pickups_To_Record \
   -name '*.MOV' -print | sort | while IFS= read -r video; do
     base="$(basename "$video" .MOV)"
     clip_dir="$OUT_DIR/$base"

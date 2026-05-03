@@ -20,4 +20,10 @@ __pycache__/
 !.env.example
 
 # Local generated voice/output metadata.
-voiceovers/cartesia_voice_clone_response.json
+keyboard-trip/audio/voiceovers/cartesia_voice_clone_response.json
+
+# Editor app is its own git repo with its own remote.
+ai-agent-video-editor/
+
+# Final Cut Pro library bundle internals (binary working state).
+*.fcpbundle/

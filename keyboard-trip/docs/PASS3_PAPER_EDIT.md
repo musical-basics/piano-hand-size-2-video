@@ -182,7 +182,7 @@ Notes:
 
 Target: 2:00-2:25.
 
-Primary A-roll: `05_Post_Pickup_Main_Argument/041_IMG_0297_ds60_ds55_car_monologue.MOV`.
+Primary A-roll: `footage/05_Post_Pickup_Main_Argument/041_IMG_0297_ds60_ds55_car_monologue.MOV`.
 
 Use:
 
@@ -202,7 +202,7 @@ Cover with:
 - M037 hands-on piano/key testing.
 - M039 keyboard/control-panel demo.
 - M042/M044 Athena internals.
-- `04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG`.
+- `footage/04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG`.
 
 On-screen chapter title:
 

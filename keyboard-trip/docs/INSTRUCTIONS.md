@@ -18,16 +18,16 @@ Target length: 10 to 13 minutes.
 
 The project has been reorganized into chronological edit bins:
 
-- `01_Trip_Setup`
-- `02_Drive_To_Titusville`
-- `03_David_Factory_Visit`
-- `04_Keyboards_Technical_Stills`
-- `05_Post_Pickup_Main_Argument`
-- `06_Car_Trouble_Return`
-- `07_Home_Demo_Payoff`
-- `08_Pickups_To_Record`
-- `90_Reference_Frames`
-- `91_Visual_Contact_Sheets`
+- `footage/01_Trip_Setup`
+- `footage/02_Drive_To_Titusville`
+- `footage/03_David_Factory_Visit`
+- `footage/04_Keyboards_Technical_Stills`
+- `footage/05_Post_Pickup_Main_Argument`
+- `footage/06_Car_Trouble_Return`
+- `footage/07_Home_Demo_Payoff`
+- `footage/08_Pickups_To_Record`
+- `footage/90_Reference_Frames`
+- `footage/91_Visual_Contact_Sheets`
 
 Use `ASSET_INDEX.md` for the complete asset list.
 
@@ -53,21 +53,21 @@ Do not rename assets casually after this point. The edit plan, transcripts, cont
 All current `.MOV` clips have matching `.txt` transcripts. `IMG_0310.MOV` has already been transcribed and lives at:
 
 ```text
-07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.txt
+footage/07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.txt
 ```
 
-Use `transcribe_all.py` when new clips are added, especially the pickup clips in `08_Pickups_To_Record`.
+Use `transcribe_all.py` when new clips are added, especially the pickup clips in `footage/08_Pickups_To_Record`.
 
 Default behavior: skip transcripts that already exist.
 
 ```bash
-python3 transcribe_all.py
+python3 scripts/transcribe_all.py
 ```
 
 Force regeneration only when needed:
 
 ```bash
-python3 transcribe_all.py --force
+python3 scripts/transcribe_all.py --force
 ```
 
 After transcript files are edited, regenerate `TRANSCRIPTS.md` so the master transcript reflects the current clip notes.
@@ -76,7 +76,7 @@ After transcript files are edited, regenerate `TRANSCRIPTS.md` so the master tra
 {
   printf '# Master Timestamped Transcripts: Piano Hand Size Part 2\n\n'
   current=''
-  find 01_Trip_Setup 02_Drive_To_Titusville 03_David_Factory_Visit 05_Post_Pickup_Main_Argument 06_Car_Trouble_Return 07_Home_Demo_Payoff 08_Pickups_To_Record -type f -name '*.txt' | sort | while IFS= read -r file; do
+  find footage/01_Trip_Setup footage/02_Drive_To_Titusville footage/03_David_Factory_Visit footage/05_Post_Pickup_Main_Argument footage/06_Car_Trouble_Return footage/07_Home_Demo_Payoff footage/08_Pickups_To_Record -type f -name '*.txt' | sort | while IFS= read -r file; do
     dir=${file%/*}
     base=${file##*/}
     name=${base%.txt}
@@ -106,19 +106,19 @@ Reason:
 Contact sheets live in:
 
 ```text
-91_Visual_Contact_Sheets/
+footage/91_Visual_Contact_Sheets/
 ```
 
 Regenerate the current 2-second review sheets with:
 
 ```bash
-./make_contact_sheets.sh 2
+./scripts/make_contact_sheets.sh 2
 ```
 
 Use a 1-second pass only for clips that need closer inspection:
 
 ```bash
-./make_contact_sheets.sh 1
+./scripts/make_contact_sheets.sh 1
 ```
 
 PySceneDetect can still be useful later for long, visually varied clips, but it is not required for the current pass.
@@ -194,7 +194,7 @@ Return moments in this shape:
 
 ```json
 {
-  "clip": "03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV",
+  "clip": "footage/03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV",
   "start": 42,
   "end": 58,
   "type": "talking_head | broll | ambient",
@@ -238,7 +238,7 @@ Goal: produce practical editor instructions:
 Folder:
 
 ```text
-08_Pickups_To_Record/
+footage/08_Pickups_To_Record/
 ```
 
 Planned clips:
@@ -246,13 +246,13 @@ Planned clips:
 - `055_PICKUP_front_facing_intro.MOV`
 - `056_PICKUP_hand_key_comparison.MOV`
 
-Use `08_Pickups_To_Record/README.md` for the recording prompts.
+Use `footage/08_Pickups_To_Record/README.md` for the recording prompts.
 
 After recording:
 
-1. Put the clips in `08_Pickups_To_Record/`.
-2. Run `python3 transcribe_all.py`.
-3. Run `./make_contact_sheets.sh 2`.
+1. Put the clips in `footage/08_Pickups_To_Record/`.
+2. Run `python3 scripts/transcribe_all.py`.
+3. Run `./scripts/make_contact_sheets.sh 2`.
 4. Add visual descriptors to the new `.txt` files.
 5. Regenerate `TRANSCRIPTS.md`.
 

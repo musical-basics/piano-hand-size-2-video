@@ -15,7 +15,7 @@ Working rule:
 `P056` means:
 
 ```text
-08_Pickups_To_Record/056_PICKUP_hand_key_comparison.MOV
+footage/08_Pickups_To_Record/056_PICKUP_hand_key_comparison.MOV
 ```
 
 Until it is recorded, use a temporary black slug, title card, freeze-frame, or nearby key-detail b-roll wherever `P056` appears.
@@ -55,7 +55,7 @@ Desired placeholder content:
 | 4:18-4:38 | `018_IMG_0274_ds_size_lineup_on_steinway.MOV` | 00:49-01:12 | 20s | DS 6.0, DS 5.1, normal, 4.0 lineup. | This is the clearest size-comparison proof. |
 | 4:38-5:05 | `019_IMG_0275_ds55_pickup_and_wrap.MOV` | 00:00-00:20, 01:00-02:30 | 27s | DS 5.5 identification plus hands-on playing/testing. | Use as b-roll under brief natural audio or music. |
 | 5:05-5:40 | `027_IMG_0283_athena_internals_reconnaissance.MOV` | 00:00-00:24, 00:29-01:04 | 35s | "Athena open up"; speaker/board/sound module/speakers. | Technical tour. Keep moving; avoid over-explaining plugs. |
-| 5:40-5:55 | `04_Keyboards_Technical_Stills/*` | stills | 15s | Bridge into thesis. | Freeze-frame inserts of keys/action/internals. |
+| 5:40-5:55 | `footage/04_Keyboards_Technical_Stills/*` | stills | 15s | Bridge into thesis. | Freeze-frame inserts of keys/action/internals. |
 | 5:55-6:15 | `041_IMG_0297_ds60_ds55_car_monologue.MOV` | 00:00-00:36 | 20s | Leaving factory with DS 6.0/DS 5.5; DS 5.5 good for his hand size. | Start on car selfie, then cover with factory/key b-roll. |
 | 6:15-6:42 | `041_IMG_0297_ds60_ds55_car_monologue.MOV` | 00:36-01:17 | 27s | Full-size keyboard led to strained, wrist-based technique; narrow keys demand finger control. | Overlay `MY EXPERIENCE` / `FOR MY HAND SIZE`. |
 | 6:42-7:10 | `041_IMG_0297_ds60_ds55_car_monologue.MOV` | 01:34-02:05 | 28s | Smaller keys help intervals and force better finger technique. | Cover heavily with M037, M039, and stills. |
@@ -133,7 +133,7 @@ Use these to cover jump cuts, repeated phrases, and long talking-head spans:
 | `019_IMG_0275_ds55_pickup_and_wrap.MOV` 01:00-02:30 | Main argument about technique and hand size. |
 | `026_IMG_0282_range_test_or_demo.MOV` 00:00-00:23 | Keyboard detail / proof inserts. |
 | `027_IMG_0283_athena_internals_reconnaissance.MOV` 00:07-01:04 | Technical legitimacy / internals. |
-| `04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG` | Any A-roll where a visual explanation helps. |
+| `footage/04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG` | Any A-roll where a visual explanation helps. |
 | `P056` | Setup, home payoff, and closing once recorded. |
 
 ## Audio And Pacing

@@ -42,12 +42,12 @@ Purpose: make viewers immediately understand the stakes.
 
 Use:
 
-- `01_Trip_Setup/001_IMG_0256_0142am_trip_setup.MOV`
+- `footage/01_Trip_Setup/001_IMG_0256_0142am_trip_setup.MOV`
   - Use the line: "right now it's 1:42 a.m."
   - Use the line about driving to Titusville, Pennsylvania to get another Kawai DS 6.0 keyboard.
-- Quick flash of `06_Car_Trouble_Return/048_IMG_0304_hotel_car_broke_down.MOV`
+- Quick flash of `footage/06_Car_Trouble_Return/048_IMG_0304_hotel_car_broke_down.MOV`
   - "my car broke down"
-- Quick flash of `07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.MOV`
+- Quick flash of `footage/07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.MOV`
   - "I am here now with the DS 6, the DS 5.5..."
 - Once the two pickup clips are recorded, use a 1-2 second clean playing/comparison hit here.
 
@@ -67,8 +67,8 @@ Suggested VO:
 
 Visuals:
 
-- `04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG` as key/keyboard detail B-roll.
-- `03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV` around the key-size comparison.
+- `footage/04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG` as key/keyboard detail B-roll.
+- `footage/03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV` around the key-size comparison.
 - Add simple labels when sizes appear: `Standard`, `DS 6.0`, `DS 5.5`, `DS 5.1`, `DS 4.0`.
 
 ### 1:15-3:10 - The Overnight Drive
@@ -77,14 +77,14 @@ Purpose: make the viewer feel the cost of the trip.
 
 Use:
 
-- `01_Trip_Setup/001_IMG_0256_0142am_trip_setup.MOV`
+- `footage/01_Trip_Setup/001_IMG_0256_0142am_trip_setup.MOV`
   - Five and a half hours of driving plus stops.
   - Discounted price / worth it because key size makes a difference.
-- `01_Trip_Setup/002_IMG_0257_hagerstown_gas_station.MOV`
+- `footage/01_Trip_Setup/002_IMG_0257_hagerstown_gas_station.MOV`
   - Gas station near Hagerstown, one hour away from Baltimore.
-- `01_Trip_Setup/003_IMG_0258_road_trip_snacks_no_caffeine.MOV`
+- `footage/01_Trip_Setup/003_IMG_0258_road_trip_snacks_no_caffeine.MOV`
   - Keep this very tight and funny: water jug, beef stick, animal crackers, chocolate milk, no caffeine.
-- `01_Trip_Setup/005_IMG_0260_waking_up_after_car_nap.MOV` and `01_Trip_Setup/006_IMG_0261_car_nap_recovery_drive_resumes.MOV`
+- `footage/01_Trip_Setup/005_IMG_0260_waking_up_after_car_nap.MOV` and `footage/01_Trip_Setup/006_IMG_0261_car_nap_recovery_drive_resumes.MOV`
   - Nap in the car, then waking up after almost three hours.
 
 Editing note:
@@ -97,15 +97,15 @@ Purpose: reset pacing after the talking intro and make the trip cinematic.
 
 Use:
 
-- `02_Drive_To_Titusville/007_IMG_0263_morning_highway_update.MOV`
+- `footage/02_Drive_To_Titusville/007_IMG_0263_morning_highway_update.MOV`
   - "3 and a half hours to go"
   - "I'm feeling good... really energetic"
-- `02_Drive_To_Titusville/008_IMG_0264_pennsylvania_scenery.MOV`
+- `footage/02_Drive_To_Titusville/008_IMG_0264_pennsylvania_scenery.MOV`
   - Scenic road.
-- `02_Drive_To_Titusville/011_IMG_0267_in_the_woods_almost_there.MOV`
+- `footage/02_Drive_To_Titusville/011_IMG_0267_in_the_woods_almost_there.MOV`
   - "still driving after like five hours"
   - "we're in the woods"
-- `02_Drive_To_Titusville/012_IMG_0268_double_big_mac_lunch.MOV`
+- `footage/02_Drive_To_Titusville/012_IMG_0268_double_big_mac_lunch.MOV`
   - Double Big Mac as a quick comic beat.
 
 Suggested music:
@@ -118,17 +118,17 @@ Purpose: deliver the "this is real" proof.
 
 Use:
 
-- `03_David_Factory_Visit/013_IMG_0269_keyboard_21_intro.MOV`
+- `footage/03_David_Factory_Visit/013_IMG_0269_keyboard_21_intro.MOV`
   - "Here's keyboard number 21 we built"
-- `03_David_Factory_Visit/014_IMG_0270_factory_technician_intro.MOV`
+- `footage/03_David_Factory_Visit/014_IMG_0270_factory_technician_intro.MOV`
   - Use only if it visually introduces technicians/David.
-- `03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV`
+- `footage/03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV`
   - This is a key clip. Use the part where the DS 5.5, DS 6.0, DS 5.1, normal, and 4.0 sizes are discussed.
-- `03_David_Factory_Visit/019_IMG_0275_ds55_pickup_and_wrap.MOV`
+- `footage/03_David_Factory_Visit/019_IMG_0275_ds55_pickup_and_wrap.MOV`
   - Use as visual proof of the DS 5.5, but avoid letting the full 4-minute clip slow the edit.
-- `03_David_Factory_Visit/027_IMG_0283_athena_internals_reconnaissance.MOV`
+- `footage/03_David_Factory_Visit/027_IMG_0283_athena_internals_reconnaissance.MOV`
   - Use the "Athena open up" / sound module / speaker internals as a technical B-roll sequence.
-- `04_Keyboards_Technical_Stills/*keyboard_factory_still.JPG` and `04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG`
+- `footage/04_Keyboards_Technical_Stills/*keyboard_factory_still.JPG` and `footage/04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG`
   - Use as freeze-frame inserts while explaining what the viewer is seeing.
 
 Editing note:
@@ -141,7 +141,7 @@ Purpose: turn the vlog into a useful video for pianists.
 
 Primary clip:
 
-- `05_Post_Pickup_Main_Argument/041_IMG_0297_ds60_ds55_car_monologue.MOV`
+- `footage/05_Post_Pickup_Main_Argument/041_IMG_0297_ds60_ds55_car_monologue.MOV`
 
 Best ideas from this clip:
 
@@ -167,15 +167,15 @@ Purpose: add story drama before the final payoff.
 
 Use:
 
-- `05_Post_Pickup_Main_Argument/042_IMG_0298_tionesta_lake_cutaway.MOV`
+- `footage/05_Post_Pickup_Main_Argument/042_IMG_0298_tionesta_lake_cutaway.MOV`
   - Lake clip as a calm transition after the intense explanation.
-- `05_Post_Pickup_Main_Argument/044_IMG_0300_177777_mileage.MOV`
+- `footage/05_Post_Pickup_Main_Argument/044_IMG_0300_177777_mileage.MOV`
   - Mileage clip as a tiny weird/funny beat.
-- `06_Car_Trouble_Return/048_IMG_0304_hotel_car_broke_down.MOV`
+- `footage/06_Car_Trouble_Return/048_IMG_0304_hotel_car_broke_down.MOV`
   - Hotel in Pennsylvania because the car broke down.
-- `06_Car_Trouble_Return/049_IMG_0305_car_fixed_heading_home.MOV`
+- `footage/06_Car_Trouble_Return/049_IMG_0305_car_fixed_heading_home.MOV`
   - Car fixed, loose battery connection, grateful to be heading home.
-- `06_Car_Trouble_Return/050_IMG_0306_beautiful_return_drive.MOV`
+- `footage/06_Car_Trouble_Return/050_IMG_0306_beautiful_return_drive.MOV`
   - Beautiful drive home.
 
 Editing note:
@@ -188,7 +188,7 @@ Purpose: give viewers the final value and the concrete takeaway.
 
 Use:
 
-- `07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.MOV`
+- `footage/07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.MOV`
 
 Best points from this clip:
 
@@ -211,7 +211,7 @@ Between those chunks, insert:
 
 - The new hand/key comparison pickup.
 - The new front-facing intro or any clean playing/demo pickup.
-- Short detail shots from `04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG`.
+- Short detail shots from `footage/04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG`.
 
 Suggested on-screen chart:
 
@@ -248,37 +248,37 @@ End with:
 
 Must use:
 
-- `01_Trip_Setup/001_IMG_0256_0142am_trip_setup.MOV`
-- `01_Trip_Setup/003_IMG_0258_road_trip_snacks_no_caffeine.MOV`
-- `02_Drive_To_Titusville/007_IMG_0263_morning_highway_update.MOV`
-- `02_Drive_To_Titusville/011_IMG_0267_in_the_woods_almost_there.MOV`
-- `03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV`
-- `03_David_Factory_Visit/027_IMG_0283_athena_internals_reconnaissance.MOV`
-- `05_Post_Pickup_Main_Argument/041_IMG_0297_ds60_ds55_car_monologue.MOV`
-- `06_Car_Trouble_Return/048_IMG_0304_hotel_car_broke_down.MOV`
-- `06_Car_Trouble_Return/049_IMG_0305_car_fixed_heading_home.MOV`
-- `07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.MOV`
+- `footage/01_Trip_Setup/001_IMG_0256_0142am_trip_setup.MOV`
+- `footage/01_Trip_Setup/003_IMG_0258_road_trip_snacks_no_caffeine.MOV`
+- `footage/02_Drive_To_Titusville/007_IMG_0263_morning_highway_update.MOV`
+- `footage/02_Drive_To_Titusville/011_IMG_0267_in_the_woods_almost_there.MOV`
+- `footage/03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV`
+- `footage/03_David_Factory_Visit/027_IMG_0283_athena_internals_reconnaissance.MOV`
+- `footage/05_Post_Pickup_Main_Argument/041_IMG_0297_ds60_ds55_car_monologue.MOV`
+- `footage/06_Car_Trouble_Return/048_IMG_0304_hotel_car_broke_down.MOV`
+- `footage/06_Car_Trouble_Return/049_IMG_0305_car_fixed_heading_home.MOV`
+- `footage/07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.MOV`
 
 Use if visually strong:
 
-- `02_Drive_To_Titusville/008_IMG_0264_pennsylvania_scenery.MOV`
-- `02_Drive_To_Titusville/012_IMG_0268_double_big_mac_lunch.MOV`
-- `03_David_Factory_Visit/013_IMG_0269_keyboard_21_intro.MOV`
-- `03_David_Factory_Visit/019_IMG_0275_ds55_pickup_and_wrap.MOV`
-- `05_Post_Pickup_Main_Argument/042_IMG_0298_tionesta_lake_cutaway.MOV`
-- `05_Post_Pickup_Main_Argument/044_IMG_0300_177777_mileage.MOV`
-- `06_Car_Trouble_Return/050_IMG_0306_beautiful_return_drive.MOV`
-- `06_Car_Trouble_Return/051_IMG_0307_return_drive_broll.MOV`
-- `06_Car_Trouble_Return/052_IMG_0308_return_lake_cutaway.MOV`
-- `04_Keyboards_Technical_Stills/*keyboard_factory_still.JPG`
-- `04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG`
+- `footage/02_Drive_To_Titusville/008_IMG_0264_pennsylvania_scenery.MOV`
+- `footage/02_Drive_To_Titusville/012_IMG_0268_double_big_mac_lunch.MOV`
+- `footage/03_David_Factory_Visit/013_IMG_0269_keyboard_21_intro.MOV`
+- `footage/03_David_Factory_Visit/019_IMG_0275_ds55_pickup_and_wrap.MOV`
+- `footage/05_Post_Pickup_Main_Argument/042_IMG_0298_tionesta_lake_cutaway.MOV`
+- `footage/05_Post_Pickup_Main_Argument/044_IMG_0300_177777_mileage.MOV`
+- `footage/06_Car_Trouble_Return/050_IMG_0306_beautiful_return_drive.MOV`
+- `footage/06_Car_Trouble_Return/051_IMG_0307_return_drive_broll.MOV`
+- `footage/06_Car_Trouble_Return/052_IMG_0308_return_lake_cutaway.MOV`
+- `footage/04_Keyboards_Technical_Stills/*keyboard_factory_still.JPG`
+- `footage/04_Keyboards_Technical_Stills/*technical_keyboard_still.JPG`
 
 Likely cut or use only as silent B-roll:
 
-- `03_David_Factory_Visit/016_IMG_0272_parking_lot_tesla_conversation.MOV`
-- `03_David_Factory_Visit/017_IMG_0273_robotaxi_conversation_broll.MOV`
-- `05_Post_Pickup_Main_Argument/043_IMG_0299_lake_overlook_broll.MOV`
-- `06_Car_Trouble_Return/053_IMG_0309_highway_home_broll.MOV`
+- `footage/03_David_Factory_Visit/016_IMG_0272_parking_lot_tesla_conversation.MOV`
+- `footage/03_David_Factory_Visit/017_IMG_0273_robotaxi_conversation_broll.MOV`
+- `footage/05_Post_Pickup_Main_Argument/043_IMG_0299_lake_overlook_broll.MOV`
+- `footage/06_Car_Trouble_Return/053_IMG_0309_highway_home_broll.MOV`
 
 The Tesla/robotaxi conversation is interesting but probably distracts from the piano story unless the visuals are unusually good.
 

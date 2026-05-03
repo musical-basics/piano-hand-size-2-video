@@ -3,7 +3,7 @@
 Output:
 
 ```text
-review_cuts/piano_hand_size_part2_rough_cut_v2.mp4
+renders/review_cuts/piano_hand_size_part2_rough_cut_v2.mp4
 ```
 
 Runtime:
@@ -23,12 +23,12 @@ Runtime:
 - Rotated the technical still inserts 90 degrees counterclockwise.
 - Extended `044_IMG_0300_177777_mileage.MOV` from 4s to 6s.
 - Added all six generated Cartesia travel voiceovers:
-  - `voiceovers/VO_01_late_night_drive.wav`
-  - `voiceovers/VO_02_gas_station_and_snacks.wav`
-  - `voiceovers/VO_03_car_nap.wav`
-  - `voiceovers/VO_04_pennsylvania_road.wav`
-  - `voiceovers/VO_05_lake_pause.wav`
-  - `voiceovers/VO_06_breakdown_and_return.wav`
+  - `audio/voiceovers/VO_01_late_night_drive.wav`
+  - `audio/voiceovers/VO_02_gas_station_and_snacks.wav`
+  - `audio/voiceovers/VO_03_car_nap.wav`
+  - `audio/voiceovers/VO_04_pennsylvania_road.wav`
+  - `audio/voiceovers/VO_05_lake_pause.wav`
+  - `audio/voiceovers/VO_06_breakdown_and_return.wav`
 
 ## Known Rough Edges
 
