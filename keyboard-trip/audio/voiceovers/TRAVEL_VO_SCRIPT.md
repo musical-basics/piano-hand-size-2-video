@@ -10,12 +10,17 @@ edd6c2b6-407e-43da-a021-b5be5ed2dfd1
 
 ## VO 01 - Late Night Drive
 
+This segment uses Lionel's real recording (not Cartesia TTS).
+Source: `Piano Hand Size Part 2 Audio.wav` bounced 2026-05-03 from Logic.
+
 ```text
-The funny thing about this trip is that it only makes sense if you already care way too much about piano keys.
+The funny thing about this trip is that it only makes sense if you truly appreciate how much narrower keys can change the piano playing experience.
 
-It was almost two in the morning, and I was driving to Pennsylvania because one person in the country had built the exact keyboards I wanted to try: DS 6.0 and DS 5.5.
+It was almost 2 in the morning and I was driving to Pennsylvania to pick up two alternate-sized DS 5.5 and DS 6.0 keyboards from David Steinbuhler, the only builder in the world who makes them.
 
-On paper, that sounds ridiculous. But if you have smaller hands, a few millimeters on each key can change the whole experience of playing.
+On paper this sounds ridiculous. But if you have smaller hands, a few millimeters on each key can change the entire experience of playing.
+
+Skills that take months to master can be shortened to weeks or even days.
 ```
 
 ## VO 02 - Gas Station And Snacks

@@ -27,3 +27,8 @@ ai-agent-video-editor/
 
 # Final Cut Pro library bundle internals (binary working state).
 *.fcpbundle/
+
+# Logic Pro narration project lives at the workspace root with its own
+# version control; bounces get copied into keyboard-trip/audio/voiceovers/.
+/Piano Hand Size Part 2 Audio Project/
+/Piano Hand Size Part 2 Audio.wav
