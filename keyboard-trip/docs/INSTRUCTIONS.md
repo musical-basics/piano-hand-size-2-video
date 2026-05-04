@@ -157,7 +157,46 @@ Helpful editor labels:
 - `proof`: shows the keyboard, size comparison, hand position, mechanical detail, or real-world evidence.
 - `backup`: potentially usable but not essential.
 
-## Edit Passes
+## Pre-Pass Contract (read this BEFORE every editing pass)
+
+The editor app's SQLite database is the single source of truth for the
+current cut. Before any AI editing pass:
+
+1. **Snapshot the current pass.** Run:
+   ```bash
+   python3 scripts/dump_timeline.py <pass-id>
+   ```
+   This writes `timelines/<pass-id>.yaml` from the live SQLite, generates
+   missing/stale contact sheets for every source clip in that pass, and
+   runs collision/gap/source-overrun validation. Use `--list` to see all
+   pass IDs.
+
+2. **Read the YAML, not the seed.** The yaml's `clips` block is the truth
+   — `db.ts` seed data and `make_rough_review_cut_v*.sh` are derived
+   artifacts that may lag behind manual edits in the UI.
+
+3. **Respect `last_edited_by: user`.** Any clip stamped `user` was
+   manually adjusted by Lionel in the editor UI. AI passes MUST NOT change
+   its `timeline`, `source.range`, `track`, or `rotation` — work AROUND
+   these clips. AI passes MAY adjust adjacent clips to compensate for
+   them. To unlock a user-stamped clip, Lionel says so explicitly or
+   re-stamps it via the UI.
+
+4. **Look at `active_visual` first.** That section linearly lists which
+   clip is the top visual at every moment of the cut. It's the fastest
+   way to understand the current visual flow before planning changes.
+   The same info is also marked per-clip with `is_top_visual: true`.
+
+5. **Use the contact sheets.** Every clip in the yaml has a
+   `contact_sheet.path` pointing to a folder of 2-second-grid JPGs. Read
+   the relevant sheets when picking a new in/out point — the filename
+   alone is rarely enough to know what's at second N of a clip.
+
+6. **Re-dump and validate after every change.** Issues count must be
+   non-increasing pass-over-pass. If a new pass introduces overlaps or
+   gaps that weren't there before, that's a regression.
+
+### Edit Passes
 
 ### Pass 0: Plan
 
