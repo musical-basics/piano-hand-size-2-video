@@ -1,0 +1,162 @@
+# Pass 15 V12 Captions + Travel Chronology Log
+
+Output:
+
+```text
+keyboard-trip/renders/review_cuts/piano_hand_size_part2_rough_cut_v12.mp4
+```
+
+Runtime:
+
+```text
+12:32.79
+```
+
+Specs:
+
+```text
+1280x720, 30 fps, H.264 video, AAC audio, 140 MB
+```
+
+## Goals
+
+Lionel's review note:
+
+- "start adding captions"
+- "the chronology of the travel time to david's place is still not right"
+- "re-review the various parts and what i'm saying in each narration vs.
+  the actual scenes"
+- "i can't even hear the background music anymore"
+
+## Diagnosis
+
+The main chronology problem was the early David/workshop reveal:
+
+```text
+VO_01c ends around 1:42, then Pass 14 immediately showed
+018_IMG_0274_ds_size_lineup_on_steinway.MOV.
+```
+
+That made the cut visually arrive at David's before the gas-station,
+snack, car-nap, morning-drive, woods, and lunch beats had happened.
+It also made VO_02/VO_03/VO_04 feel like flashbacks even though their
+language describes the ongoing trip.
+
+Reviewed travel narration against scene order:
+
+- VO_01a/b/c: thesis and "driving to Pennsylvania" setup, so it stays
+  on road/gas/Sheetz/recovery-drive visuals only.
+- VO_02: gas stations, snacks, chocolate milk, sleeping in the car, so
+  it now directly leads into the snack and nap A-roll.
+- VO_03: car nap and waking up, so it stays on sleep/recovery/morning
+  visuals.
+- VO_04: "By morning" and "getting close", so it stays on morning
+  highway, Pennsylvania scenery, and woods/48-minutes-left visuals.
+- David/workshop footage now starts only after the woods and lunch
+  beats.
+
+## Changes Applied
+
+### 1. Travel chronology fixed
+
+Removed the early pre-arrival DS size-lineup reveal from the travel
+section. The same DS lineup proof still appears in the David section
+after arrival.
+
+New travel-to-David order:
+
+```text
+1:42 AM setup
+P056 placeholder flash
+VO_01a road/gas
+snack burst
+VO_01b Sheetz/drive
+car-nap burst
+VO_01c recovery/rainy drive
+VO_02 gas/snacks/chocolate milk
+snack A-roll
+car-nap/recovery A-roll
+VO_03 car nap
+morning highway update: 3.5 hours to go
+VO_04 Pennsylvania roads
+woods: 48 minutes left
+Double Big Mac
+David's workshop arrival
+```
+
+### 2. First caption layer added
+
+Added burned-in caption support to `make_rough_review_cut_v12.sh`:
+
+- `caption_filter`
+- `add_video_captioned`
+- optional caption argument on `finish_montage_with_vo_and_music`
+
+This is a first-pass caption layer, not full word-for-word subtitles.
+It covers the opening/travel narration, travel checkpoint A-roll, lake
+VO, and breakdown VO. A captioned frame was spot-checked at `00:02:55`
+and the text box rendered cleanly.
+
+### 3. Music made audible again
+
+Raised render music constants:
+
+```text
+MUSIC_CARD_VOLUME       0.18 -> 0.28
+MUSIC_UNDER_VO_VOLUME   0.16 -> 0.24
+MUSIC_ONLY_VOLUME       0.22 -> 0.36
+```
+
+Also changed VO/music mixing from ffmpeg's default normalized `amix` to
+`normalize=0` with an `alimiter`, so the music bed no longer gets
+silently halved during VO montages.
+
+Quick loudness spot-check on the gas-station/snacks VO section:
+
+```text
+v11 comparable section: -20.2 LUFS integrated
+v12 comparable section: -16.8 LUFS integrated
+```
+
+## Pass 14 -> Pass 15 Deltas
+
+```text
+render runtime:             768.69s -> 752.79s
+dumped timeline runtime:    768.5s  -> 752.5s
+enabled clips:              92      -> 91
+validation issues:          0       -> 0
+early David reveal:         yes     -> no
+caption layer:              no      -> starter burned-in captions
+VO/music mix:               subdued -> louder, limited mix
+```
+
+## Validation
+
+```bash
+python3 keyboard-trip/scripts/dump_timeline.py pass-15-captions-travel-chronology --skip-contact-sheets
+```
+
+Result:
+
+```text
+[summary] 91 clips, 0 locked-by-user, 752.5s total
+[issues] none
+```
+
+`ffprobe` on v12:
+
+```text
+duration=752.788000
+video=H.264 1280x720 30fps
+audio=AAC
+```
+
+## Known Rough Edges
+
+- Captions are starter/summary captions, not full word-for-word
+  subtitles yet.
+- `056_PICKUP_hand_key_comparison.MOV` is still not recorded, so the
+  cold-open and home-payoff placeholder cards remain.
+- VO_02..VO_06 are still Cartesia TTS.
+- Talking-head buffers are still broad review-cut buffers rather than
+  hand-trimmed final-master sentence tails.

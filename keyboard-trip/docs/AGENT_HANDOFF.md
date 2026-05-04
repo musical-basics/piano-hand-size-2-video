@@ -98,8 +98,8 @@ PASS<M>_V<N>_<DESCRIPTION>_LOG.md
 
 Pass numbers and version numbers are not 1:1 — early passes shared
 versions (Pass 5 was render v1, Pass 6 was v3, etc.). From Pass 9
-onward they run together (Pass 10 → v7, Pass 11 → v8, ..., Pass 14 →
-v11).
+onward they run together (Pass 10 → v7, Pass 11 → v8, ..., Pass 15 →
+v12).
 
 Each script `cd`s to `keyboard-trip/` and uses relative paths from
 there. Run them with:
@@ -113,15 +113,18 @@ Helpers inside the scripts you'll use a lot:
 - `add_video <path> <start_s> <duration_s> [rotation]` — single video
   segment. Auto fade-out 0.4s on audio (added in v9). Talking-head
   clips should be padded ~1.5s past the natural sentence end.
+- `add_video_captioned <path> <start_s> <duration_s> <rotation> <caption>`
+  — single video segment with a burned-in lower caption box (added in v12).
 - `add_still <path> <duration_s> [rotation]` — single still image.
 - `add_card <duration_s> <text>` — title card, no music.
 - `add_card_with_music <duration_s> <text>` — title card with the
   current `MUSIC_BED` ducked underneath.
 - `start_montage` / `montage_piece_video` / `montage_piece_still` /
-  `finish_montage_with_vo_and_music <vo_path> <label>` — assemble a
+  `finish_montage_with_vo_and_music <vo_path> <label> [caption]` — assemble a
   silent visual montage, then mix in a VO + music track. The finish
   helper auto-extends the silent video if the VO is longer
-  (added in v10 to fix the cutoff bug — see Pass 13 log).
+  (added in v10 to fix the cutoff bug — see Pass 13 log). The optional
+  caption burns in a lower caption box across the montage (added in v12).
 
 Music routing: set `MUSIC_BED="$MUSIC_LATE_NIGHT"` (or the relevant
 constant) before each section. Constants defined at the top of v9+
@@ -293,8 +296,11 @@ Read these in order if you want the full arc:
   — repaired SQLite/render source-of-truth drift so cutaways and VO_03
   match the render script, and refined the VO montage helper so it only
   holds the last frame when a VO actually needs extension
+- [PASS15_V12_CAPTIONS_TRAVEL_CHRONOLOGY_LOG.md](PASS15_V12_CAPTIONS_TRAVEL_CHRONOLOGY_LOG.md)
+  — removed the pre-arrival David/workshop reveal from the travel section,
+  added starter burned-in captions, and raised/limited the VO music mix
 
-## Known rough edges as of Pass 14
+## Known rough edges as of Pass 15
 
 These are the active problems waiting for the next pass to address:
 
@@ -308,6 +314,9 @@ These are the active problems waiting for the next pass to address:
 - **VO chunk seams in VO_01a/b/c.** Split with `-c copy` at
   non-keyframe positions; small audible artifacts at the cuts. Not
   bad enough to warrant re-encoding yet.
+- **Captions are started, not complete.** Pass 15 adds summary/checkpoint
+  captions through the travel/lake/breakdown VO sections. It is not yet
+  a full word-for-word subtitle pass.
 - **A-roll inserts during VO_01 split** carry their original camera
   audio. The editor timeline is now synced around these inserts, but
   final mix still needs a listen for any music/camera-audio handoff
