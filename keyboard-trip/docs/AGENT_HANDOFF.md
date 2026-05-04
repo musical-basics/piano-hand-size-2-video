@@ -1,0 +1,360 @@
+# Agent Handoff — Piano Hand Size Part 2
+
+You are picking up a YouTube vlog edit project. This file is the
+authoritative briefing. Read it before doing anything else.
+
+## What this project is
+
+A 12-minute story-driven YouTube video. Lionel drove overnight from
+Baltimore to Titusville, PA to pick up two alternate-sized piano
+keyboards (DS 6.0 and DS 5.5) made by David Steinbuhler. The edit is
+part vlog, part argument: the trip provides motion, the
+hand-size-matters thesis provides meaning. Target tone: Mr Beast vlog
+energy with substance.
+
+Source of truth for the edit's intended structure:
+[VIDEO_PLAN.md](VIDEO_PLAN.md).
+
+## Repo layout
+
+This working directory holds two independently-versioned repos:
+
+```
+Piano Hand Size Part 2/
+├── keyboard-trip/             ← THIS REPO (musical-basics/piano-hand-size-2-video)
+│   ├── footage/               ← all source clips, organized chronologically
+│   ├── audio/
+│   │   ├── voiceovers/        ← Cartesia TTS + Lionel's real VO_01
+│   │   └── music/             ← AI-generated section-specific beds
+│   ├── renders/review_cuts/   ← rough cut mp4s (v1 → v10)
+│   ├── scripts/               ← cut scripts, dump tools, generation tools
+│   ├── docs/                  ← plan, instructions, pass logs (this doc)
+│   ├── timelines/             ← per-pass yaml snapshots (single source of truth)
+│   └── piano hand size 2 video.fcpbundle/   ← Final Cut library (binary, gitignored)
+└── ai-agent-video-editor/     ← Separate repo (musical-basics/ai-agent-video-editor)
+                                  Local-only Next.js editor UI for the same project
+                                  Reads/writes its own SQLite at .cut-notes/cut-notes.sqlite
+                                  This repo's .gitignore excludes it
+```
+
+`PROJECT_STRUCTURE.md` at the workspace root has more detail on the
+two-repo arrangement.
+
+## Source of truth: SQLite + dumped yaml
+
+The editor app's `.cut-notes/cut-notes.sqlite` (under
+`ai-agent-video-editor/`) is where the timeline lives. The render
+scripts are derived from it — never the other way around.
+
+Read the live state via:
+
+```bash
+python3 keyboard-trip/scripts/dump_timeline.py <pass-id> [--list] [--all]
+```
+
+This writes `keyboard-trip/timelines/<pass-id>.yaml`, regenerates any
+missing or stale contact sheets for source clips referenced in that
+pass, and runs collision detection. The yaml has three sections you
+will use:
+
+- `clips:` — every clip's id, lane, timeline window, source range,
+  rotation, contact-sheet path, and `last_edited_by` ("user" or "ai").
+- `active_visual:` — linear list of which clip is the top visual at
+  every moment of the cut. Read this first to grok the visual flow.
+- `issues:` — overlaps, gaps, audio collisions, source overruns. Must
+  not regress pass-over-pass.
+
+## The pre-pass contract — READ THIS BEFORE ANY EDIT
+
+This is non-negotiable. Originally written in
+[INSTRUCTIONS.md](INSTRUCTIONS.md), reproduced here for visibility:
+
+1. **Snapshot first.** Before you touch anything, run
+   `dump_timeline.py <current-pass-id>` and read the yaml.
+2. **Respect `last_edited_by: user`.** Any clip stamped `user` was
+   manually adjusted by Lionel in the editor UI. You MUST NOT change
+   its `timeline`, `source.range`, `track`, or `rotation`. You MAY
+   shift adjacent clips around it. To unlock, Lionel says so
+   explicitly.
+3. **Use the contact sheets.** Every clip's yaml entry has a
+   `contact_sheet.path`. Read those JPGs when picking new in/out
+   points — filenames alone never tell you what's at second N.
+4. **Re-dump and validate after every change.** The `issues` count
+   must be non-increasing pass-over-pass. New overlaps, gaps, source
+   overruns, or audio collisions are regressions and must be fixed
+   before render.
+5. **Read [VIDEO_PLAN.md](VIDEO_PLAN.md) for narrative spine.** The
+   thesis ("smaller piano keys change the way you experience the
+   piano") and the trip's structure are the north star.
+
+## The render pipeline
+
+Each pass has its own shell script. Naming convention:
+
+```
+make_rough_review_cut_v<N>.sh  →  piano_hand_size_part2_rough_cut_v<N>.mp4
+PASS<M>_V<N>_<DESCRIPTION>_LOG.md
+```
+
+Pass numbers and version numbers are not 1:1 — early passes shared
+versions (Pass 5 was render v1, Pass 6 was v3, etc.). From Pass 9
+onward they run together (Pass 10 → v7, Pass 11 → v8, ..., Pass 13 →
+v10).
+
+Each script `cd`s to `keyboard-trip/` and uses relative paths from
+there. Run them with:
+
+```bash
+./keyboard-trip/scripts/make_rough_review_cut_v<N>.sh
+```
+
+Helpers inside the scripts you'll use a lot:
+
+- `add_video <path> <start_s> <duration_s> [rotation]` — single video
+  segment. Auto fade-out 0.4s on audio (added in v9). Talking-head
+  clips should be padded ~1.5s past the natural sentence end.
+- `add_still <path> <duration_s> [rotation]` — single still image.
+- `add_card <duration_s> <text>` — title card, no music.
+- `add_card_with_music <duration_s> <text>` — title card with the
+  current `MUSIC_BED` ducked underneath.
+- `start_montage` / `montage_piece_video` / `montage_piece_still` /
+  `finish_montage_with_vo_and_music <vo_path> <label>` — assemble a
+  silent visual montage, then mix in a VO + music track. The finish
+  helper auto-extends the silent video if the VO is longer
+  (added in v10 to fix the cutoff bug — see Pass 13 log).
+
+Music routing: set `MUSIC_BED="$MUSIC_LATE_NIGHT"` (or the relevant
+constant) before each section. Constants defined at the top of v9+
+scripts.
+
+## Voiceovers
+
+VO_01 is **Lionel's real recording** bounced from Logic. VO_02..VO_06
+are **Cartesia TTS** of his cloned voice. Whenever Lionel re-records
+or wants to update narration, run:
+
+```bash
+python3 keyboard-trip/scripts/regenerate_voiceovers.py
+```
+
+This re-clones the voice from the current
+`audio/voiceovers/VO_01_late_night_drive.wav`, then regenerates
+VO_02..VO_06 from `audio/voiceovers/TRAVEL_VO_SCRIPT.md`. Cartesia
+model is `sonic-3`. API key in `.env.local`
+(`CARTESIA_API_KEY=…`).
+
+Long VOs can be **split at sentence boundaries** for vlog-style
+alternation. Pass 13 split VO_01 (40s) into three chunks
+(`VO_01a_late_night_thesis.wav`, `VO_01b_pennsylvania_setup.wav`,
+`VO_01c_millimeters_payoff.wav`) using ffmpeg `-ss`/`-to` and the
+Whisper-confirmed sentence-boundary timestamps. The sentence
+timestamps for any VO are in the matching transcript at
+`footage/<bin>/*.txt` (or run `python3 scripts/transcribe_all.py`).
+
+VO loudness is normalized at render time via
+`loudnorm=I=-16:LRA=11:TP=-1.5` inside `finish_montage_with_vo_*`
+helpers (added in v8). Do not pre-normalize source files.
+
+## Music beds
+
+All four music beds are AI-generated via Replicate's Stable Audio 2.5.
+Generate via:
+
+```bash
+python3 keyboard-trip/scripts/generate_music_bed.py "<prompt>" <duration_s> <basename>
+```
+
+API key in `.env.local` (`REPLICATE_API_TOKEN=…`). Max duration 190s,
+~$0.05–0.10 per generation. Output is mp3 (the `output_format` param
+is ignored by this model). Saved to `audio/music/<basename>.mp3`.
+
+**Prompt note**: Stable Audio interprets "ambient cinematic" as slow
+synth drone. For vlog energy, use prompts like
+*"upbeat indie pop instrumental, plucky acoustic guitar with light
+percussion claps and shaker, 110 bpm, optimistic travel vlog music"*.
+The Pass 12 vs Pass 13 prompts are documented in
+[PASS12_V9_BUFFERS_CUTAWAYS_LOG.md](PASS12_V9_BUFFERS_CUTAWAYS_LOG.md).
+
+Current beds (all in `audio/music/`):
+
+- `ai_v1_late_night_drive_60s.mp3` — cold open + VO_01 chunks
+- `ai_morning_road_60s.mp3` — VO_02, VO_03, VO_04
+- `ai_lake_pause_60s.mp3` — VO_05
+- `ai_breakdown_return_60s.mp3` — VO_06
+
+## Editor app capabilities
+
+Lionel reviews and edits in the Next.js app at `ai-agent-video-editor/`.
+Run with `npm run dev` from that folder (already running on
+http://localhost:3001). It supports:
+
+- **Drag clip body** to move (changes `timelineStart`, can change
+  `role` if dropped on a different lane row).
+- **Drag clip edges** to trim (changes `sourceIn` / `sourceOut` /
+  `targetDuration`).
+- **Hold T** then drag to slip (both source in/out shift, position
+  fixed).
+- **Marquee selection** by click+drag on empty timeline space.
+  Cmd/Shift+click on clips toggles individual selection.
+- **Right-click clip** → context menu with Reveal in Finder, Open
+  file, Copy path, Split, Duplicate, Delete.
+- **Keyboard shortcuts**: Space (play/pause), S (split at playhead),
+  ⌘D (duplicate), Delete (delete), ⌘Z / ⌘⇧Z (undo/redo for patch
+  edits — split/delete/duplicate not in undo stack), ⌘= / ⌘- /
+  ⌘0 (zoom timeline), T (toggle slip mode), Esc (cancel slip).
+- **Inspector panel** for the selected clip with editable
+  `timelineStart`, `sourceIn`, `sourceOut`, `targetDuration`, `role`
+  inputs. Commits on blur or Enter.
+- **Audio mixer** plays all overlapping voiceover/music tracks at the
+  playhead simultaneously, deduped by source URL.
+- **Preview pane** follows the playhead (not the explicit selection)
+  and prefers the highest-priority visual lane (`a_roll > b_roll >
+  still > title_card > placeholder > ambient`).
+
+Every UI mutation stamps `lastEditedBy='user'` and `lastEditedAt=now`
+on the row. AI edits stamp `'ai'`.
+
+## How to do a new pass — the recipe
+
+```bash
+# 1. Read current state.
+python3 keyboard-trip/scripts/dump_timeline.py <current-pass-id>
+cat keyboard-trip/timelines/<current-pass-id>.yaml | less
+
+# 2. Identify locked clips (clips with last_edited_by: user). Plan around them.
+
+# 3. For any clip you intend to recut, look at its contact sheet:
+ls keyboard-trip/footage/91_Visual_Contact_Sheets/<clip_basename>/
+# Open the JPGs in Finder/Preview to see what's actually at each 2s of the source.
+
+# 4. Read open notes from SQLite for context:
+sqlite3 ai-agent-video-editor/.cut-notes/cut-notes.sqlite \
+  "SELECT id, body, timecodeStart, timelineItemId FROM notes
+   WHERE projectId='piano-hand-size-part-2' AND status='open'"
+
+# 5. Read VIDEO_PLAN.md and the latest PASS<M>*_LOG.md for spine + recent context.
+
+# 6. Decide changes. Plan them concretely (list specific clips, durations, music).
+
+# 7. Implement:
+#    a. Generate any new music: scripts/generate_music_bed.py "<prompt>" 60 <basename>
+#    b. Write make_rough_review_cut_v<N+1>.sh (clone the latest, edit surgically)
+#    c. ./keyboard-trip/scripts/make_rough_review_cut_v<N+1>.sh
+
+# 8. Update SQLite: insert new pass row, render-job row, copy timeline_items
+#    from the previous pass with id rewrite (REPLACE 'p<old>-' → 'p<new>-'),
+#    apply patches/inserts/disables. Then update projects.metadata.currentPass /
+#    currentPassId / currentRenderJobId. (Look at any recent PASS<M>*_LOG.md
+#    Mechanics section for an example SQL set.)
+
+# 9. Re-dump and validate:
+python3 keyboard-trip/scripts/dump_timeline.py <new-pass-id> --skip-contact-sheets
+
+# 10. Write keyboard-trip/docs/PASS<M+1>_V<N+1>_<NAME>_LOG.md.
+
+# 11. git add + commit + push (Lionel's standing rule: commit and push after
+#     every completed change). Editor app changes commit separately in its
+#     own folder.
+```
+
+## Naming conventions
+
+- Pass IDs: `pass-<N>-<kebab-name>` (e.g. `pass-13-vo-split-and-buffer`).
+- Render job IDs: `render-v<N>-<kebab-name>` (e.g. `render-v10-vo-split`).
+- Timeline item IDs: `p<N>-<kebab-name>` (e.g. `p13-vo01a-broll-rainy`).
+- Asset IDs: `asset-<descriptor>` (varies; check existing patterns).
+- Pass logs: `PASS<N>_V<M>_<UPPER_SNAKE>_LOG.md`.
+
+## What's been done so far (Pass 5 → Pass 13)
+
+Read these in order if you want the full arc:
+
+- [PASS5_V2_FIX_LOG.md](PASS5_V2_FIX_LOG.md) — first rotation/trim fixes
+- [PASS5_V3_FIX_LOG.md](PASS5_V3_FIX_LOG.md) — VO + music cleanup pass
+- [PASS7_V4_FIX_LOG.md](PASS7_V4_FIX_LOG.md) — clip note fixes
+- [PASS8_V5_VO_MUSIC_LOG.md](PASS8_V5_VO_MUSIC_LOG.md) — first time
+  with the procedural music drone
+- [PASS9_V6_REAL_VO_LOG.md](PASS9_V6_REAL_VO_LOG.md) — Lionel
+  recorded real VO_01 in Logic, voice re-cloned in Cartesia
+- [PASS10_V7_FLOW_AND_MUSIC_LOG.md](PASS10_V7_FLOW_AND_MUSIC_LOG.md)
+  — chronology fix + AI music beds replace the procedural drone
+- [PASS11_V8_VLOG_FLOW_LOG.md](PASS11_V8_VLOG_FLOW_LOG.md) — intro
+  first, all-video VO_01 montage (no stills under VO), VO loudness
+  normalization
+- [PASS12_V9_BUFFERS_CUTAWAYS_LOG.md](PASS12_V9_BUFFERS_CUTAWAYS_LOG.md)
+  — talking-head sentence-tail buffers, b-roll cutaways inside the
+  main argument and home payoff, music regenerated with upbeat
+  indie/vlog prompts
+- [PASS13_V10_VO_SPLIT_LOG.md](PASS13_V10_VO_SPLIT_LOG.md) — fixed
+  the "chocolate milk and sleeping in the car" cutoff (VO_02
+  truncation), VO_01 split into 3 sentence chunks with A-roll
+  inserts, helper now self-defends against future cutoffs
+
+## Known rough edges as of Pass 13
+
+These are the active problems waiting for the next pass to address:
+
+- **`056_PICKUP_hand_key_comparison.MOV` not yet recorded.** Two
+  P056 placeholder cards stand in for it (cold open and home payoff).
+  Once Lionel records the comparison shot, replace both placeholders
+  with real footage.
+- **VO_02..VO_06 are still Cartesia TTS.** The seam between Lionel's
+  real VO_01 chunks and the cloned VO_02 voice is audible. Either
+  re-record those VOs or accept the seam.
+- **VO chunk seams in VO_01a/b/c.** Split with `-c copy` at
+  non-keyframe positions; small audible artifacts at the cuts. Not
+  bad enough to warrant re-encoding yet.
+- **A-roll inserts during VO_01 split** carry their original camera
+  audio, briefly fighting the music bed. For final mix, duck music
+  during these 5-second inserts.
+- **Talking-head buffer is a flat +1.5s.** Some clips overshoot and
+  sit on silence at the end. For the final master, listen and trim
+  each clip's exact end manually.
+- **Stable Audio 2.5 returns mp3 only.** The model ignores
+  `output_format=wav`. Files are `audio/music/*.mp3` with the
+  appropriate MIME type served by the editor's media route.
+- **Validation tracks visual-only metrics.** Audio collision detection
+  treats voiceover+music as expected; it doesn't catch VO overlaps
+  with talking-head A-roll source audio. If you stack a VO over an
+  A-roll without ducking source audio, validation passes but the mix
+  sounds bad.
+
+## Useful commands cheatsheet
+
+```bash
+# List all passes:
+python3 keyboard-trip/scripts/dump_timeline.py --list
+
+# Dump every pass at once (slow if many contact sheets need generation):
+python3 keyboard-trip/scripts/dump_timeline.py --all --skip-contact-sheets
+
+# Open the editor app:
+cd ai-agent-video-editor && npm run dev    # http://localhost:3000 (or 3001 if 3000 taken)
+
+# If better-sqlite3 throws ABI mismatch on dev start:
+cd ai-agent-video-editor && npm rebuild better-sqlite3
+
+# See current SQLite state of any pass directly:
+sqlite3 ai-agent-video-editor/.cut-notes/cut-notes.sqlite \
+  "SELECT id, role, timelineStart, sourceIn, sourceOut, targetDuration, lastEditedBy
+   FROM timeline_items WHERE passId='<pass-id>' AND enabled=1
+   ORDER BY \"order\""
+
+# Check render duration:
+ffprobe -v error -show_entries format=duration -of csv=p=0 \
+  keyboard-trip/renders/review_cuts/piano_hand_size_part2_rough_cut_v<N>.mp4
+
+# Verify VO loudness on a section of a render:
+ffmpeg -y -hide_banner -i <render.mp4> -ss <start_s> -t 20 -vn \
+  -af "loudnorm=print_format=summary" -f null -
+```
+
+## Standing instructions from Lionel
+
+- Commit and push after every completed change. Don't ask first.
+- Don't bypass pre-commit hooks (`--no-verify`). Don't skip signing.
+- Never destructive git ops without confirmation (force-push, hard
+  reset, branch deletion, amending pushed commits).
+- `main` is the deploy branch on most of his projects. This repo
+  doesn't deploy but the rule still applies: don't avoid `main`.
+- Be terse. He reads the diff. He doesn't want trailing summaries.
