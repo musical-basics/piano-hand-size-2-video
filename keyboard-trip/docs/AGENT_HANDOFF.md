@@ -98,8 +98,8 @@ PASS<M>_V<N>_<DESCRIPTION>_LOG.md
 
 Pass numbers and version numbers are not 1:1 — early passes shared
 versions (Pass 5 was render v1, Pass 6 was v3, etc.). From Pass 9
-onward they run together (Pass 10 → v7, Pass 11 → v8, ..., Pass 13 →
-v10).
+onward they run together (Pass 10 → v7, Pass 11 → v8, ..., Pass 14 →
+v11).
 
 Each script `cd`s to `keyboard-trip/` and uses relative paths from
 there. Run them with:
@@ -289,8 +289,12 @@ Read these in order if you want the full arc:
   the "chocolate milk and sleeping in the car" cutoff (VO_02
   truncation), VO_01 split into 3 sentence chunks with A-roll
   inserts, helper now self-defends against future cutoffs
+- [PASS14_V11_TIMELINE_SYNC_MONTAGE_POLISH_LOG.md](PASS14_V11_TIMELINE_SYNC_MONTAGE_POLISH_LOG.md)
+  — repaired SQLite/render source-of-truth drift so cutaways and VO_03
+  match the render script, and refined the VO montage helper so it only
+  holds the last frame when a VO actually needs extension
 
-## Known rough edges as of Pass 13
+## Known rough edges as of Pass 14
 
 These are the active problems waiting for the next pass to address:
 
@@ -305,8 +309,9 @@ These are the active problems waiting for the next pass to address:
   non-keyframe positions; small audible artifacts at the cuts. Not
   bad enough to warrant re-encoding yet.
 - **A-roll inserts during VO_01 split** carry their original camera
-  audio, briefly fighting the music bed. For final mix, duck music
-  during these 5-second inserts.
+  audio. The editor timeline is now synced around these inserts, but
+  final mix still needs a listen for any music/camera-audio handoff
+  that feels abrupt.
 - **Talking-head buffer is a flat +1.5s.** Some clips overshoot and
   sit on silence at the end. For the final master, listen and trim
   each clip's exact end manually.
