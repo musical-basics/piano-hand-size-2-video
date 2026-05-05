@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.10">
+    <resources>
+        <format id="r1" name="FFVideoFormat720p30" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <format id="r2" name="FFVideoFormatRateUndefined" width="4032" height="3024" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r3" name="036_IMG_0292_technical_keyboard_still.JPG" start="0s" duration="3600s" hasVideo="1" format="r2">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/036_IMG_0292_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r4" name="038_IMG_0294_technical_keyboard_still.JPG" start="0s" duration="3600s" hasVideo="1" format="r2">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/038_IMG_0294_technical_keyboard_still.JPG"/>
+        </asset>
+        <format id="r5" name="FFVideoFormat1080p30" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <asset id="r6" name="054_IMG_0310_home_ds60_ds55_explanation.MOV" start="0s" duration="31199/100s" hasVideo="1" format="r5" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.MOV"/>
+        </asset>
+    </resources>
+    <library>
+        <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
+            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 04:18:01 +0000">
+                <sequence duration="219/2s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r6" offset="0s" duration="27/2s" start="126s" tcFormat="NDF" srcEnable="video" format="r5">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r6" offset="27/2s" duration="39/2s" start="154s" tcFormat="NDF" srcEnable="video" format="r5">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="036_IMG_0292_technical_keyboard_still.JPG" ref="r3" offset="33s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r6" offset="36s" duration="39/2s" start="178s" tcFormat="NDF" srcEnable="video" format="r5">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r6" offset="111/2s" duration="73/2s" start="221s" tcFormat="NDF" srcEnable="video" format="r5">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="038_IMG_0294_technical_keyboard_still.JPG" ref="r4" offset="92s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r6" offset="95s" duration="29/2s" start="296s" tcFormat="NDF" srcEnable="video" format="r5">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>

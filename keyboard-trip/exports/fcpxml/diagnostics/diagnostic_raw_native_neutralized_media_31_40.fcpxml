@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.10">
+    <resources>
+        <format id="r1" name="FFVideoFormat720p30" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <format id="r2" name="FFVideoFormat1080p30" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <asset id="r3" name="013_IMG_0269_keyboard_21_intro.MOV" start="0s" duration="2381/60s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/013_IMG_0269_keyboard_21_intro.MOV"/>
+        </asset>
+        <asset id="r4" name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" start="0s" duration="24181/200s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV"/>
+        </asset>
+        <asset id="r5" name="019_IMG_0275_ds55_pickup_and_wrap.MOV" start="0s" duration="73427/300s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/019_IMG_0275_ds55_pickup_and_wrap.MOV"/>
+        </asset>
+        <asset id="r6" name="027_IMG_0283_athena_internals_reconnaissance.MOV" start="0s" duration="50327/600s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/027_IMG_0283_athena_internals_reconnaissance.MOV"/>
+        </asset>
+        <format id="r7" name="FFVideoFormatRateUndefined" width="4032" height="3024" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r8" name="030_IMG_0286_technical_keyboard_still.JPG" start="0s" duration="3600s" hasVideo="1" format="r7">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/030_IMG_0286_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r9" name="041_IMG_0297_ds60_ds55_car_monologue.MOV" start="0s" duration="46689/200s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/05_Post_Pickup_Main_Argument/041_IMG_0297_ds60_ds55_car_monologue.MOV"/>
+        </asset>
+    </resources>
+    <library>
+        <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
+            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 04:17:59 +0000">
+                <sequence duration="299/2s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r3" offset="0s" duration="23/2s" start="7s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r4" offset="23/2s" duration="27/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r4" offset="25s" duration="23/2s" start="25s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r4" offset="73/2s" duration="33/2s" start="49s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r5" offset="53s" duration="23/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r5" offset="129/2s" duration="53/2s" start="60s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r6" offset="91s" duration="27/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r6" offset="209/2s" duration="33/2s" start="29s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r9" offset="121s" duration="51/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="030_IMG_0286_technical_keyboard_still.JPG" ref="r8" offset="293/2s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r7">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>

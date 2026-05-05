@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.10">
+    <resources>
+        <format id="r1" name="FFVideoFormat720p30" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <format id="r2" name="FFVideoFormat1080p30" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <asset id="r3" name="002_IMG_0257_hagerstown_gas_station.MOV" start="0s" duration="47/3s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/002_IMG_0257_hagerstown_gas_station.MOV"/>
+        </asset>
+        <format id="r4" name="FFVideoFormat1080p24" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/24s"/>
+        <asset id="r5" name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" start="0s" duration="81689/600s" hasVideo="1" format="r4" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/003_IMG_0258_road_trip_snacks_no_caffeine.MOV"/>
+        </asset>
+        <asset id="r6" name="005_IMG_0260_waking_up_after_car_nap.MOV" start="0s" duration="2887/200s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/005_IMG_0260_waking_up_after_car_nap.MOV"/>
+        </asset>
+        <asset id="r7" name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" start="0s" duration="21641/600s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/006_IMG_0261_car_nap_recovery_drive_resumes.MOV"/>
+        </asset>
+        <asset id="r8" name="010_IMG_0266_drive_broll_2.MOV" start="0s" duration="19901/600s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/010_IMG_0266_drive_broll_2.MOV"/>
+        </asset>
+        <format id="r9" name="FFVideoFormatRateUndefined" width="640" height="360" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r10" name="IMG_0258.jpg" start="0s" duration="3600s" hasVideo="1" format="r9">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0258.jpg"/>
+        </asset>
+        <asset id="r11" name="IMG_0260.jpg" start="0s" duration="3600s" hasVideo="1" format="r9">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0260.jpg"/>
+        </asset>
+    </resources>
+    <library>
+        <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
+            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 04:17:57 +0000">
+                <sequence duration="123/2s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r8" offset="0s" duration="9s" start="15s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r3" offset="9s" duration="6s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="IMG_0258.jpg" ref="r10" offset="15s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r9">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" offset="18s" duration="5s" start="103s" tcFormat="NDF" srcEnable="video" format="r4">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="IMG_0260.jpg" ref="r11" offset="23s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video" format="r9">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" offset="28s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r4">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" offset="71/2s" duration="13/2s" start="19s" tcFormat="NDF" srcEnable="video" format="r4">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r6" offset="42s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r7" offset="99/2s" duration="13/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r7" offset="56s" duration="11/2s" start="29s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>

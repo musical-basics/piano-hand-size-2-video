@@ -1064,18 +1064,23 @@ def limit_to_visual_count(
 def limit_to_media_visual_count(
     clips: list[dict[str, Any]],
     limit: int | None,
+    start: int = 1,
 ) -> list[dict[str, Any]]:
     if not limit or limit <= 0:
         return clips
     limited: list[dict[str, Any]] = []
     media_visual_count = 0
+    start = max(1, start)
+    end = start + limit - 1
     for clip in clips:
         if not is_visual(clip) or clip["role"] in TITLE_ROLES:
             continue
         media_visual_count += 1
-        limited.append(clip)
-        if media_visual_count >= limit:
+        if media_visual_count < start:
+            continue
+        if media_visual_count > end:
             break
+        limited.append(clip)
     return limited
 
 
@@ -1608,6 +1613,12 @@ def main() -> None:
         help="Diagnostic export: keep only the first N non-title visual media clips.",
     )
     parser.add_argument(
+        "--media-visual-start",
+        type=int,
+        default=1,
+        help="Diagnostic export: 1-based first media visual index when using --limit-media-visuals.",
+    )
+    parser.add_argument(
         "--compact-timeline",
         action="store_true",
         help="Diagnostic export: place kept clips back-to-back from zero.",
@@ -1629,7 +1640,11 @@ def main() -> None:
     pass_row = fetch_pass(conn, pass_id)
     clips = fetch_clips(conn, pass_id)
     if args.limit_media_visuals:
-        clips = limit_to_media_visual_count(clips, args.limit_media_visuals)
+        clips = limit_to_media_visual_count(
+            clips,
+            args.limit_media_visuals,
+            start=args.media_visual_start,
+        )
     else:
         clips = limit_to_visual_count(clips, args.limit_visuals)
     if args.compact_timeline:
