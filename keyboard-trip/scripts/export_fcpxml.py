@@ -490,6 +490,15 @@ def rotation_value(clip: dict[str, Any]) -> str | None:
     return str(degrees % 360)
 
 
+def xml_rotation_value(clip: dict[str, Any], asset: dict[str, Any]) -> str | None:
+    # Raw video files carry their own camera display matrix, and Final Cut
+    # applies it on import. Applying the render-pipeline rotation again here
+    # double-rotates phone clips. Stills do not have that MOV display matrix.
+    if str(asset.get("kind") or "") == "video":
+        return None
+    return rotation_value(clip)
+
+
 def title_params(title_el: Element, mode: str) -> None:
     if mode == "card":
         position = "0 0"
@@ -644,7 +653,7 @@ def add_visual_clip(
         attrs["format"] = str(asset["format_id"])
     clip_el = SubElement(parent, "asset-clip", attrs)
     SubElement(clip_el, "adjust-conform", {"type": "fit"})
-    rotation = rotation_value(clip)
+    rotation = xml_rotation_value(clip, asset)
     if rotation:
         SubElement(clip_el, "adjust-transform", {"rotation": rotation})
     if mute_source_audio and asset.get("has_audio"):
@@ -701,7 +710,7 @@ def add_primary_visual_clip(
         attrs["format"] = str(asset["format_id"])
     clip_el = SubElement(parent, "asset-clip", attrs)
     SubElement(clip_el, "adjust-conform", {"type": "fit"})
-    rotation = rotation_value(clip)
+    rotation = xml_rotation_value(clip, asset)
     if rotation:
         SubElement(clip_el, "adjust-transform", {"rotation": rotation})
 

@@ -362,6 +362,8 @@ ffprobe -v error -show_entries format=duration -of csv=p=0 \
 # primary visual storyline only; no connected-gap clips, captions, VO, or music.
 # Current raw-source exporter preserves each source file's native frame
 # format/timebase instead of forcing all assets to the 30fps project format.
+# Raw video rotations are left to Final Cut's camera display-matrix handling;
+# XML adjust-transform rotation is only added for still images.
 python3 keyboard-trip/scripts/export_fcpxml.py
 
 # Variant with original camera audio on source clips, still no VO/music:

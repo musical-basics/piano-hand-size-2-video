@@ -129,7 +129,7 @@
     </resources>
     <library>
         <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
-            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 02:55:45 +0000">
+            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 04:08:43 +0000">
                 <sequence duration="1505/2s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
                     <spine>
                         <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r37" offset="0s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
@@ -148,7 +148,6 @@
                         </asset-clip>
                         <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r4" offset="113/2s" duration="11/2s" start="7s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
-                            <adjust-transform rotation="90"/>
                         </asset-clip>
                         <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r6" offset="62s" duration="5s" start="30s" tcFormat="NDF" srcEnable="video" format="r5">
                             <adjust-conform type="fit"/>
@@ -170,7 +169,6 @@
                         </asset-clip>
                         <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r4" offset="205/2s" duration="6s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
-                            <adjust-transform rotation="90"/>
                         </asset-clip>
                         <asset-clip name="IMG_0258.jpg" ref="r39" offset="217/2s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r38">
                             <adjust-conform type="fit"/>
@@ -231,15 +229,12 @@
                         </asset-clip>
                         <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r18" offset="241s" duration="27/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
-                            <adjust-transform rotation="-90"/>
                         </asset-clip>
                         <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r18" offset="509/2s" duration="23/2s" start="25s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
-                            <adjust-transform rotation="-90"/>
                         </asset-clip>
                         <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r18" offset="266s" duration="33/2s" start="49s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
-                            <adjust-transform rotation="-90"/>
                         </asset-clip>
                         <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r19" offset="565/2s" duration="23/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
@@ -249,11 +244,9 @@
                         </asset-clip>
                         <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r20" offset="641/2s" duration="27/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
-                            <adjust-transform rotation="-90"/>
                         </asset-clip>
                         <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r20" offset="334s" duration="33/2s" start="29s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
-                            <adjust-transform rotation="-90"/>
                         </asset-clip>
                         <gap name="The real reason key size matters" offset="701/2s" start="0s" duration="3s"/>
                         <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r28" offset="707/2s" duration="51/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
