@@ -8,7 +8,7 @@ pass:
   id: pass-15-captions-travel-chronology
   name: 'Pass 15: Captions + Travel Chronology'
   status: needs_review
-exported_at: '2026-05-04T07:45:50+00:00'
+exported_at: '2026-05-05T02:14:50+00:00'
 summary:
   clips: 91
   locked_by_user: 0
@@ -476,8 +476,10 @@ clips:
   text_overlay: Piano Hand Size, Part 2
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id001
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/055_PICKUP_front_facing_intro
+    sheets: 1
   notes: 'V6 / Pass 15: fine-edit intro opening; keeps the clean part-two setup line.'
 - id: p15-006-front-facing-intro-clean-thesis
   section: Set Up
@@ -496,8 +498,7 @@ clips:
   text_overlay: I drove overnight for smaller piano keys.
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id001
   notes: 'V6 / Pass 15: jumps past the false start and cuts before the repeated smaller-hands line.'
 - id: p15-004-cold-title-card
   section: Cold Open
@@ -541,7 +542,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/001_IMG_0256_0142am_trip_setup
+    sheets: 1
   notes: 'V6 / Pass 15: extended the cold-open setup so the line does not cut off abruptly.'
 - id: p15-003-p056-cold-placeholder
   section: Cold Open
@@ -584,8 +587,10 @@ clips:
     piano-playing experience.'
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id002
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/010_IMG_0266_drive_broll_2
+    sheets: 1
   notes: 'Pass 15: rainy drive under VO_01a thesis.'
 - id: p15-vo01a-broll-gas
   section: VO 01a Late-Night Thesis
@@ -606,8 +611,10 @@ clips:
     piano-playing experience.'
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id003
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/002_IMG_0257_hagerstown_gas_station
+    sheets: 1
   notes: 'Pass 15: gas station moving b-roll.'
 - id: p15-vo01-insert-snack
   section: A-Roll Burst
@@ -626,8 +633,10 @@ clips:
   text_overlay: Road-trip fuel
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id004
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/003_IMG_0258_road_trip_snacks_no_caffeine
+    sheets: 3
   notes: 'Pass 15: snack vlog burst between VO_01a and VO_01b.'
 - id: p15-vo01b-broll-sheetz
   section: VO 01b PA Setup
@@ -649,7 +658,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/004_IMG_0259_sheets_stop_middle_of_nowhere
+    sheets: 1
   notes: 'Pass 15: sheetz arrival under VO_01b.'
 - id: p15-vo01b-broll-drive
   section: VO 01b PA Setup
@@ -670,8 +681,10 @@ clips:
     for DS 5.5 and DS 6.0 keyboards.'
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id007
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/009_IMG_0265_drive_broll_1
+    sheets: 1
   notes: 'Pass 15: drive b-roll second-half chunk under VO_01b.'
 - id: p15-vo01-insert-waking
   section: A-Roll Burst
@@ -690,8 +703,10 @@ clips:
   text_overlay: The car nap begins
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id005
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/005_IMG_0260_waking_up_after_car_nap
+    sheets: 1
   notes: 'Pass 15: waking up reaction between VO_01b and VO_01c.'
 - id: p15-vo01c-broll-recovery
   section: VO 01c Millimeters Payoff
@@ -712,8 +727,10 @@ clips:
     can change everything.'
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id006
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/006_IMG_0261_car_nap_recovery_drive_resumes
+    sheets: 1
   notes: 'Pass 15: recovery drive under VO_01c.'
 - id: p15-vo01c-broll-rainy-late
   section: VO 01c Millimeters Payoff
@@ -734,8 +751,7 @@ clips:
     can change everything.'
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id002
   notes: 'Pass 15: rainy drive late chunk under VO_01c.'
 - id: p15-011-vo02-gas-station
   section: VO 02 Gas Station
@@ -756,8 +772,7 @@ clips:
     and questionable decisions.'
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id003
   notes: 'V6 / Pass 15: VO 02/music over silent rotated gas station b-roll.'
 - id: p15-012-vo02-snack-still
   section: VO 02 Gas Station
@@ -779,7 +794,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'V6 / Pass 15: VO 02/music over snack still.'
 - id: p15-013-vo02-snacks-broll
   section: VO 02 Gas Station
@@ -800,8 +817,7 @@ clips:
     and questionable decisions.'
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id004
   notes: 'V6 / Pass 15: VO 02/music over silent snack b-roll.'
 - id: p15-014-vo02-car-nap-still
   section: VO 02 Gas Station
@@ -823,7 +839,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'V6 / Pass 15: VO 02/music over car nap still.'
 - id: p15-015-snack-vlog-open
   section: Overnight Drive
@@ -842,8 +860,7 @@ clips:
   text_overlay: No caffeine.
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id004
   notes: 'V6 / Pass 15: preserves snack vlog beat with original audio.'
 - id: p15-016-snack-vlog-gag
   section: Overnight Drive
@@ -862,8 +879,7 @@ clips:
   text_overlay: 'Backup plan: chocolate milk.'
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id004
   notes: 'V6 / Pass 15: preserves snack vlog beat with original audio.'
 - id: p15-017-waking-after-car-nap
   section: Overnight Drive
@@ -882,8 +898,7 @@ clips:
   text_overlay: A few hours later
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id005
   notes: 'V6 / Pass 15: original audio kept before VO montage.'
 - id: p15-018-car-nap-recovery-open
   section: Overnight Drive
@@ -902,8 +917,7 @@ clips:
   text_overlay: Almost three hours of sleep
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id006
   notes: 'V6 / Pass 15: original audio kept before VO montage.'
 - id: p15-019-car-nap-recovery-drive
   section: Overnight Drive
@@ -922,8 +936,7 @@ clips:
   text_overlay: Back on the road
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id006
   notes: 'V6 / Pass 15: original audio kept before VO montage.'
 - id: p15-021-vo03-recovery-still
   section: VO 03 Car Nap
@@ -945,7 +958,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: VO_03/music over IMG_0261 still, matching v11 script.'
 - id: p15-vo03-waking-video
   section: overnight-drive
@@ -966,8 +981,7 @@ clips:
     Human enough to keep driving.'
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id005
   notes: 'Pass 15: VO_03/music over silent waking-up video, matching v11 script.'
 - id: p15-vo03-morning-still
   section: overnight-drive
@@ -989,7 +1003,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: VO_03/music over IMG_0263 still, matching v11 script.'
 - id: p15-023-morning-highway-update
   section: Pennsylvania Road
@@ -1011,7 +1027,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/007_IMG_0263_morning_highway_update
+    sheets: 1
   notes: 'V6 / Pass 15: speaking clip keeps original audio.'
 - id: p15-024-vo04-pennsylvania-scenery
   section: VO 04 Pennsylvania Road
@@ -1033,7 +1051,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/008_IMG_0264_pennsylvania_scenery
+    sheets: 1
   notes: 'V6 / Pass 15: VO 04/music over silent road b-roll.'
 - id: p15-025-vo04-drive-broll-hills
   section: VO 04 Pennsylvania Road
@@ -1054,8 +1074,7 @@ clips:
     started to feel real.'
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id007
   notes: 'V6 / Pass 15: VO 04/music over silent road b-roll.'
 - id: p15-026-vo04-woods-still
   section: VO 04 Pennsylvania Road
@@ -1077,7 +1096,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'V6 / Pass 15: VO 04/music over almost-there still.'
 - id: p15-027-woods-almost-there
   section: Pennsylvania Road
@@ -1099,7 +1120,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/011_IMG_0267_in_the_woods_almost_there
+    sheets: 1
   notes: 'V6 / Pass 15: almost-there speaking clip keeps original audio.'
 - id: p15-028-big-mac-gag
   section: Pennsylvania Road
@@ -1119,7 +1142,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/012_IMG_0268_double_big_mac_lunch
+    sheets: 1
   notes: 'V6 / Pass 15: quick lunch beat with original audio.'
 - id: p15-029-keyboard-21-arrival
   section: Factory
@@ -1140,8 +1165,10 @@ clips:
     David Steinbuhler workshop'
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id008
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/013_IMG_0269_keyboard_21_intro
+    sheets: 1
   notes: 'V6 / Pass 15: arrival/key number 21 beat.'
 - id: p15-030-keyboard-action-broll
   section: Factory
@@ -1160,8 +1187,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id008
   notes: 'V6 / Pass 15: workshop/action b-roll.'
 - id: p15-031-ds55-on-steinway
   section: Factory
@@ -1180,8 +1206,10 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id009
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/018_IMG_0274_ds_size_lineup_on_steinway
+    sheets: 2
   notes: 'V6 / Pass 15: rotated DS lineup footage.'
 - id: p15-032-ds55-size-range
   section: Factory
@@ -1200,8 +1228,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id009
   notes: 'V6 / Pass 15: rotated DS size range footage.'
 - id: p15-033-size-lineup-proof
   section: Factory
@@ -1220,8 +1247,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id009
   notes: 'V6 / Pass 15: rotated clearest size-comparison proof.'
 - id: p15-034-ds55-pickup-open
   section: Factory
@@ -1240,8 +1266,10 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id010
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/019_IMG_0275_ds55_pickup_and_wrap
+    sheets: 5
   notes: 'V6 / Pass 15: DS 5.5 pickup/wrap beat.'
 - id: p15-035-ds55-pickup-later
   section: Factory
@@ -1260,8 +1288,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id010
   notes: 'V6 / Pass 15: DS 5.5 hands-on/pickup footage.'
 - id: p15-036-athena-internals-open
   section: Factory
@@ -1280,8 +1307,10 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id011
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/027_IMG_0283_athena_internals_reconnaissance
+    sheets: 2
   notes: 'V6 / Pass 15: rotated Athena internals footage.'
 - id: p15-037-athena-internals-later
   section: Factory
@@ -1300,8 +1329,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id011
   notes: 'V6 / Pass 15: rotated Athena internals footage.'
 - id: p15-041-main-argument-card
   section: Main Argument
@@ -1340,8 +1368,10 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id012
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/041_IMG_0297_ds60_ds55_car_monologue
+    sheets: 4
   notes: 'V6 / Pass 15: main argument with original camera audio.'
 - id: p15-cutaway-main-arg-1
   section: Main Argument
@@ -1361,7 +1391,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: keyboard close-up cutaway between main-argument chunks 1 and 2.'
 - id: p15-043-main-argument-2
   section: Main Argument
@@ -1380,8 +1412,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id012
   notes: 'V6 / Pass 15: main argument with original camera audio.'
 - id: p15-cutaway-main-arg-2
   section: Main Argument
@@ -1401,7 +1432,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: keyboard close-up cutaway between main-argument chunks 2 and 3.'
 - id: p15-044-main-argument-3
   section: Main Argument
@@ -1420,8 +1453,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id012
   notes: 'V6 / Pass 15: main argument with original camera audio.'
 - id: p15-cutaway-main-arg-3
   section: Main Argument
@@ -1441,7 +1473,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: keyboard close-up cutaway between main-argument chunks 3 and 4.'
 - id: p15-045-main-argument-4
   section: Main Argument
@@ -1460,8 +1494,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id012
   notes: 'V6 / Pass 15: main argument with original camera audio.'
 - id: p15-cutaway-main-arg-4
   section: Main Argument
@@ -1480,8 +1513,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id010
   notes: 'Pass 15: DS55 pickup b-roll cutaway between main-argument chunks 4 and 5.'
 - id: p15-046-main-argument-5
   section: Main Argument
@@ -1500,8 +1532,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id012
   notes: 'V6 / Pass 15: main argument with original camera audio.'
 - id: p15-047-vo05-lake-cutaway
   section: VO 05 Lake Pause
@@ -1523,7 +1554,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/042_IMG_0298_tionesta_lake_cutaway
+    sheets: 1
   notes: 'V6 / Pass 15: VO 05/music over silent lake cutaway.'
 - id: p15-048-vo05-lake-overlook
   section: VO 05 Lake Pause
@@ -1545,7 +1578,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/043_IMG_0299_lake_overlook_broll
+    sheets: 1
   notes: 'V6 / Pass 15: VO 05/music over silent lake overlook.'
 - id: p15-049-vo05-mileage
   section: VO 05 Lake Pause
@@ -1567,7 +1602,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/044_IMG_0300_177777_mileage
+    sheets: 1
   notes: 'V6 / Pass 15: keeps the full available mileage clip under VO 05/music.'
 - id: p15-049b-vo05-mileage-hold
   section: VO 05 Lake Pause
@@ -1589,7 +1626,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'V6 / Pass 15: adds a 2s still hold so the mileage beat no longer feels like it cuts off too
     fast.'
 - id: p15-050-hotel-breakdown
@@ -1610,7 +1649,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/048_IMG_0304_hotel_car_broke_down
+    sheets: 1
   notes: 'V6 / Pass 15: breakdown speaking clip moved later and keeps original audio.'
 - id: p15-051-vo06-breakdown-still
   section: VO 06 Return
@@ -1632,7 +1673,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'V6 / Pass 15: VO 06/music over hotel breakdown still.'
 - id: p15-052-vo06-car-fixed
   section: VO 06 Return
@@ -1654,7 +1697,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/049_IMG_0305_car_fixed_heading_home
+    sheets: 1
   notes: 'V6 / Pass 15: VO 06/music over silent car-fixed b-roll.'
 - id: p15-053-vo06-return-drive
   section: VO 06 Return
@@ -1676,7 +1721,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/050_IMG_0306_beautiful_return_drive
+    sheets: 1
   notes: 'V6 / Pass 15: VO 06/music over silent return-drive b-roll.'
 - id: p15-054-vo06-highway-home
   section: VO 06 Return
@@ -1698,7 +1745,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/053_IMG_0309_highway_home_broll
+    sheets: 1
   notes: 'V6 / Pass 15: VO 06/music over silent highway-home b-roll.'
 - id: p15-055-home-setup
   section: Home Payoff
@@ -1717,8 +1766,10 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id013
+    status: ok
+    path: footage/91_Visual_Contact_Sheets/054_IMG_0310_home_ds60_ds55_explanation
+    sheets: 6
   notes: 'V6 / Pass 15: home payoff with original camera audio.'
 - id: p15-056-ds60-history
   section: Home Payoff
@@ -1737,8 +1788,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id013
   notes: 'V6 / Pass 15: DS 6.0 history/proper weighting.'
 - id: p15-057-p056-home-placeholder
   section: Home Payoff
@@ -1779,8 +1829,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id013
   notes: 'V6 / Pass 15: DS 5.5 validity explanation.'
 - id: p15-cutaway-home-1
   section: Home Payoff
@@ -1800,7 +1849,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: keyboard cutaway in home-payoff after the third home-explanation chunk.'
 - id: p15-059-current-take-card
   section: Home Payoff
@@ -1843,8 +1894,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id013
   notes: 'V6 / Pass 15: home payoff continued.'
 - id: p15-audio-vo-01a
   section: VO 01a Late-Night Thesis
@@ -1864,7 +1914,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: "Pass 15: VO_01 chunk a \u2014 narrower keys change everything."
 - id: p15-061-home-technique-2
   section: Home Payoff
@@ -1883,8 +1935,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id013
   notes: 'V6 / Pass 15: home payoff continued.'
 - id: p15-audio-vo-02-gas-station-and-snacks
   section: VO 02 Gas Station
@@ -1904,7 +1955,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: narration over gas station/snack montage.'
 - id: p15-audio-vo-01b
   section: VO 01b PA Setup
@@ -1924,7 +1977,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: "Pass 15: VO_01 chunk b \u2014 almost 2am, DS5.5/6.0 from David."
 - id: p15-audio-vo-03-car-nap
   section: VO 03 Car Nap
@@ -1944,7 +1999,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: narration over car-nap recovery montage.'
 - id: p15-cutaway-home-2
   section: Home Payoff
@@ -1964,7 +2021,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: keyboard cutaway between home-technique chunks 2 and 3.'
 - id: p15-audio-vo-01c
   section: VO 01c Millimeters Payoff
@@ -1984,7 +2043,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: "Pass 15: VO_01 chunk c \u2014 millimeters change everything, weeks not months."
 - id: p15-062-home-technique-3
   section: Home Payoff
@@ -2003,8 +2064,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id013
   notes: 'V6 / Pass 15: home payoff continued.'
 - id: p15-audio-vo-04-pennsylvania-road
   section: VO 04 Pennsylvania Road
@@ -2024,7 +2084,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: narration over Pennsylvania road montage.'
 - id: p15-063-ds-standard-home
   section: Home Payoff
@@ -2043,8 +2105,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id013
   notes: 'V6 / Pass 15: DS standard/university instruments segment.'
 - id: p15-audio-vo-05-lake-pause
   section: VO 05 Lake Pause
@@ -2064,7 +2125,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: narration over lake pause and mileage montage.'
 - id: p15-audio-vo-06-breakdown-and-return
   section: VO 06 Breakdown and Return
@@ -2084,7 +2147,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: narration over breakdown/return-home montage.'
 - id: p15-cutaway-home-3
   section: Home Payoff
@@ -2104,7 +2169,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: keyboard cutaway before the closing recommendation.'
 - id: p15-064-closing-recommendation
   section: Closing
@@ -2123,8 +2190,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id013
   notes: 'V6 / Pass 15: closing recommendation.'
 - id: p15-audio-music-p056-cold-flash
   section: Cold Open
@@ -2143,8 +2209,10 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id014
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: low music under P056 placeholder card.'
 - id: p15-065-final-hook
   section: Closing
@@ -2185,8 +2253,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id014
   notes: 'Pass 15: low music under cold-open title card.'
 - id: p15-audio-music-vo-01a
   section: VO 01a Late-Night Thesis
@@ -2205,8 +2272,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id014
   notes: 'Pass 15: music under VO_01a.'
 - id: p15-audio-music-vo-02
   section: VO 02 Gas Station
@@ -2225,8 +2291,10 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: &id015
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: low music bed ducked under VO 02.'
 - id: p15-audio-music-vo-01b
   section: VO 01b PA Setup
@@ -2245,8 +2313,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id014
   notes: 'Pass 15: music under VO_01b.'
 - id: p15-audio-music-vo-03
   section: VO 03 Car Nap
@@ -2265,8 +2332,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id015
   notes: 'Pass 15: low music bed ducked under VO 03.'
 - id: p15-audio-music-vo-01c
   section: VO 01c Millimeters Payoff
@@ -2285,8 +2351,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id014
   notes: 'Pass 15: music under VO_01c.'
 - id: p15-audio-music-vo-04
   section: VO 04 Pennsylvania Road
@@ -2305,8 +2370,7 @@ clips:
   text_overlay: null
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
-  contact_sheet:
-    status: n/a
+  contact_sheet: *id015
   notes: 'Pass 15: low music bed ducked under VO 04.'
 - id: p15-audio-music-vo-05
   section: VO 05 Lake Pause
@@ -2326,7 +2390,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: low music bed ducked under VO 05.'
 - id: p15-audio-music-vo-06
   section: VO 06 Breakdown and Return
@@ -2346,7 +2412,9 @@ clips:
   last_edited_by: ai
   last_edited_at: '2026-05-04T07:43:30.650Z'
   contact_sheet:
-    status: n/a
+    status: skipped_non_video
+    path: null
+    sheets: 0
   notes: 'Pass 15: low music bed ducked under VO 06.'
 issues:
   overlaps: []

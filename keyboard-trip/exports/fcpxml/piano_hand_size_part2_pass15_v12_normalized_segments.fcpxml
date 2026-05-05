@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.10">
+    <resources>
+        <format id="r1" name="FFVideoFormat720p30" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <asset id="r2" name="seg_001.mp4" start="0s" duration="15/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_001.mp4"/>
+        </asset>
+        <asset id="r3" name="seg_002.mp4" start="0s" duration="37/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_002.mp4"/>
+        </asset>
+        <asset id="r4" name="seg_003.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_003.mp4"/>
+        </asset>
+        <asset id="r5" name="seg_004.mp4" start="0s" duration="35/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_004.mp4"/>
+        </asset>
+        <asset id="r6" name="seg_005.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_005.mp4"/>
+        </asset>
+        <asset id="r7" name="seg_006.mp4" start="0s" duration="10533333/1000000s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_006.mp4"/>
+        </asset>
+        <asset id="r8" name="seg_007.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_007.mp4"/>
+        </asset>
+        <asset id="r9" name="seg_008.mp4" start="0s" duration="15033333/1000000s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_008.mp4"/>
+        </asset>
+        <asset id="r10" name="seg_009.mp4" start="0s" duration="9/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_009.mp4"/>
+        </asset>
+        <asset id="r11" name="seg_010.mp4" start="0s" duration="16033333/1000000s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_010.mp4"/>
+        </asset>
+        <asset id="r12" name="seg_011.mp4" start="0s" duration="19033333/1000000s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_011.mp4"/>
+        </asset>
+        <asset id="r13" name="seg_012.mp4" start="0s" duration="15/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_012.mp4"/>
+        </asset>
+        <asset id="r14" name="seg_013.mp4" start="0s" duration="13/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_013.mp4"/>
+        </asset>
+        <asset id="r15" name="seg_014.mp4" start="0s" duration="15/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_014.mp4"/>
+        </asset>
+        <asset id="r16" name="seg_015.mp4" start="0s" duration="13/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_015.mp4"/>
+        </asset>
+        <asset id="r17" name="seg_016.mp4" start="0s" duration="11/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_016.mp4"/>
+        </asset>
+        <asset id="r18" name="seg_017.mp4" start="0s" duration="16033333/1000000s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_017.mp4"/>
+        </asset>
+        <asset id="r19" name="seg_018.mp4" start="0s" duration="23/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_018.mp4"/>
+        </asset>
+        <asset id="r20" name="seg_019.mp4" start="0s" duration="20033333/1000000s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_019.mp4"/>
+        </asset>
+        <asset id="r21" name="seg_020.mp4" start="0s" duration="27/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_020.mp4"/>
+        </asset>
+        <asset id="r22" name="seg_021.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_021.mp4"/>
+        </asset>
+        <asset id="r23" name="seg_022.mp4" start="0s" duration="17/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_022.mp4"/>
+        </asset>
+        <asset id="r24" name="seg_023.mp4" start="0s" duration="23/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_023.mp4"/>
+        </asset>
+        <asset id="r25" name="seg_024.mp4" start="0s" duration="27/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_024.mp4"/>
+        </asset>
+        <asset id="r26" name="seg_025.mp4" start="0s" duration="23/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_025.mp4"/>
+        </asset>
+        <asset id="r27" name="seg_026.mp4" start="0s" duration="33/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_026.mp4"/>
+        </asset>
+        <asset id="r28" name="seg_027.mp4" start="0s" duration="23/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_027.mp4"/>
+        </asset>
+        <asset id="r29" name="seg_028.mp4" start="0s" duration="53/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_028.mp4"/>
+        </asset>
+        <asset id="r30" name="seg_029.mp4" start="0s" duration="27/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_029.mp4"/>
+        </asset>
+        <asset id="r31" name="seg_030.mp4" start="0s" duration="33/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_030.mp4"/>
+        </asset>
+        <asset id="r32" name="seg_031.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_031.mp4"/>
+        </asset>
+        <asset id="r33" name="seg_032.mp4" start="0s" duration="51/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_032.mp4"/>
+        </asset>
+        <asset id="r34" name="seg_033.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_033.mp4"/>
+        </asset>
+        <asset id="r35" name="seg_034.mp4" start="0s" duration="53/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_034.mp4"/>
+        </asset>
+        <asset id="r36" name="seg_035.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_035.mp4"/>
+        </asset>
+        <asset id="r37" name="seg_036.mp4" start="0s" duration="51/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_036.mp4"/>
+        </asset>
+        <asset id="r38" name="seg_037.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_037.mp4"/>
+        </asset>
+        <asset id="r39" name="seg_038.mp4" start="0s" duration="47/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_038.mp4"/>
+        </asset>
+        <asset id="r40" name="seg_039.mp4" start="0s" duration="4s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_039.mp4"/>
+        </asset>
+        <asset id="r41" name="seg_040.mp4" start="0s" duration="63/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_040.mp4"/>
+        </asset>
+        <asset id="r42" name="seg_041.mp4" start="0s" duration="22033333/1000000s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_041.mp4"/>
+        </asset>
+        <asset id="r43" name="seg_042.mp4" start="0s" duration="19/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_042.mp4"/>
+        </asset>
+        <asset id="r44" name="seg_043.mp4" start="0s" duration="26033333/1000000s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_043.mp4"/>
+        </asset>
+        <asset id="r45" name="seg_044.mp4" start="0s" duration="43/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_044.mp4"/>
+        </asset>
+        <asset id="r46" name="seg_045.mp4" start="0s" duration="39/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_045.mp4"/>
+        </asset>
+        <asset id="r47" name="seg_046.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_046.mp4"/>
+        </asset>
+        <asset id="r48" name="seg_047.mp4" start="0s" duration="51/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_047.mp4"/>
+        </asset>
+        <asset id="r49" name="seg_048.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_048.mp4"/>
+        </asset>
+        <asset id="r50" name="seg_049.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_049.mp4"/>
+        </asset>
+        <asset id="r51" name="seg_050.mp4" start="0s" duration="27/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_050.mp4"/>
+        </asset>
+        <asset id="r52" name="seg_051.mp4" start="0s" duration="39/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_051.mp4"/>
+        </asset>
+        <asset id="r53" name="seg_052.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_052.mp4"/>
+        </asset>
+        <asset id="r54" name="seg_053.mp4" start="0s" duration="39/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_053.mp4"/>
+        </asset>
+        <asset id="r55" name="seg_054.mp4" start="0s" duration="73/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_054.mp4"/>
+        </asset>
+        <asset id="r56" name="seg_055.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_055.mp4"/>
+        </asset>
+        <asset id="r57" name="seg_056.mp4" start="0s" duration="29/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_056.mp4"/>
+        </asset>
+        <asset id="r58" name="seg_057.mp4" start="0s" duration="7s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_segments/seg_057.mp4"/>
+        </asset>
+    </resources>
+    <library>
+        <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
+            <project name="Pass 15: Captions + Travel Chronology Normalized Segments FCPXML" uid="3347E6E8-95AE-562C-AD2F-AEADDBCB3E7F" modDate="2026-05-05 02:18:15 +0000">
+                <sequence duration="94095833/125000s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <asset-clip name="seg_001" ref="r2" offset="0s" duration="15/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_002" ref="r3" offset="15/2s" duration="37/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_003" ref="r4" offset="26s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_004" ref="r5" offset="31s" duration="35/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_005" ref="r6" offset="97/2s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_006" ref="r7" offset="103/2s" duration="10533333/1000000s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_007" ref="r8" offset="62033333/1000000s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_008" ref="r9" offset="67033333/1000000s" duration="15033333/1000000s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_009" ref="r10" offset="41033333/500000s" duration="9/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_010" ref="r11" offset="43283333/500000s" duration="16033333/1000000s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_011" ref="r12" offset="102599999/1000000s" duration="19033333/1000000s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_012" ref="r13" offset="30408333/250000s" duration="15/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_013" ref="r14" offset="32283333/250000s" duration="13/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_014" ref="r15" offset="33908333/250000s" duration="15/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_015" ref="r16" offset="35783333/250000s" duration="13/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_016" ref="r17" offset="37408333/250000s" duration="11/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_017" ref="r18" offset="38783333/250000s" duration="16033333/1000000s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_018" ref="r19" offset="34233333/200000s" duration="23/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_019" ref="r20" offset="36533333/200000s" duration="20033333/1000000s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_020" ref="r21" offset="101349999/500000s" duration="27/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_021" ref="r22" offset="108099999/500000s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_022" ref="r23" offset="110599999/500000s" duration="17/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_023" ref="r24" offset="114849999/500000s" duration="23/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_024" ref="r25" offset="120599999/500000s" duration="27/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_025" ref="r26" offset="127349999/500000s" duration="23/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_026" ref="r27" offset="133099999/500000s" duration="33/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_027" ref="r28" offset="141349999/500000s" duration="23/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_028" ref="r29" offset="147099999/500000s" duration="53/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_029" ref="r30" offset="160349999/500000s" duration="27/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_030" ref="r31" offset="167099999/500000s" duration="33/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_031" ref="r32" offset="175349999/500000s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_032" ref="r33" offset="176849999/500000s" duration="51/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_033" ref="r34" offset="189599999/500000s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_034" ref="r35" offset="191099999/500000s" duration="53/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_035" ref="r36" offset="204349999/500000s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_036" ref="r37" offset="205849999/500000s" duration="51/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_037" ref="r38" offset="218599999/500000s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_038" ref="r39" offset="220099999/500000s" duration="47/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_039" ref="r40" offset="231849999/500000s" duration="4s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_040" ref="r41" offset="233849999/500000s" duration="63/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_041" ref="r42" offset="249599999/500000s" duration="22033333/1000000s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_042" ref="r43" offset="521233331/1000000s" duration="19/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_043" ref="r44" offset="530733331/1000000s" duration="26033333/1000000s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_044" ref="r45" offset="69595833/125000s" duration="43/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_045" ref="r46" offset="72283333/125000s" duration="39/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_046" ref="r47" offset="74720833/125000s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_047" ref="r48" offset="75345833/125000s" duration="51/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_048" ref="r49" offset="78533333/125000s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_049" ref="r50" offset="78908333/125000s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_050" ref="r51" offset="79533333/125000s" duration="27/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_051" ref="r52" offset="81220833/125000s" duration="39/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_052" ref="r53" offset="83658333/125000s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_053" ref="r54" offset="84033333/125000s" duration="39/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_054" ref="r55" offset="86470833/125000s" duration="73/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_055" ref="r56" offset="91033333/125000s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_056" ref="r57" offset="91408333/125000s" duration="29/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="seg_057" ref="r58" offset="93220833/125000s" duration="7s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>

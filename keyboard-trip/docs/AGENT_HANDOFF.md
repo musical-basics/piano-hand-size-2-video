@@ -366,6 +366,15 @@ python3 keyboard-trip/scripts/export_fcpxml.py
 python3 keyboard-trip/scripts/export_fcpxml.py --audio-mode camera \
   --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_primary_camera_audio.fcpxml
 
+# FCP 10.7.1 has crashed on the raw-source XMLs on Lionel's machine.
+# Safer rescue exports:
+# 1. One finished movie as a single FCP clip.
+python3 keyboard-trip/scripts/export_fcpxml.py --timeline-mode rendered
+# 2. A cuttable timeline made from normalized 720p30 render segments.
+#    The segment MP4s live in exports/fcpxml/intermediates/pass15_v12_segments/
+#    and are gitignored because they are media files.
+python3 keyboard-trip/scripts/export_fcpxml.py --timeline-mode segments
+
 # Verify VO loudness on a section of a render:
 ffmpeg -y -hide_banner -i <render.mp4> -ss <start_s> -t 20 -vn \
   -af "loudnorm=print_format=summary" -f null -

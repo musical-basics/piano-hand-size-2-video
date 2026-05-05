@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.10">
+    <resources>
+        <format id="r1" name="FFVideoFormat720p30" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <asset id="r2" name="piano_hand_size_part2_rough_cut_v12.mp4" start="0s" duration="188197/250s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/renders/review_cuts/piano_hand_size_part2_rough_cut_v12.mp4"/>
+        </asset>
+    </resources>
+    <library>
+        <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
+            <project name="Pass 15: Captions + Travel Chronology Rendered Rescue FCPXML" uid="E542A639-E36B-58F4-99A8-ED153AA4100C" modDate="2026-05-05 02:18:13 +0000">
+                <sequence duration="188197/250s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <asset-clip name="piano_hand_size_part2_rough_cut_v12" ref="r2" offset="0s" duration="188197/250s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>

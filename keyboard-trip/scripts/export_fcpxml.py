@@ -30,6 +30,8 @@ WORKSPACE = ROOT.parent
 DB_PATH = WORKSPACE / "ai-agent-video-editor" / ".cut-notes" / "cut-notes.sqlite"
 EXPORT_DIR = ROOT / "exports" / "fcpxml"
 PROJECT_ID = "piano-hand-size-part-2"
+REVIEW_RENDER = ROOT / "renders" / "review_cuts" / "piano_hand_size_part2_rough_cut_v12.mp4"
+DEFAULT_SEGMENTS_DIR = EXPORT_DIR / "intermediates" / "pass15_v12_segments"
 
 PROJECT_WIDTH = 1280
 PROJECT_HEIGHT = 720
@@ -371,6 +373,7 @@ def build_media_resources(
                 add_format_resource(resources, fmt_id, key[0], key[1], key[2])
             else:
                 fmt_id = format_ids[key]
+            asset["format_id"] = fmt_id or "r1"
 
         resource_id = f"r{next_resource}"
         next_resource += 1
@@ -581,6 +584,8 @@ def add_visual_clip(
     }
     if asset.get("has_audio"):
         attrs["audioRole"] = "dialogue"
+    if asset.get("format_id"):
+        attrs["format"] = str(asset["format_id"])
     clip_el = SubElement(parent, "asset-clip", attrs)
     SubElement(clip_el, "adjust-conform", {"type": "fit"})
     rotation = rotation_value(clip)
@@ -636,6 +641,8 @@ def add_primary_visual_clip(
         attrs["srcEnable"] = "video"
     elif asset.get("has_audio"):
         attrs["audioRole"] = "dialogue"
+    if asset.get("format_id"):
+        attrs["format"] = str(asset["format_id"])
     clip_el = SubElement(parent, "asset-clip", attrs)
     SubElement(clip_el, "adjust-conform", {"type": "fit"})
     rotation = rotation_value(clip)
@@ -776,6 +783,121 @@ def build_primary_fcpxml(
             )
 
     return serialize_fcpxml(fcpxml), warnings
+
+
+def build_flat_media_fcpxml(
+    pass_row: sqlite3.Row,
+    media_paths: list[Path],
+    project_suffix: str,
+) -> tuple[str, list[str]]:
+    warnings: list[str] = []
+    media_infos: list[tuple[Path, dict[str, Any], float]] = []
+    total_duration = 0.0
+    for path in media_paths:
+        info = probe_media(path)
+        duration = float(info.get("duration") or 0.0)
+        if not path.exists():
+            warnings.append(f"missing media: {path}")
+            continue
+        if duration <= 0:
+            warnings.append(f"skipped media without duration: {path}")
+            continue
+        media_infos.append((path, info, duration))
+        total_duration += duration
+
+    fcpxml, resources, spine = build_fcpxml_document(pass_row, total_duration)
+    format_ids: dict[tuple[int, int, str], str] = {
+        (PROJECT_WIDTH, PROJECT_HEIGHT, str(PROJECT_FPS)): "r1"
+    }
+    next_resource = 2
+    offset = 0.0
+    for path, info, duration in media_infos:
+        key = format_key(info, "video")
+        fmt_id = format_ids.get(key)
+        if not fmt_id:
+            fmt_id = f"r{next_resource}"
+            next_resource += 1
+            format_ids[key] = fmt_id
+            add_format_resource(resources, fmt_id, key[0], key[1], key[2])
+
+        resource_id = f"r{next_resource}"
+        next_resource += 1
+        audio_rate = int(info.get("audio_rate") or 48000)
+        audio_channels = int(info.get("audio_channels") or 2)
+        asset_el = SubElement(
+            resources,
+            "asset",
+            {
+                "id": resource_id,
+                "name": path.name,
+                "start": "0s",
+                "duration": fcptime(duration),
+                "hasVideo": "1",
+                "format": fmt_id,
+                "hasAudio": "1",
+                "audioSources": "1",
+                "audioChannels": str(audio_channels),
+                "audioRate": str(audio_rate),
+            },
+        )
+        SubElement(
+            asset_el,
+            "media-rep",
+            {
+                "kind": "original-media",
+                "src": path.resolve().as_uri(),
+            },
+        )
+        SubElement(
+            spine,
+            "asset-clip",
+            {
+                "name": path.stem,
+                "ref": resource_id,
+                "offset": fcptime(offset),
+                "duration": fcptime(duration),
+                "start": "0s",
+                "format": fmt_id,
+                "tcFormat": "NDF",
+                "audioRole": "dialogue",
+            },
+        )
+        offset += duration
+
+    project = fcpxml.find(".//project")
+    if project is not None:
+        project.set("name", f"{pass_row['name']} {project_suffix} FCPXML")
+        project.set(
+            "uid",
+            str(uuid.uuid5(uuid.NAMESPACE_URL, f"{PROJECT_ID}:{pass_row['id']}:{project_suffix}")).upper(),
+        )
+
+    return serialize_fcpxml(fcpxml), warnings
+
+
+def build_rendered_fcpxml(
+    pass_row: sqlite3.Row,
+    render_path: Path,
+) -> tuple[str, list[str]]:
+    return build_flat_media_fcpxml(
+        pass_row,
+        [render_path],
+        "Rendered Rescue",
+    )
+
+
+def build_segment_fcpxml(
+    pass_row: sqlite3.Row,
+    segments_dir: Path,
+) -> tuple[str, list[str]]:
+    segment_paths = sorted(segments_dir.glob("seg_*.mp4"))
+    if not segment_paths:
+        return "", [f"no segment MP4s found in {segments_dir}"]
+    return build_flat_media_fcpxml(
+        pass_row,
+        segment_paths,
+        "Normalized Segments",
+    )
 
 
 def build_fcpxml(
@@ -955,11 +1077,12 @@ def main() -> None:
     )
     parser.add_argument(
         "--timeline-mode",
-        choices=("primary", "connected-gap"),
+        choices=("primary", "connected-gap", "rendered", "segments"),
         default="primary",
         help=(
             "FCPXML timeline shape. 'primary' writes visual clips directly in "
-            "the spine and avoids the connected-gap importer crash path."
+            "the spine; 'rendered' writes one finished movie; 'segments' writes "
+            "the normalized render segments left by the review-cut script."
         ),
     )
     parser.add_argument(
@@ -971,13 +1094,32 @@ def main() -> None:
             "source clip audio only; external VO/music is omitted in primary mode."
         ),
     )
+    parser.add_argument(
+        "--render-source",
+        type=Path,
+        default=REVIEW_RENDER,
+        help="Rendered movie used by --timeline-mode rendered.",
+    )
+    parser.add_argument(
+        "--segments-dir",
+        type=Path,
+        default=DEFAULT_SEGMENTS_DIR,
+        help="Directory of seg_*.mp4 files used by --timeline-mode segments.",
+    )
     args = parser.parse_args()
 
     conn = open_db()
     pass_id = args.pass_id or current_pass_id(conn)
     pass_row = fetch_pass(conn, pass_id)
     clips = fetch_clips(conn, pass_id)
-    output = (args.output or default_output(pass_id)).resolve()
+    if args.output:
+        output = args.output.resolve()
+    elif args.timeline_mode == "rendered":
+        output = (EXPORT_DIR / "piano_hand_size_part2_pass15_v12_rendered_rescue.fcpxml").resolve()
+    elif args.timeline_mode == "segments":
+        output = (EXPORT_DIR / "piano_hand_size_part2_pass15_v12_normalized_segments.fcpxml").resolve()
+    else:
+        output = default_output(pass_id).resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
 
     if args.timeline_mode == "primary":
@@ -987,8 +1129,22 @@ def main() -> None:
             title_mode=args.title_mode,
             audio_mode=args.audio_mode,
         )
+    elif args.timeline_mode == "rendered":
+        text, warnings = build_rendered_fcpxml(
+            pass_row,
+            args.render_source.resolve(),
+        )
+    elif args.timeline_mode == "segments":
+        text, warnings = build_segment_fcpxml(
+            pass_row,
+            args.segments_dir.resolve(),
+        )
     else:
         text, warnings = build_fcpxml(pass_row, clips, args.title_mode)
+    if not text:
+        for warning in warnings:
+            print(f"[fcpxml] {warning}", file=sys.stderr)
+        sys.exit(1)
     output.write_text(text, encoding="utf-8")
 
     visual_count = sum(1 for c in clips if is_visual(c))
