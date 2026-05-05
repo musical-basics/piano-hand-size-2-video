@@ -127,226 +127,226 @@
     </resources>
     <library>
         <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
-            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 02:00:22 +0000">
+            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 02:00:19 +0000">
                 <sequence duration="1505/2s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
                     <spine>
-                        <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r35" offset="0s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r35" offset="0s" duration="15/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r35" offset="15/2s" duration="37/2s" start="27/2s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r35" offset="15/2s" duration="37/2s" start="27/2s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
                         <gap name="I drove overnight for a keyboard most pian" offset="26s" start="0s" duration="5s"/>
-                        <asset-clip name="001_IMG_0256_0142am_trip_setup.MOV" ref="r3" offset="31s" duration="35/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="001_IMG_0256_0142am_trip_setup.MOV" ref="r3" offset="31s" duration="35/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
                         <gap name="P056 PLACEHOLDER Hand/key comparison flash" offset="97/2s" start="0s" duration="3s"/>
-                        <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r12" offset="103/2s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r12" offset="103/2s" duration="5s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r4" offset="113/2s" duration="11/2s" start="7s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                            <adjust-transform rotation="90"/>
-                        </asset-clip>
-                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" offset="62s" duration="5s" start="30s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                        </asset-clip>
-                        <asset-clip name="004_IMG_0259_sheets_stop_middle_of_nowhere.MOV" ref="r6" offset="67s" duration="7s" start="0s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                        </asset-clip>
-                        <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r11" offset="74s" duration="8s" start="7s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                        </asset-clip>
-                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r7" offset="82s" duration="9/2s" start="8s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                        </asset-clip>
-                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r8" offset="173/2s" duration="7s" start="14s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                        </asset-clip>
-                        <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r12" offset="187/2s" duration="9s" start="15s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                        </asset-clip>
-                        <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r4" offset="205/2s" duration="6s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r4" offset="113/2s" duration="11/2s" start="7s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="90"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0258.jpg" ref="r37" offset="217/2s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" offset="62s" duration="5s" start="30s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" offset="223/2s" duration="5s" start="103s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="004_IMG_0259_sheets_stop_middle_of_nowhere.MOV" ref="r6" offset="67s" duration="7s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0260.jpg" ref="r38" offset="233/2s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r11" offset="74s" duration="8s" start="7s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" offset="243/2s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r7" offset="82s" duration="9/2s" start="8s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" offset="129s" duration="13/2s" start="19s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r8" offset="173/2s" duration="7s" start="14s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r7" offset="271/2s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r12" offset="187/2s" duration="9s" start="15s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r8" offset="143s" duration="13/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r4" offset="205/2s" duration="6s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="90"/>
+                        </asset-clip>
+                        <asset-clip name="IMG_0258.jpg" ref="r37" offset="217/2s" duration="3s" start="0s" tcFormat="NDF">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r8" offset="299/2s" duration="11/2s" start="29s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" offset="223/2s" duration="5s" start="103s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0261.jpg" ref="r39" offset="155s" duration="4s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="IMG_0260.jpg" ref="r38" offset="233/2s" duration="5s" start="0s" tcFormat="NDF">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r7" offset="159s" duration="7s" start="6s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" offset="243/2s" duration="15/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0263.jpg" ref="r40" offset="166s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" offset="129s" duration="13/2s" start="19s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="007_IMG_0263_morning_highway_update.MOV" ref="r9" offset="171s" duration="23/2s" start="21s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r7" offset="271/2s" duration="15/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="008_IMG_0264_pennsylvania_scenery.MOV" ref="r10" offset="365/2s" duration="8s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r8" offset="143s" duration="13/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r11" offset="381/2s" duration="7s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r8" offset="299/2s" duration="11/2s" start="29s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0267.jpg" ref="r41" offset="395/2s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="IMG_0261.jpg" ref="r39" offset="155s" duration="4s" start="0s" tcFormat="NDF">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="011_IMG_0267_in_the_woods_almost_there.MOV" ref="r13" offset="405/2s" duration="27/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r7" offset="159s" duration="7s" start="6s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="012_IMG_0268_double_big_mac_lunch.MOV" ref="r14" offset="216s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="IMG_0263.jpg" ref="r40" offset="166s" duration="5s" start="0s" tcFormat="NDF">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r15" offset="221s" duration="17/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="007_IMG_0263_morning_highway_update.MOV" ref="r9" offset="171s" duration="23/2s" start="21s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r15" offset="459/2s" duration="23/2s" start="7s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="008_IMG_0264_pennsylvania_scenery.MOV" ref="r10" offset="365/2s" duration="8s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r16" offset="241s" duration="27/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r11" offset="381/2s" duration="7s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="IMG_0267.jpg" ref="r41" offset="395/2s" duration="5s" start="0s" tcFormat="NDF">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="011_IMG_0267_in_the_woods_almost_there.MOV" ref="r13" offset="405/2s" duration="27/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="012_IMG_0268_double_big_mac_lunch.MOV" ref="r14" offset="216s" duration="5s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r15" offset="221s" duration="17/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r15" offset="459/2s" duration="23/2s" start="7s" tcFormat="NDF" audioRole="dialogue">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r16" offset="241s" duration="27/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
                         </asset-clip>
-                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r16" offset="509/2s" duration="23/2s" start="25s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r16" offset="509/2s" duration="23/2s" start="25s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
                         </asset-clip>
-                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r16" offset="266s" duration="33/2s" start="49s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r16" offset="266s" duration="33/2s" start="49s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
                         </asset-clip>
-                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r17" offset="565/2s" duration="23/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r17" offset="565/2s" duration="23/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r17" offset="294s" duration="53/2s" start="60s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r17" offset="294s" duration="53/2s" start="60s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r18" offset="641/2s" duration="27/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r18" offset="641/2s" duration="27/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
                         </asset-clip>
-                        <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r18" offset="334s" duration="33/2s" start="29s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r18" offset="334s" duration="33/2s" start="29s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
                         </asset-clip>
                         <gap name="The real reason key size matters" offset="701/2s" start="0s" duration="3s"/>
-                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r26" offset="707/2s" duration="51/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r26" offset="707/2s" duration="51/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="030_IMG_0286_technical_keyboard_still.JPG" ref="r20" offset="379s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                            <adjust-transform rotation="-90"/>
-                        </asset-clip>
-                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r26" offset="382s" duration="53/2s" start="36s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                        </asset-clip>
-                        <asset-clip name="031_IMG_0287_technical_keyboard_still.JPG" ref="r21" offset="817/2s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="030_IMG_0286_technical_keyboard_still.JPG" ref="r20" offset="379s" duration="3s" start="0s" tcFormat="NDF">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
                         </asset-clip>
-                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r26" offset="823/2s" duration="51/2s" start="94s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r26" offset="382s" duration="53/2s" start="36s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="032_IMG_0288_technical_keyboard_still.JPG" ref="r22" offset="437s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="031_IMG_0287_technical_keyboard_still.JPG" ref="r21" offset="817/2s" duration="3s" start="0s" tcFormat="NDF">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
                         </asset-clip>
-                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r26" offset="440s" duration="47/2s" start="125s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r26" offset="823/2s" duration="51/2s" start="94s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r17" offset="927/2s" duration="4s" start="30s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="032_IMG_0288_technical_keyboard_still.JPG" ref="r22" offset="437s" duration="3s" start="0s" tcFormat="NDF">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r26" offset="440s" duration="47/2s" start="125s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r26" offset="935/2s" duration="63/2s" start="192s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r17" offset="927/2s" duration="4s" start="30s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="042_IMG_0298_tionesta_lake_cutaway.MOV" ref="r27" offset="499s" duration="7s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r26" offset="935/2s" duration="63/2s" start="192s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="043_IMG_0299_lake_overlook_broll.MOV" ref="r28" offset="506s" duration="7s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="042_IMG_0298_tionesta_lake_cutaway.MOV" ref="r27" offset="499s" duration="7s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="044_IMG_0300_177777_mileage.MOV" ref="r29" offset="513s" duration="6s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="043_IMG_0299_lake_overlook_broll.MOV" ref="r28" offset="506s" duration="7s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0300.jpg" ref="r43" offset="519s" duration="2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="044_IMG_0300_177777_mileage.MOV" ref="r29" offset="513s" duration="6s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="048_IMG_0304_hotel_car_broke_down.MOV" ref="r30" offset="521s" duration="19/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="IMG_0300.jpg" ref="r43" offset="519s" duration="2s" start="0s" tcFormat="NDF">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0304.jpg" ref="r44" offset="1061/2s" duration="4s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="048_IMG_0304_hotel_car_broke_down.MOV" ref="r30" offset="521s" duration="19/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="049_IMG_0305_car_fixed_heading_home.MOV" ref="r31" offset="1069/2s" duration="8s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="IMG_0304.jpg" ref="r44" offset="1061/2s" duration="4s" start="0s" tcFormat="NDF">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="050_IMG_0306_beautiful_return_drive.MOV" ref="r32" offset="1085/2s" duration="6s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="049_IMG_0305_car_fixed_heading_home.MOV" ref="r31" offset="1069/2s" duration="8s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="053_IMG_0309_highway_home_broll.MOV" ref="r33" offset="1097/2s" duration="8s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="050_IMG_0306_beautiful_return_drive.MOV" ref="r32" offset="1085/2s" duration="6s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="1113/2s" duration="43/2s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="053_IMG_0309_highway_home_broll.MOV" ref="r33" offset="1097/2s" duration="8s" start="0s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="578s" duration="39/2s" start="43s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="1113/2s" duration="43/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="578s" duration="39/2s" start="43s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
                         <gap name="P056 PLACEHOLDER Standard vs DS 6.0 vs DS " offset="1195/2s" start="0s" duration="5s"/>
-                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="1205/2s" duration="51/2s" start="71s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="1205/2s" duration="51/2s" start="71s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="034_IMG_0290_technical_keyboard_still.JPG" ref="r23" offset="628s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="034_IMG_0290_technical_keyboard_still.JPG" ref="r23" offset="628s" duration="3s" start="0s" tcFormat="NDF">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
                         </asset-clip>
                         <gap name="My current take Try DS 6.0 and DS 5.5 if p" offset="631s" start="0s" duration="5s"/>
-                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="636s" duration="27/2s" start="126s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="636s" duration="27/2s" start="126s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="1299/2s" duration="39/2s" start="154s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="1299/2s" duration="39/2s" start="154s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="036_IMG_0292_technical_keyboard_still.JPG" ref="r24" offset="669s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                            <adjust-transform rotation="-90"/>
-                        </asset-clip>
-                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="672s" duration="39/2s" start="178s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                        </asset-clip>
-                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="1383/2s" duration="73/2s" start="221s" tcFormat="NDF" srcEnable="video">
-                            <adjust-conform type="fit"/>
-                        </asset-clip>
-                        <asset-clip name="038_IMG_0294_technical_keyboard_still.JPG" ref="r25" offset="728s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="036_IMG_0292_technical_keyboard_still.JPG" ref="r24" offset="669s" duration="3s" start="0s" tcFormat="NDF">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
                         </asset-clip>
-                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="731s" duration="29/2s" start="296s" tcFormat="NDF" srcEnable="video">
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="672s" duration="39/2s" start="178s" tcFormat="NDF" audioRole="dialogue">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="1383/2s" duration="73/2s" start="221s" tcFormat="NDF" audioRole="dialogue">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="038_IMG_0294_technical_keyboard_still.JPG" ref="r25" offset="728s" duration="3s" start="0s" tcFormat="NDF">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" offset="731s" duration="29/2s" start="296s" tcFormat="NDF" audioRole="dialogue">
                             <adjust-conform type="fit"/>
                         </asset-clip>
                         <gap name="Part 3: DS 6.0 vs DS 5.5 comparison?" offset="1491/2s" start="0s" duration="7s"/>

@@ -358,12 +358,13 @@ sqlite3 ai-agent-video-editor/.cut-notes/cut-notes.sqlite \
 ffprobe -v error -show_entries format=duration -of csv=p=0 \
   keyboard-trip/renders/review_cuts/piano_hand_size_part2_rough_cut_v<N>.mp4
 
-# Export current pass as Final Cut Pro XML:
+# Export current pass as a conservative Final Cut Pro XML:
+# primary visual storyline only; no connected-gap clips, captions, VO, or music.
 python3 keyboard-trip/scripts/export_fcpxml.py
 
-# Safest fallback if Final Cut dislikes caption imports:
-python3 keyboard-trip/scripts/export_fcpxml.py --title-mode none \
-  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_media_only.fcpxml
+# Variant with original camera audio on source clips, still no VO/music:
+python3 keyboard-trip/scripts/export_fcpxml.py --audio-mode camera \
+  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_primary_camera_audio.fcpxml
 
 # Verify VO loudness on a section of a render:
 ffmpeg -y -hide_banner -i <render.mp4> -ss <start_s> -t 20 -vn \

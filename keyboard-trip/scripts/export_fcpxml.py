@@ -294,10 +294,16 @@ def build_media_resources(
     resources: Element,
     clips: list[dict[str, Any]],
     first_resource_id: int = 2,
+    include_audio_clips: bool = True,
 ) -> tuple[dict[str, str], dict[str, dict[str, Any]], list[str]]:
     media_clips = [
         c for c in clips
-        if c.get("assetId") and c["role"] not in TITLE_ROLES and source_path(c)
+        if (
+            c.get("assetId")
+            and c["role"] not in TITLE_ROLES
+            and (include_audio_clips or c["role"] not in AUDIO_ROLES)
+            and source_path(c)
+        )
     ]
     assets: dict[str, dict[str, Any]] = {}
     warnings: list[str] = []
@@ -610,6 +616,168 @@ def add_audio_clip(
         SubElement(clip_el, "adjust-volume", {"amount": "0dB"})
 
 
+def add_primary_visual_clip(
+    parent: Element,
+    clip: dict[str, Any],
+    ref: str,
+    asset: dict[str, Any],
+    audio_mode: str,
+) -> None:
+    start, _ = clip_window(clip)
+    attrs = {
+        "name": clean_name(clip.get("assetBasename"), clip["id"]),
+        "ref": ref,
+        "offset": fcptime(start),
+        "duration": fcptime(clip_duration(clip)),
+        "start": fcptime(clip.get("sourceIn") or 0.0),
+        "tcFormat": "NDF",
+    }
+    if audio_mode == "none":
+        attrs["srcEnable"] = "video"
+    elif asset.get("has_audio"):
+        attrs["audioRole"] = "dialogue"
+    clip_el = SubElement(parent, "asset-clip", attrs)
+    SubElement(clip_el, "adjust-conform", {"type": "fit"})
+    rotation = rotation_value(clip)
+    if rotation:
+        SubElement(clip_el, "adjust-transform", {"rotation": rotation})
+
+
+def build_fcpxml_document(
+    pass_row: sqlite3.Row,
+    total_duration: float,
+) -> tuple[Element, Element, Element]:
+    fcpxml = Element("fcpxml", {"version": "1.10"})
+    resources = SubElement(fcpxml, "resources")
+    add_format_resource(
+        resources,
+        "r1",
+        PROJECT_WIDTH,
+        PROJECT_HEIGHT,
+        str(PROJECT_FPS),
+        project=True,
+    )
+    library = SubElement(fcpxml, "library")
+    event = SubElement(
+        library,
+        "event",
+        {
+            "name": "Piano Hand Size Part 2",
+            "uid": str(uuid.uuid5(uuid.NAMESPACE_URL, f"{PROJECT_ID}:event")).upper(),
+        },
+    )
+    project = SubElement(
+        event,
+        "project",
+        {
+            "name": f"{pass_row['name']} FCPXML",
+            "uid": str(uuid.uuid5(uuid.NAMESPACE_URL, f"{PROJECT_ID}:{pass_row['id']}")).upper(),
+            "modDate": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S +0000"),
+        },
+    )
+    sequence = SubElement(
+        project,
+        "sequence",
+        {
+            "duration": fcptime(total_duration),
+            "format": "r1",
+            "tcStart": "0s",
+            "tcFormat": "NDF",
+            "audioLayout": "stereo",
+            "audioRate": "48k",
+        },
+    )
+    return fcpxml, resources, SubElement(sequence, "spine")
+
+
+def serialize_fcpxml(fcpxml: Element) -> str:
+    raw = tostring(fcpxml, encoding="utf-8")
+    pretty = minidom.parseString(raw).toprettyxml(indent="    ", encoding="UTF-8")
+    text = pretty.decode("utf-8")
+    return text.replace(
+        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE fcpxml>",
+    )
+
+
+def build_primary_fcpxml(
+    pass_row: sqlite3.Row,
+    clips: list[dict[str, Any]],
+    title_mode: str,
+    audio_mode: str,
+) -> tuple[str, list[str]]:
+    total_duration = max((clip_window(c)[1] for c in clips), default=0.0)
+    fcpxml, resources, spine = build_fcpxml_document(pass_row, total_duration)
+    if title_mode == "captionator":
+        SubElement(
+            resources,
+            "effect",
+            {
+                "id": "r2",
+                "name": "Caption",
+                "uid": "~/Titles.localized/Captionator/Caption/Caption.moti",
+            },
+        )
+    asset_refs, assets, warnings = build_media_resources(
+        resources,
+        clips,
+        first_resource_id=3 if title_mode == "captionator" else 2,
+        include_audio_clips=False,
+    )
+
+    title_index = 0
+    for clip in clips:
+        if not is_visual(clip):
+            continue
+        start, _ = clip_window(clip)
+        duration = clip_duration(clip)
+        overlay = clip.get("textOverlay")
+        if clip["role"] in TITLE_ROLES:
+            gap = SubElement(
+                spine,
+                "gap",
+                {
+                    "name": title_preview(overlay or clip["id"]),
+                    "offset": fcptime(start),
+                    "start": "0s",
+                    "duration": fcptime(duration),
+                },
+            )
+            if overlay and title_mode != "none":
+                title_index += 1
+                add_text_overlay(
+                    gap,
+                    overlay,
+                    start,
+                    duration,
+                    lane=1,
+                    style_id=f"ts{title_index}",
+                    mode="card",
+                    title_mode=title_mode,
+                )
+            continue
+
+        asset_id = str(clip.get("assetId") or "")
+        ref = asset_refs.get(asset_id)
+        asset = assets.get(asset_id)
+        if ref and asset:
+            add_primary_visual_clip(spine, clip, ref, asset, audio_mode)
+        else:
+            warnings.append(f"skipped visual clip without media: {clip['id']}")
+            SubElement(
+                spine,
+                "gap",
+                {
+                    "name": clip["id"],
+                    "offset": fcptime(start),
+                    "start": "0s",
+                    "duration": fcptime(duration),
+                },
+            )
+
+    return serialize_fcpxml(fcpxml), warnings
+
+
 def build_fcpxml(
     pass_row: sqlite3.Row,
     clips: list[dict[str, Any]],
@@ -779,10 +947,28 @@ def main() -> None:
     parser.add_argument(
         "--title-mode",
         choices=("native", "captionator", "none"),
-        default="native",
+        default="none",
         help=(
-            "How to export text overlays. 'native' writes FCP iTT captions "
-            "and is the safest importer path."
+            "How to export text overlays. Default is 'none' because FCP 10.7.1 "
+            "is crashing on this project during XML import."
+        ),
+    )
+    parser.add_argument(
+        "--timeline-mode",
+        choices=("primary", "connected-gap"),
+        default="primary",
+        help=(
+            "FCPXML timeline shape. 'primary' writes visual clips directly in "
+            "the spine and avoids the connected-gap importer crash path."
+        ),
+    )
+    parser.add_argument(
+        "--audio-mode",
+        choices=("none", "camera"),
+        default="none",
+        help=(
+            "Audio to include in primary timeline exports. 'camera' keeps "
+            "source clip audio only; external VO/music is omitted in primary mode."
         ),
     )
     args = parser.parse_args()
@@ -794,7 +980,15 @@ def main() -> None:
     output = (args.output or default_output(pass_id)).resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
 
-    text, warnings = build_fcpxml(pass_row, clips, args.title_mode)
+    if args.timeline_mode == "primary":
+        text, warnings = build_primary_fcpxml(
+            pass_row,
+            clips,
+            title_mode=args.title_mode,
+            audio_mode=args.audio_mode,
+        )
+    else:
+        text, warnings = build_fcpxml(pass_row, clips, args.title_mode)
     output.write_text(text, encoding="utf-8")
 
     visual_count = sum(1 for c in clips if is_visual(c))
@@ -804,8 +998,9 @@ def main() -> None:
     print(f"[fcpxml] wrote {display_path(output)}")
     print(
         f"[fcpxml] {len(clips)} clips: {visual_count} visual, "
-        f"{audio_count} audio, {caption_count} text overlays "
-        f"({args.title_mode}), "
+        f"{audio_count} db audio rows, {caption_count} text overlays "
+        f"({args.title_mode}), {args.timeline_mode} timeline, "
+        f"audio={args.audio_mode}, "
         f"{total:.1f}s total"
     )
     if warnings:
