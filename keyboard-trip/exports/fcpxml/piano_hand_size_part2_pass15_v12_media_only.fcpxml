@@ -170,362 +170,106 @@
                             <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r35" lane="1" offset="0s" duration="15/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Piano Hand Size, Part 2" lane="3" offset="0s" duration="15/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts1">Piano Hand Size, Part 2</text-style>
-                                </text>
-                                <text-style-def id="ts1">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r35" lane="1" offset="15/2s" duration="37/2s" start="27/2s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="I drove overnight for smaller piano keys." lane="3" offset="15/2s" duration="37/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts2">I drove overnight for smaller piano keys.</text-style>
-                                </text>
-                                <text-style-def id="ts2">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
-                            <caption name="I drove overnight for a keyboard most pian" lane="2" offset="26s" duration="5s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts3">I drove overnight for a keyboard most pianists have never tried.</text-style>
-                                </text>
-                                <text-style-def id="ts3">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="001_IMG_0256_0142am_trip_setup.MOV" ref="r3" lane="1" offset="31s" duration="35/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="1:42 AM Baltimore to Titusville, Pennsylva" lane="3" offset="31s" duration="35/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts4">1:42 AM Baltimore to Titusville, Pennsylvania</text-style>
-                                </text>
-                                <text-style-def id="ts4">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
-                            <caption name="P056 PLACEHOLDER Hand/key comparison flash" lane="2" offset="97/2s" duration="3s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts5">P056 PLACEHOLDER Hand/key comparison flash</text-style>
-                                </text>
-                                <text-style-def id="ts5">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r12" lane="1" offset="103/2s" duration="5s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="Narrower keys can change the whole piano-p" lane="3" offset="103/2s" duration="5s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts6">Narrower keys can change the whole piano-playing experience.</text-style>
-                                </text>
-                                <text-style-def id="ts6">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r4" lane="1" offset="113/2s" duration="11/2s" start="7s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-transform rotation="90"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="Narrower keys can change the whole piano-p" lane="3" offset="113/2s" duration="11/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts7">Narrower keys can change the whole piano-playing experience.</text-style>
-                                </text>
-                                <text-style-def id="ts7">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" lane="1" offset="62s" duration="5s" start="30s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Road-trip fuel" lane="3" offset="62s" duration="5s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts8">Road-trip fuel</text-style>
-                                </text>
-                                <text-style-def id="ts8">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="004_IMG_0259_sheets_stop_middle_of_nowhere.MOV" ref="r6" lane="1" offset="67s" duration="7s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="Almost 2 AM: driving to Pennsylvania for D" lane="3" offset="67s" duration="7s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts9">Almost 2 AM: driving to Pennsylvania for DS 5.5 and DS 6.0 keyboards.</text-style>
-                                </text>
-                                <text-style-def id="ts9">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r11" lane="1" offset="74s" duration="8s" start="7s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="Almost 2 AM: driving to Pennsylvania for D" lane="3" offset="74s" duration="8s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts10">Almost 2 AM: driving to Pennsylvania for DS 5.5 and DS 6.0 keyboards.</text-style>
-                                </text>
-                                <text-style-def id="ts10">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r7" lane="1" offset="82s" duration="9/2s" start="8s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="The car nap begins" lane="3" offset="82s" duration="9/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts11">The car nap begins</text-style>
-                                </text>
-                                <text-style-def id="ts11">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r8" lane="1" offset="173/2s" duration="7s" start="14s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="A few millimeters on each key can change e" lane="3" offset="173/2s" duration="7s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts12">A few millimeters on each key can change everything.</text-style>
-                                </text>
-                                <text-style-def id="ts12">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r12" lane="1" offset="187/2s" duration="9s" start="15s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="A few millimeters on each key can change e" lane="3" offset="187/2s" duration="9s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts13">A few millimeters on each key can change everything.</text-style>
-                                </text>
-                                <text-style-def id="ts13">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r4" lane="1" offset="205/2s" duration="6s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-transform rotation="90"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="Gas stations, snacks, and questionable dec" lane="3" offset="205/2s" duration="6s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts14">Gas stations, snacks, and questionable decisions.</text-style>
-                                </text>
-                                <text-style-def id="ts14">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="IMG_0258.jpg" ref="r37" lane="1" offset="217/2s" duration="3s" start="0s" tcFormat="NDF">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Gas stations, snacks, and questionable dec" lane="3" offset="217/2s" duration="3s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts15">Gas stations, snacks, and questionable decisions.</text-style>
-                                </text>
-                                <text-style-def id="ts15">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" lane="1" offset="223/2s" duration="5s" start="103s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="Gas stations, snacks, and questionable dec" lane="3" offset="223/2s" duration="5s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts16">Gas stations, snacks, and questionable decisions.</text-style>
-                                </text>
-                                <text-style-def id="ts16">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="IMG_0260.jpg" ref="r38" lane="1" offset="233/2s" duration="5s" start="0s" tcFormat="NDF">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Gas stations, snacks, and questionable dec" lane="3" offset="233/2s" duration="5s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts17">Gas stations, snacks, and questionable decisions.</text-style>
-                                </text>
-                                <text-style-def id="ts17">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" lane="1" offset="243/2s" duration="15/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="No caffeine." lane="3" offset="243/2s" duration="15/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts18">No caffeine.</text-style>
-                                </text>
-                                <text-style-def id="ts18">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r5" lane="1" offset="129s" duration="13/2s" start="19s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Backup plan: chocolate milk." lane="3" offset="129s" duration="13/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts19">Backup plan: chocolate milk.</text-style>
-                                </text>
-                                <text-style-def id="ts19">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r7" lane="1" offset="271/2s" duration="15/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="A few hours later" lane="3" offset="271/2s" duration="15/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts20">A few hours later</text-style>
-                                </text>
-                                <text-style-def id="ts20">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r8" lane="1" offset="143s" duration="13/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Almost three hours of sleep" lane="3" offset="143s" duration="13/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts21">Almost three hours of sleep</text-style>
-                                </text>
-                                <text-style-def id="ts21">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r8" lane="1" offset="299/2s" duration="11/2s" start="29s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Back on the road" lane="3" offset="299/2s" duration="11/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts22">Back on the road</text-style>
-                                </text>
-                                <text-style-def id="ts22">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="IMG_0261.jpg" ref="r39" lane="1" offset="155s" duration="4s" start="0s" tcFormat="NDF">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Slept in the car. Human enough to keep dri" lane="3" offset="155s" duration="4s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts23">Slept in the car. Human enough to keep driving.</text-style>
-                                </text>
-                                <text-style-def id="ts23">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r7" lane="1" offset="159s" duration="7s" start="6s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="Slept in the car. Human enough to keep dri" lane="3" offset="159s" duration="7s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts24">Slept in the car. Human enough to keep driving.</text-style>
-                                </text>
-                                <text-style-def id="ts24">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="IMG_0263.jpg" ref="r40" lane="1" offset="166s" duration="5s" start="0s" tcFormat="NDF">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Slept in the car. Human enough to keep dri" lane="3" offset="166s" duration="5s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts25">Slept in the car. Human enough to keep driving.</text-style>
-                                </text>
-                                <text-style-def id="ts25">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="007_IMG_0263_morning_highway_update.MOV" ref="r9" lane="1" offset="171s" duration="23/2s" start="21s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Morning update: 3.5 hours to go" lane="3" offset="171s" duration="23/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts26">Morning update: 3.5 hours to go</text-style>
-                                </text>
-                                <text-style-def id="ts26">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="008_IMG_0264_pennsylvania_scenery.MOV" ref="r10" lane="1" offset="365/2s" duration="8s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="By morning, Pennsylvania started to feel r" lane="3" offset="365/2s" duration="8s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts27">By morning, Pennsylvania started to feel real.</text-style>
-                                </text>
-                                <text-style-def id="ts27">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r11" lane="1" offset="381/2s" duration="7s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="By morning, Pennsylvania started to feel r" lane="3" offset="381/2s" duration="7s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts28">By morning, Pennsylvania started to feel real.</text-style>
-                                </text>
-                                <text-style-def id="ts28">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="IMG_0267.jpg" ref="r41" lane="1" offset="395/2s" duration="5s" start="0s" tcFormat="NDF">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="By morning, Pennsylvania started to feel r" lane="3" offset="395/2s" duration="5s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts29">By morning, Pennsylvania started to feel real.</text-style>
-                                </text>
-                                <text-style-def id="ts29">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="011_IMG_0267_in_the_woods_almost_there.MOV" ref="r13" lane="1" offset="405/2s" duration="27/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="After five hours: 48 minutes left" lane="3" offset="405/2s" duration="27/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts30">After five hours: 48 minutes left</text-style>
-                                </text>
-                                <text-style-def id="ts30">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="012_IMG_0268_double_big_mac_lunch.MOV" ref="r14" lane="1" offset="216s" duration="5s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Emergency lunch" lane="3" offset="216s" duration="5s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts31">Emergency lunch</text-style>
-                                </text>
-                                <text-style-def id="ts31">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r15" lane="1" offset="221s" duration="17/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Arrived: David Steinbuhler workshop" lane="3" offset="221s" duration="17/2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts32">Arrived: David Steinbuhler workshop</text-style>
-                                </text>
-                                <text-style-def id="ts32">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r15" lane="1" offset="459/2s" duration="23/2s" start="7s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
@@ -555,14 +299,6 @@
                                 <adjust-conform type="fit"/>
                                 <adjust-transform rotation="-90"/>
                             </asset-clip>
-                            <caption name="The real reason key size matters" lane="2" offset="701/2s" duration="3s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts33">The real reason key size matters</text-style>
-                                </text>
-                                <text-style-def id="ts33">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r26" lane="1" offset="707/2s" duration="51/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
@@ -597,111 +333,39 @@
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="After visiting David, I stopped by the lak" lane="3" offset="499s" duration="7s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts34">After visiting David, I stopped by the lake to breathe.</text-style>
-                                </text>
-                                <text-style-def id="ts34">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="043_IMG_0299_lake_overlook_broll.MOV" ref="r28" lane="1" offset="506s" duration="7s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="After visiting David, I stopped by the lak" lane="3" offset="506s" duration="7s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts35">After visiting David, I stopped by the lake to breathe.</text-style>
-                                </text>
-                                <text-style-def id="ts35">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="044_IMG_0300_177777_mileage.MOV" ref="r29" lane="1" offset="513s" duration="6s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="After visiting David, I stopped by the lak" lane="3" offset="513s" duration="6s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts36">After visiting David, I stopped by the lake to breathe.</text-style>
-                                </text>
-                                <text-style-def id="ts36">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="IMG_0300.jpg" ref="r43" lane="1" offset="519s" duration="2s" start="0s" tcFormat="NDF">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="After visiting David, I stopped by the lak" lane="3" offset="519s" duration="2s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts37">After visiting David, I stopped by the lake to breathe.</text-style>
-                                </text>
-                                <text-style-def id="ts37">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="048_IMG_0304_hotel_car_broke_down.MOV" ref="r30" lane="1" offset="521s" duration="19/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
                             <asset-clip name="IMG_0304.jpg" ref="r44" lane="1" offset="1061/2s" duration="4s" start="0s" tcFormat="NDF">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="The car broke down in Pennsylvania. The tr" lane="3" offset="1061/2s" duration="4s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts38">The car broke down in Pennsylvania. The trip had one more plot twist.</text-style>
-                                </text>
-                                <text-style-def id="ts38">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="049_IMG_0305_car_fixed_heading_home.MOV" ref="r31" lane="1" offset="1069/2s" duration="8s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="The car broke down in Pennsylvania. The tr" lane="3" offset="1069/2s" duration="8s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts39">The car broke down in Pennsylvania. The trip had one more plot twist.</text-style>
-                                </text>
-                                <text-style-def id="ts39">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="050_IMG_0306_beautiful_return_drive.MOV" ref="r32" lane="1" offset="1085/2s" duration="6s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                                 <adjust-volume amount="-96dB"/>
                             </asset-clip>
-                            <caption name="The car broke down in Pennsylvania. The tr" lane="3" offset="1085/2s" duration="6s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts40">The car broke down in Pennsylvania. The trip had one more plot twist.</text-style>
-                                </text>
-                                <text-style-def id="ts40">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="053_IMG_0309_highway_home_broll.MOV" ref="r33" lane="1" offset="1097/2s" duration="8s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="The car broke down in Pennsylvania. The tr" lane="3" offset="1097/2s" duration="8s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts41">The car broke down in Pennsylvania. The trip had one more plot twist.</text-style>
-                                </text>
-                                <text-style-def id="ts41">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" lane="1" offset="1113/2s" duration="43/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
                             <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" lane="1" offset="578s" duration="39/2s" start="43s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="P056 PLACEHOLDER Standard vs DS 6.0 vs DS " lane="2" offset="1195/2s" duration="5s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts42">P056 PLACEHOLDER Standard vs DS 6.0 vs DS 5.5</text-style>
-                                </text>
-                                <text-style-def id="ts42">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" lane="1" offset="1205/2s" duration="51/2s" start="71s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
@@ -709,14 +373,6 @@
                                 <adjust-conform type="fit"/>
                                 <adjust-transform rotation="-90"/>
                             </asset-clip>
-                            <caption name="My current take Try DS 6.0 and DS 5.5 if p" lane="2" offset="631s" duration="5s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts43">My current take Try DS 6.0 and DS 5.5 if possible. Under ~8.2 inches: consider DS 5.5 too.</text-style>
-                                </text>
-                                <text-style-def id="ts43">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" lane="1" offset="636s" duration="27/2s" start="126s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
@@ -740,14 +396,6 @@
                             <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r34" lane="1" offset="731s" duration="29/2s" start="296s" tcFormat="NDF" audioRole="dialogue">
                                 <adjust-conform type="fit"/>
                             </asset-clip>
-                            <caption name="Part 3: DS 6.0 vs DS 5.5 comparison?" lane="2" offset="1491/2s" duration="7s" start="0s" role="iTT?captionFormat=ITT.en">
-                                <text placement="bottom">
-                                    <text-style ref="ts44">Part 3: DS 6.0 vs DS 5.5 comparison?</text-style>
-                                </text>
-                                <text-style-def id="ts44">
-                                    <text-style font=".AppleSystemUIFont" fontFace="Regular" fontSize="13" fontColor="1.0 1.0 1.0 1.0" backgroundColor="0.0 0.0 0.0 1.0"/>
-                                </text-style-def>
-                            </caption>
                             <asset-clip name="VO_01a_late_night_thesis.wav" ref="r45" lane="-1" offset="103/2s" duration="10069333/1000000s" start="0s" audioRole="dialogue"/>
                             <asset-clip name="VO_02_gas_station_and_snacks.wav" ref="r48" lane="-1" offset="205/2s" duration="8637823/500000s" start="0s" audioRole="dialogue">
                                 <adjust-volume amount="0dB"/>

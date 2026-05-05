@@ -361,6 +361,10 @@ ffprobe -v error -show_entries format=duration -of csv=p=0 \
 # Export current pass as Final Cut Pro XML:
 python3 keyboard-trip/scripts/export_fcpxml.py
 
+# Safest fallback if Final Cut dislikes caption imports:
+python3 keyboard-trip/scripts/export_fcpxml.py --title-mode none \
+  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_media_only.fcpxml
+
 # Verify VO loudness on a section of a render:
 ffmpeg -y -hide_banner -i <render.mp4> -ss <start_s> -t 20 -vn \
   -af "loudnorm=print_format=summary" -f null -

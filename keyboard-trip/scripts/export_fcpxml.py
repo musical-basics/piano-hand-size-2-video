@@ -11,7 +11,6 @@ FCPXML aligned with the rendered review cut and the editor database.
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import math
 import sqlite3
@@ -166,10 +165,6 @@ def source_path(clip: dict[str, Any]) -> Path | None:
     return path.resolve()
 
 
-def stable_uid(path: Path) -> str:
-    return hashlib.md5(str(path).encode("utf-8")).hexdigest().upper()
-
-
 def fcptime(seconds: float | int | None) -> str:
     value = 0.0 if seconds is None else float(seconds)
     if abs(value) < 0.0000005:
@@ -298,6 +293,7 @@ def add_format_resource(
 def build_media_resources(
     resources: Element,
     clips: list[dict[str, Any]],
+    first_resource_id: int = 2,
 ) -> tuple[dict[str, str], dict[str, dict[str, Any]], list[str]]:
     media_clips = [
         c for c in clips
@@ -352,7 +348,7 @@ def build_media_resources(
     format_ids: dict[tuple[int, int, str], str] = {
         (PROJECT_WIDTH, PROJECT_HEIGHT, str(PROJECT_FPS)): "r1"
     }
-    next_resource = 3
+    next_resource = first_resource_id
     asset_resource_ids: dict[str, str] = {}
 
     for asset_id, asset in sorted(assets.items(), key=lambda item: item[1]["basename"]):
@@ -373,11 +369,9 @@ def build_media_resources(
         resource_id = f"r{next_resource}"
         next_resource += 1
         asset_resource_ids[asset_id] = resource_id
-        uid = stable_uid(asset["path"])
         attrs = {
             "id": resource_id,
             "name": asset["basename"],
-            "uid": uid,
             "start": "0s",
             "duration": fcptime(asset["duration"]),
         }
@@ -399,7 +393,6 @@ def build_media_resources(
             "media-rep",
             {
                 "kind": "original-media",
-                "sig": uid,
                 "src": asset["path"].as_uri(),
             },
         )
@@ -507,6 +500,62 @@ def add_title(
     )
 
 
+def add_native_caption(
+    parent: Element,
+    text: str,
+    offset: float,
+    duration: float,
+    lane: int,
+    style_id: str,
+) -> None:
+    caption_text = " ".join(text.split())
+    caption_el = SubElement(
+        parent,
+        "caption",
+        {
+            "name": title_preview(caption_text),
+            "lane": str(lane),
+            "offset": fcptime(offset),
+            "duration": fcptime(duration),
+            "start": "0s",
+            "role": "iTT?captionFormat=ITT.en",
+        },
+    )
+    text_el = SubElement(caption_el, "text", {"placement": "bottom"})
+    text_style = SubElement(text_el, "text-style", {"ref": style_id})
+    text_style.text = caption_text
+    style_def = SubElement(caption_el, "text-style-def", {"id": style_id})
+    SubElement(
+        style_def,
+        "text-style",
+        {
+            "font": ".AppleSystemUIFont",
+            "fontFace": "Regular",
+            "fontSize": "13",
+            "fontColor": "1.0 1.0 1.0 1.0",
+            "backgroundColor": "0.0 0.0 0.0 1.0",
+        },
+    )
+
+
+def add_text_overlay(
+    parent: Element,
+    text: str,
+    offset: float,
+    duration: float,
+    lane: int,
+    style_id: str,
+    mode: str,
+    title_mode: str,
+) -> None:
+    if title_mode == "none":
+        return
+    if title_mode == "native":
+        add_native_caption(parent, text, offset, duration, lane, style_id)
+        return
+    add_title(parent, text, offset, duration, lane, style_id, mode)
+
+
 def add_visual_clip(
     parent: Element,
     clip: dict[str, Any],
@@ -561,7 +610,11 @@ def add_audio_clip(
         SubElement(clip_el, "adjust-volume", {"amount": "0dB"})
 
 
-def build_fcpxml(pass_row: sqlite3.Row, clips: list[dict[str, Any]]) -> tuple[str, list[str]]:
+def build_fcpxml(
+    pass_row: sqlite3.Row,
+    clips: list[dict[str, Any]],
+    title_mode: str,
+) -> tuple[str, list[str]]:
     total_duration = max((clip_window(c)[1] for c in clips), default=0.0)
 
     fcpxml = Element("fcpxml", {"version": "1.10"})
@@ -574,16 +627,21 @@ def build_fcpxml(pass_row: sqlite3.Row, clips: list[dict[str, Any]]) -> tuple[st
         str(PROJECT_FPS),
         project=True,
     )
-    SubElement(
+    if title_mode == "captionator":
+        SubElement(
+            resources,
+            "effect",
+            {
+                "id": "r2",
+                "name": "Caption",
+                "uid": "~/Titles.localized/Captionator/Caption/Caption.moti",
+            },
+        )
+    asset_refs, assets, warnings = build_media_resources(
         resources,
-        "effect",
-        {
-            "id": "r2",
-            "name": "Caption",
-            "uid": "~/Titles.localized/Captionator/Caption/Caption.moti",
-        },
+        clips,
+        first_resource_id=3 if title_mode == "captionator" else 2,
     )
-    asset_refs, assets, warnings = build_media_resources(resources, clips)
 
     library = SubElement(fcpxml, "library")
     event = SubElement(
@@ -641,14 +699,15 @@ def build_fcpxml(pass_row: sqlite3.Row, clips: list[dict[str, Any]]) -> tuple[st
         if clip["role"] in TITLE_ROLES:
             if overlay:
                 title_index += 1
-                add_title(
+                add_text_overlay(
                     timeline_gap,
                     overlay,
                     start,
                     duration,
-                    lane=1,
+                    lane=2,
                     style_id=f"ts{title_index}",
                     mode="card",
+                    title_mode=title_mode,
                 )
             continue
 
@@ -668,14 +727,15 @@ def build_fcpxml(pass_row: sqlite3.Row, clips: list[dict[str, Any]]) -> tuple[st
 
         if overlay:
             title_index += 1
-            add_title(
+            add_text_overlay(
                 timeline_gap,
                 overlay,
                 start,
                 duration,
-                lane=2,
+                lane=3,
                 style_id=f"ts{title_index}",
                 mode="caption",
+                title_mode=title_mode,
             )
 
     for clip in clips:
@@ -716,6 +776,15 @@ def main() -> None:
         help="Pass ID to export. Defaults to project metadata currentPassId.",
     )
     parser.add_argument("--output", type=Path, help="Output .fcpxml path")
+    parser.add_argument(
+        "--title-mode",
+        choices=("native", "captionator", "none"),
+        default="native",
+        help=(
+            "How to export text overlays. 'native' writes FCP iTT captions "
+            "and is the safest importer path."
+        ),
+    )
     args = parser.parse_args()
 
     conn = open_db()
@@ -725,7 +794,7 @@ def main() -> None:
     output = (args.output or default_output(pass_id)).resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
 
-    text, warnings = build_fcpxml(pass_row, clips)
+    text, warnings = build_fcpxml(pass_row, clips, args.title_mode)
     output.write_text(text, encoding="utf-8")
 
     visual_count = sum(1 for c in clips if is_visual(c))
@@ -735,7 +804,8 @@ def main() -> None:
     print(f"[fcpxml] wrote {display_path(output)}")
     print(
         f"[fcpxml] {len(clips)} clips: {visual_count} visual, "
-        f"{audio_count} audio, {caption_count} caption/title overlays, "
+        f"{audio_count} audio, {caption_count} text overlays "
+        f"({args.title_mode}), "
         f"{total:.1f}s total"
     )
     if warnings:
