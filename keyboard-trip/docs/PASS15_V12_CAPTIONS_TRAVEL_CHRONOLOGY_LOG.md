@@ -159,17 +159,26 @@ diagnostics were `IMG_0258.jpg` and `IMG_0260.jpg` in the 11-15 media
 range. Exporting those same source JPG assets as `<video>` timeline items
 fixed the crash while keeping the clips linked to the original source files.
 
-Use the neutralized raw-native export for Final Cut handoff:
+Use the raw-native timeline-rotations export for Final Cut handoff:
 
 ```bash
 python3 keyboard-trip/scripts/export_fcpxml.py pass-15-captions-travel-chronology \
-  --neutralize-camera-rotation \
-  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_raw_native_neutralized.fcpxml
+  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_raw_native_timeline_rotations.fcpxml
 ```
 
 Keep `normalized-clips` / `segments` only as rescue exports. They import
 cleanly, but they intentionally point FCP at generated intermediates instead
 of the raw source media.
+
+Rotation diagnostics showed that MOV display-matrix metadata alone cannot
+determine semantic orientation. `019_IMG_0275_ds55_pickup_and_wrap.MOV` and
+`042_IMG_0298_tionesta_lake_cutaway.MOV` both report `rotation=-90`, but
+`019` is correct when FCP uses only the camera display matrix, while `042`
+needs an additional `270` timeline/XML rotation. Use existing timeline
+rotations when they exist (`018` / `027`), and for unmarked sideways clips
+generate 0/90/180/270 probes and judge them visually from faces, horizons,
+keyboards, and readable labels. Known current finding: `042` is correct at
+`270`.
 
 ## Known Rough Edges
 

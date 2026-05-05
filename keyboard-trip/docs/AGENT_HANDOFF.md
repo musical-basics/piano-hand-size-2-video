@@ -365,13 +365,25 @@ ffprobe -v error -show_entries format=duration -of csv=p=0 \
 python3 keyboard-trip/scripts/export_fcpxml.py
 
 # Preferred raw-source Final Cut XML for Lionel:
-# source MOV/JPG files stay linked, camera-audio metadata is stripped unless
-# explicitly requested, quarter-turn MOV display-matrix rotations are neutralized,
-# and JPG timeline items are emitted as <video> elements rather than
-# <asset-clip>. That JPG representation fixed the FCP import crashes on the
-# previously failing IMG_0258.jpg / IMG_0260.jpg diagnostics.
-python3 keyboard-trip/scripts/export_fcpxml.py --neutralize-camera-rotation \
-  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_raw_native_neutralized.fcpxml
+# source MOV/JPG files stay linked, source clips play video-only unless camera
+# audio is explicitly requested, MOV camera display matrices are left for FCP
+# to apply, explicit timeline rotations are written as XML transforms, and JPG
+# timeline items are emitted as <video> elements rather than <asset-clip>.
+# That JPG representation fixed the FCP import crashes on the previously
+# failing IMG_0258.jpg / IMG_0260.jpg diagnostics.
+python3 keyboard-trip/scripts/export_fcpxml.py \
+  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_raw_native_timeline_rotations.fcpxml
+
+# Rotation lesson from raw-source FCPXML debugging:
+# ffprobe/MOV display-matrix metadata is necessary but not sufficient. 019 and
+# 042 both report displaymatrix rotation=-90, but 019 is correct with no extra
+# XML transform while 042 needs an additional 270-degree timeline rotation.
+# Trust existing timeline/editor rotations when present. When a clip has no
+# explicit rotation but looks sideways/upside-down in FCP or in the render,
+# generate 0/90/180/270 diagnostic probes and visually score them using human
+# content cues: faces upright, lake horizons horizontal, keyboards/labels in
+# their expected orientation. Known current finding: 042_IMG_0298 is correct
+# with 270.
 
 # Variant with original camera audio on source clips, still no VO/music:
 python3 keyboard-trip/scripts/export_fcpxml.py --audio-mode camera \
