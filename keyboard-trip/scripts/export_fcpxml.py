@@ -50,6 +50,15 @@ VISUAL_PRIORITY = {
 }
 AUDIO_ROLES = {"voiceover", "music"}
 TITLE_ROLES = {"title_card", "placeholder"}
+VISUAL_LANES = {
+    "a_roll": 1,
+    "b_roll": 2,
+    "ambient": 3,
+    "still": 4,
+    "title_card": 5,
+    "placeholder": 5,
+}
+CAPTION_LANE = 8
 
 MUSIC_CARD_DB = 20 * math.log10(0.28)
 MUSIC_UNDER_VO_DB = 20 * math.log10(0.24)
@@ -158,6 +167,10 @@ def is_visual(clip: dict[str, Any]) -> bool:
 
 def is_audio(clip: dict[str, Any]) -> bool:
     return clip["role"] in AUDIO_ROLES
+
+
+def visual_lane(clip: dict[str, Any]) -> int:
+    return VISUAL_LANES.get(str(clip.get("role") or ""), 1)
 
 
 def source_path(clip: dict[str, Any]) -> Path | None:
@@ -714,6 +727,7 @@ def add_visual_clip(
     ref: str,
     asset: dict[str, Any],
     mute_source_audio: bool,
+    lane: int,
     neutralize_camera_rotation: bool = False,
 ) -> None:
     start, _ = clip_window(clip)
@@ -721,7 +735,7 @@ def add_visual_clip(
         attrs = {
             "name": clean_name(clip.get("assetBasename"), clip["id"]),
             "ref": ref,
-            "lane": "1",
+            "lane": str(lane),
             "offset": fcptime(start),
             "duration": fcptime(clip_duration(clip)),
             "start": fcptime(clip.get("sourceIn") or 0.0),
@@ -736,7 +750,7 @@ def add_visual_clip(
     attrs = {
         "name": clean_name(clip.get("assetBasename"), clip["id"]),
         "ref": ref,
-        "lane": "1",
+        "lane": str(lane),
         "offset": fcptime(start),
         "duration": fcptime(clip_duration(clip)),
         "start": fcptime(clip.get("sourceIn") or 0.0),
@@ -1556,7 +1570,7 @@ def build_fcpxml(
                     overlay,
                     start,
                     duration,
-                    lane=2,
+                    lane=visual_lane(clip),
                     style_id=f"ts{title_index}",
                     mode="card",
                     title_mode=title_mode,
@@ -1573,6 +1587,7 @@ def build_fcpxml(
                 ref,
                 asset,
                 mute_source_audio=overlaps_voiceover(clip, voiceover_windows),
+                lane=visual_lane(clip),
             )
         else:
             warnings.append(f"skipped visual clip without media: {clip['id']}")
@@ -1584,7 +1599,7 @@ def build_fcpxml(
                 overlay,
                 start,
                 duration,
-                lane=3,
+                lane=CAPTION_LANE,
                 style_id=f"ts{title_index}",
                 mode="caption",
                 title_mode=title_mode,
