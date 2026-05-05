@@ -513,9 +513,14 @@ def xml_rotation_value(
     neutralize_camera_rotation: bool = False,
 ) -> str | None:
     # Raw video files carry their own camera display matrix, and Final Cut
-    # applies it on import. Applying the render-pipeline rotation again here
-    # double-rotates phone clips. Stills do not have that MOV display matrix.
+    # applies it on import. Only carry explicit timeline/editor rotations on
+    # top of that matrix; deriving XML transforms from the MOV matrix
+    # double-rotates normal phone clips such as 019_IMG_0275. Stills do not
+    # have that MOV display matrix, so they keep the timeline/source rotation.
     if str(asset.get("kind") or "") == "video":
+        explicit_rotation = rotation_value(clip)
+        if explicit_rotation:
+            return explicit_rotation
         if neutralize_camera_rotation:
             display_rotation = (asset.get("probe") or {}).get("display_rotation")
             if display_rotation is not None:
@@ -528,6 +533,48 @@ def xml_rotation_value(
                     return None
         return None
     return rotation_value(clip)
+
+
+def parse_forced_rotations(values: list[str] | None) -> dict[str, int]:
+    rotations: dict[str, int] = {}
+    for value in values or []:
+        key, sep, raw_degrees = value.partition("=")
+        if not sep or not key.strip():
+            sys.exit("--force-clip-rotation expects NAME=DEGREES")
+        try:
+            degrees = int(raw_degrees)
+        except ValueError:
+            sys.exit(f"Invalid rotation degrees: {value}")
+        rotations[key.strip()] = degrees
+    return rotations
+
+
+def apply_forced_rotations(
+    clips: list[dict[str, Any]],
+    rotations: dict[str, int],
+) -> None:
+    if not rotations:
+        return
+    unmatched = set(rotations)
+    for clip in clips:
+        path = source_path(clip)
+        names = {
+            str(clip.get("id") or ""),
+            str(clip.get("assetBasename") or ""),
+        }
+        if path:
+            names.add(path.name)
+            try:
+                names.add(str(path.relative_to(ROOT)))
+            except ValueError:
+                names.add(str(path))
+        for name in names:
+            if name in rotations:
+                clip["rotationOverride"] = rotations[name]
+                unmatched.discard(name)
+                break
+    if unmatched:
+        sys.exit(f"No clips matched --force-clip-rotation: {', '.join(sorted(unmatched))}")
 
 
 def title_params(title_el: Element, mode: str) -> None:
@@ -1664,12 +1711,22 @@ def main() -> None:
         action="store_true",
         help="Raw-source diagnostic: add opposite transforms to cancel MOV display-matrix rotation.",
     )
+    parser.add_argument(
+        "--force-clip-rotation",
+        action="append",
+        metavar="NAME=DEGREES",
+        help=(
+            "Diagnostic export: override timeline rotation for clips matching "
+            "a clip id, basename, or relative source path."
+        ),
+    )
     args = parser.parse_args()
 
     conn = open_db()
     pass_id = args.pass_id or current_pass_id(conn)
     pass_row = fetch_pass(conn, pass_id)
     clips = fetch_clips(conn, pass_id)
+    apply_forced_rotations(clips, parse_forced_rotations(args.force_clip_rotation))
     if args.limit_media_visuals:
         clips = limit_to_media_visual_count(
             clips,
