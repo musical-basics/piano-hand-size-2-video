@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.10">
+    <resources>
+        <format id="r1" name="FFVideoFormat720p30" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <format id="r2" name="FFVideoFormat1080p30" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <asset id="r3" name="001_IMG_0256_0142am_trip_setup.MOV" start="0s" duration="16613/300s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/001_IMG_0256_0142am_trip_setup.MOV"/>
+        </asset>
+        <asset id="r4" name="002_IMG_0257_hagerstown_gas_station.MOV" start="0s" duration="47/3s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/002_IMG_0257_hagerstown_gas_station.MOV"/>
+        </asset>
+        <asset id="r5" name="010_IMG_0266_drive_broll_2.MOV" start="0s" duration="19901/600s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/010_IMG_0266_drive_broll_2.MOV"/>
+        </asset>
+        <asset id="r6" name="055_PICKUP_front_facing_intro.MOV" start="0s" duration="7467/200s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/08_Pickups_To_Record/055_PICKUP_front_facing_intro.MOV"/>
+        </asset>
+    </resources>
+    <library>
+        <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
+            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 04:13:59 +0000">
+                <sequence duration="54s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r6" offset="0s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r6" offset="15/2s" duration="37/2s" start="27/2s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="001_IMG_0256_0142am_trip_setup.MOV" ref="r3" offset="26s" duration="35/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r5" offset="87/2s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r4" offset="97/2s" duration="11/2s" start="7s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </asset-clip>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>

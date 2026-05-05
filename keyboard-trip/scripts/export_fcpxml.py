@@ -226,7 +226,8 @@ def probe_media(path: Path) -> dict[str, Any]:
         (
             "format=duration:"
             "stream=codec_type,width,height,r_frame_rate,avg_frame_rate,"
-            "time_base,duration,sample_rate,channels"
+            "time_base,duration,sample_rate,channels:"
+            "stream_side_data=rotation"
         ),
         "-of",
         "json",
@@ -265,6 +266,14 @@ def probe_media(path: Path) -> dict[str, Any]:
                     info["video_duration"] = float(duration)
                 except ValueError:
                     pass
+            for side_data in stream.get("side_data_list", []):
+                if "rotation" not in side_data:
+                    continue
+                try:
+                    info["display_rotation"] = int(side_data["rotation"])
+                except (TypeError, ValueError):
+                    pass
+                break
         if codec_type == "audio" and "audio_rate" not in info:
             sample_rate = stream.get("sample_rate")
             channels = stream.get("channels")
@@ -490,11 +499,33 @@ def rotation_value(clip: dict[str, Any]) -> str | None:
     return str(degrees % 360)
 
 
-def xml_rotation_value(clip: dict[str, Any], asset: dict[str, Any]) -> str | None:
+def normalized_rotation(degrees: int) -> str | None:
+    if degrees % 360 == 0:
+        return None
+    if degrees % 360 == 270:
+        return "-90"
+    return str(degrees % 360)
+
+
+def xml_rotation_value(
+    clip: dict[str, Any],
+    asset: dict[str, Any],
+    neutralize_camera_rotation: bool = False,
+) -> str | None:
     # Raw video files carry their own camera display matrix, and Final Cut
     # applies it on import. Applying the render-pipeline rotation again here
     # double-rotates phone clips. Stills do not have that MOV display matrix.
     if str(asset.get("kind") or "") == "video":
+        if neutralize_camera_rotation:
+            display_rotation = (asset.get("probe") or {}).get("display_rotation")
+            if display_rotation is not None:
+                try:
+                    degrees = int(display_rotation)
+                    if degrees % 180 == 0:
+                        return None
+                    return normalized_rotation(degrees)
+                except (TypeError, ValueError):
+                    return None
         return None
     return rotation_value(clip)
 
@@ -636,6 +667,7 @@ def add_visual_clip(
     ref: str,
     asset: dict[str, Any],
     mute_source_audio: bool,
+    neutralize_camera_rotation: bool = False,
 ) -> None:
     start, _ = clip_window(clip)
     attrs = {
@@ -653,7 +685,7 @@ def add_visual_clip(
         attrs["format"] = str(asset["format_id"])
     clip_el = SubElement(parent, "asset-clip", attrs)
     SubElement(clip_el, "adjust-conform", {"type": "fit"})
-    rotation = xml_rotation_value(clip, asset)
+    rotation = xml_rotation_value(clip, asset, neutralize_camera_rotation)
     if rotation:
         SubElement(clip_el, "adjust-transform", {"rotation": rotation})
     if mute_source_audio and asset.get("has_audio"):
@@ -692,6 +724,7 @@ def add_primary_visual_clip(
     ref: str,
     asset: dict[str, Any],
     audio_mode: str,
+    neutralize_camera_rotation: bool = False,
 ) -> None:
     start, _ = clip_window(clip)
     attrs = {
@@ -710,7 +743,7 @@ def add_primary_visual_clip(
         attrs["format"] = str(asset["format_id"])
     clip_el = SubElement(parent, "asset-clip", attrs)
     SubElement(clip_el, "adjust-conform", {"type": "fit"})
-    rotation = xml_rotation_value(clip, asset)
+    rotation = xml_rotation_value(clip, asset, neutralize_camera_rotation)
     if rotation:
         SubElement(clip_el, "adjust-transform", {"rotation": rotation})
 
@@ -785,6 +818,7 @@ def build_primary_fcpxml(
     title_mode: str,
     audio_mode: str,
     strip_source_audio: bool = False,
+    neutralize_camera_rotation: bool = False,
 ) -> tuple[str, list[str]]:
     total_duration = max((clip_window(c)[1] for c in clips), default=0.0)
     fcpxml, resources, spine = build_fcpxml_document(pass_row, total_duration)
@@ -842,7 +876,14 @@ def build_primary_fcpxml(
         ref = asset_refs.get(asset_id)
         asset = assets.get(asset_id)
         if ref and asset:
-            add_primary_visual_clip(spine, clip, ref, asset, audio_mode)
+            add_primary_visual_clip(
+                spine,
+                clip,
+                ref,
+                asset,
+                audio_mode,
+                neutralize_camera_rotation=neutralize_camera_rotation,
+            )
         else:
             warnings.append(f"skipped visual clip without media: {clip['id']}")
             SubElement(
@@ -1576,6 +1617,11 @@ def main() -> None:
         action="store_true",
         help="Raw-source diagnostic: omit source audio metadata from video assets.",
     )
+    parser.add_argument(
+        "--neutralize-camera-rotation",
+        action="store_true",
+        help="Raw-source diagnostic: add opposite transforms to cancel MOV display-matrix rotation.",
+    )
     args = parser.parse_args()
 
     conn = open_db()
@@ -1607,6 +1653,7 @@ def main() -> None:
             title_mode=args.title_mode,
             audio_mode=args.audio_mode,
             strip_source_audio=args.strip_source_audio,
+            neutralize_camera_rotation=args.neutralize_camera_rotation,
         )
     elif args.timeline_mode == "rendered":
         text, warnings = build_rendered_fcpxml(
