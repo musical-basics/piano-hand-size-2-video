@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.10">
+    <resources>
+        <format id="r1" name="FFVideoFormat720p30" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <format id="r2" name="FFVideoFormat1080p30" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <asset id="r3" name="001_IMG_0256_0142am_trip_setup.MOV" start="0s" duration="16613/300s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/001_IMG_0256_0142am_trip_setup.MOV"/>
+        </asset>
+        <asset id="r4" name="002_IMG_0257_hagerstown_gas_station.MOV" start="0s" duration="47/3s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/002_IMG_0257_hagerstown_gas_station.MOV"/>
+        </asset>
+        <format id="r5" name="FFVideoFormat1080p24" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/24s"/>
+        <asset id="r6" name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" start="0s" duration="81689/600s" hasVideo="1" format="r5" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/003_IMG_0258_road_trip_snacks_no_caffeine.MOV"/>
+        </asset>
+        <asset id="r7" name="004_IMG_0259_sheets_stop_middle_of_nowhere.MOV" start="0s" duration="142/15s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/004_IMG_0259_sheets_stop_middle_of_nowhere.MOV"/>
+        </asset>
+        <asset id="r8" name="005_IMG_0260_waking_up_after_car_nap.MOV" start="0s" duration="2887/200s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/005_IMG_0260_waking_up_after_car_nap.MOV"/>
+        </asset>
+        <asset id="r9" name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" start="0s" duration="21641/600s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/006_IMG_0261_car_nap_recovery_drive_resumes.MOV"/>
+        </asset>
+        <format id="r10" name="FFVideoFormat1080p2997" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)" frameDuration="1001/30000s"/>
+        <asset id="r11" name="007_IMG_0263_morning_highway_update.MOV" start="0s" duration="13391/300s" hasVideo="1" format="r10" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/007_IMG_0263_morning_highway_update.MOV"/>
+        </asset>
+        <asset id="r12" name="008_IMG_0264_pennsylvania_scenery.MOV" start="0s" duration="5687/200s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/008_IMG_0264_pennsylvania_scenery.MOV"/>
+        </asset>
+        <asset id="r13" name="009_IMG_0265_drive_broll_1.MOV" start="0s" duration="20849/600s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/009_IMG_0265_drive_broll_1.MOV"/>
+        </asset>
+        <asset id="r14" name="010_IMG_0266_drive_broll_2.MOV" start="0s" duration="19901/600s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/010_IMG_0266_drive_broll_2.MOV"/>
+        </asset>
+        <asset id="r15" name="011_IMG_0267_in_the_woods_almost_there.MOV" start="0s" duration="13961/600s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/011_IMG_0267_in_the_woods_almost_there.MOV"/>
+        </asset>
+        <asset id="r16" name="012_IMG_0268_double_big_mac_lunch.MOV" start="0s" duration="968/75s" hasVideo="1" format="r10" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/012_IMG_0268_double_big_mac_lunch.MOV"/>
+        </asset>
+        <asset id="r17" name="013_IMG_0269_keyboard_21_intro.MOV" start="0s" duration="2381/60s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/013_IMG_0269_keyboard_21_intro.MOV"/>
+        </asset>
+        <asset id="r18" name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" start="0s" duration="24181/200s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV"/>
+        </asset>
+        <asset id="r19" name="019_IMG_0275_ds55_pickup_and_wrap.MOV" start="0s" duration="73427/300s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/019_IMG_0275_ds55_pickup_and_wrap.MOV"/>
+        </asset>
+        <asset id="r20" name="027_IMG_0283_athena_internals_reconnaissance.MOV" start="0s" duration="50327/600s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/027_IMG_0283_athena_internals_reconnaissance.MOV"/>
+        </asset>
+        <format id="r21" name="FFVideoFormatRateUndefined" width="4032" height="3024" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r22" name="030_IMG_0286_technical_keyboard_still.JPG" start="0s" duration="3600s" hasVideo="1" format="r21">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/030_IMG_0286_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r23" name="031_IMG_0287_technical_keyboard_still.JPG" start="0s" duration="3600s" hasVideo="1" format="r21">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/031_IMG_0287_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r24" name="032_IMG_0288_technical_keyboard_still.JPG" start="0s" duration="3600s" hasVideo="1" format="r21">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/032_IMG_0288_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r25" name="034_IMG_0290_technical_keyboard_still.JPG" start="0s" duration="3600s" hasVideo="1" format="r21">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/034_IMG_0290_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r26" name="036_IMG_0292_technical_keyboard_still.JPG" start="0s" duration="3600s" hasVideo="1" format="r21">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/036_IMG_0292_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r27" name="038_IMG_0294_technical_keyboard_still.JPG" start="0s" duration="3600s" hasVideo="1" format="r21">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/038_IMG_0294_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r28" name="041_IMG_0297_ds60_ds55_car_monologue.MOV" start="0s" duration="46689/200s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/05_Post_Pickup_Main_Argument/041_IMG_0297_ds60_ds55_car_monologue.MOV"/>
+        </asset>
+        <asset id="r29" name="042_IMG_0298_tionesta_lake_cutaway.MOV" start="0s" duration="55/6s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/05_Post_Pickup_Main_Argument/042_IMG_0298_tionesta_lake_cutaway.MOV"/>
+        </asset>
+        <asset id="r30" name="043_IMG_0299_lake_overlook_broll.MOV" start="0s" duration="18889/600s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/05_Post_Pickup_Main_Argument/043_IMG_0299_lake_overlook_broll.MOV"/>
+        </asset>
+        <asset id="r31" name="044_IMG_0300_177777_mileage.MOV" start="0s" duration="187/30s" hasVideo="1" format="r10" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/05_Post_Pickup_Main_Argument/044_IMG_0300_177777_mileage.MOV"/>
+        </asset>
+        <asset id="r32" name="048_IMG_0304_hotel_car_broke_down.MOV" start="0s" duration="12653/300s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/06_Car_Trouble_Return/048_IMG_0304_hotel_car_broke_down.MOV"/>
+        </asset>
+        <asset id="r33" name="049_IMG_0305_car_fixed_heading_home.MOV" start="0s" duration="10621/200s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/06_Car_Trouble_Return/049_IMG_0305_car_fixed_heading_home.MOV"/>
+        </asset>
+        <asset id="r34" name="050_IMG_0306_beautiful_return_drive.MOV" start="0s" duration="9181/600s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/06_Car_Trouble_Return/050_IMG_0306_beautiful_return_drive.MOV"/>
+        </asset>
+        <asset id="r35" name="053_IMG_0309_highway_home_broll.MOV" start="0s" duration="12547/600s" hasVideo="1" format="r10" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/06_Car_Trouble_Return/053_IMG_0309_highway_home_broll.MOV"/>
+        </asset>
+        <asset id="r36" name="054_IMG_0310_home_ds60_ds55_explanation.MOV" start="0s" duration="31199/100s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.MOV"/>
+        </asset>
+        <asset id="r37" name="055_PICKUP_front_facing_intro.MOV" start="0s" duration="7467/200s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/08_Pickups_To_Record/055_PICKUP_front_facing_intro.MOV"/>
+        </asset>
+        <format id="r38" name="FFVideoFormatRateUndefined" width="640" height="360" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r39" name="IMG_0258.jpg" start="0s" duration="3600s" hasVideo="1" format="r38">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0258.jpg"/>
+        </asset>
+        <asset id="r40" name="IMG_0260.jpg" start="0s" duration="3600s" hasVideo="1" format="r38">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0260.jpg"/>
+        </asset>
+        <asset id="r41" name="IMG_0261.jpg" start="0s" duration="3600s" hasVideo="1" format="r38">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0261.jpg"/>
+        </asset>
+        <asset id="r42" name="IMG_0263.jpg" start="0s" duration="3600s" hasVideo="1" format="r38">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0263.jpg"/>
+        </asset>
+        <asset id="r43" name="IMG_0267.jpg" start="0s" duration="3600s" hasVideo="1" format="r38">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0267.jpg"/>
+        </asset>
+        <format id="r44" name="FFVideoFormatRateUndefined" width="640" height="1138" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r45" name="IMG_0300.jpg" start="0s" duration="3600s" hasVideo="1" format="r44">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0300.jpg"/>
+        </asset>
+        <asset id="r46" name="IMG_0304.jpg" start="0s" duration="3600s" hasVideo="1" format="r38">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0304.jpg"/>
+        </asset>
+    </resources>
+    <library>
+        <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
+            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 04:51:02 +0000">
+                <sequence duration="1449/2s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r37" offset="0s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r37" offset="15/2s" duration="37/2s" start="27/2s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="001_IMG_0256_0142am_trip_setup.MOV" ref="r3" offset="26s" duration="35/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r14" offset="87/2s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r4" offset="97/2s" duration="11/2s" start="7s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r6" offset="54s" duration="5s" start="30s" tcFormat="NDF" srcEnable="video" format="r5">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="004_IMG_0259_sheets_stop_middle_of_nowhere.MOV" ref="r7" offset="59s" duration="7s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r13" offset="66s" duration="8s" start="7s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r8" offset="74s" duration="9/2s" start="8s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r9" offset="157/2s" duration="7s" start="14s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r14" offset="171/2s" duration="9s" start="15s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r4" offset="189/2s" duration="6s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="IMG_0258.jpg" ref="r39" offset="201/2s" duration="3s" start="0s">
+                            <adjust-conform type="fit"/>
+                        </video>
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r6" offset="207/2s" duration="5s" start="103s" tcFormat="NDF" srcEnable="video" format="r5">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="IMG_0260.jpg" ref="r40" offset="217/2s" duration="5s" start="0s">
+                            <adjust-conform type="fit"/>
+                        </video>
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r6" offset="227/2s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r5">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r6" offset="121s" duration="13/2s" start="19s" tcFormat="NDF" srcEnable="video" format="r5">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r8" offset="255/2s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r9" offset="135s" duration="13/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r9" offset="283/2s" duration="11/2s" start="29s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="IMG_0261.jpg" ref="r41" offset="147s" duration="4s" start="0s">
+                            <adjust-conform type="fit"/>
+                        </video>
+                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r8" offset="151s" duration="7s" start="6s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="IMG_0263.jpg" ref="r42" offset="158s" duration="5s" start="0s">
+                            <adjust-conform type="fit"/>
+                        </video>
+                        <asset-clip name="007_IMG_0263_morning_highway_update.MOV" ref="r11" offset="163s" duration="23/2s" start="21s" tcFormat="NDF" srcEnable="video" format="r10">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="008_IMG_0264_pennsylvania_scenery.MOV" ref="r12" offset="349/2s" duration="8s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r13" offset="365/2s" duration="7s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="IMG_0267.jpg" ref="r43" offset="379/2s" duration="5s" start="0s">
+                            <adjust-conform type="fit"/>
+                        </video>
+                        <asset-clip name="011_IMG_0267_in_the_woods_almost_there.MOV" ref="r15" offset="389/2s" duration="27/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="012_IMG_0268_double_big_mac_lunch.MOV" ref="r16" offset="208s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video" format="r10">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r17" offset="213s" duration="17/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r17" offset="443/2s" duration="23/2s" start="7s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r18" offset="233s" duration="27/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r18" offset="493/2s" duration="23/2s" start="25s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r18" offset="258s" duration="33/2s" start="49s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r19" offset="549/2s" duration="23/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r19" offset="286s" duration="53/2s" start="60s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r20" offset="625/2s" duration="27/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r20" offset="326s" duration="33/2s" start="29s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r28" offset="685/2s" duration="51/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="030_IMG_0286_technical_keyboard_still.JPG" ref="r22" offset="368s" duration="3s" start="0s">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </video>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r28" offset="371s" duration="53/2s" start="36s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="031_IMG_0287_technical_keyboard_still.JPG" ref="r23" offset="795/2s" duration="3s" start="0s">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </video>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r28" offset="801/2s" duration="51/2s" start="94s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="032_IMG_0288_technical_keyboard_still.JPG" ref="r24" offset="426s" duration="3s" start="0s">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </video>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r28" offset="429s" duration="47/2s" start="125s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r19" offset="905/2s" duration="4s" start="30s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r28" offset="913/2s" duration="63/2s" start="192s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="042_IMG_0298_tionesta_lake_cutaway.MOV" ref="r29" offset="488s" duration="7s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="043_IMG_0299_lake_overlook_broll.MOV" ref="r30" offset="495s" duration="7s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="044_IMG_0300_177777_mileage.MOV" ref="r31" offset="502s" duration="6s" start="0s" tcFormat="NDF" srcEnable="video" format="r10">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="IMG_0300.jpg" ref="r45" offset="508s" duration="2s" start="0s">
+                            <adjust-conform type="fit"/>
+                        </video>
+                        <asset-clip name="048_IMG_0304_hotel_car_broke_down.MOV" ref="r32" offset="510s" duration="19/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="IMG_0304.jpg" ref="r46" offset="1039/2s" duration="4s" start="0s">
+                            <adjust-conform type="fit"/>
+                        </video>
+                        <asset-clip name="049_IMG_0305_car_fixed_heading_home.MOV" ref="r33" offset="1047/2s" duration="8s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="050_IMG_0306_beautiful_return_drive.MOV" ref="r34" offset="1063/2s" duration="6s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="053_IMG_0309_highway_home_broll.MOV" ref="r35" offset="1075/2s" duration="8s" start="0s" tcFormat="NDF" srcEnable="video" format="r10">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="1091/2s" duration="43/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="567s" duration="39/2s" start="43s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="1173/2s" duration="51/2s" start="71s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="034_IMG_0290_technical_keyboard_still.JPG" ref="r25" offset="612s" duration="3s" start="0s">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </video>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="615s" duration="27/2s" start="126s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="1257/2s" duration="39/2s" start="154s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="036_IMG_0292_technical_keyboard_still.JPG" ref="r26" offset="648s" duration="3s" start="0s">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </video>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="651s" duration="39/2s" start="178s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="1341/2s" duration="73/2s" start="221s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                        <video name="038_IMG_0294_technical_keyboard_still.JPG" ref="r27" offset="707s" duration="3s" start="0s">
+                            <adjust-conform type="fit"/>
+                            <adjust-transform rotation="-90"/>
+                        </video>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="710s" duration="29/2s" start="296s" tcFormat="NDF" srcEnable="video" format="r2">
+                            <adjust-conform type="fit"/>
+                        </asset-clip>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>
