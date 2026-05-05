@@ -129,7 +129,7 @@
     </resources>
     <library>
         <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
-            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 04:17:53 +0000">
+            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 04:44:09 +0000">
                 <sequence duration="1449/2s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
                     <spine>
                         <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r37" offset="0s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
@@ -170,15 +170,15 @@
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0258.jpg" ref="r39" offset="201/2s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r38">
+                        <video name="IMG_0258.jpg" ref="r39" offset="201/2s" duration="3s" start="0s">
                             <adjust-conform type="fit"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r6" offset="207/2s" duration="5s" start="103s" tcFormat="NDF" srcEnable="video" format="r5">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0260.jpg" ref="r40" offset="217/2s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video" format="r38">
+                        <video name="IMG_0260.jpg" ref="r40" offset="217/2s" duration="5s" start="0s">
                             <adjust-conform type="fit"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r6" offset="227/2s" duration="15/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r5">
                             <adjust-conform type="fit"/>
                         </asset-clip>
@@ -194,15 +194,15 @@
                         <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r9" offset="283/2s" duration="11/2s" start="29s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0261.jpg" ref="r41" offset="147s" duration="4s" start="0s" tcFormat="NDF" srcEnable="video" format="r38">
+                        <video name="IMG_0261.jpg" ref="r41" offset="147s" duration="4s" start="0s">
                             <adjust-conform type="fit"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r8" offset="151s" duration="7s" start="6s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0263.jpg" ref="r42" offset="158s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video" format="r38">
+                        <video name="IMG_0263.jpg" ref="r42" offset="158s" duration="5s" start="0s">
                             <adjust-conform type="fit"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="007_IMG_0263_morning_highway_update.MOV" ref="r11" offset="163s" duration="23/2s" start="21s" tcFormat="NDF" srcEnable="video" format="r10">
                             <adjust-conform type="fit"/>
                         </asset-clip>
@@ -212,9 +212,9 @@
                         <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r13" offset="365/2s" duration="7s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0267.jpg" ref="r43" offset="379/2s" duration="5s" start="0s" tcFormat="NDF" srcEnable="video" format="r38">
+                        <video name="IMG_0267.jpg" ref="r43" offset="379/2s" duration="5s" start="0s">
                             <adjust-conform type="fit"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="011_IMG_0267_in_the_woods_almost_there.MOV" ref="r15" offset="389/2s" duration="27/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
@@ -259,24 +259,24 @@
                         <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r28" offset="685/2s" duration="51/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="030_IMG_0286_technical_keyboard_still.JPG" ref="r22" offset="368s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r21">
+                        <video name="030_IMG_0286_technical_keyboard_still.JPG" ref="r22" offset="368s" duration="3s" start="0s">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r28" offset="371s" duration="53/2s" start="36s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="031_IMG_0287_technical_keyboard_still.JPG" ref="r23" offset="795/2s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r21">
+                        <video name="031_IMG_0287_technical_keyboard_still.JPG" ref="r23" offset="795/2s" duration="3s" start="0s">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r28" offset="801/2s" duration="51/2s" start="94s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="032_IMG_0288_technical_keyboard_still.JPG" ref="r24" offset="426s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r21">
+                        <video name="032_IMG_0288_technical_keyboard_still.JPG" ref="r24" offset="426s" duration="3s" start="0s">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r28" offset="429s" duration="47/2s" start="125s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
@@ -298,15 +298,15 @@
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0300.jpg" ref="r45" offset="508s" duration="2s" start="0s" tcFormat="NDF" srcEnable="video" format="r44">
+                        <video name="IMG_0300.jpg" ref="r45" offset="508s" duration="2s" start="0s">
                             <adjust-conform type="fit"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="048_IMG_0304_hotel_car_broke_down.MOV" ref="r32" offset="510s" duration="19/2s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="IMG_0304.jpg" ref="r46" offset="1039/2s" duration="4s" start="0s" tcFormat="NDF" srcEnable="video" format="r38">
+                        <video name="IMG_0304.jpg" ref="r46" offset="1039/2s" duration="4s" start="0s">
                             <adjust-conform type="fit"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="049_IMG_0305_car_fixed_heading_home.MOV" ref="r33" offset="1047/2s" duration="8s" start="0s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
@@ -325,30 +325,30 @@
                         <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="1173/2s" duration="51/2s" start="71s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="034_IMG_0290_technical_keyboard_still.JPG" ref="r25" offset="612s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r21">
+                        <video name="034_IMG_0290_technical_keyboard_still.JPG" ref="r25" offset="612s" duration="3s" start="0s">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="615s" duration="27/2s" start="126s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
                         <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="1257/2s" duration="39/2s" start="154s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="036_IMG_0292_technical_keyboard_still.JPG" ref="r26" offset="648s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r21">
+                        <video name="036_IMG_0292_technical_keyboard_still.JPG" ref="r26" offset="648s" duration="3s" start="0s">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="651s" duration="39/2s" start="178s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
                         <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="1341/2s" duration="73/2s" start="221s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
-                        <asset-clip name="038_IMG_0294_technical_keyboard_still.JPG" ref="r27" offset="707s" duration="3s" start="0s" tcFormat="NDF" srcEnable="video" format="r21">
+                        <video name="038_IMG_0294_technical_keyboard_still.JPG" ref="r27" offset="707s" duration="3s" start="0s">
                             <adjust-conform type="fit"/>
                             <adjust-transform rotation="-90"/>
-                        </asset-clip>
+                        </video>
                         <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r36" offset="710s" duration="29/2s" start="296s" tcFormat="NDF" srcEnable="video" format="r2">
                             <adjust-conform type="fit"/>
                         </asset-clip>
