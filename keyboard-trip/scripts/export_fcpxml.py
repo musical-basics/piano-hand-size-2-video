@@ -670,6 +670,22 @@ def add_visual_clip(
     neutralize_camera_rotation: bool = False,
 ) -> None:
     start, _ = clip_window(clip)
+    if str(asset.get("kind") or "") == "image":
+        attrs = {
+            "name": clean_name(clip.get("assetBasename"), clip["id"]),
+            "ref": ref,
+            "lane": "1",
+            "offset": fcptime(start),
+            "duration": fcptime(clip_duration(clip)),
+            "start": fcptime(clip.get("sourceIn") or 0.0),
+        }
+        clip_el = SubElement(parent, "video", attrs)
+        SubElement(clip_el, "adjust-conform", {"type": "fit"})
+        rotation = xml_rotation_value(clip, asset, neutralize_camera_rotation)
+        if rotation:
+            SubElement(clip_el, "adjust-transform", {"rotation": rotation})
+        return
+
     attrs = {
         "name": clean_name(clip.get("assetBasename"), clip["id"]),
         "ref": ref,
@@ -727,6 +743,21 @@ def add_primary_visual_clip(
     neutralize_camera_rotation: bool = False,
 ) -> None:
     start, _ = clip_window(clip)
+    if str(asset.get("kind") or "") == "image":
+        attrs = {
+            "name": clean_name(clip.get("assetBasename"), clip["id"]),
+            "ref": ref,
+            "offset": fcptime(start),
+            "duration": fcptime(clip_duration(clip)),
+            "start": fcptime(clip.get("sourceIn") or 0.0),
+        }
+        clip_el = SubElement(parent, "video", attrs)
+        SubElement(clip_el, "adjust-conform", {"type": "fit"})
+        rotation = xml_rotation_value(clip, asset, neutralize_camera_rotation)
+        if rotation:
+            SubElement(clip_el, "adjust-transform", {"rotation": rotation})
+        return
+
     attrs = {
         "name": clean_name(clip.get("assetBasename"), clip["id"]),
         "ref": ref,
