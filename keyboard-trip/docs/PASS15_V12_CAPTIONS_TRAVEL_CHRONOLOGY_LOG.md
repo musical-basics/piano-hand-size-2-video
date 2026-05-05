@@ -151,6 +151,26 @@ video=H.264 1280x720 30fps
 audio=AAC
 ```
 
+## FCPXML Import Notes
+
+The raw-source Final Cut XML debugging found one repeatable crash source:
+JPG stills imported as `<asset-clip>` timeline items. The failing media
+diagnostics were `IMG_0258.jpg` and `IMG_0260.jpg` in the 11-15 media
+range. Exporting those same source JPG assets as `<video>` timeline items
+fixed the crash while keeping the clips linked to the original source files.
+
+Use the neutralized raw-native export for Final Cut handoff:
+
+```bash
+python3 keyboard-trip/scripts/export_fcpxml.py pass-15-captions-travel-chronology \
+  --neutralize-camera-rotation \
+  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_raw_native_neutralized.fcpxml
+```
+
+Keep `normalized-clips` / `segments` only as rescue exports. They import
+cleanly, but they intentionally point FCP at generated intermediates instead
+of the raw source media.
+
 ## Known Rough Edges
 
 - Captions are starter/summary captions, not full word-for-word

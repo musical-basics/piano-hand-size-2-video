@@ -362,9 +362,16 @@ ffprobe -v error -show_entries format=duration -of csv=p=0 \
 # primary visual storyline only; no connected-gap clips, captions, VO, or music.
 # Current raw-source exporter preserves each source file's native frame
 # format/timebase instead of forcing all assets to the 30fps project format.
-# Raw video rotations are left to Final Cut's camera display-matrix handling;
-# XML adjust-transform rotation is only added for still images.
 python3 keyboard-trip/scripts/export_fcpxml.py
+
+# Preferred raw-source Final Cut XML for Lionel:
+# source MOV/JPG files stay linked, camera-audio metadata is stripped unless
+# explicitly requested, quarter-turn MOV display-matrix rotations are neutralized,
+# and JPG timeline items are emitted as <video> elements rather than
+# <asset-clip>. That JPG representation fixed the FCP import crashes on the
+# previously failing IMG_0258.jpg / IMG_0260.jpg diagnostics.
+python3 keyboard-trip/scripts/export_fcpxml.py --neutralize-camera-rotation \
+  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_raw_native_neutralized.fcpxml
 
 # Variant with original camera audio on source clips, still no VO/music:
 python3 keyboard-trip/scripts/export_fcpxml.py --audio-mode camera \
@@ -376,8 +383,7 @@ python3 keyboard-trip/scripts/export_fcpxml.py --audio-mode camera \
 python3 keyboard-trip/scripts/export_fcpxml.py --strip-source-audio \
   --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_raw_native_video_only.fcpxml
 
-# FCP 10.7.1 has crashed on the raw-source XMLs on Lionel's machine.
-# Safer rescue exports:
+# Historical FCP rescue exports if raw-source XML regresses:
 # 1. One finished movie as a single FCP clip.
 python3 keyboard-trip/scripts/export_fcpxml.py --timeline-mode rendered
 # 2. A cuttable timeline made from normalized 720p30 render segments.
