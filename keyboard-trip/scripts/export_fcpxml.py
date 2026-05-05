@@ -1011,6 +1011,31 @@ def limit_to_visual_count(
     return limited
 
 
+def limit_to_media_visual_count(
+    clips: list[dict[str, Any]],
+    limit: int | None,
+) -> list[dict[str, Any]]:
+    if not limit or limit <= 0:
+        return clips
+    limited: list[dict[str, Any]] = []
+    media_visual_count = 0
+    for clip in clips:
+        if not is_visual(clip) or clip["role"] in TITLE_ROLES:
+            continue
+        media_visual_count += 1
+        limited.append(clip)
+        if media_visual_count >= limit:
+            break
+    return limited
+
+
+def compact_timeline_starts(clips: list[dict[str, Any]]) -> None:
+    cursor = 0.0
+    for clip in clips:
+        clip["_resolved_start"] = cursor
+        cursor += clip_duration(clip)
+
+
 def rotation_filter_fragment(clip: dict[str, Any]) -> list[str]:
     rotation = rotation_value(clip)
     if rotation == "90":
@@ -1528,6 +1553,16 @@ def main() -> None:
         help="Diagnostic export: keep only the first N visual clips.",
     )
     parser.add_argument(
+        "--limit-media-visuals",
+        type=int,
+        help="Diagnostic export: keep only the first N non-title visual media clips.",
+    )
+    parser.add_argument(
+        "--compact-timeline",
+        action="store_true",
+        help="Diagnostic export: place kept clips back-to-back from zero.",
+    )
+    parser.add_argument(
         "--strip-source-audio",
         action="store_true",
         help="Raw-source diagnostic: omit source audio metadata from video assets.",
@@ -1537,7 +1572,13 @@ def main() -> None:
     conn = open_db()
     pass_id = args.pass_id or current_pass_id(conn)
     pass_row = fetch_pass(conn, pass_id)
-    clips = limit_to_visual_count(fetch_clips(conn, pass_id), args.limit_visuals)
+    clips = fetch_clips(conn, pass_id)
+    if args.limit_media_visuals:
+        clips = limit_to_media_visual_count(clips, args.limit_media_visuals)
+    else:
+        clips = limit_to_visual_count(clips, args.limit_visuals)
+    if args.compact_timeline:
+        compact_timeline_starts(clips)
     if args.output:
         output = args.output.resolve()
     elif args.timeline_mode == "rendered":
