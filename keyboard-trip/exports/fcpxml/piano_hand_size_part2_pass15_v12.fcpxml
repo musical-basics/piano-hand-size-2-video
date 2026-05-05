@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.10">
+    <resources>
+        <format id="r1" name="FFVideoFormat720p30" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <effect id="r2" name="Caption" uid="~/Titles.localized/Captionator/Caption/Caption.moti"/>
+        <format id="r3" name="FFVideoFormat1080p30" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <asset id="r4" name="001_IMG_0256_0142am_trip_setup.MOV" uid="212CCD6959C73A63CDCA41D30F7DF052" start="0s" duration="55376667/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="212CCD6959C73A63CDCA41D30F7DF052" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/001_IMG_0256_0142am_trip_setup.MOV"/>
+        </asset>
+        <asset id="r5" name="002_IMG_0257_hagerstown_gas_station.MOV" uid="8BF714468292009403A7B4221C0D4167" start="0s" duration="15666667/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="8BF714468292009403A7B4221C0D4167" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/002_IMG_0257_hagerstown_gas_station.MOV"/>
+        </asset>
+        <asset id="r6" name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" uid="B9C314EF07AF2B31222D5C6FB9004239" start="0s" duration="136148333/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="B9C314EF07AF2B31222D5C6FB9004239" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/003_IMG_0258_road_trip_snacks_no_caffeine.MOV"/>
+        </asset>
+        <asset id="r7" name="004_IMG_0259_sheets_stop_middle_of_nowhere.MOV" uid="8B4593565C21ABF71C3B381D39F8FE32" start="0s" duration="9466667/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="8B4593565C21ABF71C3B381D39F8FE32" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/004_IMG_0259_sheets_stop_middle_of_nowhere.MOV"/>
+        </asset>
+        <asset id="r8" name="005_IMG_0260_waking_up_after_car_nap.MOV" uid="555F479B43C92C274AE0FB553F5BA795" start="0s" duration="2887/200s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="555F479B43C92C274AE0FB553F5BA795" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/005_IMG_0260_waking_up_after_car_nap.MOV"/>
+        </asset>
+        <asset id="r9" name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" uid="2DE6D17402AB2A34E876FE9DF3348234" start="0s" duration="7213669/200000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="2DE6D17402AB2A34E876FE9DF3348234" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/01_Trip_Setup/006_IMG_0261_car_nap_recovery_drive_resumes.MOV"/>
+        </asset>
+        <asset id="r10" name="007_IMG_0263_morning_highway_update.MOV" uid="184858ED8ABF149B5388BA14B668C5A1" start="0s" duration="44636667/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="184858ED8ABF149B5388BA14B668C5A1" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/007_IMG_0263_morning_highway_update.MOV"/>
+        </asset>
+        <asset id="r11" name="008_IMG_0264_pennsylvania_scenery.MOV" uid="5A034C7DCAA6183C8F52BDED0BCE32C1" start="0s" duration="28435011/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="5A034C7DCAA6183C8F52BDED0BCE32C1" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/008_IMG_0264_pennsylvania_scenery.MOV"/>
+        </asset>
+        <asset id="r12" name="009_IMG_0265_drive_broll_1.MOV" uid="43B00F51A92A40FAC686A4F507BD9E7F" start="0s" duration="34748333/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="43B00F51A92A40FAC686A4F507BD9E7F" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/009_IMG_0265_drive_broll_1.MOV"/>
+        </asset>
+        <asset id="r13" name="010_IMG_0266_drive_broll_2.MOV" uid="DD946E35A0DDAE15EA84926FDB4AC1CE" start="0s" duration="33168333/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="DD946E35A0DDAE15EA84926FDB4AC1CE" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/010_IMG_0266_drive_broll_2.MOV"/>
+        </asset>
+        <asset id="r14" name="011_IMG_0267_in_the_woods_almost_there.MOV" uid="825AD7493537F07847B0EDB0989584AD" start="0s" duration="23268333/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="825AD7493537F07847B0EDB0989584AD" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/011_IMG_0267_in_the_woods_almost_there.MOV"/>
+        </asset>
+        <asset id="r15" name="012_IMG_0268_double_big_mac_lunch.MOV" uid="FC38721C15467465875222C3DD3250A6" start="0s" duration="12906667/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="FC38721C15467465875222C3DD3250A6" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/02_Drive_To_Titusville/012_IMG_0268_double_big_mac_lunch.MOV"/>
+        </asset>
+        <asset id="r16" name="013_IMG_0269_keyboard_21_intro.MOV" uid="EB722D4E019DD776CB6B790AC8A7C5D6" start="0s" duration="39683333/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="EB722D4E019DD776CB6B790AC8A7C5D6" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/013_IMG_0269_keyboard_21_intro.MOV"/>
+        </asset>
+        <asset id="r17" name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" uid="386BF4AD05E434345FCCD51C22848F19" start="0s" duration="24181/200s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="386BF4AD05E434345FCCD51C22848F19" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV"/>
+        </asset>
+        <asset id="r18" name="019_IMG_0275_ds55_pickup_and_wrap.MOV" uid="27063BB1817600242DC0852B27D4FF4F" start="0s" duration="244756667/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="27063BB1817600242DC0852B27D4FF4F" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/019_IMG_0275_ds55_pickup_and_wrap.MOV"/>
+        </asset>
+        <asset id="r19" name="027_IMG_0283_athena_internals_reconnaissance.MOV" uid="3D5263A502153E56360E2C599ABD5E67" start="0s" duration="83878333/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="3D5263A502153E56360E2C599ABD5E67" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/03_David_Factory_Visit/027_IMG_0283_athena_internals_reconnaissance.MOV"/>
+        </asset>
+        <format id="r20" name="FFVideoFormatRateUndefined" width="4032" height="3024" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r21" name="030_IMG_0286_technical_keyboard_still.JPG" uid="13EAA12A96B3D7DE270FED29FB37775E" start="0s" duration="3600s" hasVideo="1" format="r20">
+            <media-rep kind="original-media" sig="13EAA12A96B3D7DE270FED29FB37775E" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/030_IMG_0286_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r22" name="031_IMG_0287_technical_keyboard_still.JPG" uid="DC14202EF27F6E15012B10FA8981E519" start="0s" duration="3600s" hasVideo="1" format="r20">
+            <media-rep kind="original-media" sig="DC14202EF27F6E15012B10FA8981E519" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/031_IMG_0287_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r23" name="032_IMG_0288_technical_keyboard_still.JPG" uid="5DFFA48B0BE44EC4AD26C9546A2EA528" start="0s" duration="3600s" hasVideo="1" format="r20">
+            <media-rep kind="original-media" sig="5DFFA48B0BE44EC4AD26C9546A2EA528" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/032_IMG_0288_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r24" name="034_IMG_0290_technical_keyboard_still.JPG" uid="AC0A81B73C3F4572703FC0A5CF810CE5" start="0s" duration="3600s" hasVideo="1" format="r20">
+            <media-rep kind="original-media" sig="AC0A81B73C3F4572703FC0A5CF810CE5" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/034_IMG_0290_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r25" name="036_IMG_0292_technical_keyboard_still.JPG" uid="910C911D691A516B4C8D9FE06C0C9F07" start="0s" duration="3600s" hasVideo="1" format="r20">
+            <media-rep kind="original-media" sig="910C911D691A516B4C8D9FE06C0C9F07" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/036_IMG_0292_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r26" name="038_IMG_0294_technical_keyboard_still.JPG" uid="BE9CFF4ADED40D9697442DC9DC180ABB" start="0s" duration="3600s" hasVideo="1" format="r20">
+            <media-rep kind="original-media" sig="BE9CFF4ADED40D9697442DC9DC180ABB" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/04_Keyboards_Technical_Stills/038_IMG_0294_technical_keyboard_still.JPG"/>
+        </asset>
+        <asset id="r27" name="041_IMG_0297_ds60_ds55_car_monologue.MOV" uid="0722506E7CFBD572C66AFF70B35EDC5D" start="0s" duration="233445011/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="0722506E7CFBD572C66AFF70B35EDC5D" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/05_Post_Pickup_Main_Argument/041_IMG_0297_ds60_ds55_car_monologue.MOV"/>
+        </asset>
+        <asset id="r28" name="042_IMG_0298_tionesta_lake_cutaway.MOV" uid="F59A520BCDB7DC534DA4753E70098C4C" start="0s" duration="9166667/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="F59A520BCDB7DC534DA4753E70098C4C" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/05_Post_Pickup_Main_Argument/042_IMG_0298_tionesta_lake_cutaway.MOV"/>
+        </asset>
+        <asset id="r29" name="043_IMG_0299_lake_overlook_broll.MOV" uid="5502468917DF11F3357A09D80EAAED1B" start="0s" duration="15740839/500000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="5502468917DF11F3357A09D80EAAED1B" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/05_Post_Pickup_Main_Argument/043_IMG_0299_lake_overlook_broll.MOV"/>
+        </asset>
+        <asset id="r30" name="044_IMG_0300_177777_mileage.MOV" uid="979D760CA17FE381650E177953F8A58A" start="0s" duration="6233333/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="979D760CA17FE381650E177953F8A58A" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/05_Post_Pickup_Main_Argument/044_IMG_0300_177777_mileage.MOV"/>
+        </asset>
+        <asset id="r31" name="048_IMG_0304_hotel_car_broke_down.MOV" uid="2982512BCBEC0D72569814E61C5097B7" start="0s" duration="42176667/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="2982512BCBEC0D72569814E61C5097B7" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/06_Car_Trouble_Return/048_IMG_0304_hotel_car_broke_down.MOV"/>
+        </asset>
+        <asset id="r32" name="049_IMG_0305_car_fixed_heading_home.MOV" uid="BACB952CFD606D7D52083E6C094102C1" start="0s" duration="10621/200s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="BACB952CFD606D7D52083E6C094102C1" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/06_Car_Trouble_Return/049_IMG_0305_car_fixed_heading_home.MOV"/>
+        </asset>
+        <asset id="r33" name="050_IMG_0306_beautiful_return_drive.MOV" uid="211D44103B89E94295DA08786FF95B21" start="0s" duration="15301667/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="211D44103B89E94295DA08786FF95B21" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/06_Car_Trouble_Return/050_IMG_0306_beautiful_return_drive.MOV"/>
+        </asset>
+        <asset id="r34" name="053_IMG_0309_highway_home_broll.MOV" uid="116EC17C280A7A0A14DA160A6FE022E3" start="0s" duration="20911667/1000000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="116EC17C280A7A0A14DA160A6FE022E3" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/06_Car_Trouble_Return/053_IMG_0309_highway_home_broll.MOV"/>
+        </asset>
+        <asset id="r35" name="054_IMG_0310_home_ds60_ds55_explanation.MOV" uid="470E79580F6F4227B9FA7E0632CEE03E" start="0s" duration="31199/100s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="470E79580F6F4227B9FA7E0632CEE03E" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.MOV"/>
+        </asset>
+        <asset id="r36" name="055_PICKUP_front_facing_intro.MOV" uid="1F71A119117D3EA76482C0F70A059C50" start="0s" duration="7467/200s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="1F71A119117D3EA76482C0F70A059C50" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/08_Pickups_To_Record/055_PICKUP_front_facing_intro.MOV"/>
+        </asset>
+        <format id="r37" name="FFVideoFormatRateUndefined" width="640" height="360" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r38" name="IMG_0258.jpg" uid="3FC5C6DDD616B2BB570A9C23F78F8EEC" start="0s" duration="3600s" hasVideo="1" format="r37">
+            <media-rep kind="original-media" sig="3FC5C6DDD616B2BB570A9C23F78F8EEC" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0258.jpg"/>
+        </asset>
+        <asset id="r39" name="IMG_0260.jpg" uid="46E38EB2DEB67FB72B5CD613FFF8F6E7" start="0s" duration="3600s" hasVideo="1" format="r37">
+            <media-rep kind="original-media" sig="46E38EB2DEB67FB72B5CD613FFF8F6E7" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0260.jpg"/>
+        </asset>
+        <asset id="r40" name="IMG_0261.jpg" uid="4FCD0E63E65327330798AD5F288F234E" start="0s" duration="3600s" hasVideo="1" format="r37">
+            <media-rep kind="original-media" sig="4FCD0E63E65327330798AD5F288F234E" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0261.jpg"/>
+        </asset>
+        <asset id="r41" name="IMG_0263.jpg" uid="A25982B406B83C1EF44629CCDF2EF642" start="0s" duration="3600s" hasVideo="1" format="r37">
+            <media-rep kind="original-media" sig="A25982B406B83C1EF44629CCDF2EF642" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0263.jpg"/>
+        </asset>
+        <asset id="r42" name="IMG_0267.jpg" uid="3A88FC3BFD3241ABFC8371477FF4D5D9" start="0s" duration="3600s" hasVideo="1" format="r37">
+            <media-rep kind="original-media" sig="3A88FC3BFD3241ABFC8371477FF4D5D9" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0267.jpg"/>
+        </asset>
+        <format id="r43" name="FFVideoFormatRateUndefined" width="640" height="1138" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r44" name="IMG_0300.jpg" uid="D53DD34D2106F1B0CF050E2FDF8E9A1F" start="0s" duration="3600s" hasVideo="1" format="r43">
+            <media-rep kind="original-media" sig="D53DD34D2106F1B0CF050E2FDF8E9A1F" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0300.jpg"/>
+        </asset>
+        <asset id="r45" name="IMG_0304.jpg" uid="46E825C6E9F45D225C92B69E0D03E104" start="0s" duration="3600s" hasVideo="1" format="r37">
+            <media-rep kind="original-media" sig="46E825C6E9F45D225C92B69E0D03E104" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/footage/90_Reference_Frames/IMG_0304.jpg"/>
+        </asset>
+        <asset id="r46" name="VO_01a_late_night_thesis.wav" uid="9A1887CE3721DAA1CB2CC945C162CCEB" start="0s" duration="10069333/1000000s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="9A1887CE3721DAA1CB2CC945C162CCEB" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/voiceovers/VO_01a_late_night_thesis.wav"/>
+        </asset>
+        <asset id="r47" name="VO_01b_pennsylvania_setup.wav" uid="162636AD4EECE7B6555BAB85B03A8C54" start="0s" duration="14506667/1000000s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="162636AD4EECE7B6555BAB85B03A8C54" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/voiceovers/VO_01b_pennsylvania_setup.wav"/>
+        </asset>
+        <asset id="r48" name="VO_01c_millimeters_payoff.wav" uid="2C8D49BA5C662471733FFFCAB76078FB" start="0s" duration="15330667/1000000s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="2C8D49BA5C662471733FFFCAB76078FB" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/voiceovers/VO_01c_millimeters_payoff.wav"/>
+        </asset>
+        <asset id="r49" name="VO_02_gas_station_and_snacks.wav" uid="064C2634F871E25FB74403D23F4EB53C" start="0s" duration="8637823/500000s" hasAudio="1" audioSources="1" audioChannels="1" audioRate="44100">
+            <media-rep kind="original-media" sig="064C2634F871E25FB74403D23F4EB53C" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/voiceovers/VO_02_gas_station_and_snacks.wav"/>
+        </asset>
+        <asset id="r50" name="VO_03_car_nap.wav" uid="5039F0CBF6DA2A8CE1A9C2C73E4520EA" start="0s" duration="3599093/250000s" hasAudio="1" audioSources="1" audioChannels="1" audioRate="44100">
+            <media-rep kind="original-media" sig="5039F0CBF6DA2A8CE1A9C2C73E4520EA" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/voiceovers/VO_03_car_nap.wav"/>
+        </asset>
+        <asset id="r51" name="VO_04_pennsylvania_road.wav" uid="3AC84844CDD30F457EFBE086F43AB934" start="0s" duration="4597551/250000s" hasAudio="1" audioSources="1" audioChannels="1" audioRate="44100">
+            <media-rep kind="original-media" sig="3AC84844CDD30F457EFBE086F43AB934" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/voiceovers/VO_04_pennsylvania_road.wav"/>
+        </asset>
+        <asset id="r52" name="VO_05_lake_pause.wav" uid="97A855179FFC6DB930C7F1B0CCD92AA2" start="0s" duration="10681179/1000000s" hasAudio="1" audioSources="1" audioChannels="1" audioRate="44100">
+            <media-rep kind="original-media" sig="97A855179FFC6DB930C7F1B0CCD92AA2" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/voiceovers/VO_05_lake_pause.wav"/>
+        </asset>
+        <asset id="r53" name="VO_06_breakdown_and_return.wav" uid="B7CC5F308F66052928985D2794724946" start="0s" duration="8823583/500000s" hasAudio="1" audioSources="1" audioChannels="1" audioRate="44100">
+            <media-rep kind="original-media" sig="B7CC5F308F66052928985D2794724946" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/voiceovers/VO_06_breakdown_and_return.wav"/>
+        </asset>
+        <asset id="r54" name="ai_breakdown_return_60s.mp3" uid="784471CEBBD5A33ABEF188D3CC621E32" start="0s" duration="15007347/250000s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="784471CEBBD5A33ABEF188D3CC621E32" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/music/ai_breakdown_return_60s.mp3"/>
+        </asset>
+        <asset id="r55" name="ai_lake_pause_60s.mp3" uid="2795A62CB10B3FBD061F7DA90ED7A72C" start="0s" duration="15007347/250000s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="2795A62CB10B3FBD061F7DA90ED7A72C" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/music/ai_lake_pause_60s.mp3"/>
+        </asset>
+        <asset id="r56" name="ai_morning_road_60s.mp3" uid="D1B7EB448DBF88CCA7F1A6EFB71E7DB5" start="0s" duration="15007347/250000s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="D1B7EB448DBF88CCA7F1A6EFB71E7DB5" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/music/ai_morning_road_60s.mp3"/>
+        </asset>
+        <asset id="r57" name="ai_v1_late_night_drive_60s.mp3" uid="80C692B1C58290CD180A94423DA696C9" start="0s" duration="15007347/250000s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <media-rep kind="original-media" sig="80C692B1C58290CD180A94423DA696C9" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/audio/music/ai_v1_late_night_drive_60s.mp3"/>
+        </asset>
+    </resources>
+    <library>
+        <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
+            <project name="Pass 15: Captions + Travel Chronology FCPXML" uid="0A04B5FF-DF0C-52A9-A7EE-B5B63D9AC335" modDate="2026-05-05 01:10:01 +0000">
+                <sequence duration="1505/2s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <gap name="Pass 15 Timeline" offset="0s" start="0s" duration="1505/2s">
+                            <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r36" lane="1" offset="0s" duration="15/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Piano Hand Size, Part 2 - Caption" ref="r2" lane="2" offset="0s" duration="15/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts1">Piano Hand Size, Part 2</text-style>
+                                </text>
+                                <text-style-def id="ts1">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r36" lane="1" offset="15/2s" duration="37/2s" start="27/2s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="I drove overnight for smaller piano keys. - Caption" ref="r2" lane="2" offset="15/2s" duration="37/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts2">I drove overnight for smaller piano keys.</text-style>
+                                </text>
+                                <text-style-def id="ts2">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <title name="I drove overnight for a keyboard most pian - Caption" ref="r2" lane="1" offset="26s" duration="5s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 0"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1280"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="120"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts3">I drove overnight for a keyboard
+most pianists have never tried.</text-style>
+                                </text>
+                                <text-style-def id="ts3">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="40" fontColor="1 1 1 1" alignment="center" lineSpacing="14"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="001_IMG_0256_0142am_trip_setup.MOV" ref="r4" lane="1" offset="31s" duration="35/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="1:42 AM Baltimore to Titusville, Pennsylva - Caption" ref="r2" lane="2" offset="31s" duration="35/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts4">1:42 AM
+Baltimore to Titusville, Pennsylvania</text-style>
+                                </text>
+                                <text-style-def id="ts4">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <title name="P056 PLACEHOLDER Hand/key comparison flash - Caption" ref="r2" lane="1" offset="97/2s" duration="3s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 0"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1280"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="120"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts5">P056 PLACEHOLDER
+Hand/key comparison flash</text-style>
+                                </text>
+                                <text-style-def id="ts5">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="40" fontColor="1 1 1 1" alignment="center" lineSpacing="14"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r13" lane="1" offset="103/2s" duration="5s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="Narrower keys can change the whole piano-p - Caption" ref="r2" lane="2" offset="103/2s" duration="5s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts6">Narrower keys can change the whole
+piano-playing experience.</text-style>
+                                </text>
+                                <text-style-def id="ts6">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r5" lane="1" offset="113/2s" duration="11/2s" start="7s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="90"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="Narrower keys can change the whole piano-p - Caption" ref="r2" lane="2" offset="113/2s" duration="11/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts7">Narrower keys can change the whole
+piano-playing experience.</text-style>
+                                </text>
+                                <text-style-def id="ts7">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r6" lane="1" offset="62s" duration="5s" start="30s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Road-trip fuel - Caption" ref="r2" lane="2" offset="62s" duration="5s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts8">Road-trip fuel</text-style>
+                                </text>
+                                <text-style-def id="ts8">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="004_IMG_0259_sheets_stop_middle_of_nowhere.MOV" ref="r7" lane="1" offset="67s" duration="7s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="Almost 2 AM: driving to Pennsylvania for D - Caption" ref="r2" lane="2" offset="67s" duration="7s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts9">Almost 2 AM: driving to Pennsylvania
+for DS 5.5 and DS 6.0 keyboards.</text-style>
+                                </text>
+                                <text-style-def id="ts9">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r12" lane="1" offset="74s" duration="8s" start="7s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="Almost 2 AM: driving to Pennsylvania for D - Caption" ref="r2" lane="2" offset="74s" duration="8s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts10">Almost 2 AM: driving to Pennsylvania
+for DS 5.5 and DS 6.0 keyboards.</text-style>
+                                </text>
+                                <text-style-def id="ts10">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r8" lane="1" offset="82s" duration="9/2s" start="8s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="The car nap begins - Caption" ref="r2" lane="2" offset="82s" duration="9/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts11">The car nap begins</text-style>
+                                </text>
+                                <text-style-def id="ts11">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r9" lane="1" offset="173/2s" duration="7s" start="14s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="A few millimeters on each key can change e - Caption" ref="r2" lane="2" offset="173/2s" duration="7s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts12">A few millimeters on each key
+can change everything.</text-style>
+                                </text>
+                                <text-style-def id="ts12">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r13" lane="1" offset="187/2s" duration="9s" start="15s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="A few millimeters on each key can change e - Caption" ref="r2" lane="2" offset="187/2s" duration="9s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts13">A few millimeters on each key
+can change everything.</text-style>
+                                </text>
+                                <text-style-def id="ts13">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r5" lane="1" offset="205/2s" duration="6s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="90"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="Gas stations, snacks, and questionable dec - Caption" ref="r2" lane="2" offset="205/2s" duration="6s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts14">Gas stations, snacks,
+and questionable decisions.</text-style>
+                                </text>
+                                <text-style-def id="ts14">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="IMG_0258.jpg" ref="r38" lane="1" offset="217/2s" duration="3s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Gas stations, snacks, and questionable dec - Caption" ref="r2" lane="2" offset="217/2s" duration="3s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts15">Gas stations, snacks,
+and questionable decisions.</text-style>
+                                </text>
+                                <text-style-def id="ts15">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r6" lane="1" offset="223/2s" duration="5s" start="103s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="Gas stations, snacks, and questionable dec - Caption" ref="r2" lane="2" offset="223/2s" duration="5s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts16">Gas stations, snacks,
+and questionable decisions.</text-style>
+                                </text>
+                                <text-style-def id="ts16">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="IMG_0260.jpg" ref="r39" lane="1" offset="233/2s" duration="5s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Gas stations, snacks, and questionable dec - Caption" ref="r2" lane="2" offset="233/2s" duration="5s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts17">Gas stations, snacks,
+and questionable decisions.</text-style>
+                                </text>
+                                <text-style-def id="ts17">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r6" lane="1" offset="243/2s" duration="15/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="No caffeine. - Caption" ref="r2" lane="2" offset="243/2s" duration="15/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts18">No caffeine.</text-style>
+                                </text>
+                                <text-style-def id="ts18">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r6" lane="1" offset="129s" duration="13/2s" start="19s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Backup plan: chocolate milk. - Caption" ref="r2" lane="2" offset="129s" duration="13/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts19">Backup plan: chocolate milk.</text-style>
+                                </text>
+                                <text-style-def id="ts19">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r8" lane="1" offset="271/2s" duration="15/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="A few hours later - Caption" ref="r2" lane="2" offset="271/2s" duration="15/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts20">A few hours later</text-style>
+                                </text>
+                                <text-style-def id="ts20">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r9" lane="1" offset="143s" duration="13/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Almost three hours of sleep - Caption" ref="r2" lane="2" offset="143s" duration="13/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts21">Almost three hours of sleep</text-style>
+                                </text>
+                                <text-style-def id="ts21">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r9" lane="1" offset="299/2s" duration="11/2s" start="29s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Back on the road - Caption" ref="r2" lane="2" offset="299/2s" duration="11/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts22">Back on the road</text-style>
+                                </text>
+                                <text-style-def id="ts22">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="IMG_0261.jpg" ref="r40" lane="1" offset="155s" duration="4s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Slept in the car. Human enough to keep dri - Caption" ref="r2" lane="2" offset="155s" duration="4s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts23">Slept in the car.
+Human enough to keep driving.</text-style>
+                                </text>
+                                <text-style-def id="ts23">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r8" lane="1" offset="159s" duration="7s" start="6s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="Slept in the car. Human enough to keep dri - Caption" ref="r2" lane="2" offset="159s" duration="7s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts24">Slept in the car.
+Human enough to keep driving.</text-style>
+                                </text>
+                                <text-style-def id="ts24">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="IMG_0263.jpg" ref="r41" lane="1" offset="166s" duration="5s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Slept in the car. Human enough to keep dri - Caption" ref="r2" lane="2" offset="166s" duration="5s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts25">Slept in the car.
+Human enough to keep driving.</text-style>
+                                </text>
+                                <text-style-def id="ts25">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="007_IMG_0263_morning_highway_update.MOV" ref="r10" lane="1" offset="171s" duration="23/2s" start="21s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Morning update: 3.5 hours to go - Caption" ref="r2" lane="2" offset="171s" duration="23/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts26">Morning update:
+3.5 hours to go</text-style>
+                                </text>
+                                <text-style-def id="ts26">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="008_IMG_0264_pennsylvania_scenery.MOV" ref="r11" lane="1" offset="365/2s" duration="8s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="By morning, Pennsylvania started to feel r - Caption" ref="r2" lane="2" offset="365/2s" duration="8s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts27">By morning, Pennsylvania
+started to feel real.</text-style>
+                                </text>
+                                <text-style-def id="ts27">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r12" lane="1" offset="381/2s" duration="7s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="By morning, Pennsylvania started to feel r - Caption" ref="r2" lane="2" offset="381/2s" duration="7s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts28">By morning, Pennsylvania
+started to feel real.</text-style>
+                                </text>
+                                <text-style-def id="ts28">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="IMG_0267.jpg" ref="r42" lane="1" offset="395/2s" duration="5s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="By morning, Pennsylvania started to feel r - Caption" ref="r2" lane="2" offset="395/2s" duration="5s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts29">By morning, Pennsylvania
+started to feel real.</text-style>
+                                </text>
+                                <text-style-def id="ts29">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="011_IMG_0267_in_the_woods_almost_there.MOV" ref="r14" lane="1" offset="405/2s" duration="27/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="After five hours: 48 minutes left - Caption" ref="r2" lane="2" offset="405/2s" duration="27/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts30">After five hours:
+48 minutes left</text-style>
+                                </text>
+                                <text-style-def id="ts30">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="012_IMG_0268_double_big_mac_lunch.MOV" ref="r15" lane="1" offset="216s" duration="5s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Emergency lunch - Caption" ref="r2" lane="2" offset="216s" duration="5s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts31">Emergency lunch</text-style>
+                                </text>
+                                <text-style-def id="ts31">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r16" lane="1" offset="221s" duration="17/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Arrived: David Steinbuhler workshop - Caption" ref="r2" lane="2" offset="221s" duration="17/2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts32">Arrived:
+David Steinbuhler workshop</text-style>
+                                </text>
+                                <text-style-def id="ts32">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r16" lane="1" offset="459/2s" duration="23/2s" start="7s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r17" lane="1" offset="241s" duration="27/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="-90"/>
+                            </asset-clip>
+                            <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r17" lane="1" offset="509/2s" duration="23/2s" start="25s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="-90"/>
+                            </asset-clip>
+                            <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r17" lane="1" offset="266s" duration="33/2s" start="49s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="-90"/>
+                            </asset-clip>
+                            <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r18" lane="1" offset="565/2s" duration="23/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r18" lane="1" offset="294s" duration="53/2s" start="60s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r19" lane="1" offset="641/2s" duration="27/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="-90"/>
+                            </asset-clip>
+                            <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r19" lane="1" offset="334s" duration="33/2s" start="29s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="-90"/>
+                            </asset-clip>
+                            <title name="The real reason key size matters - Caption" ref="r2" lane="1" offset="701/2s" duration="3s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 0"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1280"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="120"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts33">The real reason key size matters</text-style>
+                                </text>
+                                <text-style-def id="ts33">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="40" fontColor="1 1 1 1" alignment="center" lineSpacing="14"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r27" lane="1" offset="707/2s" duration="51/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="030_IMG_0286_technical_keyboard_still.JPG" ref="r21" lane="1" offset="379s" duration="3s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="-90"/>
+                            </asset-clip>
+                            <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r27" lane="1" offset="382s" duration="53/2s" start="36s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="031_IMG_0287_technical_keyboard_still.JPG" ref="r22" lane="1" offset="817/2s" duration="3s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="-90"/>
+                            </asset-clip>
+                            <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r27" lane="1" offset="823/2s" duration="51/2s" start="94s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="032_IMG_0288_technical_keyboard_still.JPG" ref="r23" lane="1" offset="437s" duration="3s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="-90"/>
+                            </asset-clip>
+                            <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r27" lane="1" offset="440s" duration="47/2s" start="125s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r18" lane="1" offset="927/2s" duration="4s" start="30s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r27" lane="1" offset="935/2s" duration="63/2s" start="192s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="042_IMG_0298_tionesta_lake_cutaway.MOV" ref="r28" lane="1" offset="499s" duration="7s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="After visiting David, I stopped by the lak - Caption" ref="r2" lane="2" offset="499s" duration="7s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts34">After visiting David,
+I stopped by the lake to breathe.</text-style>
+                                </text>
+                                <text-style-def id="ts34">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="043_IMG_0299_lake_overlook_broll.MOV" ref="r29" lane="1" offset="506s" duration="7s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="After visiting David, I stopped by the lak - Caption" ref="r2" lane="2" offset="506s" duration="7s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts35">After visiting David,
+I stopped by the lake to breathe.</text-style>
+                                </text>
+                                <text-style-def id="ts35">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="044_IMG_0300_177777_mileage.MOV" ref="r30" lane="1" offset="513s" duration="6s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="After visiting David, I stopped by the lak - Caption" ref="r2" lane="2" offset="513s" duration="6s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts36">After visiting David,
+I stopped by the lake to breathe.</text-style>
+                                </text>
+                                <text-style-def id="ts36">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="IMG_0300.jpg" ref="r44" lane="1" offset="519s" duration="2s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="After visiting David, I stopped by the lak - Caption" ref="r2" lane="2" offset="519s" duration="2s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts37">After visiting David,
+I stopped by the lake to breathe.</text-style>
+                                </text>
+                                <text-style-def id="ts37">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="048_IMG_0304_hotel_car_broke_down.MOV" ref="r31" lane="1" offset="521s" duration="19/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="IMG_0304.jpg" ref="r45" lane="1" offset="1061/2s" duration="4s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="The car broke down in Pennsylvania. The tr - Caption" ref="r2" lane="2" offset="1061/2s" duration="4s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts38">The car broke down in Pennsylvania.
+The trip had one more plot twist.</text-style>
+                                </text>
+                                <text-style-def id="ts38">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="049_IMG_0305_car_fixed_heading_home.MOV" ref="r32" lane="1" offset="1069/2s" duration="8s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="The car broke down in Pennsylvania. The tr - Caption" ref="r2" lane="2" offset="1069/2s" duration="8s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts39">The car broke down in Pennsylvania.
+The trip had one more plot twist.</text-style>
+                                </text>
+                                <text-style-def id="ts39">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="050_IMG_0306_beautiful_return_drive.MOV" ref="r33" lane="1" offset="1085/2s" duration="6s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                                <adjust-volume amount="-96dB"/>
+                            </asset-clip>
+                            <title name="The car broke down in Pennsylvania. The tr - Caption" ref="r2" lane="2" offset="1085/2s" duration="6s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts40">The car broke down in Pennsylvania.
+The trip had one more plot twist.</text-style>
+                                </text>
+                                <text-style-def id="ts40">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="053_IMG_0309_highway_home_broll.MOV" ref="r34" lane="1" offset="1097/2s" duration="8s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="The car broke down in Pennsylvania. The tr - Caption" ref="r2" lane="2" offset="1097/2s" duration="8s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 -232"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1128"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="0"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts41">The car broke down in Pennsylvania.
+The trip had one more plot twist.</text-style>
+                                </text>
+                                <text-style-def id="ts41">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="34" fontColor="1 1 1 1" alignment="center" lineSpacing="8"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r35" lane="1" offset="1113/2s" duration="43/2s" start="0s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r35" lane="1" offset="578s" duration="39/2s" start="43s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="P056 PLACEHOLDER Standard vs DS 6.0 vs DS  - Caption" ref="r2" lane="1" offset="1195/2s" duration="5s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 0"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1280"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="120"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts42">P056 PLACEHOLDER
+Standard vs DS 6.0 vs DS 5.5</text-style>
+                                </text>
+                                <text-style-def id="ts42">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="40" fontColor="1 1 1 1" alignment="center" lineSpacing="14"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r35" lane="1" offset="1205/2s" duration="51/2s" start="71s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="034_IMG_0290_technical_keyboard_still.JPG" ref="r24" lane="1" offset="628s" duration="3s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="-90"/>
+                            </asset-clip>
+                            <title name="My current take Try DS 6.0 and DS 5.5 if p - Caption" ref="r2" lane="1" offset="631s" duration="5s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 0"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1280"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="120"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts43">My current take
+Try DS 6.0 and DS 5.5 if possible.
+Under ~8.2 inches: consider DS 5.5 too.</text-style>
+                                </text>
+                                <text-style-def id="ts43">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="40" fontColor="1 1 1 1" alignment="center" lineSpacing="14"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r35" lane="1" offset="636s" duration="27/2s" start="126s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r35" lane="1" offset="1299/2s" duration="39/2s" start="154s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="036_IMG_0292_technical_keyboard_still.JPG" ref="r25" lane="1" offset="669s" duration="3s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="-90"/>
+                            </asset-clip>
+                            <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r35" lane="1" offset="672s" duration="39/2s" start="178s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r35" lane="1" offset="1383/2s" duration="73/2s" start="221s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <asset-clip name="038_IMG_0294_technical_keyboard_still.JPG" ref="r26" lane="1" offset="728s" duration="3s" start="0s" tcFormat="NDF">
+                                <adjust-conform type="fit"/>
+                                <adjust-transform rotation="-90"/>
+                            </asset-clip>
+                            <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r35" lane="1" offset="731s" duration="29/2s" start="296s" tcFormat="NDF" audioRole="dialogue">
+                                <adjust-conform type="fit"/>
+                            </asset-clip>
+                            <title name="Part 3: DS 6.0 vs DS 5.5 comparison? - Caption" ref="r2" lane="1" offset="1491/2s" duration="7s" start="0s" role="titles.Generated Titles">
+                                <param name="Alignment" key="9999/11020/10003/10009/2/354/10038/401" value="1 (center)"/>
+                                <param name="Alignment" key="9999/11020/10003/10009/2/373" value="0 (Left) 1 (Middle)"/>
+                                <param name="Build Out" key="9999/10000/2/102" value="0"/>
+                                <param name="Shadow" key="9999/11944/100/11946/2/100" value="0"/>
+                                <param name="Position" key="9999/11020/10003/10009/1/100/101" value="0 0"/>
+                                <param name="Layour Method" key="9999/11020/10003/10009/2/314" value="1 (Paragraph)"/>
+                                <param name="Anchor Point" key="9999/11020/10003/10009/1/100/107" value="640 360"/>
+                                <param name="Right Margin" key="9999/11020/10003/10009/2/324" value="1280"/>
+                                <param name="Top Margin" key="9999/11020/10003/10009/2/325" value="120"/>
+                                <param name="Build In" key="9999/10000/2/101" value="0"/>
+                                <text>
+                                    <text-style ref="ts44">Part 3:
+DS 6.0 vs DS 5.5 comparison?</text-style>
+                                </text>
+                                <text-style-def id="ts44">
+                                    <text-style font="Arial" fontFace="Bold" fontSize="40" fontColor="1 1 1 1" alignment="center" lineSpacing="14"/>
+                                </text-style-def>
+                            </title>
+                            <asset-clip name="VO_01a_late_night_thesis.wav" ref="r46" lane="-1" offset="103/2s" duration="10069333/1000000s" start="0s" audioRole="dialogue"/>
+                            <asset-clip name="VO_02_gas_station_and_snacks.wav" ref="r49" lane="-1" offset="205/2s" duration="8637823/500000s" start="0s" audioRole="dialogue">
+                                <adjust-volume amount="0dB"/>
+                            </asset-clip>
+                            <asset-clip name="VO_01b_pennsylvania_setup.wav" ref="r47" lane="-1" offset="67s" duration="14506667/1000000s" start="0s" audioRole="dialogue"/>
+                            <asset-clip name="VO_03_car_nap.wav" ref="r50" lane="-1" offset="155s" duration="3599093/250000s" start="0s" audioRole="dialogue">
+                                <adjust-volume amount="0dB"/>
+                            </asset-clip>
+                            <asset-clip name="VO_01c_millimeters_payoff.wav" ref="r48" lane="-1" offset="173/2s" duration="15330667/1000000s" start="0s" audioRole="dialogue"/>
+                            <asset-clip name="VO_04_pennsylvania_road.wav" ref="r51" lane="-1" offset="365/2s" duration="4597551/250000s" start="0s" audioRole="dialogue">
+                                <adjust-volume amount="0dB"/>
+                            </asset-clip>
+                            <asset-clip name="VO_05_lake_pause.wav" ref="r52" lane="-1" offset="499s" duration="10681179/1000000s" start="0s" audioRole="dialogue">
+                                <adjust-volume amount="0dB"/>
+                            </asset-clip>
+                            <asset-clip name="VO_06_breakdown_and_return.wav" ref="r53" lane="-1" offset="1061/2s" duration="8823583/500000s" start="0s" audioRole="dialogue">
+                                <adjust-volume amount="0dB"/>
+                            </asset-clip>
+                            <asset-clip name="ai_v1_late_night_drive_60s.mp3" ref="r57" lane="-2" offset="97/2s" duration="3s" start="0s" audioRole="music">
+                                <adjust-volume amount="-11.1dB"/>
+                            </asset-clip>
+                            <asset-clip name="ai_v1_late_night_drive_60s.mp3" ref="r57" lane="-2" offset="26s" duration="5s" start="0s" audioRole="music">
+                                <adjust-volume amount="-11.1dB"/>
+                            </asset-clip>
+                            <asset-clip name="ai_v1_late_night_drive_60s.mp3" ref="r57" lane="-2" offset="103/2s" duration="21/2s" start="0s" audioRole="music">
+                                <adjust-volume amount="-12.4dB"/>
+                            </asset-clip>
+                            <asset-clip name="ai_morning_road_60s.mp3" ref="r56" lane="-2" offset="205/2s" duration="19s" start="0s" audioRole="music">
+                                <adjust-volume amount="-12.4dB"/>
+                            </asset-clip>
+                            <asset-clip name="ai_v1_late_night_drive_60s.mp3" ref="r57" lane="-2" offset="67s" duration="15s" start="0s" audioRole="music">
+                                <adjust-volume amount="-12.4dB"/>
+                            </asset-clip>
+                            <asset-clip name="ai_morning_road_60s.mp3" ref="r56" lane="-2" offset="155s" duration="16s" start="0s" audioRole="music">
+                                <adjust-volume amount="-12.4dB"/>
+                            </asset-clip>
+                            <asset-clip name="ai_v1_late_night_drive_60s.mp3" ref="r57" lane="-2" offset="173/2s" duration="16s" start="0s" audioRole="music">
+                                <adjust-volume amount="-12.4dB"/>
+                            </asset-clip>
+                            <asset-clip name="ai_morning_road_60s.mp3" ref="r56" lane="-2" offset="365/2s" duration="20s" start="0s" audioRole="music">
+                                <adjust-volume amount="-12.4dB"/>
+                            </asset-clip>
+                            <asset-clip name="ai_lake_pause_60s.mp3" ref="r55" lane="-2" offset="499s" duration="22s" start="0s" audioRole="music">
+                                <adjust-volume amount="-12.4dB"/>
+                            </asset-clip>
+                            <asset-clip name="ai_breakdown_return_60s.mp3" ref="r54" lane="-2" offset="1061/2s" duration="26s" start="0s" audioRole="music">
+                                <adjust-volume amount="-12.4dB"/>
+                            </asset-clip>
+                        </gap>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>

@@ -358,6 +358,9 @@ sqlite3 ai-agent-video-editor/.cut-notes/cut-notes.sqlite \
 ffprobe -v error -show_entries format=duration -of csv=p=0 \
   keyboard-trip/renders/review_cuts/piano_hand_size_part2_rough_cut_v<N>.mp4
 
+# Export current pass as Final Cut Pro XML:
+python3 keyboard-trip/scripts/export_fcpxml.py
+
 # Verify VO loudness on a section of a render:
 ffmpeg -y -hide_banner -i <render.mp4> -ss <start_s> -t 20 -vn \
   -af "loudnorm=print_format=summary" -f null -
