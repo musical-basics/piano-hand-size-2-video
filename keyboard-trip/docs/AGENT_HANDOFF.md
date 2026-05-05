@@ -374,6 +374,10 @@ python3 keyboard-trip/scripts/export_fcpxml.py --timeline-mode rendered
 #    The segment MP4s live in exports/fcpxml/intermediates/pass15_v12_segments/
 #    and are gitignored because they are media files.
 python3 keyboard-trip/scripts/export_fcpxml.py --timeline-mode segments
+# 3. Best current FCP rescue: one normalized 720p30 MP4 per visual cut,
+#    with the final reviewed audio slice baked into each clip. This preserves
+#    clip separation without pointing FCP at the crashy raw phone media.
+python3 keyboard-trip/scripts/export_fcpxml.py --timeline-mode normalized-clips
 
 # Verify VO loudness on a section of a render:
 ffmpeg -y -hide_banner -i <render.mp4> -ss <start_s> -t 20 -vn \

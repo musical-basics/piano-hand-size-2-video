@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.10">
+    <resources>
+        <format id="r1" name="FFVideoFormat720p30" width="1280" height="720" colorSpace="1-1-1 (Rec. 709)" frameDuration="1/30s"/>
+        <asset id="r2" name="clip_001_p15-005-front-facing-intro-open.mp4" start="0s" duration="15/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_001_p15-005-front-facing-intro-open.mp4"/>
+        </asset>
+        <asset id="r3" name="clip_002_p15-006-front-facing-intro-clean-thesis.mp4" start="0s" duration="37/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_002_p15-006-front-facing-intro-clean-thesis.mp4"/>
+        </asset>
+        <asset id="r4" name="clip_003_p15-004-cold-title-card.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_003_p15-004-cold-title-card.mp4"/>
+        </asset>
+        <asset id="r5" name="clip_004_p15-001-late-night-trip-setup.mp4" start="0s" duration="35/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_004_p15-001-late-night-trip-setup.mp4"/>
+        </asset>
+        <asset id="r6" name="clip_005_p15-003-p056-cold-placeholder.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_005_p15-003-p056-cold-placeholder.mp4"/>
+        </asset>
+        <asset id="r7" name="clip_006_p15-vo01a-broll-rainy.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_006_p15-vo01a-broll-rainy.mp4"/>
+        </asset>
+        <asset id="r8" name="clip_007_p15-vo01a-broll-gas.mp4" start="0s" duration="11/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_007_p15-vo01a-broll-gas.mp4"/>
+        </asset>
+        <asset id="r9" name="clip_008_p15-vo01-insert-snack.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_008_p15-vo01-insert-snack.mp4"/>
+        </asset>
+        <asset id="r10" name="clip_009_p15-vo01b-broll-sheetz.mp4" start="0s" duration="7s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_009_p15-vo01b-broll-sheetz.mp4"/>
+        </asset>
+        <asset id="r11" name="clip_010_p15-vo01b-broll-drive.mp4" start="0s" duration="8s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_010_p15-vo01b-broll-drive.mp4"/>
+        </asset>
+        <asset id="r12" name="clip_011_p15-vo01-insert-waking.mp4" start="0s" duration="9/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_011_p15-vo01-insert-waking.mp4"/>
+        </asset>
+        <asset id="r13" name="clip_012_p15-vo01c-broll-recovery.mp4" start="0s" duration="7s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_012_p15-vo01c-broll-recovery.mp4"/>
+        </asset>
+        <asset id="r14" name="clip_013_p15-vo01c-broll-rainy-late.mp4" start="0s" duration="9s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_013_p15-vo01c-broll-rainy-late.mp4"/>
+        </asset>
+        <asset id="r15" name="clip_014_p15-011-vo02-gas-station.mp4" start="0s" duration="6s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_014_p15-011-vo02-gas-station.mp4"/>
+        </asset>
+        <asset id="r16" name="clip_015_p15-012-vo02-snack-still.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_015_p15-012-vo02-snack-still.mp4"/>
+        </asset>
+        <asset id="r17" name="clip_016_p15-013-vo02-snacks-broll.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_016_p15-013-vo02-snacks-broll.mp4"/>
+        </asset>
+        <asset id="r18" name="clip_017_p15-014-vo02-car-nap-still.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_017_p15-014-vo02-car-nap-still.mp4"/>
+        </asset>
+        <asset id="r19" name="clip_018_p15-015-snack-vlog-open.mp4" start="0s" duration="15/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_018_p15-015-snack-vlog-open.mp4"/>
+        </asset>
+        <asset id="r20" name="clip_019_p15-016-snack-vlog-gag.mp4" start="0s" duration="13/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_019_p15-016-snack-vlog-gag.mp4"/>
+        </asset>
+        <asset id="r21" name="clip_020_p15-017-waking-after-car-nap.mp4" start="0s" duration="15/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_020_p15-017-waking-after-car-nap.mp4"/>
+        </asset>
+        <asset id="r22" name="clip_021_p15-018-car-nap-recovery-open.mp4" start="0s" duration="13/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_021_p15-018-car-nap-recovery-open.mp4"/>
+        </asset>
+        <asset id="r23" name="clip_022_p15-019-car-nap-recovery-drive.mp4" start="0s" duration="11/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_022_p15-019-car-nap-recovery-drive.mp4"/>
+        </asset>
+        <asset id="r24" name="clip_023_p15-021-vo03-recovery-still.mp4" start="0s" duration="4s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_023_p15-021-vo03-recovery-still.mp4"/>
+        </asset>
+        <asset id="r25" name="clip_024_p15-vo03-waking-video.mp4" start="0s" duration="7s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_024_p15-vo03-waking-video.mp4"/>
+        </asset>
+        <asset id="r26" name="clip_025_p15-vo03-morning-still.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_025_p15-vo03-morning-still.mp4"/>
+        </asset>
+        <asset id="r27" name="clip_026_p15-023-morning-highway-update.mp4" start="0s" duration="23/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_026_p15-023-morning-highway-update.mp4"/>
+        </asset>
+        <asset id="r28" name="clip_027_p15-024-vo04-pennsylvania-scenery.mp4" start="0s" duration="8s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_027_p15-024-vo04-pennsylvania-scenery.mp4"/>
+        </asset>
+        <asset id="r29" name="clip_028_p15-025-vo04-drive-broll-hills.mp4" start="0s" duration="7s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_028_p15-025-vo04-drive-broll-hills.mp4"/>
+        </asset>
+        <asset id="r30" name="clip_029_p15-026-vo04-woods-still.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_029_p15-026-vo04-woods-still.mp4"/>
+        </asset>
+        <asset id="r31" name="clip_030_p15-027-woods-almost-there.mp4" start="0s" duration="27/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_030_p15-027-woods-almost-there.mp4"/>
+        </asset>
+        <asset id="r32" name="clip_031_p15-028-big-mac-gag.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_031_p15-028-big-mac-gag.mp4"/>
+        </asset>
+        <asset id="r33" name="clip_032_p15-029-keyboard-21-arrival.mp4" start="0s" duration="17/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_032_p15-029-keyboard-21-arrival.mp4"/>
+        </asset>
+        <asset id="r34" name="clip_033_p15-030-keyboard-action-broll.mp4" start="0s" duration="23/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_033_p15-030-keyboard-action-broll.mp4"/>
+        </asset>
+        <asset id="r35" name="clip_034_p15-031-ds55-on-steinway.mp4" start="0s" duration="27/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_034_p15-031-ds55-on-steinway.mp4"/>
+        </asset>
+        <asset id="r36" name="clip_035_p15-032-ds55-size-range.mp4" start="0s" duration="23/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_035_p15-032-ds55-size-range.mp4"/>
+        </asset>
+        <asset id="r37" name="clip_036_p15-033-size-lineup-proof.mp4" start="0s" duration="33/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_036_p15-033-size-lineup-proof.mp4"/>
+        </asset>
+        <asset id="r38" name="clip_037_p15-034-ds55-pickup-open.mp4" start="0s" duration="23/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_037_p15-034-ds55-pickup-open.mp4"/>
+        </asset>
+        <asset id="r39" name="clip_038_p15-035-ds55-pickup-later.mp4" start="0s" duration="53/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_038_p15-035-ds55-pickup-later.mp4"/>
+        </asset>
+        <asset id="r40" name="clip_039_p15-036-athena-internals-open.mp4" start="0s" duration="27/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_039_p15-036-athena-internals-open.mp4"/>
+        </asset>
+        <asset id="r41" name="clip_040_p15-037-athena-internals-later.mp4" start="0s" duration="33/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_040_p15-037-athena-internals-later.mp4"/>
+        </asset>
+        <asset id="r42" name="clip_041_p15-041-main-argument-card.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_041_p15-041-main-argument-card.mp4"/>
+        </asset>
+        <asset id="r43" name="clip_042_p15-042-main-argument-1.mp4" start="0s" duration="51/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_042_p15-042-main-argument-1.mp4"/>
+        </asset>
+        <asset id="r44" name="clip_043_p15-cutaway-main-arg-1.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_043_p15-cutaway-main-arg-1.mp4"/>
+        </asset>
+        <asset id="r45" name="clip_044_p15-043-main-argument-2.mp4" start="0s" duration="53/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_044_p15-043-main-argument-2.mp4"/>
+        </asset>
+        <asset id="r46" name="clip_045_p15-cutaway-main-arg-2.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_045_p15-cutaway-main-arg-2.mp4"/>
+        </asset>
+        <asset id="r47" name="clip_046_p15-044-main-argument-3.mp4" start="0s" duration="51/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_046_p15-044-main-argument-3.mp4"/>
+        </asset>
+        <asset id="r48" name="clip_047_p15-cutaway-main-arg-3.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_047_p15-cutaway-main-arg-3.mp4"/>
+        </asset>
+        <asset id="r49" name="clip_048_p15-045-main-argument-4.mp4" start="0s" duration="47/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_048_p15-045-main-argument-4.mp4"/>
+        </asset>
+        <asset id="r50" name="clip_049_p15-cutaway-main-arg-4.mp4" start="0s" duration="4s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_049_p15-cutaway-main-arg-4.mp4"/>
+        </asset>
+        <asset id="r51" name="clip_050_p15-046-main-argument-5.mp4" start="0s" duration="63/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_050_p15-046-main-argument-5.mp4"/>
+        </asset>
+        <asset id="r52" name="clip_051_p15-047-vo05-lake-cutaway.mp4" start="0s" duration="7s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_051_p15-047-vo05-lake-cutaway.mp4"/>
+        </asset>
+        <asset id="r53" name="clip_052_p15-048-vo05-lake-overlook.mp4" start="0s" duration="7s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_052_p15-048-vo05-lake-overlook.mp4"/>
+        </asset>
+        <asset id="r54" name="clip_053_p15-049-vo05-mileage.mp4" start="0s" duration="6s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_053_p15-049-vo05-mileage.mp4"/>
+        </asset>
+        <asset id="r55" name="clip_054_p15-049b-vo05-mileage-hold.mp4" start="0s" duration="2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_054_p15-049b-vo05-mileage-hold.mp4"/>
+        </asset>
+        <asset id="r56" name="clip_055_p15-050-hotel-breakdown.mp4" start="0s" duration="19/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_055_p15-050-hotel-breakdown.mp4"/>
+        </asset>
+        <asset id="r57" name="clip_056_p15-051-vo06-breakdown-still.mp4" start="0s" duration="4s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_056_p15-051-vo06-breakdown-still.mp4"/>
+        </asset>
+        <asset id="r58" name="clip_057_p15-052-vo06-car-fixed.mp4" start="0s" duration="8s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_057_p15-052-vo06-car-fixed.mp4"/>
+        </asset>
+        <asset id="r59" name="clip_058_p15-053-vo06-return-drive.mp4" start="0s" duration="6s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_058_p15-053-vo06-return-drive.mp4"/>
+        </asset>
+        <asset id="r60" name="clip_059_p15-054-vo06-highway-home.mp4" start="0s" duration="8s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_059_p15-054-vo06-highway-home.mp4"/>
+        </asset>
+        <asset id="r61" name="clip_060_p15-055-home-setup.mp4" start="0s" duration="43/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_060_p15-055-home-setup.mp4"/>
+        </asset>
+        <asset id="r62" name="clip_061_p15-056-ds60-history.mp4" start="0s" duration="39/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_061_p15-056-ds60-history.mp4"/>
+        </asset>
+        <asset id="r63" name="clip_062_p15-057-p056-home-placeholder.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_062_p15-057-p056-home-placeholder.mp4"/>
+        </asset>
+        <asset id="r64" name="clip_063_p15-058-ds55-valid.mp4" start="0s" duration="51/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_063_p15-058-ds55-valid.mp4"/>
+        </asset>
+        <asset id="r65" name="clip_064_p15-cutaway-home-1.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_064_p15-cutaway-home-1.mp4"/>
+        </asset>
+        <asset id="r66" name="clip_065_p15-059-current-take-card.mp4" start="0s" duration="5s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_065_p15-059-current-take-card.mp4"/>
+        </asset>
+        <asset id="r67" name="clip_066_p15-060-home-technique-1.mp4" start="0s" duration="27/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_066_p15-060-home-technique-1.mp4"/>
+        </asset>
+        <asset id="r68" name="clip_067_p15-061-home-technique-2.mp4" start="0s" duration="39/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_067_p15-061-home-technique-2.mp4"/>
+        </asset>
+        <asset id="r69" name="clip_068_p15-cutaway-home-2.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_068_p15-cutaway-home-2.mp4"/>
+        </asset>
+        <asset id="r70" name="clip_069_p15-062-home-technique-3.mp4" start="0s" duration="39/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_069_p15-062-home-technique-3.mp4"/>
+        </asset>
+        <asset id="r71" name="clip_070_p15-063-ds-standard-home.mp4" start="0s" duration="73/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_070_p15-063-ds-standard-home.mp4"/>
+        </asset>
+        <asset id="r72" name="clip_071_p15-cutaway-home-3.mp4" start="0s" duration="3s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_071_p15-cutaway-home-3.mp4"/>
+        </asset>
+        <asset id="r73" name="clip_072_p15-064-closing-recommendation.mp4" start="0s" duration="29/2s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_072_p15-064-closing-recommendation.mp4"/>
+        </asset>
+        <asset id="r74" name="clip_073_p15-065-final-hook.mp4" start="0s" duration="7s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/lionelyu/Music/Piano%20Hand%20Size%20Part%202/keyboard-trip/exports/fcpxml/intermediates/pass15_v12_normalized_clips/clip_073_p15-065-final-hook.mp4"/>
+        </asset>
+    </resources>
+    <library>
+        <event name="Piano Hand Size Part 2" uid="E82AA723-9820-598F-889D-1C5B51F7B984">
+            <project name="Pass 15: Captions + Travel Chronology Normalized Clip Intermediates FCPXML" uid="902AF3B0-4006-54E5-97C9-4C53FA1CB46E" modDate="2026-05-05 02:33:01 +0000">
+                <sequence duration="1505/2s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r2" offset="0s" duration="15/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="055_PICKUP_front_facing_intro.MOV" ref="r3" offset="15/2s" duration="37/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="title-card-v3-road-keyboard" ref="r4" offset="26s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="001_IMG_0256_0142am_trip_setup.MOV" ref="r5" offset="31s" duration="35/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="title-card-v3-p056-cold" ref="r6" offset="97/2s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r7" offset="103/2s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r8" offset="113/2s" duration="11/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r9" offset="62s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="004_IMG_0259_sheets_stop_middle_of_nowhere.MOV" ref="r10" offset="67s" duration="7s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r11" offset="74s" duration="8s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r12" offset="82s" duration="9/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r13" offset="173/2s" duration="7s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="010_IMG_0266_drive_broll_2.MOV" ref="r14" offset="187/2s" duration="9s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="002_IMG_0257_hagerstown_gas_station.MOV" ref="r15" offset="205/2s" duration="6s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="IMG_0258.jpg" ref="r16" offset="217/2s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r17" offset="223/2s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="IMG_0260.jpg" ref="r18" offset="233/2s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r19" offset="243/2s" duration="15/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="003_IMG_0258_road_trip_snacks_no_caffeine.MOV" ref="r20" offset="129s" duration="13/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r21" offset="271/2s" duration="15/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r22" offset="143s" duration="13/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="006_IMG_0261_car_nap_recovery_drive_resumes.MOV" ref="r23" offset="299/2s" duration="11/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="IMG_0261.jpg" ref="r24" offset="155s" duration="4s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="005_IMG_0260_waking_up_after_car_nap.MOV" ref="r25" offset="159s" duration="7s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="IMG_0263.jpg" ref="r26" offset="166s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="007_IMG_0263_morning_highway_update.MOV" ref="r27" offset="171s" duration="23/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="008_IMG_0264_pennsylvania_scenery.MOV" ref="r28" offset="365/2s" duration="8s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="009_IMG_0265_drive_broll_1.MOV" ref="r29" offset="381/2s" duration="7s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="IMG_0267.jpg" ref="r30" offset="395/2s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="011_IMG_0267_in_the_woods_almost_there.MOV" ref="r31" offset="405/2s" duration="27/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="012_IMG_0268_double_big_mac_lunch.MOV" ref="r32" offset="216s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r33" offset="221s" duration="17/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="013_IMG_0269_keyboard_21_intro.MOV" ref="r34" offset="459/2s" duration="23/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r35" offset="241s" duration="27/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r36" offset="509/2s" duration="23/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="018_IMG_0274_ds_size_lineup_on_steinway.MOV" ref="r37" offset="266s" duration="33/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r38" offset="565/2s" duration="23/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r39" offset="294s" duration="53/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r40" offset="641/2s" duration="27/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="027_IMG_0283_athena_internals_reconnaissance.MOV" ref="r41" offset="334s" duration="33/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="title-card-v3-main-argument" ref="r42" offset="701/2s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r43" offset="707/2s" duration="51/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="030_IMG_0286_technical_keyboard_still.JPG" ref="r44" offset="379s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r45" offset="382s" duration="53/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="031_IMG_0287_technical_keyboard_still.JPG" ref="r46" offset="817/2s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r47" offset="823/2s" duration="51/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="032_IMG_0288_technical_keyboard_still.JPG" ref="r48" offset="437s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r49" offset="440s" duration="47/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="019_IMG_0275_ds55_pickup_and_wrap.MOV" ref="r50" offset="927/2s" duration="4s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="041_IMG_0297_ds60_ds55_car_monologue.MOV" ref="r51" offset="935/2s" duration="63/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="042_IMG_0298_tionesta_lake_cutaway.MOV" ref="r52" offset="499s" duration="7s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="043_IMG_0299_lake_overlook_broll.MOV" ref="r53" offset="506s" duration="7s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="044_IMG_0300_177777_mileage.MOV" ref="r54" offset="513s" duration="6s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="IMG_0300.jpg" ref="r55" offset="519s" duration="2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="048_IMG_0304_hotel_car_broke_down.MOV" ref="r56" offset="521s" duration="19/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="IMG_0304.jpg" ref="r57" offset="1061/2s" duration="4s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="049_IMG_0305_car_fixed_heading_home.MOV" ref="r58" offset="1069/2s" duration="8s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="050_IMG_0306_beautiful_return_drive.MOV" ref="r59" offset="1085/2s" duration="6s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="053_IMG_0309_highway_home_broll.MOV" ref="r60" offset="1097/2s" duration="8s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r61" offset="1113/2s" duration="43/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r62" offset="578s" duration="39/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="title-card-v3-p056-home" ref="r63" offset="1195/2s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r64" offset="1205/2s" duration="51/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="034_IMG_0290_technical_keyboard_still.JPG" ref="r65" offset="628s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="title-card-v3-current-take" ref="r66" offset="631s" duration="5s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r67" offset="636s" duration="27/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r68" offset="1299/2s" duration="39/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="036_IMG_0292_technical_keyboard_still.JPG" ref="r69" offset="669s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r70" offset="672s" duration="39/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r71" offset="1383/2s" duration="73/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="038_IMG_0294_technical_keyboard_still.JPG" ref="r72" offset="728s" duration="3s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="054_IMG_0310_home_ds60_ds55_explanation.MOV" ref="r73" offset="731s" duration="29/2s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                        <asset-clip name="title-card-v3-final-hook" ref="r74" offset="1491/2s" duration="7s" start="0s" format="r1" tcFormat="NDF" audioRole="dialogue"/>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>

@@ -13,9 +13,11 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import re
 import sqlite3
 import subprocess
 import sys
+import tempfile
 import uuid
 from datetime import datetime, timezone
 from fractions import Fraction
@@ -32,6 +34,7 @@ EXPORT_DIR = ROOT / "exports" / "fcpxml"
 PROJECT_ID = "piano-hand-size-part-2"
 REVIEW_RENDER = ROOT / "renders" / "review_cuts" / "piano_hand_size_part2_rough_cut_v12.mp4"
 DEFAULT_SEGMENTS_DIR = EXPORT_DIR / "intermediates" / "pass15_v12_segments"
+DEFAULT_NORMALIZED_CLIPS_DIR = EXPORT_DIR / "intermediates" / "pass15_v12_normalized_clips"
 
 PROJECT_WIDTH = 1280
 PROJECT_HEIGHT = 720
@@ -50,6 +53,10 @@ TITLE_ROLES = {"title_card", "placeholder"}
 
 MUSIC_CARD_DB = 20 * math.log10(0.28)
 MUSIC_UNDER_VO_DB = 20 * math.log10(0.24)
+FONT_CANDIDATES = [
+    Path("/System/Library/Fonts/Supplemental/Arial.ttf"),
+    Path("/System/Library/Fonts/Supplemental/Helvetica.ttf"),
+]
 
 
 def open_db() -> sqlite3.Connection:
@@ -173,6 +180,16 @@ def fcptime(seconds: float | int | None) -> str:
         return "0s"
     frac = Fraction(str(round(value, 6))).limit_denominator(1_000_000)
     return fraction_time(frac)
+
+
+def frames_from_seconds(seconds: float | int | None) -> int:
+    return max(0, int(round((0.0 if seconds is None else float(seconds)) * PROJECT_FPS)))
+
+
+def frame_time(frames: int) -> str:
+    if frames <= 0:
+        return "0s"
+    return fraction_time(Fraction(frames, PROJECT_FPS))
 
 
 def fraction_time(frac: Fraction) -> str:
@@ -654,6 +671,13 @@ def build_fcpxml_document(
     pass_row: sqlite3.Row,
     total_duration: float,
 ) -> tuple[Element, Element, Element]:
+    return build_fcpxml_document_with_duration(pass_row, fcptime(total_duration))
+
+
+def build_fcpxml_document_with_duration(
+    pass_row: sqlite3.Row,
+    duration: str,
+) -> tuple[Element, Element, Element]:
     fcpxml = Element("fcpxml", {"version": "1.10"})
     resources = SubElement(fcpxml, "resources")
     add_format_resource(
@@ -686,7 +710,7 @@ def build_fcpxml_document(
         project,
         "sequence",
         {
-            "duration": fcptime(total_duration),
+            "duration": duration,
             "format": "r1",
             "tcStart": "0s",
             "tcFormat": "NDF",
@@ -791,8 +815,8 @@ def build_flat_media_fcpxml(
     project_suffix: str,
 ) -> tuple[str, list[str]]:
     warnings: list[str] = []
-    media_infos: list[tuple[Path, dict[str, Any], float]] = []
-    total_duration = 0.0
+    media_infos: list[tuple[Path, dict[str, Any], int]] = []
+    total_frames = 0
     for path in media_paths:
         info = probe_media(path)
         duration = float(info.get("duration") or 0.0)
@@ -802,16 +826,20 @@ def build_flat_media_fcpxml(
         if duration <= 0:
             warnings.append(f"skipped media without duration: {path}")
             continue
-        media_infos.append((path, info, duration))
-        total_duration += duration
+        frames = max(1, frames_from_seconds(duration))
+        media_infos.append((path, info, frames))
+        total_frames += frames
 
-    fcpxml, resources, spine = build_fcpxml_document(pass_row, total_duration)
+    fcpxml, resources, spine = build_fcpxml_document_with_duration(
+        pass_row,
+        frame_time(total_frames),
+    )
     format_ids: dict[tuple[int, int, str], str] = {
         (PROJECT_WIDTH, PROJECT_HEIGHT, str(PROJECT_FPS)): "r1"
     }
     next_resource = 2
-    offset = 0.0
-    for path, info, duration in media_infos:
+    offset_frames = 0
+    for path, info, frames in media_infos:
         key = format_key(info, "video")
         fmt_id = format_ids.get(key)
         if not fmt_id:
@@ -831,7 +859,7 @@ def build_flat_media_fcpxml(
                 "id": resource_id,
                 "name": path.name,
                 "start": "0s",
-                "duration": fcptime(duration),
+                "duration": frame_time(frames),
                 "hasVideo": "1",
                 "format": fmt_id,
                 "hasAudio": "1",
@@ -854,15 +882,15 @@ def build_flat_media_fcpxml(
             {
                 "name": path.stem,
                 "ref": resource_id,
-                "offset": fcptime(offset),
-                "duration": fcptime(duration),
+                "offset": frame_time(offset_frames),
+                "duration": frame_time(frames),
                 "start": "0s",
                 "format": fmt_id,
                 "tcFormat": "NDF",
                 "audioRole": "dialogue",
             },
         )
-        offset += duration
+        offset_frames += frames
 
     project = fcpxml.find(".//project")
     if project is not None:
@@ -898,6 +926,322 @@ def build_segment_fcpxml(
         segment_paths,
         "Normalized Segments",
     )
+
+
+def font_path() -> Path:
+    for candidate in FONT_CANDIDATES:
+        if candidate.exists():
+            return candidate
+    return FONT_CANDIDATES[-1]
+
+
+def slugify(value: str) -> str:
+    slug = re.sub(r"[^A-Za-z0-9]+", "-", value).strip("-").lower()
+    return (slug or "clip")[:70]
+
+
+def normalized_visuals(clips: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    visuals = [clip for clip in clips if is_visual(clip)]
+    return sorted(
+        visuals,
+        key=lambda clip: (
+            frames_from_seconds(clip_window(clip)[0]),
+            int(clip.get("order") or 0),
+        ),
+    )
+
+
+def rotation_filter_fragment(clip: dict[str, Any]) -> list[str]:
+    rotation = rotation_value(clip)
+    if rotation == "90":
+        return ["transpose=1"]
+    if rotation == "-90":
+        return ["transpose=2"]
+    if rotation == "180":
+        return ["transpose=2", "transpose=2"]
+    return []
+
+
+def normalized_video_filter(
+    clip: dict[str, Any],
+    text_file: Path | None = None,
+) -> str:
+    filters = rotation_filter_fragment(clip)
+    filters.extend(
+        [
+            f"scale={PROJECT_WIDTH}:{PROJECT_HEIGHT}:force_original_aspect_ratio=decrease",
+            f"pad={PROJECT_WIDTH}:{PROJECT_HEIGHT}:(ow-iw)/2:(oh-ih)/2:black",
+            "setsar=1",
+            f"fps={PROJECT_FPS}",
+            "format=yuv420p",
+        ]
+    )
+    if text_file:
+        filters.extend(
+            [
+                "drawbox=x=76:y=560:w=1128:h=104:color=black@0.62:t=fill",
+                (
+                    f"drawtext=fontfile={font_path().as_posix()}:"
+                    f"textfile={text_file.as_posix()}:"
+                    "fontcolor=white:fontsize=34:line_spacing=8:"
+                    "x=(w-text_w)/2:y=586"
+                ),
+            ]
+        )
+    return ",".join(filters)
+
+
+def title_card_filter(text_file: Path) -> str:
+    return (
+        f"drawtext=fontfile={font_path().as_posix()}:"
+        f"textfile={text_file.as_posix()}:"
+        "fontcolor=white:fontsize=40:line_spacing=14:"
+        "x=(w-text_w)/2:y=(h-text_h)/2"
+    )
+
+
+def write_filter_text(text_dir: Path, index: int, text: str) -> Path:
+    text_path = text_dir / f"text_{index:03d}.txt"
+    text_path.write_text(f"{text}\n", encoding="utf-8")
+    return text_path
+
+
+def render_normalized_visual_clip(
+    clip: dict[str, Any],
+    index: int,
+    output: Path,
+    text_dir: Path,
+    audio_source: Path,
+) -> None:
+    start, _ = clip_window(clip)
+    offset_frames = frames_from_seconds(start)
+    duration_frames = max(1, frames_from_seconds(clip_duration(clip)))
+    duration = duration_frames / PROJECT_FPS
+    timeline_start = offset_frames / PROJECT_FPS
+    overlay = clip.get("textOverlay")
+
+    cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error"]
+    if clip["role"] in TITLE_ROLES:
+        text_file = write_filter_text(text_dir, index, overlay or clip["id"])
+        vf = title_card_filter(text_file)
+        cmd.extend(
+            [
+                "-f",
+                "lavfi",
+                "-t",
+                attr_float(duration, 6),
+                "-i",
+                f"color=c=0x111111:s={PROJECT_WIDTH}x{PROJECT_HEIGHT}:r={PROJECT_FPS}",
+            ]
+        )
+    else:
+        path = source_path(clip)
+        if not path or not path.exists():
+            text_file = write_filter_text(text_dir, index, overlay or clip["id"])
+            vf = title_card_filter(text_file)
+            cmd.extend(
+                [
+                    "-f",
+                    "lavfi",
+                    "-t",
+                    attr_float(duration, 6),
+                    "-i",
+                    f"color=c=0x111111:s={PROJECT_WIDTH}x{PROJECT_HEIGHT}:r={PROJECT_FPS}",
+                ]
+            )
+        elif str(clip.get("assetKind") or "").lower() == "image":
+            text_file = write_filter_text(text_dir, index, overlay) if overlay else None
+            vf = normalized_video_filter(clip, text_file)
+            cmd.extend(
+                [
+                    "-loop",
+                    "1",
+                    "-framerate",
+                    str(PROJECT_FPS),
+                    "-t",
+                    attr_float(duration, 6),
+                    "-i",
+                    str(path),
+                ]
+            )
+        else:
+            text_file = write_filter_text(text_dir, index, overlay) if overlay else None
+            vf = normalized_video_filter(clip, text_file)
+            cmd.extend(
+                [
+                    "-ss",
+                    attr_float(float(clip.get("sourceIn") or 0.0), 6),
+                    "-t",
+                    attr_float(duration, 6),
+                    "-i",
+                    str(path),
+                ]
+            )
+
+    cmd.extend(
+        [
+            "-ss",
+            attr_float(timeline_start, 6),
+            "-t",
+            attr_float(duration, 6),
+            "-i",
+            str(audio_source),
+            "-filter_complex",
+            (
+                f"[0:v]{vf}[v];"
+                f"[1:a]aresample=48000,atrim=0:{attr_float(duration, 6)},"
+                "asetpts=PTS-STARTPTS[a]"
+            ),
+            "-map",
+            "[v]",
+            "-map",
+            "[a]",
+            "-frames:v",
+            str(duration_frames),
+            "-c:v",
+            "libx264",
+            "-preset",
+            "veryfast",
+            "-crf",
+            "23",
+            "-pix_fmt",
+            "yuv420p",
+            "-c:a",
+            "aac",
+            "-b:a",
+            "160k",
+            "-ar",
+            "48000",
+            "-ac",
+            "2",
+            "-movflags",
+            "+faststart",
+            str(output),
+        ]
+    )
+    subprocess.run(cmd, check=True)
+
+
+def ensure_normalized_clip_media(
+    clips: list[dict[str, Any]],
+    output_dir: Path,
+    audio_source: Path,
+    force: bool,
+) -> tuple[list[dict[str, Any]], list[str]]:
+    warnings: list[str] = []
+    if not audio_source.exists():
+        return [], [f"missing audio guide render: {audio_source}"]
+    output_dir.mkdir(parents=True, exist_ok=True)
+    items: list[dict[str, Any]] = []
+    visuals = normalized_visuals(clips)
+
+    with tempfile.TemporaryDirectory(prefix="fcpxml_norm_text_") as tmp:
+        text_dir = Path(tmp)
+        for index, clip in enumerate(visuals, start=1):
+            start, _ = clip_window(clip)
+            offset_frames = frames_from_seconds(start)
+            duration_frames = max(1, frames_from_seconds(clip_duration(clip)))
+            name = clean_name(clip.get("assetBasename"), clip["id"])
+            output = output_dir / f"clip_{index:03d}_{slugify(clip['id'])}.mp4"
+            if force or not output.exists() or output.stat().st_size == 0:
+                print(f"[fcpxml] rendering normalized clip {index:03d}/{len(visuals)}: {clip['id']}")
+                render_normalized_visual_clip(
+                    clip,
+                    index,
+                    output,
+                    text_dir,
+                    audio_source,
+                )
+            if not output.exists() or output.stat().st_size == 0:
+                warnings.append(f"failed to render normalized clip: {clip['id']}")
+                continue
+            items.append(
+                {
+                    "clip": clip,
+                    "path": output,
+                    "name": name,
+                    "offset_frames": offset_frames,
+                    "duration_frames": duration_frames,
+                }
+            )
+    return items, warnings
+
+
+def build_normalized_clips_fcpxml(
+    pass_row: sqlite3.Row,
+    clips: list[dict[str, Any]],
+    normalized_dir: Path,
+    audio_source: Path,
+    force_media: bool,
+) -> tuple[str, list[str]]:
+    media_items, warnings = ensure_normalized_clip_media(
+        clips,
+        normalized_dir,
+        audio_source,
+        force_media,
+    )
+    if not media_items:
+        return "", warnings or [f"no normalized clip media found in {normalized_dir}"]
+
+    total_frames = max(
+        item["offset_frames"] + item["duration_frames"] for item in media_items
+    )
+    fcpxml, resources, spine = build_fcpxml_document_with_duration(
+        pass_row,
+        frame_time(total_frames),
+    )
+    project = fcpxml.find(".//project")
+    if project is not None:
+        project.set("name", f"{pass_row['name']} Normalized Clip Intermediates FCPXML")
+        project.set(
+            "uid",
+            str(uuid.uuid5(uuid.NAMESPACE_URL, f"{PROJECT_ID}:{pass_row['id']}:normalized-clips")).upper(),
+        )
+
+    for index, item in enumerate(media_items, start=2):
+        resource_id = f"r{index}"
+        path = item["path"]
+        duration = frame_time(item["duration_frames"])
+        asset_el = SubElement(
+            resources,
+            "asset",
+            {
+                "id": resource_id,
+                "name": path.name,
+                "start": "0s",
+                "duration": duration,
+                "hasVideo": "1",
+                "format": "r1",
+                "hasAudio": "1",
+                "audioSources": "1",
+                "audioChannels": "2",
+                "audioRate": "48000",
+            },
+        )
+        SubElement(
+            asset_el,
+            "media-rep",
+            {
+                "kind": "original-media",
+                "src": path.resolve().as_uri(),
+            },
+        )
+        SubElement(
+            spine,
+            "asset-clip",
+            {
+                "name": item["name"],
+                "ref": resource_id,
+                "offset": frame_time(item["offset_frames"]),
+                "duration": duration,
+                "start": "0s",
+                "format": "r1",
+                "tcFormat": "NDF",
+                "audioRole": "dialogue",
+            },
+        )
+
+    return serialize_fcpxml(fcpxml), warnings
 
 
 def build_fcpxml(
@@ -1077,12 +1421,13 @@ def main() -> None:
     )
     parser.add_argument(
         "--timeline-mode",
-        choices=("primary", "connected-gap", "rendered", "segments"),
+        choices=("primary", "connected-gap", "rendered", "segments", "normalized-clips"),
         default="primary",
         help=(
             "FCPXML timeline shape. 'primary' writes visual clips directly in "
             "the spine; 'rendered' writes one finished movie; 'segments' writes "
-            "the normalized render segments left by the review-cut script."
+            "the normalized render segments left by the review-cut script; "
+            "'normalized-clips' writes one normalized intermediate per visual cut."
         ),
     )
     parser.add_argument(
@@ -1106,6 +1451,17 @@ def main() -> None:
         default=DEFAULT_SEGMENTS_DIR,
         help="Directory of seg_*.mp4 files used by --timeline-mode segments.",
     )
+    parser.add_argument(
+        "--normalized-clips-dir",
+        type=Path,
+        default=DEFAULT_NORMALIZED_CLIPS_DIR,
+        help="Directory for per-visual-cut normalized MP4s.",
+    )
+    parser.add_argument(
+        "--force-normalized-media",
+        action="store_true",
+        help="Re-render normalized clip MP4s even when files already exist.",
+    )
     args = parser.parse_args()
 
     conn = open_db()
@@ -1118,6 +1474,8 @@ def main() -> None:
         output = (EXPORT_DIR / "piano_hand_size_part2_pass15_v12_rendered_rescue.fcpxml").resolve()
     elif args.timeline_mode == "segments":
         output = (EXPORT_DIR / "piano_hand_size_part2_pass15_v12_normalized_segments.fcpxml").resolve()
+    elif args.timeline_mode == "normalized-clips":
+        output = (EXPORT_DIR / "piano_hand_size_part2_pass15_v12_normalized_clips.fcpxml").resolve()
     else:
         output = default_output(pass_id).resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -1138,6 +1496,14 @@ def main() -> None:
         text, warnings = build_segment_fcpxml(
             pass_row,
             args.segments_dir.resolve(),
+        )
+    elif args.timeline_mode == "normalized-clips":
+        text, warnings = build_normalized_clips_fcpxml(
+            pass_row,
+            clips,
+            args.normalized_clips_dir.resolve(),
+            args.render_source.resolve(),
+            args.force_normalized_media,
         )
     else:
         text, warnings = build_fcpxml(pass_row, clips, args.title_mode)
