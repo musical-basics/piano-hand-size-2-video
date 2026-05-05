@@ -170,6 +170,25 @@ Keep `normalized-clips` / `segments` only as rescue exports. They import
 cleanly, but they intentionally point FCP at generated intermediates instead
 of the raw source media.
 
+The actual multilane edit export is the better FCP handoff now that the raw
+source diagnostics pass:
+
+```bash
+python3 keyboard-trip/scripts/export_fcpxml.py pass-15-captions-travel-chronology \
+  --timeline-mode connected-gap \
+  --title-mode native \
+  --force-clip-rotation 042_IMG_0298_tionesta_lake_cutaway.MOV=270 \
+  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_actual_edit_multilane_native_titles.fcpxml
+```
+
+For future round-trip import back into Cut Notes, the exporter now writes
+stable breadcrumbs into FCPXML: `cutnotes.*` metadata on asset resources and
+metadata-capable timeline items, plus `note` payloads prefixed with
+`cutnotes:` on timeline elements where FCPXML does not allow metadata. The
+importer should treat SQLite as the app source format, prefer
+`cutnotes.timelineItemId` / `cutnotes.assetId`, and fall back to parsing the
+note JSON if Final Cut strips formal metadata.
+
 Rotation diagnostics showed that MOV display-matrix metadata alone cannot
 determine semantic orientation. `019_IMG_0275_ds55_pickup_and_wrap.MOV` and
 `042_IMG_0298_tionesta_lake_cutaway.MOV` both report `rotation=-90`, but

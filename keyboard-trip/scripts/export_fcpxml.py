@@ -219,6 +219,10 @@ def db_amount(value: float) -> str:
     return f"{value:.1f}dB"
 
 
+def compact_json(data: dict[str, Any]) -> str:
+    return json.dumps(data, sort_keys=True, separators=(",", ":"))
+
+
 def clean_name(value: str | None, fallback: str) -> str:
     text = (value or fallback).strip()
     return " ".join(text.split()) or fallback
@@ -483,6 +487,7 @@ def build_media_resources(
                 "src": asset["path"].as_uri(),
             },
         )
+        add_cutnotes_metadata(asset_el, asset_cutnotes_payload(asset))
     return asset_resource_ids, assets, warnings
 
 
@@ -590,6 +595,70 @@ def apply_forced_rotations(
         sys.exit(f"No clips matched --force-clip-rotation: {', '.join(sorted(unmatched))}")
 
 
+def maybe_relative_to_root(path: Path | None) -> str | None:
+    if not path:
+        return None
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
+
+
+def add_cutnotes_note(parent: Element, payload: dict[str, Any]) -> None:
+    note = SubElement(parent, "note")
+    note.text = "cutnotes:" + compact_json({k: v for k, v in payload.items() if v is not None})
+
+
+def add_cutnotes_metadata(parent: Element, payload: dict[str, Any]) -> None:
+    data = {k: v for k, v in payload.items() if v is not None}
+    if not data:
+        return
+    metadata = SubElement(parent, "metadata")
+    for key, value in data.items():
+        SubElement(metadata, "md", {"key": f"cutnotes.{key}", "value": str(value)})
+
+
+def asset_cutnotes_payload(asset: dict[str, Any]) -> dict[str, Any]:
+    path = asset.get("path")
+    return {
+        "schemaVersion": 1,
+        "projectId": PROJECT_ID,
+        "assetId": asset.get("asset_id"),
+        "assetKind": asset.get("kind"),
+        "assetBasename": asset.get("basename"),
+        "sourcePath": maybe_relative_to_root(path if isinstance(path, Path) else None),
+    }
+
+
+def timeline_cutnotes_payload(
+    clip: dict[str, Any],
+    pass_id: str,
+    asset: dict[str, Any] | None = None,
+    lane: int | str | None = None,
+) -> dict[str, Any]:
+    path = source_path(clip)
+    return {
+        "schemaVersion": 1,
+        "projectId": PROJECT_ID,
+        "passId": pass_id,
+        "timelineItemId": clip.get("id"),
+        "assetId": clip.get("assetId"),
+        "role": clip.get("role"),
+        "section": clip.get("section"),
+        "order": clip.get("order"),
+        "lane": lane,
+        "timelineStart": clip_window(clip)[0],
+        "sourceIn": clip.get("sourceIn"),
+        "sourceOut": clip.get("sourceOut"),
+        "targetDuration": clip_duration(clip),
+        "rotationOverride": clip.get("rotationOverride"),
+        "assetRotation": clip.get("assetRotation"),
+        "assetKind": (asset or {}).get("kind") or clip.get("assetKind"),
+        "assetBasename": clip.get("assetBasename"),
+        "sourcePath": maybe_relative_to_root(path),
+    }
+
+
 def title_params(title_el: Element, mode: str) -> None:
     if mode == "card":
         position = "0 0"
@@ -626,6 +695,7 @@ def add_title(
     lane: int,
     style_id: str,
     mode: str,
+    payload: dict[str, Any] | None = None,
 ) -> None:
     title_el = SubElement(
         parent,
@@ -663,6 +733,9 @@ def add_title(
             "lineSpacing": line_spacing,
         },
     )
+    if payload:
+        add_cutnotes_note(title_el, payload)
+        add_cutnotes_metadata(title_el, payload)
 
 
 def add_native_caption(
@@ -672,6 +745,7 @@ def add_native_caption(
     duration: float,
     lane: int,
     style_id: str,
+    payload: dict[str, Any] | None = None,
 ) -> None:
     caption_text = " ".join(text.split())
     caption_el = SubElement(
@@ -701,6 +775,8 @@ def add_native_caption(
             "backgroundColor": "0.0 0.0 0.0 1.0",
         },
     )
+    if payload:
+        add_cutnotes_note(caption_el, payload)
 
 
 def add_text_overlay(
@@ -712,13 +788,14 @@ def add_text_overlay(
     style_id: str,
     mode: str,
     title_mode: str,
+    payload: dict[str, Any] | None = None,
 ) -> None:
     if title_mode == "none":
         return
     if title_mode == "native":
-        add_native_caption(parent, text, offset, duration, lane, style_id)
+        add_native_caption(parent, text, offset, duration, lane, style_id, payload)
         return
-    add_title(parent, text, offset, duration, lane, style_id, mode)
+    add_title(parent, text, offset, duration, lane, style_id, mode, payload)
 
 
 def add_visual_clip(
@@ -728,9 +805,11 @@ def add_visual_clip(
     asset: dict[str, Any],
     mute_source_audio: bool,
     lane: int,
+    pass_id: str,
     neutralize_camera_rotation: bool = False,
 ) -> None:
     start, _ = clip_window(clip)
+    payload = timeline_cutnotes_payload(clip, pass_id, asset, lane)
     if str(asset.get("kind") or "") == "image":
         attrs = {
             "name": clean_name(clip.get("assetBasename"), clip["id"]),
@@ -741,6 +820,7 @@ def add_visual_clip(
             "start": fcptime(clip.get("sourceIn") or 0.0),
         }
         clip_el = SubElement(parent, "video", attrs)
+        add_cutnotes_note(clip_el, payload)
         SubElement(clip_el, "adjust-conform", {"type": "fit"})
         rotation = xml_rotation_value(clip, asset, neutralize_camera_rotation)
         if rotation:
@@ -761,12 +841,14 @@ def add_visual_clip(
     if asset.get("format_id"):
         attrs["format"] = str(asset["format_id"])
     clip_el = SubElement(parent, "asset-clip", attrs)
+    add_cutnotes_note(clip_el, payload)
     SubElement(clip_el, "adjust-conform", {"type": "fit"})
     rotation = xml_rotation_value(clip, asset, neutralize_camera_rotation)
     if rotation:
         SubElement(clip_el, "adjust-transform", {"rotation": rotation})
     if mute_source_audio and asset.get("has_audio"):
         SubElement(clip_el, "adjust-volume", {"amount": "-96dB"})
+    add_cutnotes_metadata(clip_el, payload)
 
 
 def add_audio_clip(
@@ -774,10 +856,12 @@ def add_audio_clip(
     clip: dict[str, Any],
     ref: str,
     asset: dict[str, Any],
+    pass_id: str,
 ) -> None:
     start, _ = clip_window(clip)
     role = "music" if clip["role"] == "music" else "dialogue"
     lane = "-2" if clip["role"] == "music" else "-1"
+    payload = timeline_cutnotes_payload(clip, pass_id, asset, lane)
     attrs = {
         "name": clean_name(clip.get("assetBasename"), clip["id"]),
         "ref": ref,
@@ -788,11 +872,13 @@ def add_audio_clip(
         "audioRole": role,
     }
     clip_el = SubElement(parent, "asset-clip", attrs)
+    add_cutnotes_note(clip_el, payload)
     if clip["role"] == "music":
         amount = MUSIC_CARD_DB if ("cold" in clip["id"] or "p056" in clip["id"]) else MUSIC_UNDER_VO_DB
         SubElement(clip_el, "adjust-volume", {"amount": db_amount(amount)})
     elif asset.get("probe", {}).get("audio_rate") and asset["probe"]["audio_rate"] != 48000:
         SubElement(clip_el, "adjust-volume", {"amount": "0dB"})
+    add_cutnotes_metadata(clip_el, payload)
 
 
 def add_primary_visual_clip(
@@ -802,8 +888,10 @@ def add_primary_visual_clip(
     asset: dict[str, Any],
     audio_mode: str,
     neutralize_camera_rotation: bool = False,
+    pass_id: str | None = None,
 ) -> None:
     start, _ = clip_window(clip)
+    payload = timeline_cutnotes_payload(clip, pass_id, asset, "primary") if pass_id else None
     if str(asset.get("kind") or "") == "image":
         attrs = {
             "name": clean_name(clip.get("assetBasename"), clip["id"]),
@@ -813,6 +901,8 @@ def add_primary_visual_clip(
             "start": fcptime(clip.get("sourceIn") or 0.0),
         }
         clip_el = SubElement(parent, "video", attrs)
+        if payload:
+            add_cutnotes_note(clip_el, payload)
         SubElement(clip_el, "adjust-conform", {"type": "fit"})
         rotation = xml_rotation_value(clip, asset, neutralize_camera_rotation)
         if rotation:
@@ -834,10 +924,14 @@ def add_primary_visual_clip(
     if asset.get("format_id"):
         attrs["format"] = str(asset["format_id"])
     clip_el = SubElement(parent, "asset-clip", attrs)
+    if payload:
+        add_cutnotes_note(clip_el, payload)
     SubElement(clip_el, "adjust-conform", {"type": "fit"})
     rotation = xml_rotation_value(clip, asset, neutralize_camera_rotation)
     if rotation:
         SubElement(clip_el, "adjust-transform", {"rotation": rotation})
+    if payload:
+        add_cutnotes_metadata(clip_el, payload)
 
 
 def build_fcpxml_document(
@@ -940,6 +1034,7 @@ def build_primary_fcpxml(
         duration = clip_duration(clip)
         overlay = clip.get("textOverlay")
         if clip["role"] in TITLE_ROLES:
+            payload = timeline_cutnotes_payload(clip, pass_row["id"], None, "primary-title")
             gap = SubElement(
                 spine,
                 "gap",
@@ -950,6 +1045,7 @@ def build_primary_fcpxml(
                     "duration": fcptime(duration),
                 },
             )
+            add_cutnotes_note(gap, payload)
             if overlay and title_mode != "none":
                 title_index += 1
                 add_text_overlay(
@@ -961,7 +1057,9 @@ def build_primary_fcpxml(
                     style_id=f"ts{title_index}",
                     mode="card",
                     title_mode=title_mode,
+                    payload={**payload, "overlayKind": "title-card"},
                 )
+            add_cutnotes_metadata(gap, payload)
             continue
 
         asset_id = str(clip.get("assetId") or "")
@@ -975,10 +1073,12 @@ def build_primary_fcpxml(
                 asset,
                 audio_mode,
                 neutralize_camera_rotation=neutralize_camera_rotation,
+                pass_id=pass_row["id"],
             )
         else:
             warnings.append(f"skipped visual clip without media: {clip['id']}")
-            SubElement(
+            payload = timeline_cutnotes_payload(clip, pass_row["id"], None, "primary-missing")
+            gap = SubElement(
                 spine,
                 "gap",
                 {
@@ -988,6 +1088,8 @@ def build_primary_fcpxml(
                     "duration": fcptime(duration),
                 },
             )
+            add_cutnotes_note(gap, payload)
+            add_cutnotes_metadata(gap, payload)
 
     return serialize_fcpxml(fcpxml), warnings
 
@@ -1550,6 +1652,14 @@ def build_fcpxml(
             "duration": fcptime(total_duration),
         },
     )
+    timeline_payload = {
+        "schemaVersion": 1,
+        "projectId": PROJECT_ID,
+        "passId": pass_row["id"],
+        "timelineContainer": "connected-gap",
+        "targetDuration": total_duration,
+    }
+    add_cutnotes_note(timeline_gap, timeline_payload)
 
     voiceover_windows = [
         clip_window(c) for c in clips if c["role"] == "voiceover"
@@ -1565,6 +1675,9 @@ def build_fcpxml(
         if clip["role"] in TITLE_ROLES:
             if overlay:
                 title_index += 1
+                payload = timeline_cutnotes_payload(
+                    clip, pass_row["id"], None, visual_lane(clip)
+                )
                 add_text_overlay(
                     timeline_gap,
                     overlay,
@@ -1574,6 +1687,7 @@ def build_fcpxml(
                     style_id=f"ts{title_index}",
                     mode="card",
                     title_mode=title_mode,
+                    payload={**payload, "overlayKind": "title-card"},
                 )
             continue
 
@@ -1588,12 +1702,16 @@ def build_fcpxml(
                 asset,
                 mute_source_audio=overlaps_voiceover(clip, voiceover_windows),
                 lane=visual_lane(clip),
+                pass_id=pass_row["id"],
             )
         else:
             warnings.append(f"skipped visual clip without media: {clip['id']}")
 
         if overlay:
             title_index += 1
+            payload = timeline_cutnotes_payload(
+                clip, pass_row["id"], asset if asset else None, CAPTION_LANE
+            )
             add_text_overlay(
                 timeline_gap,
                 overlay,
@@ -1603,6 +1721,7 @@ def build_fcpxml(
                 style_id=f"ts{title_index}",
                 mode="caption",
                 title_mode=title_mode,
+                payload={**payload, "overlayKind": "caption"},
             )
 
     for clip in clips:
@@ -1614,7 +1733,9 @@ def build_fcpxml(
         if not ref or not asset:
             warnings.append(f"skipped audio clip without media: {clip['id']}")
             continue
-        add_audio_clip(timeline_gap, clip, ref, asset)
+        add_audio_clip(timeline_gap, clip, ref, asset, pass_row["id"])
+
+    add_cutnotes_metadata(timeline_gap, timeline_payload)
 
     raw = tostring(fcpxml, encoding="utf-8")
     pretty = minidom.parseString(raw).toprettyxml(indent="    ", encoding="UTF-8")

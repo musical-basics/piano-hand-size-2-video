@@ -374,6 +374,24 @@ python3 keyboard-trip/scripts/export_fcpxml.py
 python3 keyboard-trip/scripts/export_fcpxml.py \
   --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_raw_native_timeline_rotations.fcpxml
 
+# Actual multilane Final Cut XML for the Cut Notes edit:
+# source media stays linked, visual lanes are mapped to FCP connected lanes,
+# voiceover/music come through as separate audio clips, and title/caption
+# overlays can be exported as native FCP captions/titles.
+python3 keyboard-trip/scripts/export_fcpxml.py pass-15-captions-travel-chronology \
+  --timeline-mode connected-gap \
+  --title-mode native \
+  --force-clip-rotation 042_IMG_0298_tionesta_lake_cutaway.MOV=270 \
+  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_actual_edit_multilane_native_titles.fcpxml
+
+# Round-trip breadcrumb policy:
+# the app's live edit format is SQLite, not the dumped YAML. Exported FCPXMLs
+# now carry stable Cut Notes breadcrumbs as cutnotes.* metadata where FCPXML
+# allows metadata, plus compact note text (`cutnotes:{...}`) on timeline
+# elements that do not allow metadata. A future FCPXML importer should prefer
+# cutnotes.timelineItemId / cutnotes.assetId from metadata and fall back to the
+# note payload when metadata is absent or stripped by Final Cut.
+
 # Rotation lesson from raw-source FCPXML debugging:
 # ffprobe/MOV display-matrix metadata is necessary but not sufficient. 019 and
 # 042 both report displaymatrix rotation=-90, but 019 is correct with no extra
