@@ -360,11 +360,19 @@ ffprobe -v error -show_entries format=duration -of csv=p=0 \
 
 # Export current pass as a conservative Final Cut Pro XML:
 # primary visual storyline only; no connected-gap clips, captions, VO, or music.
+# Current raw-source exporter preserves each source file's native frame
+# format/timebase instead of forcing all assets to the 30fps project format.
 python3 keyboard-trip/scripts/export_fcpxml.py
 
 # Variant with original camera audio on source clips, still no VO/music:
 python3 keyboard-trip/scripts/export_fcpxml.py --audio-mode camera \
   --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_primary_camera_audio.fcpxml
+
+# Raw-source diagnostic that still points at the original MOV/JPG files but
+# removes source-audio metadata from video assets to avoid FCP XML audio
+# preflight crashes.
+python3 keyboard-trip/scripts/export_fcpxml.py --strip-source-audio \
+  --output keyboard-trip/exports/fcpxml/piano_hand_size_part2_pass15_v12_raw_native_video_only.fcpxml
 
 # FCP 10.7.1 has crashed on the raw-source XMLs on Lionel's machine.
 # Safer rescue exports:

@@ -223,7 +223,11 @@ def probe_media(path: Path) -> dict[str, Any]:
         "-v",
         "error",
         "-show_entries",
-        "format=duration:stream=codec_type,width,height,avg_frame_rate,sample_rate,channels",
+        (
+            "format=duration:"
+            "stream=codec_type,width,height,r_frame_rate,avg_frame_rate,"
+            "time_base,duration,sample_rate,channels"
+        ),
         "-of",
         "json",
         str(path),
@@ -252,7 +256,15 @@ def probe_media(path: Path) -> dict[str, Any]:
         if codec_type == "video" and "width" not in info:
             info["width"] = int(stream.get("width") or PROJECT_WIDTH)
             info["height"] = int(stream.get("height") or PROJECT_HEIGHT)
+            info["r_frame_rate"] = stream.get("r_frame_rate")
             info["avg_frame_rate"] = stream.get("avg_frame_rate")
+            info["video_time_base"] = stream.get("time_base")
+            duration = stream.get("duration")
+            if duration not in (None, "N/A"):
+                try:
+                    info["video_duration"] = float(duration)
+                except ValueError:
+                    pass
         if codec_type == "audio" and "audio_rate" not in info:
             sample_rate = stream.get("sample_rate")
             channels = stream.get("channels")
@@ -266,9 +278,28 @@ def format_key(info: dict[str, Any], fallback_kind: str) -> tuple[int, int, str]
     height = int(info.get("height") or PROJECT_HEIGHT)
     if fallback_kind == "image":
         return width, height, "undefined"
-    # The rough-cut render normalizes everything to 30fps, and using one clean
-    # project-rate resource avoids tiny phone-camera VFR fractions in FCP.
-    return width, height, str(PROJECT_FPS)
+    rate = str(info.get("r_frame_rate") or info.get("avg_frame_rate") or PROJECT_FPS)
+    if rate in {"0/0", "0"}:
+        rate = str(PROJECT_FPS)
+    return width, height, rate
+
+
+def duration_time_for_asset(asset: dict[str, Any]) -> str:
+    kind = str(asset.get("kind") or "")
+    if kind == "image":
+        return fcptime(asset.get("duration"))
+
+    info = asset.get("probe") or {}
+    duration = float(info.get("video_duration") or info.get("duration") or asset.get("duration") or 0.0)
+    time_base = str(info.get("video_time_base") or "")
+    if duration > 0 and "/" in time_base:
+        try:
+            base = Fraction(time_base)
+            units = round(duration / float(base))
+            return fraction_time(Fraction(units) * base)
+        except (ValueError, ZeroDivisionError):
+            pass
+    return fcptime(duration)
 
 
 def frame_duration(rate: str) -> str | None:
@@ -292,10 +323,15 @@ def add_format_resource(
     rate: str,
     project: bool = False,
 ) -> None:
+    try:
+        rate_frac = Fraction(rate)
+        fps_label = attr_float(float(rate_frac), 2).replace(".", "")
+    except (ValueError, ZeroDivisionError):
+        fps_label = str(PROJECT_FPS)
     attrs = {
         "id": fmt_id,
         "name": (
-            f"FFVideoFormat{height}p{PROJECT_FPS}"
+            f"FFVideoFormat{height}p{fps_label}"
             if project or rate != "undefined"
             else "FFVideoFormatRateUndefined"
         ),
@@ -314,6 +350,7 @@ def build_media_resources(
     clips: list[dict[str, Any]],
     first_resource_id: int = 2,
     include_audio_clips: bool = True,
+    strip_source_audio: bool = False,
 ) -> tuple[dict[str, str], dict[str, dict[str, Any]], list[str]]:
     media_clips = [
         c for c in clips
@@ -367,6 +404,8 @@ def build_media_resources(
             # Still images can be stretched to any edit duration in Final Cut.
             asset["duration"] = max(float(asset.get("duration") or 0.0), 3600.0)
             asset["has_audio"] = False
+        elif strip_source_audio and asset["kind"] == "video":
+            asset["has_audio"] = False
         elif info.get("audio_rate"):
             asset["has_audio"] = True
 
@@ -399,7 +438,7 @@ def build_media_resources(
             "id": resource_id,
             "name": asset["basename"],
             "start": "0s",
-            "duration": fcptime(asset["duration"]),
+            "duration": duration_time_for_asset(asset),
         }
         if is_visual_asset:
             attrs["hasVideo"] = "1"
@@ -736,6 +775,7 @@ def build_primary_fcpxml(
     clips: list[dict[str, Any]],
     title_mode: str,
     audio_mode: str,
+    strip_source_audio: bool = False,
 ) -> tuple[str, list[str]]:
     total_duration = max((clip_window(c)[1] for c in clips), default=0.0)
     fcpxml, resources, spine = build_fcpxml_document(pass_row, total_duration)
@@ -754,6 +794,7 @@ def build_primary_fcpxml(
         clips,
         first_resource_id=3 if title_mode == "captionator" else 2,
         include_audio_clips=False,
+        strip_source_audio=strip_source_audio,
     )
 
     title_index = 0
@@ -949,6 +990,25 @@ def normalized_visuals(clips: list[dict[str, Any]]) -> list[dict[str, Any]]:
             int(clip.get("order") or 0),
         ),
     )
+
+
+def limit_to_visual_count(
+    clips: list[dict[str, Any]],
+    limit: int | None,
+) -> list[dict[str, Any]]:
+    if not limit or limit <= 0:
+        return clips
+    limited: list[dict[str, Any]] = []
+    visual_count = 0
+    for clip in clips:
+        if is_visual(clip):
+            if visual_count >= limit:
+                continue
+            visual_count += 1
+            limited.append(clip)
+        elif visual_count < limit:
+            limited.append(clip)
+    return limited
 
 
 def rotation_filter_fragment(clip: dict[str, Any]) -> list[str]:
@@ -1462,12 +1522,22 @@ def main() -> None:
         action="store_true",
         help="Re-render normalized clip MP4s even when files already exist.",
     )
+    parser.add_argument(
+        "--limit-visuals",
+        type=int,
+        help="Diagnostic export: keep only the first N visual clips.",
+    )
+    parser.add_argument(
+        "--strip-source-audio",
+        action="store_true",
+        help="Raw-source diagnostic: omit source audio metadata from video assets.",
+    )
     args = parser.parse_args()
 
     conn = open_db()
     pass_id = args.pass_id or current_pass_id(conn)
     pass_row = fetch_pass(conn, pass_id)
-    clips = fetch_clips(conn, pass_id)
+    clips = limit_to_visual_count(fetch_clips(conn, pass_id), args.limit_visuals)
     if args.output:
         output = args.output.resolve()
     elif args.timeline_mode == "rendered":
@@ -1486,6 +1556,7 @@ def main() -> None:
             clips,
             title_mode=args.title_mode,
             audio_mode=args.audio_mode,
+            strip_source_audio=args.strip_source_audio,
         )
     elif args.timeline_mode == "rendered":
         text, warnings = build_rendered_fcpxml(
