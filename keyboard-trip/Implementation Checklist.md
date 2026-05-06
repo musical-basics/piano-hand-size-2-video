@@ -168,7 +168,7 @@ have a baseline of warnings/errors to fix in subsequent passes.
 **Done when**: schema doc explains every field; jsonschema validator
 can validate a sample patch.
 
-### [ ] 10. Build apply_timeline_patch.py (Plan Step 24)
+### [x] 10. Build apply_timeline_patch.py (Plan Step 24)
 
 - Create `keyboard-trip/scripts/apply_timeline_patch.py`
 - Reads `edit_patch_plan.json`
