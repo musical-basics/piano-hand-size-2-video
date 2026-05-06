@@ -38,7 +38,7 @@ Start at the top of Week 1 and tick off as you go.
 **Done when**: every clip in `ASSET_INDEX.md` has an entry; `yq` /
 PyYAML can parse the file.
 
-### [ ] 2. Add STORY_BEATS.yaml (Plan Step 8)
+### [x] 2. Add STORY_BEATS.yaml (Plan Step 8)
 
 - Create `keyboard-trip/docs/STORY_BEATS.yaml`
 - Define beats covering the full master timeline of the current pass

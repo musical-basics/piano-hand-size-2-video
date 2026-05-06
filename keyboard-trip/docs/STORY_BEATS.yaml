@@ -1,0 +1,138 @@
+# STORY_BEATS.yaml
+#
+# Master beat structure of the cut. Defines which story_phase values are
+# allowed to appear as the active visual inside each timeline window.
+#
+# Built against pass-15-captions-travel-chronology.yaml (runtime 752.5s,
+# 73 active_visual segments) and the narrative spine in docs/VIDEO_PLAN.md.
+#
+# Field contract (per Implementation Plan.md step 8 + checklist item 2):
+#   id                     Stable beat id, kebab-case.
+#   start                  Beat start in seconds on the master timeline.
+#   end                    Beat end in seconds on the master timeline.
+#   purpose                One-line statement of what this beat is for the
+#                          viewer (matches a section in VIDEO_PLAN.md).
+#   allowed_story_phases   Subset of the recommended story_phase values from
+#                          ASSET_INTELLIGENCE.yaml. The chronology validator
+#                          (Plan Step 9) errors if an active visual's
+#                          story_phase is NOT in this set during the beat.
+#
+# Invariants:
+#   - Beats span 0s → cut_runtime with NO gaps and NO overlaps
+#     (consecutive beats share the same boundary value).
+#   - Every value in allowed_story_phases appears in this set:
+#       intro, trip_setup, drive_to_titusville, factory_visit,
+#       technical_keyboard_stills, post_pickup_argument,
+#       car_trouble_return, home_demo_payoff, pickup_to_record
+#   - Where flexible visual cover is intentional (e.g. rainy "drive" b-roll
+#     used under a late-night trip_setup VO), both phases are listed and
+#     called out in the purpose line.
+
+cut_runtime: 752.5
+
+beats:
+  - id: cold-open
+    start: 0.0
+    end: 31.0
+    purpose: >-
+      Front-facing seated intro plus the cold-open title card. Establishes
+      the part-two framing and hooks the viewer.
+    allowed_story_phases:
+      - pickup_to_record
+      - intro
+
+  - id: late-night-trip-premise
+    start: 31.0
+    end: 51.5
+    purpose: >-
+      Late-night home talking-head ("it's 1:42 a.m.") plus the cold-open
+      hand/key-comparison placeholder (P056). Sets up the absurd premise.
+    allowed_story_phases:
+      - trip_setup
+      - pickup_to_record
+
+  - id: overnight-drive-vo-montage
+    start: 51.5
+    end: 171.0
+    purpose: >-
+      VO_01a/b/c chunks plus VO_02 (gas-station/snacks) and VO_03 (car nap)
+      with intercut a-roll and rainy-road b-roll. drive_to_titusville bin is
+      intentionally allowed here because rainy-windshield broll is used as
+      visual cover for late-night trip_setup VOs.
+    allowed_story_phases:
+      - trip_setup
+      - drive_to_titusville
+
+  - id: pennsylvania-road-texture
+    start: 171.0
+    end: 221.0
+    purpose: >-
+      Morning highway update, scenic Pennsylvania b-roll, "in the woods /
+      almost there", and the Double Big Mac comic beat. Resets pacing
+      before the factory arrival.
+    allowed_story_phases:
+      - drive_to_titusville
+
+  - id: davids-keyboard-world
+    start: 221.0
+    end: 350.5
+    purpose: >-
+      Arrival proof — keyboard #21, DS 5.5 on Steinway B, the size lineup
+      (4.0 / 5.1 / 5.5 / 6.0), DS 5.5 pickup, and Athena internals
+      reconnaissance. The "this is real" section.
+    allowed_story_phases:
+      - factory_visit
+
+  - id: main-argument
+    start: 350.5
+    end: 499.0
+    purpose: >-
+      Title card + five chapters of the post-pickup car monologue making
+      the DS 6.0 / DS 5.5 hand-size argument. Technical keyboard stills
+      and one factory pickup-wrap pickup are used as 3-4s cutaways to keep
+      the eye moving.
+    allowed_story_phases:
+      - post_pickup_argument
+      - technical_keyboard_stills
+      - factory_visit
+
+  - id: post-argument-pause
+    start: 499.0
+    end: 521.0
+    purpose: >-
+      Tionesta lake cutaway, lake overlook, and the 177777 mileage gag
+      under VO_05. Calm breath after the dense main-argument block.
+    allowed_story_phases:
+      - post_pickup_argument
+
+  - id: trip-fights-back
+    start: 521.0
+    end: 556.5
+    purpose: >-
+      Hotel breakdown, car-fixed update, return drive, and final highway
+      home under VO_06. Short complication-and-resolution arc.
+    allowed_story_phases:
+      - car_trouble_return
+
+  - id: home-payoff
+    start: 556.5
+    end: 728.0
+    purpose: >-
+      Home demo payoff — what Lionel brought back, the DS 6.0 history, the
+      DS 5.5 valid-option claim, the P056 home placeholder, the
+      "current take" recommendation card, and the home technique chapters.
+      Uses technical keyboard stills as 3s cutaways between chapters.
+    allowed_story_phases:
+      - home_demo_payoff
+      - pickup_to_record
+      - technical_keyboard_stills
+
+  - id: closing
+    start: 728.0
+    end: 752.5
+    purpose: >-
+      Closing technical-still cutaway, the closing recommendation, and the
+      final-hook title card.
+    allowed_story_phases:
+      - home_demo_payoff
+      - technical_keyboard_stills

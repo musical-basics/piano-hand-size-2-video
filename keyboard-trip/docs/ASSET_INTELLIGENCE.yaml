@@ -1160,3 +1160,372 @@ assets:
     visual_summary: Earlier "road keyboard" title card variant; superseded by v3 series.
     best_ranges: []
     avoid_ranges: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # 90_Reference_Frames (single-JPG poster frames extracted from each
+  # source clip; used as still cutaways when the active visual needs to
+  # hold longer than the underlying motion clip allows). story_phase
+  # mirrors the source clip's phase. has_motion is false by definition.
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-90-reference-frames-img-0256
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0256.jpg
+    trip_order: 401
+    story_phase: trip_setup
+    clip_type: talking_head
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 001 — late-night home talking-head still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0257
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0257.jpg
+    trip_order: 402
+    story_phase: trip_setup
+    clip_type: gas_station
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 002 — Hagerstown gas-station still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0258
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0258.jpg
+    trip_order: 403
+    story_phase: trip_setup
+    clip_type: food_stop
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 003 — road-trip snacks still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0259
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0259.jpg
+    trip_order: 404
+    story_phase: trip_setup
+    clip_type: gas_station
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 004 — Sheetz middle-of-nowhere still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0260
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0260.jpg
+    trip_order: 405
+    story_phase: trip_setup
+    clip_type: talking_head
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 005 — waking up after car nap still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0261
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0261.jpg
+    trip_order: 406
+    story_phase: trip_setup
+    clip_type: talking_head
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 006 — car-nap recovery still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0263
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0263.jpg
+    trip_order: 407
+    story_phase: drive_to_titusville
+    clip_type: talking_head
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 007 — morning highway update still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0264
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0264.jpg
+    trip_order: 408
+    story_phase: drive_to_titusville
+    clip_type: driving_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 008 — Pennsylvania scenery still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0265
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0265.jpg
+    trip_order: 409
+    story_phase: drive_to_titusville
+    clip_type: driving_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 009 — drive b-roll still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0266
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0266.jpg
+    trip_order: 410
+    story_phase: drive_to_titusville
+    clip_type: driving_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 010 — rainy highway still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0267
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0267.jpg
+    trip_order: 411
+    story_phase: drive_to_titusville
+    clip_type: talking_head
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 011 — in-the-woods almost-there still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0268
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0268.jpg
+    trip_order: 412
+    story_phase: drive_to_titusville
+    clip_type: food_stop
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 012 — Double Big Mac still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0269
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0269.jpg
+    trip_order: 413
+    story_phase: factory_visit
+    clip_type: factory_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 013 — keyboard-21 intro still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0270
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0270.jpg
+    trip_order: 414
+    story_phase: factory_visit
+    clip_type: factory_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 014 — factory technician intro still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0271
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0271.jpg
+    trip_order: 415
+    story_phase: factory_visit
+    clip_type: keyboard_demo
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 015 — keyboard setup still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0272
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0272.jpg
+    trip_order: 416
+    story_phase: factory_visit
+    clip_type: talking_head
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 016 — Tesla parking-lot still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0273
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0273.jpg
+    trip_order: 417
+    story_phase: factory_visit
+    clip_type: talking_head
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 017 — robotaxi conversation still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0274
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0274.jpg
+    trip_order: 418
+    story_phase: factory_visit
+    clip_type: keyboard_demo
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 018 — DS size lineup on Steinway still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0275
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0275.jpg
+    trip_order: 419
+    story_phase: factory_visit
+    clip_type: keyboard_demo
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 019 — DS 5.5 pickup-and-wrap still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0282
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0282.jpg
+    trip_order: 420
+    story_phase: factory_visit
+    clip_type: keyboard_demo
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 026 — Athena range/demo still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0283
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0283.jpg
+    trip_order: 421
+    story_phase: factory_visit
+    clip_type: keyboard_demo
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 027 — Athena internals still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0297
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0297.jpg
+    trip_order: 422
+    story_phase: post_pickup_argument
+    clip_type: talking_head
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 041 — DS 6.0 / DS 5.5 car monologue still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0298
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0298.jpg
+    trip_order: 423
+    story_phase: post_pickup_argument
+    clip_type: lake_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 042 — Tionesta lake cutaway still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0299
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0299.jpg
+    trip_order: 424
+    story_phase: post_pickup_argument
+    clip_type: lake_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 043 — lake overlook still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0300
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0300.jpg
+    trip_order: 425
+    story_phase: post_pickup_argument
+    clip_type: driving_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 044 — 177777 mileage still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0304
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0304.jpg
+    trip_order: 426
+    story_phase: car_trouble_return
+    clip_type: talking_head
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 048 — hotel car-broke-down still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0305
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0305.jpg
+    trip_order: 427
+    story_phase: car_trouble_return
+    clip_type: talking_head
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 049 — car-fixed heading-home still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0306
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0306.jpg
+    trip_order: 428
+    story_phase: car_trouble_return
+    clip_type: driving_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 050 — beautiful return drive still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0307
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0307.jpg
+    trip_order: 429
+    story_phase: car_trouble_return
+    clip_type: driving_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 051 — return drive b-roll still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0308
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0308.jpg
+    trip_order: 430
+    story_phase: car_trouble_return
+    clip_type: lake_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 052 — return lake cutaway still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0309
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0309.jpg
+    trip_order: 431
+    story_phase: car_trouble_return
+    clip_type: driving_broll
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 053 — highway-home b-roll still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-img-0310
+    file: keyboard-trip/footage/90_Reference_Frames/IMG_0310.jpg
+    trip_order: 432
+    story_phase: home_demo_payoff
+    clip_type: home_demo
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of clip 054 — home DS 6.0 / DS 5.5 explanation still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-90-reference-frames-055-pickup-front-facing-intro
+    file: keyboard-trip/footage/90_Reference_Frames/055_PICKUP_front_facing_intro.jpg
+    trip_order: 433
+    story_phase: pickup_to_record
+    clip_type: talking_head
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Poster frame of pickup 055 — front-facing intro still.
+    best_ranges: []
+    avoid_ranges: []
