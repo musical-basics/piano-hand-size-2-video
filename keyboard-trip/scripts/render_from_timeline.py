@@ -214,15 +214,39 @@ def _build_audio_mix(
         ]
         if c.get("track") == "voiceover":
             per_clip_filters.append("loudnorm=I=-16:LRA=11:TP=-1.5")
+        if c.get("track") == "aroll":
+            # 0.4s audio fade-out at the end (matches bash add_video).
+            fade_start = max(0.0, seg_dur - 0.4)
+            per_clip_filters.append(
+                f"afade=t=out:st={fade_start}:d=0.4"
+            )
         per_clip_chain = ",".join(per_clip_filters)
+        # Use -map 0:a:0? so videos with no audio stream don't error;
+        # they produce silence and the mix step proceeds fine.
         cmd = [
             "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
             "-ss", f"{sin}", "-i", str(src), "-t", f"{seg_dur}",
             "-af", per_clip_chain,
+            "-map", "0:a:0?",
             "-c:a", "pcm_s16le", "-ar", str(SR), "-ac", "2",
             str(inter),
         ]
-        subprocess.run(cmd, check=True)
+        try:
+            subprocess.run(cmd, check=True, capture_output=True)
+        except subprocess.CalledProcessError:
+            # No audio stream (e.g. a still routed through here) — write
+            # silence of the right length so the mix step still works.
+            subprocess.run(
+                [
+                    "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
+                    "-f", "lavfi", "-i",
+                    f"anullsrc=channel_layout=stereo:sample_rate={SR}",
+                    "-t", f"{seg_dur}",
+                    "-c:a", "pcm_s16le",
+                    str(inter),
+                ],
+                check=True,
+            )
         intermediates.append((inter, ts, volume))
 
     # Mix the intermediates with adelay + amix (lightweight filter
@@ -314,9 +338,54 @@ def render(pass_yaml: Path, out_mp4: Path) -> None:
     audio_clips = [
         c for c in dump["clips"] if c.get("track") in ("voiceover", "music")
     ]
-    print(f"[audio] mixing {len(audio_clips)} audio clips over {runtime:.2f}s")
+    # Include source audio from a_roll visual segments (Lionel's
+    # talking-head dialogue). Without this, ~half the cut renders
+    # silent because the cold open + main argument + home payoff are
+    # all a_roll with no separate VO. Lane convention (set in item 4):
+    # only a_roll plays its source audio at render time; ambient /
+    # b_roll / still / title_card / placeholder are silent cover.
+    aroll_audio_clips = []
+    for seg in active_visual:
+        if seg.get("lane") != "a_roll":
+            continue
+        clip = clips_by_id.get(seg["clip_id"])
+        if not clip:
+            continue
+        src_rel = (clip.get("source") or {}).get("file") or ""
+        if not src_rel:
+            continue
+        ext = src_rel.rsplit(".", 1)[-1].lower()
+        if ext in {"jpg", "jpeg", "png"}:
+            continue
+        if "[audio: muted]" in (clip.get("notes") or ""):
+            continue
+        # Compute the correct source_in for THIS sub-window of the
+        # clip: clip start in source coords + offset of segment within
+        # the clip's timeline window.
+        clip_tl_start = float(clip["timeline"]["start"])
+        clip_source_in = float((clip["source"].get("in") or 0.0))
+        seg_tl_start = float(seg["window"][0])
+        seg_dur = float(seg["window"][1]) - seg_tl_start
+        sub_source_in = clip_source_in + max(0.0, seg_tl_start - clip_tl_start)
+        aroll_audio_clips.append(
+            {
+                "id": f"aroll-{seg['clip_id']}-{seg_tl_start:.3f}",
+                "track": "aroll",
+                "source": {"file": src_rel, "in": sub_source_in,
+                           "out": sub_source_in + seg_dur},
+                "timeline": {"start": seg_tl_start, "duration": seg_dur},
+                "notes": clip.get("notes"),
+            }
+        )
+
+    all_audio = audio_clips + aroll_audio_clips
+    print(
+        f"[audio] mixing {len(audio_clips)} VO/music + "
+        f"{len(aroll_audio_clips)} a-roll source-audio segments "
+        f"over {runtime:.2f}s"
+    )
     audio_mix = work / "audio_mix.aac"
-    _build_audio_mix(audio_clips, runtime, work, audio_mix)
+    _build_audio_mix(all_audio, runtime, work, audio_mix)
 
     print(f"[mux] → {out_mp4}")
     out_mp4.parent.mkdir(parents=True, exist_ok=True)
