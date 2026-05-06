@@ -1,0 +1,1162 @@
+# ASSET_INTELLIGENCE.yaml
+#
+# Source-of-truth metadata for every asset that can land on the timeline.
+# Built from docs/ASSET_INDEX.md, the per-clip *.txt visual descriptors in
+# footage/<bin>/, and the contact sheets in footage/91_Visual_Contact_Sheets/.
+#
+# Field contract (per Implementation Plan.md step 5 + checklist item 1):
+#   asset_id        Stable id; matches the SQLite assets.id where one exists.
+#   file            Repo-relative path to the underlying media file.
+#   trip_order      Integer chronological rank (matches the NNN_ filename
+#                   prefix for source footage; synthetic for derived assets
+#                   like VO chunks, music beds, and title cards).
+#   story_phase     One of:
+#                     intro, trip_setup, drive_to_titusville, factory_visit,
+#                     technical_keyboard_stills, post_pickup_argument,
+#                     car_trouble_return, home_demo_payoff, pickup_to_record
+#                   For derived assets (VO/music/title cards) this is the
+#                   primary phase the asset is intended to score/cover.
+#   clip_type       One of:
+#                     talking_head, driving_broll, gas_station, food_stop,
+#                     factory_broll, keyboard_demo, keyboard_still,
+#                     lake_broll, car_trouble, home_demo, title_card,
+#                     placeholder, music, voiceover
+#   has_dialogue    True if the asset contains spoken words (Lionel or others).
+#   has_motion      True if the asset has visible camera or subject motion.
+#                   False for stills, title cards, audio-only assets.
+#   visual_summary  One-line description of what the viewer sees.
+#   best_ranges     [{in: <sec>, out: <sec>, reason: ...}]
+#                   Recommended cut windows for this asset. For very short
+#                   stills/title cards, leave empty (any range is the asset).
+#   avoid_ranges    [{in: <sec>, out: <sec>, reason: ...}]
+#                   Windows to skip (blurry, off-topic, framing breaks).
+#                   Empty list when nothing to avoid.
+
+assets:
+  # ─────────────────────────────────────────────────────────────────────
+  # 01_Trip_Setup
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-001-img-0256-0142am-trip-setup
+    file: keyboard-trip/footage/01_Trip_Setup/001_IMG_0256_0142am_trip_setup.MOV
+    trip_order: 1
+    story_phase: trip_setup
+    clip_type: talking_head
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Late-night handheld talking-head at home explaining the 1:42 a.m. departure, the discount, and why DS key sizes matter; brief pan to a clock as proof.
+    best_ranges:
+      - in: 0.0
+        out: 15.0
+        reason: Clearest setup of "it's 1:42 a.m., I'm driving to Titusville, PA for another DS 6.0" — strongest cold-open A-roll.
+      - in: 22.0
+        out: 32.0
+        reason: '"5 1/2 hours of driving plus stops" + "$8000 discount" beats; great for the why-this-trip premise.'
+    avoid_ranges:
+      - in: 16.0
+        out: 19.0
+        reason: Camera swings to phone clock, frame is heavily blurred — usable as a 0.5s flash but not as a hold.
+
+  - asset_id: asset-002-img-0257-hagerstown-gas-station
+    file: keyboard-trip/footage/01_Trip_Setup/002_IMG_0257_hagerstown_gas_station.MOV
+    trip_order: 2
+    story_phase: trip_setup
+    clip_type: gas_station
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Bright Hagerstown gas-station/convenience-store selfie marking the first checkpoint outside Baltimore.
+    best_ranges:
+      - in: 0.0
+        out: 9.0
+        reason: Clean "I'm at this gas station near Hagerstown, an hour from Baltimore" — perfect short travel beat.
+    avoid_ranges: []
+
+  - asset_id: asset-003-img-0258-road-trip-snacks-no-caffeine
+    file: keyboard-trip/footage/01_Trip_Setup/003_IMG_0258_road_trip_snacks_no_caffeine.MOV
+    trip_order: 3
+    story_phase: trip_setup
+    clip_type: food_stop
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Dark car-interior haul of trip snacks (water jug, beef stick, Reese's animal crackers) ending on the chocolate-milk no-caffeine gag.
+    best_ranges:
+      - in: 0.0
+        out: 12.0
+        reason: Water jug + first beef-stick reveal; quick comic personality beat.
+      - in: 96.0
+        out: 110.0
+        reason: Reese's dipped animal crackers reaction — best laugh moment.
+      - in: 120.0
+        out: 136.0
+        reason: Chocolate-milk no-caffeine punchline + "take a giant nap" — sets up VO_03 car nap.
+    avoid_ranges:
+      - in: 30.0
+        out: 95.0
+        reason: Long quiet middle stretch with weak/dark framing; clip is 136s and most of the middle is unusable.
+
+  - asset_id: asset-004-img-0259-sheets-stop-middle-of-nowhere
+    file: keyboard-trip/footage/01_Trip_Setup/004_IMG_0259_sheets_stop_middle_of_nowhere.MOV
+    trip_order: 4
+    story_phase: trip_setup
+    clip_type: gas_station
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Quick nighttime "Sheetz in the middle of nowhere" location marker outside the car.
+    best_ranges:
+      - in: 0.0
+        out: 9.0
+        reason: Whole clip is a single 9s ambient location beat; usable in full as a quick travel insert.
+    avoid_ranges: []
+
+  - asset_id: asset-005-img-0260-waking-up-after-car-nap
+    file: keyboard-trip/footage/01_Trip_Setup/005_IMG_0260_waking_up_after_car_nap.MOV
+    trip_order: 5
+    story_phase: trip_setup
+    clip_type: talking_head
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Sleepy morning car-interior shot after passing out in the back seat; sets up the recovery beat.
+    best_ranges:
+      - in: 0.0
+        out: 12.0
+        reason: Whole clip is the fatigue/recovery payoff — natural pair with VO_03.
+    avoid_ranges: []
+
+  - asset_id: asset-006-img-0261-car-nap-recovery-drive-resumes
+    file: keyboard-trip/footage/01_Trip_Setup/006_IMG_0261_car_nap_recovery_drive_resumes.MOV
+    trip_order: 6
+    story_phase: trip_setup
+    clip_type: talking_head
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Morning selfie outside/near the car, joking about beef stick + animal crackers and resuming the drive.
+    best_ranges:
+      - in: 0.0
+        out: 12.0
+        reason: '"Finally asleep for almost three hours / they feel great" — best fatigue payoff.'
+      - in: 24.0
+        out: 36.0
+        reason: '"Anyways, we''re going to keep driving" — clean transition into the morning drive.'
+    avoid_ranges: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # 02_Drive_To_Titusville
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-007-img-0263-morning-highway-update
+    file: keyboard-trip/footage/02_Drive_To_Titusville/007_IMG_0263_morning_highway_update.MOV
+    trip_order: 7
+    story_phase: drive_to_titusville
+    clip_type: talking_head
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Overcast morning highway selfie; alert/energetic update with the windshield road in frame.
+    best_ranges:
+      - in: 0.0
+        out: 18.0
+        reason: Clean "we are going to Pytisville, Pennsylvania / 3.5 hours to go" — strongest morning-drive beat.
+      - in: 35.0
+        out: 44.6
+        reason: '"I''m feeling good, alert, get there by noon" — energetic button.'
+    avoid_ranges:
+      - in: 18.0
+        out: 24.0
+        reason: Sneeze + "called David" mumble; weaker.
+
+  - asset_id: asset-008-img-0264-pennsylvania-scenery
+    file: keyboard-trip/footage/02_Drive_To_Titusville/008_IMG_0264_pennsylvania_scenery.MOV
+    trip_order: 8
+    story_phase: drive_to_titusville
+    clip_type: driving_broll
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Windshield view of Pennsylvania hills, trees, and cloudy sky with brief "so beautiful" reactions.
+    best_ranges:
+      - in: 0.0
+        out: 28.4
+        reason: Whole clip is breathing-room scenic b-roll; strong under VO_04.
+    avoid_ranges: []
+
+  - asset_id: asset-009-img-0265-drive-broll-1
+    file: keyboard-trip/footage/02_Drive_To_Titusville/009_IMG_0265_drive_broll_1.MOV
+    trip_order: 9
+    story_phase: drive_to_titusville
+    clip_type: driving_broll
+    has_dialogue: false
+    has_motion: true
+    visual_summary: Forward-moving windshield b-roll through hilly Pennsylvania terrain; no usable dialogue.
+    best_ranges:
+      - in: 0.0
+        out: 34.7
+        reason: Pure road texture; safe to use any sub-range under VO/music.
+    avoid_ranges: []
+
+  - asset_id: asset-010-img-0266-drive-broll-2
+    file: keyboard-trip/footage/02_Drive_To_Titusville/010_IMG_0266_drive_broll_2.MOV
+    trip_order: 10
+    story_phase: drive_to_titusville
+    clip_type: driving_broll
+    has_dialogue: false
+    has_motion: true
+    visual_summary: Rainy highway windshield b-roll with wipers visible; adds tension/fatigue texture.
+    best_ranges:
+      - in: 0.0
+        out: 33.2
+        reason: Useful as weather/hardship insert during the late-night → morning transition.
+    avoid_ranges: []
+
+  - asset_id: asset-011-img-0267-in-the-woods-almost-there
+    file: keyboard-trip/footage/02_Drive_To_Titusville/011_IMG_0267_in_the_woods_almost_there.MOV
+    trip_order: 11
+    story_phase: drive_to_titusville
+    clip_type: talking_head
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Rainy two-lane wooded road through the windshield with "now we're in the woods, 48 minutes away" voice update.
+    best_ranges:
+      - in: 0.0
+        out: 20.0
+        reason: '"Still driving after 5 hours / in the woods / 48 minutes" — strongest "almost there" payoff.'
+    avoid_ranges: []
+
+  - asset_id: asset-012-img-0268-double-big-mac-lunch
+    file: keyboard-trip/footage/02_Drive_To_Titusville/012_IMG_0268_double_big_mac_lunch.MOV
+    trip_order: 12
+    story_phase: drive_to_titusville
+    clip_type: food_stop
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Tight in-car shot of a Double Big Mac with the four-patty count gag.
+    best_ranges:
+      - in: 0.0
+        out: 12.9
+        reason: Whole clip is the gag — use as a quick comedic beat under driving music.
+    avoid_ranges: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # 03_David_Factory_Visit
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-013-img-0269-keyboard-21-intro
+    file: keyboard-trip/footage/03_David_Factory_Visit/013_IMG_0269_keyboard_21_intro.MOV
+    trip_order: 13
+    story_phase: factory_visit
+    clip_type: factory_broll
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Factory close-ups of an exposed piano action assembly; David and Lionel discussing keyboard #21 from the 1998 PTG convention.
+    best_ranges:
+      - in: 0.0
+        out: 15.0
+        reason: '"Here''s keyboard number 21 we built / PTG convention 1998" — strong arrival/proof beat.'
+      - in: 15.0
+        out: 35.0
+        reason: Size discussion + 42-inch / 5.5 reference — useful when introducing key-size lineup.
+    avoid_ranges: []
+
+  - asset_id: asset-014-img-0270-factory-technician-intro
+    file: keyboard-trip/footage/03_David_Factory_Visit/014_IMG_0270_factory_technician_intro.MOV
+    trip_order: 14
+    story_phase: factory_visit
+    clip_type: factory_broll
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Brief workshop view with a crate/case in frame; mentions Karen and the technicians.
+    best_ranges:
+      - in: 0.0
+        out: 15.3
+        reason: Whole clip is contextual factory texture; use only if a technician/team beat is needed.
+    avoid_ranges: []
+
+  - asset_id: asset-015-img-0271-keyboard-setup-broll
+    file: keyboard-trip/footage/03_David_Factory_Visit/015_IMG_0271_keyboard_setup_broll.MOV
+    trip_order: 15
+    story_phase: factory_visit
+    clip_type: keyboard_demo
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Lionel in headphones at a black digital keyboard, briefly playing/testing it in the workshop.
+    best_ranges:
+      - in: 0.0
+        out: 10.0
+        reason: Hands-on first impression with "There we go" — clean visual proof.
+      - in: 23.0
+        out: 27.7
+        reason: '"It''s good" reaction button; pairs well over VO.'
+    avoid_ranges: []
+
+  - asset_id: asset-016-img-0272-parking-lot-tesla-conversation
+    file: keyboard-trip/footage/03_David_Factory_Visit/016_IMG_0272_parking_lot_tesla_conversation.MOV
+    trip_order: 16
+    story_phase: factory_visit
+    clip_type: talking_head
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Tesla interior with David; off-topic chatter about Tesla self-driving in the parking lot.
+    best_ranges:
+      - in: 30.0
+        out: 47.9
+        reason: '"Driving 5 hours to come here / charging center to charging center" — only segment with travel relevance.'
+    avoid_ranges:
+      - in: 0.0
+        out: 30.0
+        reason: Pure car-tech aside; off the keyboard thesis.
+
+  - asset_id: asset-017-img-0273-robotaxi-conversation-broll
+    file: keyboard-trip/footage/03_David_Factory_Visit/017_IMG_0273_robotaxi_conversation_broll.MOV
+    trip_order: 17
+    story_phase: factory_visit
+    clip_type: talking_head
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Continuation of the Tesla/robotaxi conversation in the moving car around David's neighborhood.
+    best_ranges: []
+    avoid_ranges:
+      - in: 0.0
+        out: 27.2
+        reason: Off-topic robotaxi chatter; skip unless a tiny human/personality aside is wanted.
+
+  - asset_id: asset-018-img-0274-ds-size-lineup-on-steinway
+    file: keyboard-trip/footage/03_David_Factory_Visit/018_IMG_0274_ds_size_lineup_on_steinway.MOV
+    trip_order: 18
+    story_phase: factory_visit
+    clip_type: keyboard_demo
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Detailed size-lineup on a Steinway B — DS 5.5, DS 6.0, DS 5.1, DS 4.0 actions and keys compared in close-up.
+    best_ranges:
+      - in: 0.0
+        out: 25.0
+        reason: '"DS 5.5 on the Steinway B" reveal — strongest single proof of the alternate-size lineup.'
+      - in: 47.0
+        out: 65.0
+        reason: DS 6.0 / 5.1 / normal comparison; great when narrating the standard-vs-narrow argument.
+      - in: 100.0
+        out: 120.9
+        reason: 4.7 / 5.1 keep-or-obsolete debate — bonus context if the cut wants depth.
+    avoid_ranges: []
+
+  - asset_id: asset-019-img-0275-ds55-pickup-and-wrap
+    file: keyboard-trip/footage/03_David_Factory_Visit/019_IMG_0275_ds55_pickup_and_wrap.MOV
+    trip_order: 19
+    story_phase: factory_visit
+    clip_type: keyboard_demo
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Long pickup/wrap segment — keyboards being played and packed up; "thanks David" closing energy.
+    best_ranges:
+      - in: 0.0
+        out: 25.0
+        reason: Opening DS 5.5 framing + immediate close-ups before the long quiet middle.
+      - in: 180.0
+        out: 195.0
+        reason: Sustained piano playing — best musical-proof window in this clip.
+      - in: 230.0
+        out: 244.7
+        reason: '"We''re all done / thanks David" — natural factory exit beat.'
+    avoid_ranges:
+      - in: 25.0
+        out: 180.0
+        reason: Long unstructured workshop coverage; usable in 2-3s flashes only.
+
+  - asset_id: asset-026-img-0282-range-test-or-demo
+    file: keyboard-trip/footage/03_David_Factory_Visit/026_IMG_0282_range_test_or_demo.MOV
+    trip_order: 26
+    story_phase: factory_visit
+    clip_type: keyboard_demo
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Tight overhead shots of the Athena digital keyboard — control panel, display, and right-hand testing notes.
+    best_ranges:
+      - in: 0.0
+        out: 28.6
+        reason: Hands-on Athena range test; clean keyboard-detail b-roll throughout.
+    avoid_ranges: []
+
+  - asset_id: asset-027-img-0283-athena-internals-reconnaissance
+    file: keyboard-trip/footage/03_David_Factory_Visit/027_IMG_0283_athena_internals_reconnaissance.MOV
+    trip_order: 27
+    story_phase: factory_visit
+    clip_type: keyboard_demo
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Athena keyboard opened up — close-ups of speakers, sound module board, ribbon cables, and keybed; Lionel narrating "reconnaissance."
+    best_ranges:
+      - in: 0.0
+        out: 20.0
+        reason: Athena open + speaker/board pointer-tour — strongest technical proof window.
+      - in: 30.0
+        out: 60.0
+        reason: '"A keyboard is actually a really simple product" — nice argumentative beat to layer over.'
+    avoid_ranges:
+      - in: 60.0
+        out: 83.9
+        reason: Repeated "Oh, there's a..." filler; transcript devolves and visuals get static.
+
+  # ─────────────────────────────────────────────────────────────────────
+  # 04_Keyboards_Technical_Stills (JPGs)
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-020-img-0276-keyboard-factory-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/020_IMG_0276_keyboard_factory_still.JPG
+    trip_order: 20
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Factory still of a custom keyboard build (alongside 021-025, 028-029).
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-021-img-0277-keyboard-factory-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/021_IMG_0277_keyboard_factory_still.JPG
+    trip_order: 21
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Factory still of a custom keyboard build.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-022-img-0278-keyboard-factory-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/022_IMG_0278_keyboard_factory_still.JPG
+    trip_order: 22
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Factory still of a custom keyboard build.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-023-img-0279-keyboard-factory-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/023_IMG_0279_keyboard_factory_still.JPG
+    trip_order: 23
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Factory still of a custom keyboard build.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-024-img-0280-keyboard-factory-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/024_IMG_0280_keyboard_factory_still.JPG
+    trip_order: 24
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Factory still of a custom keyboard build.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-025-img-0281-keyboard-factory-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/025_IMG_0281_keyboard_factory_still.JPG
+    trip_order: 25
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Factory still of a custom keyboard build.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-028-img-0284-keyboard-factory-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/028_IMG_0284_keyboard_factory_still.JPG
+    trip_order: 28
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Factory still of a custom keyboard build.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-029-img-0285-keyboard-factory-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/029_IMG_0285_keyboard_factory_still.JPG
+    trip_order: 29
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Factory still of a custom keyboard build.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-030-img-0286-technical-keyboard-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/030_IMG_0286_technical_keyboard_still.JPG
+    trip_order: 30
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Technical keyboard close-up still (one of 030-040 detail shots).
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-031-img-0287-technical-keyboard-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/031_IMG_0287_technical_keyboard_still.JPG
+    trip_order: 31
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Technical keyboard close-up still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-032-img-0288-technical-keyboard-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/032_IMG_0288_technical_keyboard_still.JPG
+    trip_order: 32
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Technical keyboard close-up still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-033-img-0289-technical-keyboard-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/033_IMG_0289_technical_keyboard_still.JPG
+    trip_order: 33
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Technical keyboard close-up still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-034-img-0290-technical-keyboard-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/034_IMG_0290_technical_keyboard_still.JPG
+    trip_order: 34
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Technical keyboard close-up still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-035-img-0291-technical-keyboard-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/035_IMG_0291_technical_keyboard_still.JPG
+    trip_order: 35
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Technical keyboard close-up still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-036-img-0292-technical-keyboard-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/036_IMG_0292_technical_keyboard_still.JPG
+    trip_order: 36
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Technical keyboard close-up still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-037-img-0293-technical-keyboard-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/037_IMG_0293_technical_keyboard_still.JPG
+    trip_order: 37
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Technical keyboard close-up still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-038-img-0294-technical-keyboard-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/038_IMG_0294_technical_keyboard_still.JPG
+    trip_order: 38
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Technical keyboard close-up still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-039-img-0295-technical-keyboard-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/039_IMG_0295_technical_keyboard_still.JPG
+    trip_order: 39
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Technical keyboard close-up still.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-040-img-0296-technical-keyboard-still
+    file: keyboard-trip/footage/04_Keyboards_Technical_Stills/040_IMG_0296_technical_keyboard_still.JPG
+    trip_order: 40
+    story_phase: technical_keyboard_stills
+    clip_type: keyboard_still
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Technical keyboard close-up still.
+    best_ranges: []
+    avoid_ranges: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # 05_Post_Pickup_Main_Argument
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-041-img-0297-ds60-ds55-car-monologue
+    file: keyboard-trip/footage/05_Post_Pickup_Main_Argument/041_IMG_0297_ds60_ds55_car_monologue.MOV
+    trip_order: 41
+    story_phase: post_pickup_argument
+    clip_type: talking_head
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Long post-pickup driving monologue making the core DS 6.0 / DS 5.5 hand-size argument; framing stays close, road blurs behind.
+    best_ranges:
+      - in: 0.0
+        out: 20.0
+        reason: '"Just got out from David''s factory / DS 6.0 + DS 5.5" — clean post-factory framing.'
+      - in: 36.0
+        out: 70.0
+        reason: Strain / wrist-based / finger-control argument — strongest technical claim window.
+      - in: 96.0
+        out: 130.0
+        reason: '"Narrow keyboard demands finger control / less room for error" — main thesis paragraph.'
+      - in: 145.0
+        out: 175.0
+        reason: '"Better technique / no strain / win-win-win" — emotional argument climax.'
+      - in: 200.0
+        out: 233.4
+        reason: DS standard / universities framing — bridges into home-demo payoff.
+    avoid_ranges:
+      - in: 70.0
+        out: 96.0
+        reason: Pause / repetition stretch; cover with b-roll if used.
+
+  - asset_id: asset-042-img-0298-tionesta-lake-cutaway
+    file: keyboard-trip/footage/05_Post_Pickup_Main_Argument/042_IMG_0298_tionesta_lake_cutaway.MOV
+    trip_order: 42
+    story_phase: post_pickup_argument
+    clip_type: lake_broll
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Vertical handheld selfie at a lake/dam overlook naming the recurring Tionesta lake stop.
+    best_ranges:
+      - in: 0.0
+        out: 9.2
+        reason: Whole clip is the lake-name beat; calm transition after the dense factory section.
+    avoid_ranges: []
+
+  - asset_id: asset-043-img-0299-lake-overlook-broll
+    file: keyboard-trip/footage/05_Post_Pickup_Main_Argument/043_IMG_0299_lake_overlook_broll.MOV
+    trip_order: 43
+    story_phase: post_pickup_argument
+    clip_type: lake_broll
+    has_dialogue: false
+    has_motion: true
+    visual_summary: Wide lake/dam scenic b-roll — water, rocks, wooded hills under cloudy sky.
+    best_ranges:
+      - in: 0.0
+        out: 31.5
+        reason: Quiet scenic b-roll throughout; great breath under VO_05.
+    avoid_ranges: []
+
+  - asset_id: asset-044-img-0300-177777-mileage
+    file: keyboard-trip/footage/05_Post_Pickup_Main_Argument/044_IMG_0300_177777_mileage.MOV
+    trip_order: 44
+    story_phase: post_pickup_argument
+    clip_type: driving_broll
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Close-up of the car odometer landing on the repeating 177777 mileage.
+    best_ranges:
+      - in: 0.0
+        out: 6.2
+        reason: Whole clip is the cute mileage beat; quick rhythm insert.
+    avoid_ranges: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # 06_Car_Trouble_Return
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-045-img-0301-car-trouble-photo
+    file: keyboard-trip/footage/06_Car_Trouble_Return/045_IMG_0301_car_trouble_photo.JPG
+    trip_order: 45
+    story_phase: car_trouble_return
+    clip_type: car_trouble
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Phone photo proving the car-trouble incident.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-046-img-0302-car-trouble-screenshot
+    file: keyboard-trip/footage/06_Car_Trouble_Return/046_IMG_0302_car_trouble_screenshot.PNG
+    trip_order: 46
+    story_phase: car_trouble_return
+    clip_type: car_trouble
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Phone screenshot related to the car breakdown (likely text/diagnostic).
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-047-img-0303-car-trouble-screenshot
+    file: keyboard-trip/footage/06_Car_Trouble_Return/047_IMG_0303_car_trouble_screenshot.PNG
+    trip_order: 47
+    story_phase: car_trouble_return
+    clip_type: car_trouble
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Phone screenshot related to the car breakdown.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-048-img-0304-hotel-car-broke-down
+    file: keyboard-trip/footage/06_Car_Trouble_Return/048_IMG_0304_hotel_car_broke_down.MOV
+    trip_order: 48
+    story_phase: car_trouble_return
+    clip_type: talking_head
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Tired hotel-room talking-head explaining the car broke down (alternator) and the saga continues.
+    best_ranges:
+      - in: 0.0
+        out: 20.0
+        reason: '"Car broke down / 4.5 hours from Maryland / saga continues" — main complication beat.'
+      - in: 30.0
+        out: 42.2
+        reason: '"Don''t trust it / mechanic tomorrow" + face-rub button.'
+    avoid_ranges: []
+
+  - asset_id: asset-049-img-0305-car-fixed-heading-home
+    file: keyboard-trip/footage/06_Car_Trouble_Return/049_IMG_0305_car_fixed_heading_home.MOV
+    trip_order: 49
+    story_phase: car_trouble_return
+    clip_type: talking_head
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Daylight in-car update — car fixed (loose battery connection), 3.5 hours from home, grateful tone.
+    best_ranges:
+      - in: 0.0
+        out: 20.0
+        reason: '"Driving back home / car fixed / loose battery connection" — clean resolution.'
+      - in: 35.0
+        out: 53.1
+        reason: '"Really grateful, really blessed / happy to make it back home" — emotional close.'
+    avoid_ranges: []
+
+  - asset_id: asset-050-img-0306-beautiful-return-drive
+    file: keyboard-trip/footage/06_Car_Trouble_Return/050_IMG_0306_beautiful_return_drive.MOV
+    trip_order: 50
+    story_phase: car_trouble_return
+    clip_type: driving_broll
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Rural Pennsylvania return-drive scenery with "look how beautiful" reactions.
+    best_ranges:
+      - in: 0.0
+        out: 15.3
+        reason: Whole clip is a release/beauty beat after the breakdown.
+    avoid_ranges: []
+
+  - asset_id: asset-051-img-0307-return-drive-broll
+    file: keyboard-trip/footage/06_Car_Trouble_Return/051_IMG_0307_return_drive_broll.MOV
+    trip_order: 51
+    story_phase: car_trouble_return
+    clip_type: driving_broll
+    has_dialogue: false
+    has_motion: true
+    visual_summary: Forward windshield b-roll on a two-lane rural road; quiet return-drive texture.
+    best_ranges:
+      - in: 0.0
+        out: 34.5
+        reason: Pure return-drive texture; great connective tissue under VO_06.
+    avoid_ranges: []
+
+  - asset_id: asset-052-img-0308-return-lake-cutaway
+    file: keyboard-trip/footage/06_Car_Trouble_Return/052_IMG_0308_return_lake_cutaway.MOV
+    trip_order: 52
+    story_phase: car_trouble_return
+    clip_type: lake_broll
+    has_dialogue: false
+    has_motion: true
+    visual_summary: Calm lakeside pan — water, grassy bank, bench, trees; reflective transition.
+    best_ranges:
+      - in: 0.0
+        out: 14.1
+        reason: Whole clip is a quiet reflective beat for the home-stretch montage.
+    avoid_ranges: []
+
+  - asset_id: asset-053-img-0309-highway-home-broll
+    file: keyboard-trip/footage/06_Car_Trouble_Return/053_IMG_0309_highway_home_broll.MOV
+    trip_order: 53
+    story_phase: car_trouble_return
+    clip_type: driving_broll
+    has_dialogue: false
+    has_motion: true
+    visual_summary: Open-highway b-roll with valley/hills — final homeward driving texture.
+    best_ranges:
+      - in: 0.0
+        out: 20.9
+        reason: Strong closing-drive insert; safe under any VO/music.
+    avoid_ranges: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # 07_Home_Demo_Payoff
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-054-img-0310-home-ds60-ds55-explanation
+    file: keyboard-trip/footage/07_Home_Demo_Payoff/054_IMG_0310_home_ds60_ds55_explanation.MOV
+    trip_order: 54
+    story_phase: home_demo_payoff
+    clip_type: home_demo
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Home talking-head with both DS 6.0 and DS 5.5 visible; final size-recommendation/standard explanation. Long; chunk it heavily.
+    best_ranges:
+      - in: 0.0
+        out: 30.0
+        reason: '"Here now with the DS 6 / DS 5.5 / important part is the keys" — clean home reveal.'
+      - in: 96.0
+        out: 130.0
+        reason: Updated size recommendations (8.2 inches handspan threshold) — strongest payoff line.
+      - in: 130.0
+        out: 175.0
+        reason: 7.5 inches consideration + Dallas student anecdote — actionable for the audience.
+      - in: 220.0
+        out: 280.0
+        reason: DS standard + universities (Stanford, Johns Hopkins, Eastman) — ties trip back to the broader mission.
+      - in: 290.0
+        out: 312.0
+        reason: '"Buy a DS-sized keyboard" closing call to action.'
+    avoid_ranges:
+      - in: 30.0
+        out: 96.0
+        reason: Backstory recap (2002, 2024) — useful context but slow; cover heavily with b-roll if kept.
+
+  # ─────────────────────────────────────────────────────────────────────
+  # 08_Pickups_To_Record
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-055-pickup-front-facing-intro
+    file: keyboard-trip/footage/08_Pickups_To_Record/055_PICKUP_front_facing_intro.MOV
+    trip_order: 55
+    story_phase: pickup_to_record
+    clip_type: talking_head
+    has_dialogue: true
+    has_motion: true
+    visual_summary: Clean front-facing seated home intro — "this is part two of my piano hand-size journey, drove to Pennsylvania to pick up DS 6.0 and DS 5.5."
+    best_ranges:
+      - in: 0.0
+        out: 22.0
+        reason: First take of the framing line — strongest hook.
+    avoid_ranges:
+      - in: 22.0
+        out: 37.3
+        reason: Repeated/refined ending of the same line; second take is redundant.
+
+  - asset_id: asset-056-pickup-hand-key-comparison
+    file: keyboard-trip/footage/08_Pickups_To_Record/056_PICKUP_hand_key_comparison.MOV
+    trip_order: 56
+    story_phase: pickup_to_record
+    clip_type: placeholder
+    has_dialogue: false
+    has_motion: false
+    visual_summary: NOT YET RECORDED — planned hand-on-keys comparison (standard keys, DS 6.0, DS 5.5, same chord on each).
+    best_ranges: []
+    avoid_ranges: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # Voiceovers (Cartesia + Lionel real recording)
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-vo-01-late-night-drive
+    file: keyboard-trip/audio/voiceovers/VO_01_late_night_drive.wav
+    trip_order: 100
+    story_phase: trip_setup
+    clip_type: voiceover
+    has_dialogue: true
+    has_motion: false
+    visual_summary: Lionel's real-voice narration (39.9s) opening the video — "the funny thing about this trip is..." through "skills that take months can be shortened to weeks."
+    best_ranges:
+      - in: 0.0
+        out: 39.9
+        reason: Whole VO is the cold-open thesis; usually played in three chunks (VO_01a/b/c) but the full file remains the canonical source.
+    avoid_ranges: []
+
+  - asset_id: asset-vo-01a-late-night-thesis
+    file: keyboard-trip/audio/voiceovers/VO_01a_late_night_thesis.wav
+    trip_order: 101
+    story_phase: trip_setup
+    clip_type: voiceover
+    has_dialogue: true
+    has_motion: false
+    visual_summary: Sentence-boundary chunk of VO_01 (10.07s) — opening thesis about narrow keys changing piano playing.
+    best_ranges:
+      - in: 0.0
+        out: 10.07
+        reason: Whole chunk is one sentence; treat as atomic.
+    avoid_ranges: []
+
+  - asset_id: asset-vo-01b-pennsylvania-setup
+    file: keyboard-trip/audio/voiceovers/VO_01b_pennsylvania_setup.wav
+    trip_order: 102
+    story_phase: trip_setup
+    clip_type: voiceover
+    has_dialogue: true
+    has_motion: false
+    visual_summary: Chunk of VO_01 (14.51s) — "almost 2 a.m., driving to Pennsylvania, David Steinbuhler, only builder in the world."
+    best_ranges:
+      - in: 0.0
+        out: 14.51
+        reason: Whole chunk is one sentence; treat as atomic.
+    avoid_ranges: []
+
+  - asset_id: asset-vo-01c-millimeters-payoff
+    file: keyboard-trip/audio/voiceovers/VO_01c_millimeters_payoff.wav
+    trip_order: 103
+    story_phase: trip_setup
+    clip_type: voiceover
+    has_dialogue: true
+    has_motion: false
+    visual_summary: Chunk of VO_01 (15.33s) — "on paper this sounds ridiculous, but a few millimeters can change everything; months of practice → weeks."
+    best_ranges:
+      - in: 0.0
+        out: 15.33
+        reason: Whole chunk is one sentence; treat as atomic.
+    avoid_ranges: []
+
+  - asset_id: asset-vo-02-gas-station-and-snacks
+    file: keyboard-trip/audio/voiceovers/VO_02_gas_station_and_snacks.wav
+    trip_order: 104
+    story_phase: trip_setup
+    clip_type: voiceover
+    has_dialogue: true
+    has_motion: false
+    visual_summary: Cartesia-cloned VO (17.28s) — "very specific road trip... gas stations, snacks, chocolate milk and sleeping in the car."
+    best_ranges:
+      - in: 0.0
+        out: 17.28
+        reason: Atomic VO; do not split.
+    avoid_ranges: []
+
+  - asset_id: asset-vo-03-car-nap
+    file: keyboard-trip/audio/voiceovers/VO_03_car_nap.wav
+    trip_order: 105
+    story_phase: trip_setup
+    clip_type: voiceover
+    has_dialogue: true
+    has_motion: false
+    visual_summary: Cartesia VO (14.40s) — "passed out in the back of the car, woke up, felt like a human being again."
+    best_ranges:
+      - in: 0.0
+        out: 14.40
+        reason: Atomic VO.
+    avoid_ranges: []
+
+  - asset_id: asset-vo-04-pennsylvania-road
+    file: keyboard-trip/audio/voiceovers/VO_04_pennsylvania_road.wav
+    trip_order: 106
+    story_phase: drive_to_titusville
+    clip_type: voiceover
+    has_dialogue: true
+    has_motion: false
+    visual_summary: Cartesia VO (18.39s) — "by morning the trip felt real... pilgrimage / if these keyboards feel different, the drive is worth it."
+    best_ranges:
+      - in: 0.0
+        out: 18.39
+        reason: Atomic VO.
+    avoid_ranges: []
+
+  - asset_id: asset-vo-05-lake-pause
+    file: keyboard-trip/audio/voiceovers/VO_05_lake_pause.wav
+    trip_order: 107
+    story_phase: post_pickup_argument
+    clip_type: voiceover
+    has_dialogue: true
+    has_motion: false
+    visual_summary: Cartesia VO (10.68s) — "stopped by the lake to breathe, hard part supposed to be over, one more plot twist."
+    best_ranges:
+      - in: 0.0
+        out: 10.68
+        reason: Atomic VO; bridges into car-trouble section.
+    avoid_ranges: []
+
+  - asset_id: asset-vo-06-breakdown-and-return
+    file: keyboard-trip/audio/voiceovers/VO_06_breakdown_and_return.wav
+    trip_order: 108
+    story_phase: car_trouble_return
+    clip_type: voiceover
+    has_dialogue: true
+    has_motion: false
+    visual_summary: Cartesia VO (17.65s) — "car broke down... never just about buying equipment... when the piano finally fits the person playing it."
+    best_ranges:
+      - in: 0.0
+        out: 17.65
+        reason: Atomic VO; final emotional close.
+    avoid_ranges: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # Music beds
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-music-late-night
+    file: keyboard-trip/audio/music/ai_v1_late_night_drive_60s.mp3
+    trip_order: 200
+    story_phase: trip_setup
+    clip_type: music
+    has_dialogue: false
+    has_motion: false
+    visual_summary: AI-generated 60s upbeat indie-pop bed for the late-night/trip-setup section.
+    best_ranges:
+      - in: 0.0
+        out: 60.0
+        reason: Loop or trim as needed; sectional bed for trip_setup.
+    avoid_ranges: []
+
+  - asset_id: asset-music-morning
+    file: keyboard-trip/audio/music/ai_morning_road_60s.mp3
+    trip_order: 201
+    story_phase: drive_to_titusville
+    clip_type: music
+    has_dialogue: false
+    has_motion: false
+    visual_summary: AI-generated 60s morning-road bed (plucky guitar / claps / shaker, ~110 bpm) for drive_to_titusville.
+    best_ranges:
+      - in: 0.0
+        out: 60.0
+        reason: Sectional bed for drive_to_titusville and factory_visit arrival.
+    avoid_ranges: []
+
+  - asset_id: asset-music-lake
+    file: keyboard-trip/audio/music/ai_lake_pause_60s.mp3
+    trip_order: 202
+    story_phase: post_pickup_argument
+    clip_type: music
+    has_dialogue: false
+    has_motion: false
+    visual_summary: AI-generated 60s reflective bed for the lake / post-pickup pause.
+    best_ranges:
+      - in: 0.0
+        out: 60.0
+        reason: Sectional bed for the post_pickup_argument lake beat.
+    avoid_ranges: []
+
+  - asset_id: asset-music-breakdown
+    file: keyboard-trip/audio/music/ai_breakdown_return_60s.mp3
+    trip_order: 203
+    story_phase: car_trouble_return
+    clip_type: music
+    has_dialogue: false
+    has_motion: false
+    visual_summary: AI-generated 60s bed for the breakdown/return arc.
+    best_ranges:
+      - in: 0.0
+        out: 60.0
+        reason: Sectional bed for car_trouble_return.
+    avoid_ranges: []
+
+  - asset_id: asset-pass8-travel-bed
+    file: keyboard-trip/audio/music/pass8_travel_bed.wav
+    trip_order: 204
+    story_phase: trip_setup
+    clip_type: music
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Legacy 15-minute procedural travel bed used in Pass 8; superseded by the four AI sectional beds. Keep for legacy renders only.
+    best_ranges: []
+    avoid_ranges:
+      - in: 0.0
+        out: 901.77
+        reason: Whole file is deprecated — do not introduce in new passes.
+
+  - asset_id: asset-music-travel-bed-legacy
+    file: keyboard-trip/audio/music/travel_bed.wav
+    trip_order: 205
+    story_phase: trip_setup
+    clip_type: music
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Earlier legacy 15-minute travel bed; deprecated.
+    best_ranges: []
+    avoid_ranges:
+      - in: 0.0
+        out: 900.0
+        reason: Whole file is deprecated — do not introduce in new passes.
+
+  # ─────────────────────────────────────────────────────────────────────
+  # Title cards (synthetic, generated by ffmpeg drawtext at render time)
+  # ─────────────────────────────────────────────────────────────────────
+  - asset_id: asset-title-card-v3-p056-cold
+    file: synthetic://title-card-v3-p056-cold
+    trip_order: 300
+    story_phase: intro
+    clip_type: title_card
+    has_dialogue: false
+    has_motion: false
+    visual_summary: P056 cold-open hook title card.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-title-card-v3-road-keyboard
+    file: synthetic://title-card-v3-road-keyboard
+    trip_order: 301
+    story_phase: intro
+    clip_type: title_card
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Road-to-keyboard title card setting up the trip premise.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-title-card-v3-main-argument
+    file: synthetic://title-card-v3-main-argument
+    trip_order: 302
+    story_phase: post_pickup_argument
+    clip_type: title_card
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Title card framing the main DS 6.0 / DS 5.5 argument segment.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-title-card-v3-p056-home
+    file: synthetic://title-card-v3-p056-home
+    trip_order: 303
+    story_phase: home_demo_payoff
+    clip_type: title_card
+    has_dialogue: false
+    has_motion: false
+    visual_summary: P056 home-payoff title card.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-title-card-v3-current-take
+    file: synthetic://title-card-v3-current-take
+    trip_order: 304
+    story_phase: home_demo_payoff
+    clip_type: title_card
+    has_dialogue: false
+    has_motion: false
+    visual_summary: '"Current take" title card used in v12 captions pass.'
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-title-card-v3-final-hook
+    file: synthetic://title-card-v3-final-hook
+    trip_order: 305
+    story_phase: home_demo_payoff
+    clip_type: title_card
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Final-hook title card closing the video.
+    best_ranges: []
+    avoid_ranges: []
+
+  - asset_id: asset-title-card-road-keyboard
+    file: synthetic://title-card-road-keyboard
+    trip_order: 306
+    story_phase: intro
+    clip_type: title_card
+    has_dialogue: false
+    has_motion: false
+    visual_summary: Earlier "road keyboard" title card variant; superseded by v3 series.
+    best_ranges: []
+    avoid_ranges: []

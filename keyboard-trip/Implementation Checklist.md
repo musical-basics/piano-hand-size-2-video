@@ -15,7 +15,7 @@ Start at the top of Week 1 and tick off as you go.
 
 ## Week 1 — Deterministic infrastructure
 
-### [ ] 1. Add ASSET_INTELLIGENCE.yaml (Plan Step 5 + 6)
+### [x] 1. Add ASSET_INTELLIGENCE.yaml (Plan Step 5 + 6)
 
 - Create `keyboard-trip/docs/ASSET_INTELLIGENCE.yaml`
 - One entry per source asset listed in `docs/ASSET_INDEX.md`
