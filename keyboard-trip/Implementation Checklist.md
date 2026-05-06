@@ -205,7 +205,7 @@ In `ai-agent-video-editor`:
 **Done when**: open the editor, current-pass clips show appropriate
 icons; tooltip explains each warning.
 
-### [ ] 12. Make patch-first editing the new requirement
+### [x] 12. Make patch-first editing the new requirement
 
 - Update INSTRUCTIONS.md and AGENT_HANDOFF.md so direct SQL is
   forbidden (or at least documented as last-resort, with a justification

@@ -214,6 +214,14 @@ The historical cursor system is being deprecated (Plan Step 18 / item
 14); the validator emits `MISSING_TIMELINE_START_ERROR` for any null,
 and item 13's `fill_explicit_timeline_starts.py` cleans them up.
 
+**Patch-first editing is the rule from Pass 16 onward.** Every AI
+pass mutates SQLite by writing an `edit_patch_plan.json` and running
+it through `apply_timeline_patch.py` (which gates source overrun,
+chronology, lock protection, etc. before any row changes). Direct SQL
+is allowed only as a last resort with an explicit justification in
+the pass log. See `EDIT_PATCH_PLAN_SCHEMA.md` for the schema and
+`AGENT_HANDOFF.md` for the workflow.
+
 ### Edit Passes
 
 ### Pass 0: Plan

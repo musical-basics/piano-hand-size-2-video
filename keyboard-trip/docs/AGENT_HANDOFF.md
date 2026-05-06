@@ -120,6 +120,54 @@ the thesis ("smaller piano keys change the way you experience the
 piano") and the trip's structure are the north star, regardless of
 what tools you use to mutate the timeline.
 
+## Patch-first editing (mandatory from Pass 16 onward)
+
+Every AI pass from Pass 16 onward MUST mutate SQLite via
+`apply_timeline_patch.py` consuming an `edit_patch_plan.json`. Direct
+SQL is forbidden by default — use it only as a documented last resort
+with an explicit justification in the pass log explaining why a patch
+op type was insufficient.
+
+Why:
+
+- The validator gates run BEFORE any row changes (source overrun,
+  story-beat chronology, lock protection, no-new-overlap, explicit
+  timelineStart). Direct SQL bypasses every gate.
+- Every patched row is stamped `lastEditedBy='ai'` automatically, so
+  the user-lock distinction stays accurate.
+- Patches are reproducible artifacts that live in the pass log and
+  can be diff-reviewed.
+- Audio ops (mute/duck/volume) consistently land in the row's notes
+  field with a `[audio: ...]` prefix that item 18's
+  `render_from_timeline.py` will read, instead of being scattered
+  through render scripts.
+
+Workflow:
+
+```bash
+# 1. Author the patch
+$EDITOR /tmp/patch.json   # follow EDIT_PATCH_PLAN_SCHEMA.md
+
+# 2. Dry-run the gates
+python3 keyboard-trip/scripts/apply_timeline_patch.py /tmp/patch.json --dry-run
+
+# 3. Apply
+python3 keyboard-trip/scripts/apply_timeline_patch.py /tmp/patch.json
+
+# 4. Re-dump + re-validate
+python3 keyboard-trip/scripts/dump_timeline.py <pass-id>
+python3 keyboard-trip/scripts/validate_timeline_semantics.py <pass-id>
+
+# 5. Compare semantic-issues before/after; commit the patch in the
+#    pass log alongside the diff.
+```
+
+Pre-Pass-16 history: passes 5 → 15 mutated SQLite via ad-hoc SQL
+embedded in pass-log "Mechanics" sections. Those are archival; do not
+copy that pattern. A new pass that needs a fresh op type should
+extend the patch schema (item 9) and the apply script (item 10), not
+revert to direct SQL.
+
 ## Division of labor — what's deterministic vs creative
 
 The system is designed so the "what's mechanically correct" parts are
