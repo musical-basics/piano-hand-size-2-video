@@ -34,3 +34,9 @@ ai-agent-video-editor/
 # version control; bounces get copied into keyboard-trip/audio/voiceovers/.
 /Piano Hand Size Part 2 Audio Project/
 /Piano Hand Size Part 2 Audio.wav
+
+# Repomix packs the repo into a single file for external AI review.
+# The output is a transient artifact — regenerate on demand, don't commit.
+/repomix-output.xml
+/repomix-output.md
+/repomix-output.txt
