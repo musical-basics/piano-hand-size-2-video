@@ -261,7 +261,7 @@ pass passes after running Step 13's migration.
 **Done when**: produces an mp4 from the current pass yaml that plays;
 duration within ±0.5s of the bash-rendered version.
 
-### [ ] 16. Add compare_render_to_timeline.py (Plan Step 17)
+### [x] 16. Add compare_render_to_timeline.py (Plan Step 17)
 
 - Create `keyboard-trip/scripts/compare_render_to_timeline.py`
 - Inputs: yaml + mp4
@@ -274,7 +274,7 @@ duration within ±0.5s of the bash-rendered version.
 **Done when**: passes for the current bash-rendered mp4 vs current
 pass yaml; correctly errors when run against a deliberately-stale yaml.
 
-### [ ] 17. Run both renderers in parallel for one pass (Plan Step 16)
+### [x] 17. Run both renderers in parallel for one pass (Plan Step 16)
 
 - Pick the next pass (Pass 16+) and render it BOTH ways:
   bash + render_from_timeline.py
