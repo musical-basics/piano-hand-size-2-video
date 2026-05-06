@@ -248,7 +248,7 @@ icons; tooltip explains each warning.
 **Done when**: validator errors on any null `timelineStart`; current
 pass passes after running Step 13's migration.
 
-### [ ] 15. Build minimal render_from_timeline.py (Plan Step 15)
+### [x] 15. Build minimal render_from_timeline.py (Plan Step 15)
 
 - Create `keyboard-trip/scripts/render_from_timeline.py`
 - First version supports: video clips, still clips, title cards,
