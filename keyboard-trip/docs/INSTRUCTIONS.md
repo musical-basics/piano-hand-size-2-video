@@ -160,41 +160,59 @@ Helpful editor labels:
 ## Pre-Pass Contract (read this BEFORE every editing pass)
 
 The editor app's SQLite database is the single source of truth for the
-current cut. Before any AI editing pass:
+current cut. The five rules below are still the foundation. Wrapped
+around them is the **required pre-pass sequence** that every AI agent
+runs in order. The full sequence and the patch-based workflow are
+described in [AGENT_HANDOFF.md](AGENT_HANDOFF.md); this file states the
+non-negotiable rules.
 
-1. **Snapshot the current pass.** Run:
-   ```bash
-   python3 scripts/dump_timeline.py <pass-id>
-   ```
-   This writes `timelines/<pass-id>.yaml` from the live SQLite, generates
-   missing/stale contact sheets for every source clip in that pass, and
-   runs collision/gap/source-overrun validation. Use `--list` to see all
-   pass IDs.
+Required pre-pass sequence (run in this order):
 
-2. **Read the YAML, not the seed.** The yaml's `clips` block is the truth
-   — `db.ts` seed data and `make_rough_review_cut_v*.sh` are derived
-   artifacts that may lag behind manual edits in the UI.
+1. **Dump current timeline.** `python3 scripts/dump_timeline.py <pass-id>`
+   writes `timelines/<pass-id>.yaml`, regenerates missing contact sheets,
+   and runs overlap/gap/source-overrun validation.
+2. **Read the AI brief.** `python3 scripts/export_ai_timeline_brief.py
+   <pass-id>` writes `timelines/<pass-id>-ai-brief.yaml` — compact
+   distillation of the cut. Read this BEFORE the full dump.
+3. **Read `active_visual`.** From the full yaml; linear list of the
+   top visual clip at every moment of the cut.
+4. **Run the semantic validator.**
+   `python3 scripts/validate_timeline_semantics.py <pass-id>` writes
+   `timelines/<pass-id>-semantic-issues.yaml` with chronology / VO
+   cutoff / dialogue collision / still-under-VO / missing-timelineStart
+   findings.
+5. **Identify user-locked clips** (`last_edited_by: user`). Plan around
+   them.
+6. **Plan changes as an `edit_patch_plan.json`** (Week 2 — see
+   `EDIT_PATCH_PLAN_SCHEMA.md` once item 9 lands).
+7. **Dry-run, then apply the patch** via `apply_timeline_patch.py`.
+8. **Re-dump and re-validate.** Compare before/after.
+9. **Write the pass log** with the diff and the validator delta.
 
-3. **Respect `last_edited_by: user`.** Any clip stamped `user` was
-   manually adjusted by Lionel in the editor UI. AI passes MUST NOT change
-   its `timeline`, `source.range`, `track`, or `rotation` — work AROUND
-   these clips. AI passes MAY adjust adjacent clips to compensate for
-   them. To unlock a user-stamped clip, Lionel says so explicitly or
-   re-stamps it via the UI.
+Underlying rules that never change:
 
-4. **Look at `active_visual` first.** That section linearly lists which
-   clip is the top visual at every moment of the cut. It's the fastest
-   way to understand the current visual flow before planning changes.
-   The same info is also marked per-clip with `is_top_visual: true`.
+- **Read the YAML, not the seed.** The yaml's `clips` block is the
+  truth — `db.ts` seed data and `make_rough_review_cut_v*.sh` are
+  derived artifacts that may lag behind manual edits in the UI.
+- **Respect `last_edited_by: user`.** Any clip stamped `user` was
+  manually adjusted by Lionel in the editor UI. AI passes MUST NOT
+  change its `timeline`, `source.range`, `track`, or `rotation` — work
+  AROUND these clips. AI passes MAY adjust adjacent clips to
+  compensate. To unlock, Lionel says so explicitly.
+- **Use the contact sheets.** Every clip in the yaml has a
+  `contact_sheet.path` pointing to a folder of 2-second-grid JPGs.
+  Read the relevant sheets when picking a new in/out point — the
+  filename alone is rarely enough to know what's at second N.
+- **Validate after every change.** Issues count must be non-increasing
+  pass-over-pass. New overlaps/gaps/audio collisions are regressions.
+- **Anchor in [VIDEO_PLAN.md](VIDEO_PLAN.md).** It's the narrative
+  spine. Use `STORY_BEATS.yaml` for the deterministic
+  story_phase-per-beat contract that the validator enforces.
 
-5. **Use the contact sheets.** Every clip in the yaml has a
-   `contact_sheet.path` pointing to a folder of 2-second-grid JPGs. Read
-   the relevant sheets when picking a new in/out point — the filename
-   alone is rarely enough to know what's at second N of a clip.
-
-6. **Re-dump and validate after every change.** Issues count must be
-   non-increasing pass-over-pass. If a new pass introduces overlaps or
-   gaps that weren't there before, that's a regression.
+Every enabled `timeline_item` should have an explicit `timelineStart`.
+The historical cursor system is being deprecated (Plan Step 18 / item
+14); the validator emits `MISSING_TIMELINE_START_ERROR` for any null,
+and item 13's `fill_explicit_timeline_starts.py` cleans them up.
 
 ### Edit Passes
 

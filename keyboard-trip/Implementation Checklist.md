@@ -100,7 +100,7 @@ Add to the same `validate_timeline_semantics.py`:
 **Done when**: validator catches a synthetic case (e.g. an
 artificially long single VO clip with no breaks).
 
-### [ ] 6. Update AGENT_HANDOFF.md and INSTRUCTIONS.md with new pass checklist (Plan Step 1)
+### [x] 6. Update AGENT_HANDOFF.md and INSTRUCTIONS.md with new pass checklist (Plan Step 1)
 
 - Add a "Required pre-pass sequence" to both:
   1. dump current timeline
@@ -120,7 +120,7 @@ artificially long single VO clip with no breaks).
 read VIDEO_PLAN" 5-rule list still exists but is wrapped by this
 fuller sequence.
 
-### [ ] 7. Add Division-of-Labor section to AGENT_HANDOFF.md (Plan Step from Phase 8)
+### [x] 7. Add Division-of-Labor section to AGENT_HANDOFF.md (Plan Step from Phase 8)
 
 Append to AGENT_HANDOFF.md:
 - Deterministic code owns: timeline starts/durations, source overrun
@@ -136,7 +136,7 @@ Append to AGENT_HANDOFF.md:
 
 **Done when**: section is in AGENT_HANDOFF.md.
 
-### [ ] 8. Run the full Week-1 stack against current pass
+### [x] 8. Run the full Week-1 stack against current pass
 
 - `dump_timeline.py <current-pass>` to refresh
 - `export_ai_timeline_brief.py <current-pass>` writes the brief

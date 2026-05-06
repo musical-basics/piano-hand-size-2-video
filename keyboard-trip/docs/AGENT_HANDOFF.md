@@ -66,26 +66,108 @@ will use:
 
 ## The pre-pass contract — READ THIS BEFORE ANY EDIT
 
-This is non-negotiable. Originally written in
-[INSTRUCTIONS.md](INSTRUCTIONS.md), reproduced here for visibility:
+Non-negotiable. The five rules of "don't break the cut" still apply
+(snapshot first, respect locks, use contact sheets, validate after,
+read VIDEO_PLAN). Wrapped around them is the **required pre-pass
+sequence** that the new patch-based workflow expects every AI agent to
+follow, in this order:
 
-1. **Snapshot first.** Before you touch anything, run
-   `dump_timeline.py <current-pass-id>` and read the yaml.
-2. **Respect `last_edited_by: user`.** Any clip stamped `user` was
-   manually adjusted by Lionel in the editor UI. You MUST NOT change
-   its `timeline`, `source.range`, `track`, or `rotation`. You MAY
-   shift adjacent clips around it. To unlock, Lionel says so
-   explicitly.
-3. **Use the contact sheets.** Every clip's yaml entry has a
-   `contact_sheet.path`. Read those JPGs when picking new in/out
-   points — filenames alone never tell you what's at second N.
-4. **Re-dump and validate after every change.** The `issues` count
-   must be non-increasing pass-over-pass. New overlaps, gaps, source
-   overruns, or audio collisions are regressions and must be fixed
-   before render.
-5. **Read [VIDEO_PLAN.md](VIDEO_PLAN.md) for narrative spine.** The
-   thesis ("smaller piano keys change the way you experience the
-   piano") and the trip's structure are the north star.
+1. **Dump current timeline.**
+   `python3 keyboard-trip/scripts/dump_timeline.py <current-pass-id>`
+   Writes `timelines/<pass-id>.yaml` from SQLite.
+2. **Read the AI timeline brief first.**
+   `python3 keyboard-trip/scripts/export_ai_timeline_brief.py <current-pass-id>`
+   Writes `timelines/<pass-id>-ai-brief.yaml`. This is the compact
+   distillation — story_beats with member clips, locked clips,
+   audio_windows, issues_summary. Read this BEFORE the full dump.
+3. **Read `active_visual` from the full dump.** It linearly lists
+   which clip is the top visual at every second of the cut. Fastest
+   way to grok the visual flow before planning changes.
+4. **Read issues + semantic warnings.**
+   `python3 keyboard-trip/scripts/validate_timeline_semantics.py <current-pass-id>`
+   Writes `timelines/<pass-id>-semantic-issues.yaml`. Run this every
+   pre-pass — chronology errors, VO cutoff errors, dialogue
+   collisions, still-under-VO warnings, and missing-timelineStart
+   errors all surface here.
+5. **Identify user-locked clips.** `last_edited_by: user` (in the dump
+   and the brief) means Lionel adjusted that clip in the editor UI.
+   You MUST NOT change its `timeline`, `source.range`, `track`, or
+   `rotation`. You MAY shift adjacent clips. To unlock, Lionel says
+   so explicitly.
+6. **Produce an `edit_patch_plan.json`.** From Week 2 onward (see
+   `EDIT_PATCH_PLAN_SCHEMA.md` once item 9 lands), every AI pass plans
+   its changes as a typed list of operations with `reason` + `edit_class`
+   tags before writing anything to SQLite.
+7. **Dry-run the patch.**
+   `python3 keyboard-trip/scripts/apply_timeline_patch.py <plan.json> --dry-run`
+   Validates source overruns, locked-clip protection, story-beat
+   chronology, and explicit-timelineStart presence before any rows
+   change.
+8. **Apply the patch.**
+   `python3 keyboard-trip/scripts/apply_timeline_patch.py <plan.json>`
+   Stamps `lastEditedBy='ai'` on every row touched.
+9. **Re-dump.** Run `dump_timeline.py` again to capture the new state.
+10. **Compare before/after.** Diff the two dumps (and re-run the brief
+    + semantic validator). Issues count must be non-increasing
+    pass-over-pass; new overlaps/gaps/audio collisions are
+    regressions.
+11. **Write the pass log.** `PASS<M>_V<N>_<NAME>_LOG.md` records the
+    intent, the patch plan, the diff, the validator delta, and any
+    creative decisions made.
+
+Always anchor narrative direction in [VIDEO_PLAN.md](VIDEO_PLAN.md):
+the thesis ("smaller piano keys change the way you experience the
+piano") and the trip's structure are the north star, regardless of
+what tools you use to mutate the timeline.
+
+## Division of labor — what's deterministic vs creative
+
+The system is designed so the "what's mechanically correct" parts are
+deterministic code and the "what feels right" parts are AI judgment.
+Stay on your side of the line.
+
+**Deterministic code owns** (don't redecide these in narration):
+
+- Resolved timeline starts and durations of every enabled clip.
+- Source overrun checks (`sourceOut <= asset duration`).
+- Chronology rules (clip's `story_phase` must be in the current beat's
+  `allowed_story_phases` from `STORY_BEATS.yaml`).
+- VO cutoff prevention (visual coverage `>= vo_duration + 0.4s`).
+- User-lock protection (`lastEditedBy: user` is read-only to AI).
+- Dialogue collision detection (a-roll with `has_dialogue` under a VO
+  with no muted/ducked declaration).
+- Still-under-VO warning (>6s threshold).
+- Render duration vs yaml duration (item 16's
+  `compare_render_to_timeline.py`).
+- Render-from-yaml mechanics (item 15+18's `render_from_timeline.py`).
+
+**AI agent owns** (the system can't do these for you):
+
+- Emotional and visual choices — which b-roll best lands a VO line,
+  when to hold a still vs cut to a face, when a music swap helps.
+- Pacing intuition — when a beat feels too long or too dense, when
+  the cut wants a breath.
+- Narration splits — where to break a long VO into chunks for
+  vlog-style alternation.
+- Choosing among validated candidate b-roll (item 20's
+  `find_candidate_broll.py` produces a ranked list; you pick).
+- Title cards and on-screen text wording.
+- Pass logs — the human-readable explanation of what changed and why.
+
+**AI agent must never:**
+
+- Edit the bash render script and the SQLite DB by hand as separate
+  truths. The yaml dump is the only truth; bash scripts (until item 19
+  cuts them over) and SQLite must always agree.
+- Overwrite a `lastEditedBy: user` clip without an explicit unlock
+  from Lionel.
+- Insert clips without an explicit `timelineStart`. The cursor system
+  is being deprecated (item 14); new clips need a real position.
+- Ignore validator errors. Warnings can be acknowledged in the pass
+  log; errors must be fixed or explicitly justified.
+- Use out-of-chronology footage without flagging it as an intentional
+  flash-forward (and adding it to the relevant beat's
+  `allowed_story_phases`).
 
 ## The render pipeline
 
