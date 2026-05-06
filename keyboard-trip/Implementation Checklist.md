@@ -220,7 +220,7 @@ icons; tooltip explains each warning.
 
 ## Week 3 — Source-of-truth fixes
 
-### [ ] 13. Build fill_explicit_timeline_starts.py (Plan Step 19)
+### [x] 13. Build fill_explicit_timeline_starts.py (Plan Step 19)
 
 - Create `keyboard-trip/scripts/fill_explicit_timeline_starts.py`
 - Loads the current pass
