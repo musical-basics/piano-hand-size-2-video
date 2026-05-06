@@ -238,9 +238,15 @@ def _build_audio_mix(
         )
         labels.append(f"[a{i}]")
     n = len(intermediates)
+    # normalize=0 stops amix from dividing every input by N, which would
+    # crush an 18-clip mix by ~25 dB. Per-clip volume is already shaped
+    # via the volume= step above (VO=1.0, music=0.32 default), so the
+    # sum is already at proper levels.
     mix = (
         f"{''.join(labels)}amix=inputs={n}:duration=longest"
-        f":dropout_transition=0,apad,atrim=duration={runtime}[aout]"
+        f":dropout_transition=0:normalize=0,"
+        f"alimiter=limit=0.95,"
+        f"apad,atrim=duration={runtime}[aout]"
     )
     cmd = [
         "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
