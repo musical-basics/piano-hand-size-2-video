@@ -1,0 +1,155 @@
+pass_id: pass-15-captions-travel-chronology
+generated_at: '2026-05-06T04:59:24+00:00'
+thresholds: {vo_safety_margin_seconds: 0.4, still_under_vo_threshold_seconds: 6.0, long_vo_block_threshold_seconds: 20.0}
+summary:
+  total: 73
+  by_code: {MISSING_TIMELINE_START_ERROR: 73}
+  errors: 73
+  warnings: 0
+issues:
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-005-front-facing-intro-open, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=1) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-006-front-facing-intro-clean-thesis, window: null,
+  message: "enabled clip has NULL timelineStart (role=a_roll, order=2) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-004-cold-title-card, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=title_card, order=3) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-001-late-night-trip-setup, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=4) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-003-p056-cold-placeholder, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=placeholder, order=5) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-vo01a-broll-rainy, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=6) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-vo01a-broll-gas, window: null, message: "enabled clip\
+    \ has NULL timelineStart (role=ambient, order=7) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-vo01-insert-snack, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=8) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-vo01b-broll-sheetz, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=9) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-vo01b-broll-drive, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=10) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-vo01-insert-waking, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=11) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-vo01c-broll-recovery, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=12) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-vo01c-broll-rainy-late, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=13) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-011-vo02-gas-station, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=14) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-012-vo02-snack-still, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=still, order=15) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-013-vo02-snacks-broll, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=b_roll, order=16) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-014-vo02-car-nap-still, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=still, order=17) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-015-snack-vlog-open, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=18) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-016-snack-vlog-gag, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=19) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-017-waking-after-car-nap, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=20) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-018-car-nap-recovery-open, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=21) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-019-car-nap-recovery-drive, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=22) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-021-vo03-recovery-still, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=still, order=23) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-vo03-waking-video, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=24) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-vo03-morning-still, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=still, order=25) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-023-morning-highway-update, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=27) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-024-vo04-pennsylvania-scenery, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=28) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-025-vo04-drive-broll-hills, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=29) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-026-vo04-woods-still, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=still, order=30) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-027-woods-almost-there, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=31) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-028-big-mac-gag, window: null, message: "enabled clip\
+    \ has NULL timelineStart (role=a_roll, order=32) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-029-keyboard-21-arrival, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=33) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-030-keyboard-action-broll, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=b_roll, order=34) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-031-ds55-on-steinway, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=b_roll, order=35) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-032-ds55-size-range, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=b_roll, order=36) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-033-size-lineup-proof, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=b_roll, order=37) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-034-ds55-pickup-open, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=b_roll, order=38) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-035-ds55-pickup-later, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=b_roll, order=39) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-036-athena-internals-open, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=b_roll, order=40) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-037-athena-internals-later, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=b_roll, order=41) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-041-main-argument-card, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=title_card, order=42) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-042-main-argument-1, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=43) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-cutaway-main-arg-1, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=still, order=44) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-043-main-argument-2, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=45) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-cutaway-main-arg-2, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=still, order=46) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-044-main-argument-3, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=47) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-cutaway-main-arg-3, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=still, order=48) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-045-main-argument-4, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=49) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-cutaway-main-arg-4, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=b_roll, order=50) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-046-main-argument-5, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=51) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-047-vo05-lake-cutaway, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=52) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-048-vo05-lake-overlook, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=53) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-049-vo05-mileage, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=b_roll, order=54) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-049b-vo05-mileage-hold, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=still, order=55) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-050-hotel-breakdown, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=56) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-051-vo06-breakdown-still, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=still, order=57) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-052-vo06-car-fixed, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=58) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-053-vo06-return-drive, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=59) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-054-vo06-highway-home, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=ambient, order=60) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-055-home-setup, window: null, message: "enabled clip\
+    \ has NULL timelineStart (role=a_roll, order=61) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-056-ds60-history, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=62) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-057-p056-home-placeholder, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=placeholder, order=63) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-058-ds55-valid, window: null, message: "enabled clip\
+    \ has NULL timelineStart (role=a_roll, order=64) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-cutaway-home-1, window: null, message: "enabled clip\
+    \ has NULL timelineStart (role=still, order=65) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-059-current-take-card, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=title_card, order=66) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-060-home-technique-1, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=67) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-061-home-technique-2, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=68) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-cutaway-home-2, window: null, message: "enabled clip\
+    \ has NULL timelineStart (role=still, order=69) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-062-home-technique-3, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=70) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-063-ds-standard-home, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=71) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-cutaway-home-3, window: null, message: "enabled clip\
+    \ has NULL timelineStart (role=still, order=72) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-064-closing-recommendation, window: null, message: "enabled\
+    \ clip has NULL timelineStart (role=a_roll, order=73) \u2014 Step 13 fixes this"}
+- {code: MISSING_TIMELINE_START_ERROR, clip_id: p15-065-final-hook, window: null, message: "enabled clip\
+    \ has NULL timelineStart (role=title_card, order=74) \u2014 Step 13 fixes this"}

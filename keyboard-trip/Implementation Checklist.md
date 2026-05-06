@@ -66,7 +66,7 @@ references valid story_phase values.
 pass-15-captions-travel-chronology` writes a brief yaml; manual
 inspection shows it's actionable on its own.
 
-### [ ] 4. Build validate_timeline_semantics.py (Plan Steps 9–13)
+### [x] 4. Build validate_timeline_semantics.py (Plan Steps 9–13)
 
 - Create `keyboard-trip/scripts/validate_timeline_semantics.py`
 - Reads the current pass yaml + ASSET_INTELLIGENCE.yaml + STORY_BEATS.yaml
@@ -90,7 +90,7 @@ inspection shows it's actionable on its own.
 one warning that matches reality (e.g. the VO_01 chunk seam noise we
 already know about).
 
-### [ ] 5. Add Long-VO validator (Plan Step 13)
+### [x] 5. Add Long-VO validator (Plan Step 13)
 
 Add to the same `validate_timeline_semantics.py`:
 - Rule: no continuous VO+b-roll block >15-20s without one of:
