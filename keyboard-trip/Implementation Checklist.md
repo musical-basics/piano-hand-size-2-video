@@ -50,7 +50,7 @@ PyYAML can parse the file.
 **Done when**: beats span 0s → cut runtime with no gaps; every beat
 references valid story_phase values.
 
-### [ ] 3. Build export_ai_timeline_brief.py (Plan Step 7)
+### [x] 3. Build export_ai_timeline_brief.py (Plan Step 7)
 
 - Create `keyboard-trip/scripts/export_ai_timeline_brief.py`
 - Reads the current pass yaml from

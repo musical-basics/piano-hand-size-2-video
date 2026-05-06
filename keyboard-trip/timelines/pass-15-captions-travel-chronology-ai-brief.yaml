@@ -1,0 +1,265 @@
+pass_id: pass-15-captions-travel-chronology
+pass_name: 'Pass 15: Captions + Travel Chronology'
+pass_status: needs_review
+generated_at: '2026-05-06T04:47:47+00:00'
+source_pass_yaml: timelines/pass-15-captions-travel-chronology.yaml
+runtime_seconds: 752.5
+clip_count: 91
+active_visual_segments: 73
+issues_summary: {overlaps: 0, gaps: 0, audio_collisions: 0, source_overruns: 0}
+locked_clips: []
+story_beats:
+- id: cold-open
+  window: [0.0, 31.0]
+  purpose: Front-facing seated intro plus the cold-open title card. Establishes the part-two framing and
+    hooks the viewer.
+  allowed_story_phases: [pickup_to_record, intro]
+  observed_story_phases: [pickup_to_record]
+  clip_count: 3
+  coverage_seconds: 31.0
+  clip_ids: [p15-005-front-facing-intro-open, p15-006-front-facing-intro-clean-thesis, p15-004-cold-title-card]
+- id: late-night-trip-premise
+  window: [31.0, 51.5]
+  purpose: Late-night home talking-head ("it's 1:42 a.m.") plus the cold-open hand/key-comparison placeholder
+    (P056). Sets up the absurd premise.
+  allowed_story_phases: [trip_setup, pickup_to_record]
+  observed_story_phases: [trip_setup]
+  clip_count: 2
+  coverage_seconds: 20.5
+  clip_ids: [p15-001-late-night-trip-setup, p15-003-p056-cold-placeholder]
+- id: overnight-drive-vo-montage
+  window: [51.5, 171.0]
+  purpose: VO_01a/b/c chunks plus VO_02 (gas-station/snacks) and VO_03 (car nap) with intercut a-roll
+    and rainy-road b-roll. drive_to_titusville bin is intentionally allowed here because rainy-windshield
+    broll is used as visual cover for late-night trip_setup VOs.
+  allowed_story_phases: [trip_setup, drive_to_titusville]
+  observed_story_phases: [drive_to_titusville, trip_setup]
+  clip_count: 20
+  coverage_seconds: 119.5
+  clip_ids: [p15-vo01a-broll-rainy, p15-vo01a-broll-gas, p15-vo01-insert-snack, p15-vo01b-broll-sheetz,
+    p15-vo01b-broll-drive, p15-vo01-insert-waking, p15-vo01c-broll-recovery, p15-vo01c-broll-rainy-late,
+    p15-011-vo02-gas-station, p15-012-vo02-snack-still, p15-013-vo02-snacks-broll, p15-014-vo02-car-nap-still,
+    p15-015-snack-vlog-open, p15-016-snack-vlog-gag, p15-017-waking-after-car-nap, p15-018-car-nap-recovery-open,
+    p15-019-car-nap-recovery-drive, p15-021-vo03-recovery-still, p15-vo03-waking-video, p15-vo03-morning-still]
+- id: pennsylvania-road-texture
+  window: [171.0, 221.0]
+  purpose: Morning highway update, scenic Pennsylvania b-roll, "in the woods / almost there", and the
+    Double Big Mac comic beat. Resets pacing before the factory arrival.
+  allowed_story_phases: [drive_to_titusville]
+  observed_story_phases: [drive_to_titusville]
+  clip_count: 6
+  coverage_seconds: 50.0
+  clip_ids: [p15-023-morning-highway-update, p15-024-vo04-pennsylvania-scenery, p15-025-vo04-drive-broll-hills,
+    p15-026-vo04-woods-still, p15-027-woods-almost-there, p15-028-big-mac-gag]
+- id: davids-keyboard-world
+  window: [221.0, 350.5]
+  purpose: 'Arrival proof — keyboard #21, DS 5.5 on Steinway B, the size lineup (4.0 / 5.1 / 5.5 / 6.0),
+    DS 5.5 pickup, and Athena internals reconnaissance. The "this is real" section.'
+  allowed_story_phases: [factory_visit]
+  observed_story_phases: [factory_visit]
+  clip_count: 9
+  coverage_seconds: 129.5
+  clip_ids: [p15-029-keyboard-21-arrival, p15-030-keyboard-action-broll, p15-031-ds55-on-steinway, p15-032-ds55-size-range,
+    p15-033-size-lineup-proof, p15-034-ds55-pickup-open, p15-035-ds55-pickup-later, p15-036-athena-internals-open,
+    p15-037-athena-internals-later]
+- id: main-argument
+  window: [350.5, 499.0]
+  purpose: Title card + five chapters of the post-pickup car monologue making the DS 6.0 / DS 5.5 hand-size
+    argument. Technical keyboard stills and one factory pickup-wrap pickup are used as 3-4s cutaways to
+    keep the eye moving.
+  allowed_story_phases: [post_pickup_argument, technical_keyboard_stills, factory_visit]
+  observed_story_phases: [factory_visit, post_pickup_argument, technical_keyboard_stills]
+  clip_count: 10
+  coverage_seconds: 148.5
+  clip_ids: [p15-041-main-argument-card, p15-042-main-argument-1, p15-cutaway-main-arg-1, p15-043-main-argument-2,
+    p15-cutaway-main-arg-2, p15-044-main-argument-3, p15-cutaway-main-arg-3, p15-045-main-argument-4,
+    p15-cutaway-main-arg-4, p15-046-main-argument-5]
+- id: post-argument-pause
+  window: [499.0, 521.0]
+  purpose: Tionesta lake cutaway, lake overlook, and the 177777 mileage gag under VO_05. Calm breath after
+    the dense main-argument block.
+  allowed_story_phases: [post_pickup_argument]
+  observed_story_phases: [post_pickup_argument]
+  clip_count: 4
+  coverage_seconds: 22.0
+  clip_ids: [p15-047-vo05-lake-cutaway, p15-048-vo05-lake-overlook, p15-049-vo05-mileage, p15-049b-vo05-mileage-hold]
+- id: trip-fights-back
+  window: [521.0, 556.5]
+  purpose: Hotel breakdown, car-fixed update, return drive, and final highway home under VO_06. Short
+    complication-and-resolution arc.
+  allowed_story_phases: [car_trouble_return]
+  observed_story_phases: [car_trouble_return]
+  clip_count: 5
+  coverage_seconds: 35.5
+  clip_ids: [p15-050-hotel-breakdown, p15-051-vo06-breakdown-still, p15-052-vo06-car-fixed, p15-053-vo06-return-drive,
+    p15-054-vo06-highway-home]
+- id: home-payoff
+  window: [556.5, 728.0]
+  purpose: Home demo payoff — what Lionel brought back, the DS 6.0 history, the DS 5.5 valid-option claim,
+    the P056 home placeholder, the "current take" recommendation card, and the home technique chapters.
+    Uses technical keyboard stills as 3s cutaways between chapters.
+  allowed_story_phases: [home_demo_payoff, pickup_to_record, technical_keyboard_stills]
+  observed_story_phases: [home_demo_payoff, technical_keyboard_stills]
+  clip_count: 11
+  coverage_seconds: 171.5
+  clip_ids: [p15-055-home-setup, p15-056-ds60-history, p15-057-p056-home-placeholder, p15-058-ds55-valid,
+    p15-cutaway-home-1, p15-059-current-take-card, p15-060-home-technique-1, p15-061-home-technique-2,
+    p15-cutaway-home-2, p15-062-home-technique-3, p15-063-ds-standard-home]
+- id: closing
+  window: [728.0, 752.5]
+  purpose: Closing technical-still cutaway, the closing recommendation, and the final-hook title card.
+  allowed_story_phases: [home_demo_payoff, technical_keyboard_stills]
+  observed_story_phases: [home_demo_payoff, technical_keyboard_stills]
+  clip_count: 3
+  coverage_seconds: 24.5
+  clip_ids: [p15-cutaway-home-3, p15-064-closing-recommendation, p15-065-final-hook]
+audio_windows:
+  voiceovers:
+  - clip_id: p15-audio-vo-01a
+    window: [51.5, 61.569]
+    duration: 10.069
+    file: VO_01a_late_night_thesis.wav
+  - clip_id: p15-audio-vo-01b
+    window: [67.0, 81.507]
+    duration: 14.507
+    file: VO_01b_pennsylvania_setup.wav
+  - clip_id: p15-audio-vo-01c
+    window: [86.5, 101.831]
+    duration: 15.331
+    file: VO_01c_millimeters_payoff.wav
+  - clip_id: p15-audio-vo-02-gas-station-and-snacks
+    window: [102.5, 119.776]
+    duration: 17.276
+    file: VO_02_gas_station_and_snacks.wav
+  - clip_id: p15-audio-vo-03-car-nap
+    window: [155.0, 169.396]
+    duration: 14.396
+    file: VO_03_car_nap.wav
+  - clip_id: p15-audio-vo-04-pennsylvania-road
+    window: [182.5, 200.89]
+    duration: 18.39
+    file: VO_04_pennsylvania_road.wav
+  - clip_id: p15-audio-vo-05-lake-pause
+    window: [499.0, 509.681]
+    duration: 10.681
+    file: VO_05_lake_pause.wav
+  - clip_id: p15-audio-vo-06-breakdown-and-return
+    window: [530.5, 548.147]
+    duration: 17.647
+    file: VO_06_breakdown_and_return.wav
+  music:
+  - clip_id: p15-audio-music-cold-title
+    window: [26.0, 31.0]
+    duration: 5.0
+    file: ai_v1_late_night_drive_60s.mp3
+  - clip_id: p15-audio-music-p056-cold-flash
+    window: [48.5, 51.5]
+    duration: 3.0
+    file: ai_v1_late_night_drive_60s.mp3
+  - clip_id: p15-audio-music-vo-01a
+    window: [51.5, 62.0]
+    duration: 10.5
+    file: ai_v1_late_night_drive_60s.mp3
+  - clip_id: p15-audio-music-vo-01b
+    window: [67.0, 82.0]
+    duration: 15.0
+    file: ai_v1_late_night_drive_60s.mp3
+  - clip_id: p15-audio-music-vo-01c
+    window: [86.5, 102.5]
+    duration: 16.0
+    file: ai_v1_late_night_drive_60s.mp3
+  - clip_id: p15-audio-music-vo-02
+    window: [102.5, 121.5]
+    duration: 19.0
+    file: ai_morning_road_60s.mp3
+  - clip_id: p15-audio-music-vo-03
+    window: [155.0, 171.0]
+    duration: 16.0
+    file: ai_morning_road_60s.mp3
+  - clip_id: p15-audio-music-vo-04
+    window: [182.5, 202.5]
+    duration: 20.0
+    file: ai_morning_road_60s.mp3
+  - clip_id: p15-audio-music-vo-05
+    window: [499.0, 521.0]
+    duration: 22.0
+    file: ai_lake_pause_60s.mp3
+  - clip_id: p15-audio-music-vo-06
+    window: [530.5, 556.5]
+    duration: 26.0
+    file: ai_breakdown_return_60s.mp3
+active_visual:
+- [0.0, 7.5, p15-005-front-facing-intro-open, a_roll]
+- [7.5, 26.0, p15-006-front-facing-intro-clean-thesis, a_roll]
+- [26.0, 31.0, p15-004-cold-title-card, title_card]
+- [31.0, 48.5, p15-001-late-night-trip-setup, a_roll]
+- [48.5, 51.5, p15-003-p056-cold-placeholder, placeholder]
+- [51.5, 56.5, p15-vo01a-broll-rainy, ambient]
+- [56.5, 62.0, p15-vo01a-broll-gas, ambient]
+- [62.0, 67.0, p15-vo01-insert-snack, a_roll]
+- [67.0, 74.0, p15-vo01b-broll-sheetz, ambient]
+- [74.0, 82.0, p15-vo01b-broll-drive, ambient]
+- [82.0, 86.5, p15-vo01-insert-waking, a_roll]
+- [86.5, 93.5, p15-vo01c-broll-recovery, ambient]
+- [93.5, 102.5, p15-vo01c-broll-rainy-late, ambient]
+- [102.5, 108.5, p15-011-vo02-gas-station, ambient]
+- [108.5, 111.5, p15-012-vo02-snack-still, still]
+- [111.5, 116.5, p15-013-vo02-snacks-broll, b_roll]
+- [116.5, 121.5, p15-014-vo02-car-nap-still, still]
+- [121.5, 129.0, p15-015-snack-vlog-open, a_roll]
+- [129.0, 135.5, p15-016-snack-vlog-gag, a_roll]
+- [135.5, 143.0, p15-017-waking-after-car-nap, a_roll]
+- [143.0, 149.5, p15-018-car-nap-recovery-open, a_roll]
+- [149.5, 155.0, p15-019-car-nap-recovery-drive, a_roll]
+- [155.0, 159.0, p15-021-vo03-recovery-still, still]
+- [159.0, 166.0, p15-vo03-waking-video, ambient]
+- [166.0, 171.0, p15-vo03-morning-still, still]
+- [171.0, 182.5, p15-023-morning-highway-update, a_roll]
+- [182.5, 190.5, p15-024-vo04-pennsylvania-scenery, ambient]
+- [190.5, 197.5, p15-025-vo04-drive-broll-hills, ambient]
+- [197.5, 202.5, p15-026-vo04-woods-still, still]
+- [202.5, 216.0, p15-027-woods-almost-there, a_roll]
+- [216.0, 221.0, p15-028-big-mac-gag, a_roll]
+- [221.0, 229.5, p15-029-keyboard-21-arrival, a_roll]
+- [229.5, 241.0, p15-030-keyboard-action-broll, b_roll]
+- [241.0, 254.5, p15-031-ds55-on-steinway, b_roll]
+- [254.5, 266.0, p15-032-ds55-size-range, b_roll]
+- [266.0, 282.5, p15-033-size-lineup-proof, b_roll]
+- [282.5, 294.0, p15-034-ds55-pickup-open, b_roll]
+- [294.0, 320.5, p15-035-ds55-pickup-later, b_roll]
+- [320.5, 334.0, p15-036-athena-internals-open, b_roll]
+- [334.0, 350.5, p15-037-athena-internals-later, b_roll]
+- [350.5, 353.5, p15-041-main-argument-card, title_card]
+- [353.5, 379.0, p15-042-main-argument-1, a_roll]
+- [379.0, 382.0, p15-cutaway-main-arg-1, still]
+- [382.0, 408.5, p15-043-main-argument-2, a_roll]
+- [408.5, 411.5, p15-cutaway-main-arg-2, still]
+- [411.5, 437.0, p15-044-main-argument-3, a_roll]
+- [437.0, 440.0, p15-cutaway-main-arg-3, still]
+- [440.0, 463.5, p15-045-main-argument-4, a_roll]
+- [463.5, 467.5, p15-cutaway-main-arg-4, b_roll]
+- [467.5, 499.0, p15-046-main-argument-5, a_roll]
+- [499.0, 506.0, p15-047-vo05-lake-cutaway, ambient]
+- [506.0, 513.0, p15-048-vo05-lake-overlook, ambient]
+- [513.0, 519.0, p15-049-vo05-mileage, b_roll]
+- [519.0, 521.0, p15-049b-vo05-mileage-hold, still]
+- [521.0, 530.5, p15-050-hotel-breakdown, a_roll]
+- [530.5, 534.5, p15-051-vo06-breakdown-still, still]
+- [534.5, 542.5, p15-052-vo06-car-fixed, ambient]
+- [542.5, 548.5, p15-053-vo06-return-drive, ambient]
+- [548.5, 556.5, p15-054-vo06-highway-home, ambient]
+- [556.5, 578.0, p15-055-home-setup, a_roll]
+- [578.0, 597.5, p15-056-ds60-history, a_roll]
+- [597.5, 602.5, p15-057-p056-home-placeholder, placeholder]
+- [602.5, 628.0, p15-058-ds55-valid, a_roll]
+- [628.0, 631.0, p15-cutaway-home-1, still]
+- [631.0, 636.0, p15-059-current-take-card, title_card]
+- [636.0, 649.5, p15-060-home-technique-1, a_roll]
+- [649.5, 669.0, p15-061-home-technique-2, a_roll]
+- [669.0, 672.0, p15-cutaway-home-2, still]
+- [672.0, 691.5, p15-062-home-technique-3, a_roll]
+- [691.5, 728.0, p15-063-ds-standard-home, a_roll]
+- [728.0, 731.0, p15-cutaway-home-3, still]
+- [731.0, 745.5, p15-064-closing-recommendation, a_roll]
+- [745.5, 752.5, p15-065-final-hook, title_card]
+problem_flags: []
