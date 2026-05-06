@@ -69,6 +69,19 @@ def _video_filter(rotation: int) -> str:
     )
 
 
+def _caption_filter(rotation: int, caption: str) -> str:
+    """Lower-third caption box matching the bash script's
+    `caption_filter` (drawbox + drawtext at y=586). Item 18: parity
+    with v12's add_video_captioned helper."""
+    safe = caption.replace(":", r"\:").replace("'", r"\'")
+    return (
+        _video_filter(rotation)
+        + ",drawbox=x=76:y=560:w=1128:h=104:color=black@0.62:t=fill,"
+        + f"drawtext=fontfile={FONT}:text='{safe}':fontcolor=white:"
+        + "fontsize=34:line_spacing=8:x=(w-text_w)/2:y=586"
+    )
+
+
 def _resolve_path(rel: str) -> Path:
     """Resolve a clip's source.file to an absolute path."""
     candidate = REPO_ROOT / rel
@@ -81,12 +94,14 @@ def _resolve_path(rel: str) -> Path:
 
 
 def _render_video_segment(
-    src: Path, source_in: float, duration: float, rotation: int, out: Path
+    src: Path, source_in: float, duration: float, rotation: int,
+    out: Path, caption: str | None = None,
 ) -> None:
+    vf = _caption_filter(rotation, caption) if caption else _video_filter(rotation)
     cmd = [
         "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
         "-ss", f"{source_in}", "-i", str(src), "-t", f"{duration}",
-        "-vf", _video_filter(rotation),
+        "-vf", vf,
         "-an",  # strip source audio; the audio mix happens separately
         "-c:v", "libx264", "-preset", "veryfast", "-crf", "26",
         "-pix_fmt", "yuv420p", "-r", str(FPS),
@@ -97,12 +112,14 @@ def _render_video_segment(
 
 
 def _render_still_segment(
-    src: Path, duration: float, rotation: int, out: Path
+    src: Path, duration: float, rotation: int, out: Path,
+    caption: str | None = None,
 ) -> None:
+    vf = _caption_filter(rotation, caption) if caption else _video_filter(rotation)
     cmd = [
         "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
         "-loop", "1", "-i", str(src), "-t", f"{duration}",
-        "-vf", _video_filter(rotation),
+        "-vf", vf,
         "-an",
         "-c:v", "libx264", "-preset", "veryfast", "-crf", "26",
         "-pix_fmt", "yuv420p", "-r", str(FPS),
@@ -143,14 +160,17 @@ def _concat_segments(segment_files: list[Path], concat_file: Path, out: Path) ->
 
 
 def _build_audio_mix(
-    audio_clips: list[dict], runtime: float, out: Path
+    audio_clips: list[dict], runtime: float, work_dir: Path, out: Path
 ) -> None:
     """Mix every voiceover/music clip at its absolute timeline position
-    onto a stereo base of `runtime` seconds. Each audio clip is
-    delayed via adelay and trimmed to its target duration via atrim
-    before being passed to amix."""
+    onto a stereo base of `runtime` seconds.
+
+    Item 18: VOs are pre-rendered to intermediate WAVs with loudnorm
+    applied per-file (sequential, fast). The final mix step then only
+    needs adelay + amix, no per-clip filtering — keeps the filter graph
+    small even with 18+ audio clips.
+    """
     if not audio_clips:
-        # No audio at all — synth silence
         cmd = [
             "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
             "-f", "lavfi", "-i",
@@ -162,18 +182,17 @@ def _build_audio_mix(
         subprocess.run(cmd, check=True)
         return
 
-    inputs = []
-    filters = []
-    labels = []
+    audio_dir = work_dir / "audio"
+    audio_dir.mkdir(exist_ok=True)
+
+    intermediates: list[tuple[Path, float, float]] = []  # (file, start_s, volume)
     for i, c in enumerate(audio_clips):
         src = _resolve_path(c["source"]["file"])
         sin = float((c["source"].get("in") or 0.0))
         sout = float((c["source"].get("out") or 0.0)) or float(c["timeline"]["duration"])
         seg_dur = max(0.0, sout - sin) if sout > sin else float(c["timeline"]["duration"])
         ts = float(c["timeline"]["start"])
-        delay_ms = int(ts * 1000)
-        # Per-clip volume from notes hint (e.g. "[audio: volume=0.4]"),
-        # default 1.0
+
         volume = 1.0
         notes = (c.get("notes") or "")
         if "[audio: volume=" in notes:
@@ -186,22 +205,47 @@ def _build_audio_mix(
         if "[audio: muted]" in notes:
             volume = 0.0
         if c.get("track") == "music" and volume == 1.0:
-            # Default music ducking so it doesn't bury VOs.
             volume = 0.32
-        inputs += ["-ss", f"{sin}", "-i", str(src)]
+
+        inter = audio_dir / f"a_{i:03d}.wav"
+        per_clip_filters = [
+            f"aresample={SR}",
+            "aformat=channel_layouts=stereo",
+        ]
+        if c.get("track") == "voiceover":
+            per_clip_filters.append("loudnorm=I=-16:LRA=11:TP=-1.5")
+        per_clip_chain = ",".join(per_clip_filters)
+        cmd = [
+            "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
+            "-ss", f"{sin}", "-i", str(src), "-t", f"{seg_dur}",
+            "-af", per_clip_chain,
+            "-c:a", "pcm_s16le", "-ar", str(SR), "-ac", "2",
+            str(inter),
+        ]
+        subprocess.run(cmd, check=True)
+        intermediates.append((inter, ts, volume))
+
+    # Mix the intermediates with adelay + amix (lightweight filter
+    # graph: no per-clip filtering, just delay + volume + sum).
+    inputs: list[str] = []
+    filters: list[str] = []
+    labels: list[str] = []
+    for i, (path, ts, volume) in enumerate(intermediates):
+        delay_ms = int(ts * 1000)
+        inputs += ["-i", str(path)]
         filters.append(
-            f"[{i}:a]atrim=duration={seg_dur},asetpts=PTS-STARTPTS,"
-            f"aresample={SR},aformat=channel_layouts=stereo,"
-            f"adelay={delay_ms}|{delay_ms},volume={volume}[a{i}]"
+            f"[{i}:a]adelay={delay_ms}|{delay_ms},volume={volume}[a{i}]"
         )
         labels.append(f"[a{i}]")
-    n = len(audio_clips)
-    filter_chain = ";".join(filters)
-    mix = f"{''.join(labels)}amix=inputs={n}:duration=longest:dropout_transition=0,apad,atrim=duration={runtime}[aout]"
+    n = len(intermediates)
+    mix = (
+        f"{''.join(labels)}amix=inputs={n}:duration=longest"
+        f":dropout_transition=0,apad,atrim=duration={runtime}[aout]"
+    )
     cmd = [
         "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
         *inputs,
-        "-filter_complex", f"{filter_chain};{mix}",
+        "-filter_complex", f"{';'.join(filters)};{mix}",
         "-map", "[aout]",
         "-c:a", "aac", "-b:a", "192k", "-ar", str(SR), "-ac", "2",
         str(out),
@@ -243,16 +287,17 @@ def render(pass_yaml: Path, out_mp4: Path) -> None:
         rotation = int(clip.get("rotation") or 0)
         track = clip.get("track")
         src_rel = (clip.get("source") or {}).get("file") or ""
+        caption = clip.get("text_overlay") or None
         if track in ("title_card", "placeholder") or not src_rel:
-            text = clip.get("text_overlay") or clip.get("notes") or seg["clip_id"]
+            text = caption or clip.get("notes") or seg["clip_id"]
             _render_card_segment(str(text), duration, out_seg)
         else:
             src = _resolve_path(src_rel)
             sin = float((clip["source"].get("in") or 0.0))
             if seg.get("lane") == "still" or src.suffix.lower() in {".jpg", ".jpeg", ".png"}:
-                _render_still_segment(src, duration, rotation, out_seg)
+                _render_still_segment(src, duration, rotation, out_seg, caption=caption)
             else:
-                _render_video_segment(src, sin, duration, rotation, out_seg)
+                _render_video_segment(src, sin, duration, rotation, out_seg, caption=caption)
         segment_files.append(out_seg)
 
     print(f"[concat] {len(segment_files)} visual segments → silent mp4")
@@ -265,7 +310,7 @@ def render(pass_yaml: Path, out_mp4: Path) -> None:
     ]
     print(f"[audio] mixing {len(audio_clips)} audio clips over {runtime:.2f}s")
     audio_mix = work / "audio_mix.aac"
-    _build_audio_mix(audio_clips, runtime, audio_mix)
+    _build_audio_mix(audio_clips, runtime, work, audio_mix)
 
     print(f"[mux] → {out_mp4}")
     out_mp4.parent.mkdir(parents=True, exist_ok=True)

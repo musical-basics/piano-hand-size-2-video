@@ -292,7 +292,7 @@ fixed or accepted with explanation.
 
 ## Week 4 — Cut over and improve
 
-### [ ] 18. Expand render_from_timeline.py to feature parity (Plan Step 15 cont.)
+### [x] 18. Expand render_from_timeline.py to feature parity (Plan Step 15 cont.)
 
 - Add support for: captions (drawtext lower-third boxes), montage
   fade-in/out, audio loudnorm, music ducking, multi-audio mix
@@ -302,7 +302,7 @@ fixed or accepted with explanation.
 **Done when**: render_from_timeline.py reproduces the latest bash
 script's output to within visual/audio tolerance.
 
-### [ ] 19. Stop editing bash scripts manually
+### [x] 19. Stop editing bash scripts manually
 
 - Make a decision: bash scripts are now archival, not editable
 - All future passes go: edit yaml → render_from_timeline.py → mp4
@@ -311,7 +311,7 @@ script's output to within visual/audio tolerance.
 **Done when**: at least one pass is shipped via yaml→render only,
 with no bash script changes.
 
-### [ ] 20. Build find_candidate_broll.py (Plan Step 21)
+### [x] 20. Build find_candidate_broll.py (Plan Step 21)
 
 - Create `keyboard-trip/scripts/find_candidate_broll.py`
 - Args: `--story-phase`, `--clip-type`, `--min-duration`,
@@ -324,7 +324,7 @@ with no bash script changes.
 **Done when**: returns useful results for at least 3 sample queries;
 matches what a human editor would suggest.
 
-### [ ] 21. Add make_fine_contact_sheet.sh (Plan Step 22)
+### [x] 21. Add make_fine_contact_sheet.sh (Plan Step 22)
 
 - Create `keyboard-trip/scripts/make_fine_contact_sheet.sh
   <asset> <start> <end>`
@@ -335,7 +335,7 @@ matches what a human editor would suggest.
 **Done when**: invoking it on a known clip produces a denser sheet;
 visually inspectable in Finder.
 
-### [ ] 22. Add word-level transcripts for talking-head clips (Plan Step 23)
+### [x] 22. Add word-level transcripts for talking-head clips (Plan Step 23)
 
 - Modify `scripts/transcribe_all.py` to write word-level timestamps
   in addition to segment timestamps

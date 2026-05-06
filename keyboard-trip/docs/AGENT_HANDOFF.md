@@ -219,7 +219,28 @@ Stay on your side of the line.
 
 ## The render pipeline
 
-Each pass has its own shell script. Naming convention:
+**As of item 19 (Plan Step 16/19), `render_from_timeline.py` is the
+canonical renderer.** Bash scripts (`make_rough_review_cut_v*.sh`) are
+ARCHIVAL — keep them for historical reference but do not edit them.
+
+Canonical flow:
+
+```bash
+# 1. Make sure the pass yaml is fresh:
+python3 keyboard-trip/scripts/dump_timeline.py <pass-id>
+
+# 2. Render directly from the yaml:
+python3 keyboard-trip/scripts/render_from_timeline.py \
+  keyboard-trip/timelines/<pass-id>.yaml \
+  keyboard-trip/renders/review_cuts/piano_hand_size_part2_<pass-id>.mp4
+
+# 3. Validate the render matches the yaml:
+python3 keyboard-trip/scripts/compare_render_to_timeline.py \
+  keyboard-trip/timelines/<pass-id>.yaml \
+  keyboard-trip/renders/review_cuts/piano_hand_size_part2_<pass-id>.mp4
+```
+
+Legacy bash scripts (kept for reference):
 
 ```
 make_rough_review_cut_v<N>.sh  →  piano_hand_size_part2_rough_cut_v<N>.mp4
@@ -228,15 +249,12 @@ PASS<M>_V<N>_<DESCRIPTION>_LOG.md
 
 Pass numbers and version numbers are not 1:1 — early passes shared
 versions (Pass 5 was render v1, Pass 6 was v3, etc.). From Pass 9
-onward they run together (Pass 10 → v7, Pass 11 → v8, ..., Pass 15 →
-v12).
+through Pass 15 they ran together (Pass 10 → v7, ..., Pass 15 → v12).
+Pass 16+ uses the yaml renderer; the v* number stops incrementing.
 
-Each script `cd`s to `keyboard-trip/` and uses relative paths from
-there. Run them with:
-
-```bash
-./keyboard-trip/scripts/make_rough_review_cut_v<N>.sh
-```
+If you absolutely must produce a one-off render with the old bash path
+(e.g. to reproduce a historical cut), do not modify the script — copy
+it to a versioned name first and explain why in the pass log.
 
 Helpers inside the scripts you'll use a lot:
 
