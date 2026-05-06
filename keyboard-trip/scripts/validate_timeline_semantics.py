@@ -394,6 +394,7 @@ def run(pass_id: str) -> tuple[list[dict], Path]:
     issues.extend(validate_long_vo_block(active_visual, voiceovers))
 
     out_path = TIMELINES_DIR / f"{pass_id}-semantic-issues.yaml"
+    json_path = TIMELINES_DIR / f"{pass_id}-semantic-issues.json"
     summary = _summarise(issues)
     payload = {
         "pass_id": pass_id,
@@ -408,6 +409,11 @@ def run(pass_id: str) -> tuple[list[dict], Path]:
     }
     with out_path.open("w") as fh:
         yaml.safe_dump(payload, fh, sort_keys=False, default_flow_style=None, width=100)
+    # JSON sibling: the Next.js editor reads this for the per-clip
+    # warning overlays so it doesn't need a YAML dependency.
+    import json as _json
+    with json_path.open("w") as fh:
+        _json.dump(payload, fh, indent=2)
 
     return issues, out_path
 

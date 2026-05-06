@@ -189,7 +189,7 @@ can validate a sample patch.
 in dry-run mode; an intentionally-bad patch (overrun, locked clip) is
 rejected with the right error.
 
-### [ ] 11. Add GUI semantic-warning display (Plan Step 20)
+### [x] 11. Add GUI semantic-warning display (Plan Step 20)
 
 In `ai-agent-video-editor`:
 - Add visual indicators on clip blocks in `timeline-panel.tsx`:
