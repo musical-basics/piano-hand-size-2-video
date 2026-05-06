@@ -234,7 +234,7 @@ icons; tooltip explains each warning.
 `active_visual` as before; subsequent dumps show zero null
 `timelineStart` values.
 
-### [ ] 14. Deprecate the order cursor system (Plan Step 18)
+### [x] 14. Deprecate the order cursor system (Plan Step 18)
 
 - Add a validator that flags any enabled clip with null
   `timelineStart` as a hard error (extend

@@ -209,10 +209,15 @@ Underlying rules that never change:
   spine. Use `STORY_BEATS.yaml` for the deterministic
   story_phase-per-beat contract that the validator enforces.
 
-Every enabled `timeline_item` should have an explicit `timelineStart`.
-The historical cursor system is being deprecated (Plan Step 18 / item
-14); the validator emits `MISSING_TIMELINE_START_ERROR` for any null,
-and item 13's `fill_explicit_timeline_starts.py` cleans them up.
+Every enabled `timeline_item` MUST have an explicit `timelineStart`.
+The historical cursor-stacking fallback (where `dump_timeline.py` and
+the editor reconstruct positions for NULL timelineStart clips) is
+deprecated as of item 13/14. The validator treats any null as a
+`MISSING_TIMELINE_START_ERROR`. The `order` column is now only for
+stable UI sorting on tie-breaks at the same time, never for inferring
+positions. New clips inserted via `apply_timeline_patch.py` always
+carry an explicit `timeline_start`; legacy cursor-resolved clips were
+migrated to explicit values via `fill_explicit_timeline_starts.py`.
 
 **Patch-first editing is the rule from Pass 16 onward.** Every AI
 pass mutates SQLite by writing an `edit_patch_plan.json` and running
