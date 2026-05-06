@@ -354,7 +354,7 @@ deterministically.
 
 ## Cross-cutting acceptance
 
-### [ ] 23. Pass 16+ proves the new workflow
+### [~] 23. Pass 16+ proves the new workflow
 
 After all the above:
 - Pick a real review note from Lionel
