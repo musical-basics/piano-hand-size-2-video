@@ -1,0 +1,84 @@
+{
+  "pass_id": "pass-16-broll-rebalance",
+  "intent": "Demonstration patch covering one of every operation type for schema testing.",
+  "operations": [
+    {
+      "type": "insert_clip",
+      "edit_class": "creative_decision",
+      "reason": "Cover the gap under VO_04 with a fresh rainy-road insert.",
+      "clip": {
+        "id": "p16-vo04-cover-rainy",
+        "section": "VO 04 Pennsylvania Road",
+        "role": "ambient",
+        "asset_id": "asset-010-img-0266-drive-broll-2",
+        "timeline_start": 188.0,
+        "source_in": 4.0,
+        "source_out": 12.0,
+        "target_duration": 8.0,
+        "notes": "Pass 16: rainy-road insert under VO_04."
+      }
+    },
+    {
+      "type": "disable_clip",
+      "edit_class": "creative_decision",
+      "reason": "Tesla parking-lot conversation distracts from the keyboard story.",
+      "clip_id": "p15-016-parking-lot-tesla"
+    },
+    {
+      "type": "move_clip",
+      "edit_class": "workflow_fix",
+      "reason": "Snap lake cutaway to explicit 503.5s start.",
+      "clip_id": "p15-047-vo05-lake-cutaway",
+      "timeline_start": 503.5
+    },
+    {
+      "type": "trim_clip",
+      "edit_class": "deterministic_fix",
+      "reason": "Pad VO_05 cover by +1.5s.",
+      "clip_id": "p15-048-vo05-lake-overlook",
+      "source_out": 8.5,
+      "target_duration": 8.5
+    },
+    {
+      "type": "replace_visual",
+      "edit_class": "deterministic_fix",
+      "reason": "Replace static still with motion clip to clear STILL_UNDER_VO_WARNING.",
+      "clip_id": "p15-049b-vo05-mileage-hold",
+      "asset_id": "asset-044-img-0300-177777-mileage",
+      "source_in": 0.0,
+      "source_out": 4.0
+    },
+    {
+      "type": "split_clip",
+      "edit_class": "creative_decision",
+      "reason": "Break VO_04 in half so we can insert an a-roll burst at the seam.",
+      "clip_id": "p15-024-vo04-pennsylvania-scenery",
+      "split_at_source_seconds": 4.0,
+      "new_ids": {
+        "a": "p16-024a-vo04-scenery-open",
+        "b": "p16-024b-vo04-scenery-late"
+      }
+    },
+    {
+      "type": "set_volume",
+      "edit_class": "creative_decision",
+      "reason": "Lift VO_05 +1dB so it sits above lake music.",
+      "clip_id": "p15-audio-vo-05-lake-pause",
+      "volume": 1.12
+    },
+    {
+      "type": "mute_source_audio",
+      "edit_class": "deterministic_fix",
+      "reason": "p15-008 has dialogue that collides with VO_04.",
+      "clip_id": "p15-008-pennsylvania-scenery"
+    },
+    {
+      "type": "duck_music",
+      "edit_class": "deterministic_fix",
+      "reason": "Drop morning-road bed under VO_04.",
+      "clip_id": "p15-audio-music-vo-04",
+      "duck_window": [182.5, 200.9],
+      "volume": 0.4
+    }
+  ]
+}

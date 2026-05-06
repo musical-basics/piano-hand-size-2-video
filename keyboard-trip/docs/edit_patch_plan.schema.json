@@ -1,0 +1,230 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://musicalbasics.com/keyboard-trip/edit_patch_plan.schema.json",
+  "title": "edit_patch_plan",
+  "description": "Deterministic input format for apply_timeline_patch.py. See EDIT_PATCH_PLAN_SCHEMA.md for prose.",
+  "type": "object",
+  "required": ["pass_id", "intent", "operations"],
+  "additionalProperties": false,
+  "properties": {
+    "pass_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Target pass id; must match a row in the passes table."
+    },
+    "intent": {
+      "type": "string",
+      "minLength": 1,
+      "description": "One-sentence statement of the change's purpose."
+    },
+    "operations": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/operation" }
+    }
+  },
+  "$defs": {
+    "edit_class": {
+      "type": "string",
+      "enum": ["deterministic_fix", "workflow_fix", "creative_decision"]
+    },
+    "common_fields": {
+      "type": "object",
+      "required": ["type", "reason", "edit_class"],
+      "properties": {
+        "type": { "type": "string" },
+        "reason": { "type": "string", "minLength": 1 },
+        "edit_class": { "$ref": "#/$defs/edit_class" },
+        "unlock": {
+          "type": "boolean",
+          "description": "Set to true to override a lastEditedBy='user' protection. Should only be added by Lionel."
+        }
+      }
+    },
+    "operation": {
+      "oneOf": [
+        { "$ref": "#/$defs/insert_clip" },
+        { "$ref": "#/$defs/disable_clip" },
+        { "$ref": "#/$defs/move_clip" },
+        { "$ref": "#/$defs/trim_clip" },
+        { "$ref": "#/$defs/replace_visual" },
+        { "$ref": "#/$defs/split_clip" },
+        { "$ref": "#/$defs/set_volume" },
+        { "$ref": "#/$defs/mute_source_audio" },
+        { "$ref": "#/$defs/duck_music" }
+      ]
+    },
+    "insert_clip": {
+      "allOf": [{ "$ref": "#/$defs/common_fields" }],
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "reason", "edit_class", "clip"],
+      "properties": {
+        "type": { "const": "insert_clip" },
+        "reason": { "type": "string" },
+        "edit_class": { "$ref": "#/$defs/edit_class" },
+        "unlock": { "type": "boolean" },
+        "clip": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "section", "role", "asset_id", "timeline_start"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "section": { "type": "string", "minLength": 1 },
+            "role": {
+              "type": "string",
+              "enum": ["a_roll", "b_roll", "ambient", "still", "title_card", "placeholder", "voiceover", "music"]
+            },
+            "asset_id": { "type": "string", "minLength": 1 },
+            "timeline_start": { "type": "number", "minimum": 0 },
+            "source_in": { "type": "number", "minimum": 0 },
+            "source_out": { "type": "number", "minimum": 0 },
+            "target_duration": { "type": "number", "minimum": 0 },
+            "rotation_override": { "type": ["integer", "null"] },
+            "text_overlay": { "type": ["string", "null"] },
+            "notes": { "type": ["string", "null"] }
+          },
+          "anyOf": [
+            { "required": ["target_duration"] },
+            { "required": ["source_in", "source_out"] }
+          ]
+        }
+      }
+    },
+    "disable_clip": {
+      "allOf": [{ "$ref": "#/$defs/common_fields" }],
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "reason", "edit_class", "clip_id"],
+      "properties": {
+        "type": { "const": "disable_clip" },
+        "reason": { "type": "string" },
+        "edit_class": { "$ref": "#/$defs/edit_class" },
+        "unlock": { "type": "boolean" },
+        "clip_id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "move_clip": {
+      "allOf": [{ "$ref": "#/$defs/common_fields" }],
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "reason", "edit_class", "clip_id", "timeline_start"],
+      "properties": {
+        "type": { "const": "move_clip" },
+        "reason": { "type": "string" },
+        "edit_class": { "$ref": "#/$defs/edit_class" },
+        "unlock": { "type": "boolean" },
+        "clip_id": { "type": "string", "minLength": 1 },
+        "timeline_start": { "type": "number", "minimum": 0 },
+        "section": { "type": "string", "minLength": 1 }
+      }
+    },
+    "trim_clip": {
+      "allOf": [{ "$ref": "#/$defs/common_fields" }],
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "reason", "edit_class", "clip_id"],
+      "properties": {
+        "type": { "const": "trim_clip" },
+        "reason": { "type": "string" },
+        "edit_class": { "$ref": "#/$defs/edit_class" },
+        "unlock": { "type": "boolean" },
+        "clip_id": { "type": "string", "minLength": 1 },
+        "source_in": { "type": "number", "minimum": 0 },
+        "source_out": { "type": "number", "minimum": 0 },
+        "target_duration": { "type": "number", "minimum": 0 }
+      },
+      "anyOf": [
+        { "required": ["source_in"] },
+        { "required": ["source_out"] },
+        { "required": ["target_duration"] }
+      ]
+    },
+    "replace_visual": {
+      "allOf": [{ "$ref": "#/$defs/common_fields" }],
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "reason", "edit_class", "clip_id", "asset_id"],
+      "properties": {
+        "type": { "const": "replace_visual" },
+        "reason": { "type": "string" },
+        "edit_class": { "$ref": "#/$defs/edit_class" },
+        "unlock": { "type": "boolean" },
+        "clip_id": { "type": "string", "minLength": 1 },
+        "asset_id": { "type": "string", "minLength": 1 },
+        "source_in": { "type": "number", "minimum": 0 },
+        "source_out": { "type": "number", "minimum": 0 }
+      }
+    },
+    "split_clip": {
+      "allOf": [{ "$ref": "#/$defs/common_fields" }],
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "reason", "edit_class", "clip_id", "split_at_source_seconds", "new_ids"],
+      "properties": {
+        "type": { "const": "split_clip" },
+        "reason": { "type": "string" },
+        "edit_class": { "$ref": "#/$defs/edit_class" },
+        "unlock": { "type": "boolean" },
+        "clip_id": { "type": "string", "minLength": 1 },
+        "split_at_source_seconds": { "type": "number", "minimum": 0 },
+        "new_ids": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["a", "b"],
+          "properties": {
+            "a": { "type": "string", "minLength": 1 },
+            "b": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "set_volume": {
+      "allOf": [{ "$ref": "#/$defs/common_fields" }],
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "reason", "edit_class", "clip_id", "volume"],
+      "properties": {
+        "type": { "const": "set_volume" },
+        "reason": { "type": "string" },
+        "edit_class": { "$ref": "#/$defs/edit_class" },
+        "unlock": { "type": "boolean" },
+        "clip_id": { "type": "string", "minLength": 1 },
+        "volume": { "type": "number", "minimum": 0, "maximum": 2 }
+      }
+    },
+    "mute_source_audio": {
+      "allOf": [{ "$ref": "#/$defs/common_fields" }],
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "reason", "edit_class", "clip_id"],
+      "properties": {
+        "type": { "const": "mute_source_audio" },
+        "reason": { "type": "string" },
+        "edit_class": { "$ref": "#/$defs/edit_class" },
+        "unlock": { "type": "boolean" },
+        "clip_id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "duck_music": {
+      "allOf": [{ "$ref": "#/$defs/common_fields" }],
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "reason", "edit_class", "clip_id", "duck_window", "volume"],
+      "properties": {
+        "type": { "const": "duck_music" },
+        "reason": { "type": "string" },
+        "edit_class": { "$ref": "#/$defs/edit_class" },
+        "unlock": { "type": "boolean" },
+        "clip_id": { "type": "string", "minLength": 1 },
+        "duck_window": {
+          "type": "array",
+          "items": { "type": "number", "minimum": 0 },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "volume": { "type": "number", "minimum": 0, "maximum": 2 }
+      }
+    }
+  }
+}

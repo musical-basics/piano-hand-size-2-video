@@ -151,7 +151,7 @@ have a baseline of warnings/errors to fix in subsequent passes.
 
 ## Week 2 — Patch-based editing (deterministic application)
 
-### [ ] 9. Define the edit_patch_plan.json schema (Plan Step 2)
+### [x] 9. Define the edit_patch_plan.json schema (Plan Step 2)
 
 - Document the schema in
   `keyboard-trip/docs/EDIT_PATCH_PLAN_SCHEMA.md`
